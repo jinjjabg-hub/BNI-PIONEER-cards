@@ -525,20 +525,20 @@ footer{background:var(--dark);padding:40px 28px 100px;text-align:center;border-t
 
 <!-- 저장 버튼 -->
 <div class="save-section">
-  <a href="./송승훈.vcf" download class="save-btn btn-primary">
-    <span>📇</span>
-    <span class="lang-inline active" data-lang="ko">연락처 저장하기</span>
-    <span class="lang-inline" data-lang="en">Save Contact</span>
-    <span class="lang-inline" data-lang="ja">連絡先を保存</span>
-    <span class="lang-inline" data-lang="zh">保存联系人</span>
-  </a>
-  <button class="save-btn btn-secondary" onclick="saveToCardbook()">
-    <span>🗂️</span>
-    <span class="lang-inline active" data-lang="ko">명함첩에 저장</span>
-    <span class="lang-inline" data-lang="en">Save to Cardbook</span>
-    <span class="lang-inline" data-lang="ja">名刺帳に保存</span>
-    <span class="lang-inline" data-lang="zh">保存到名片册</span>
-  </button>
+  <button class="save-btn btn-primary" onclick="savePhone({name:'송승훈',company:'T.M (Transition Makers)',title:'대표',phone:'010-5334-2544',email:'jinjjabg@gmail.com'})">
+  <span>📞</span>
+  <span class="lang-inline active" data-lang="ko">전화번호 저장하기</span>
+  <span class="lang-inline" data-lang="en">Save Contact</span>
+  <span class="lang-inline" data-lang="ja">連絡先を保存</span>
+  <span class="lang-inline" data-lang="zh">保存联系人</span>
+</button>
+ <button class="save-btn btn-secondary" onclick="saveToCardbook({id:'song_seung_hun',name:'송승훈',nameEn:'Song Seung-hun',company:'T.M (Transition Makers)',title:'대표',phone:'010-5334-2544',email:'jinjjabg@gmail.com',chapter:'파이오니어',bni:'BNI 파이오니어 챕터 앰버서더'})">
+  <span>🗂️</span>
+  <span class="lang-inline active" data-lang="ko">명함 저장하기</span>
+  <span class="lang-inline" data-lang="en">Save to Cardbook</span>
+  <span class="lang-inline" data-lang="ja">名刺帳に保存</span>
+  <span class="lang-inline" data-lang="zh">保存到名片册</span>
+</button>
 </div>
 
 <!-- CONNECT -->
@@ -590,15 +590,19 @@ footer{background:var(--dark);padding:40px 28px 100px;text-align:center;border-t
     <span class="icon">✉️</span>
     <span class="lang-inline active" data-lang="ko">메일</span><span class="lang-inline" data-lang="en">Mail</span><span class="lang-inline" data-lang="ja">メール</span><span class="lang-inline" data-lang="zh">邮件</span>
   </a>
-  <a href="./송승훈.vcf" download class="float-btn highlight">
-    <span class="icon">📇</span>
-    <span class="lang-inline active" data-lang="ko">저장</span><span class="lang-inline" data-lang="en">Save</span><span class="lang-inline" data-lang="ja">保存</span><span class="lang-inline" data-lang="zh">保存</span>
-  </a>
-  <button onclick="saveToCardbook()" class="float-btn">
-    <span class="icon">🗂️</span>
-    <span class="lang-inline active" data-lang="ko">명함첩</span><span class="lang-inline" data-lang="en">Cards</span><span class="lang-inline" data-lang="ja">名刺帳</span><span class="lang-inline" data-lang="zh">名片册</span>
-  </button>
-</div>
+ <button onclick="savePhone({name:'송승훈',company:'T.M (Transition Makers)',title:'대표',phone:'010-5334-2544',email:'jinjjabg@gmail.com'})" class="float-btn highlight">
+  <span class="icon">📞</span>
+  <span class="lang-inline active" data-lang="ko">전화번호 저장</span>
+  <span class="lang-inline" data-lang="en">Save Contact</span>
+  <span class="lang-inline" data-lang="ja">連絡先を保存</span>
+  <span class="lang-inline" data-lang="zh">保存联系人</span>
+<button onclick="saveToCardbook({id:'song_seung_hun',name:'송승훈',nameEn:'Song Seung-hun',company:'T.M (Transition Makers)',title:'대표',phone:'010-5334-2544',email:'jinjjabg@gmail.com',chapter:'파이오니어',bni:'BNI 파이오니어 챕터 앰버서더'})" class="float-btn">
+  <span class="icon">🗂️</span>
+  <span class="lang-inline active" data-lang="ko">명함 저장</span>
+  <span class="lang-inline" data-lang="en">Save Card</span>
+  <span class="lang-inline" data-lang="ja">名刺を保存</span>
+  <span class="lang-inline" data-lang="zh">保存名片</span>
+</button>
 
 <script>
 function setTheme(theme, btn) {
@@ -633,26 +637,8 @@ wrap.addEventListener('scroll',()=>{
   dots.forEach((d,i)=>d.classList.toggle('active',i===idx));
 });
 
-function saveToCardbook() {
-  const card = {
-    id:'tm-songseunghun',
-    name:'송승훈', nameEn:'Song Seung-hun',
-    title:'대표', company:'T.M (Transition Makers)',
-    phone:'010-5334-2544', email:'jinjjabg@gmail.com',
-    url:window.location.href, bni:'BNI 파이오니어 챕터 앰버서더',
-    savedAt:new Date().toLocaleDateString('ko-KR')
-  };
-  try {
-    const cards = JSON.parse(localStorage.getItem('bni_cards')||'[]');
-    if(cards.find(c=>c.id===card.id)){
-      if(confirm('✅ 이미 명함첩에 저장되어 있어요!\n명함첩 바로 보기?')) window.location.href='/명함첩.html';
-      return;
-    }
-    cards.push(card);
-    localStorage.setItem('bni_cards',JSON.stringify(cards));
-    if(confirm('✅ 명함첩에 저장되었습니다!\n명함첩 바로 보기?')) window.location.href='/명함첩.html';
-  } catch(e){ alert('저장 완료 ✓'); }
-}
+
 </script>
+  <script src="https://jinjjabg-hub.github.io/cardbook/save-to-cardbook.js"></script>
 </body>
 </html>
