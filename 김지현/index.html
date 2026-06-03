@@ -723,22 +723,16 @@
   <!-- ══ 저장 버튼 ══ -->
   <section class="save-sec">
     <div class="save-wrap">
-      <a class="save-btn" onclick="saveContact()" href="#">
-        <span class="save-icon">👤</span>
-        <div class="save-info">
-          <strong>연락처 저장</strong>
-          <span>이름·상호·전화번호</span>
-        </div>
-      </a>
-      <button class="save-btn" onclick="saveToCardHolder()">
-        <span class="save-icon">📋</span>
-        <div class="save-info">
-          <strong>명함첩에 저장</strong>
-          <span>내 명함첩에 보관하기</span>
-        </div>
-      </button>
-    </div>
-  </section>
+     <button onclick="savePhone({name:'김지현',company:'감성온도',title:'직함',phone:'010-xxxx-xxxx',email:'이메일@gmail.com'})" class="save-btn btn-primary">
+  <span>📞</span>
+  <span class="lang-inline active" data-lang="ko">전화번호 저장하기</span>
+  ...
+</button>
+<button onclick="saveToCardbook({id:'고유ID',...})" class="save-btn btn-secondary">
+  <span>🗂️</span>
+  <span class="lang-inline active" data-lang="ko">명함 저장하기</span>
+  ...
+</button>
 
   <!-- CONTACT -->
   <div class="contact-block">
@@ -836,21 +830,6 @@ document.querySelectorAll('[data-lang="ko active"]').forEach(el => {
     URL.revokeObjectURL(url);
   }
 
-  // ── 명함첩에 저장 (localStorage) ──
-  function saveToCardHolder() {
-    const card = {
-      id:      'kimjihyun',
-      name:    '김지현',
-      company: '감성온도',
-      role:    '대표 / 공간디렉터',
-      phone:   '010-7319-1279',
-      field:   '숙박 공간 컨설팅 / 공간디렉터',
-      chapter: 'BNI Pioneer Chapter 8기 부의장',
-      url:     window.location.href,
-      photo:   'profile.jpg',
-      savedAt: new Date().toLocaleDateString('ko-KR')
-    };
-
     let cards = JSON.parse(localStorage.getItem('bni_cards') || '[]');
 
     if (cards.find(c => c.id === card.id)) {
@@ -873,5 +852,6 @@ document.querySelectorAll('[data-lang="ko active"]').forEach(el => {
   });
 
 </script>
-</body>
+  <script src="https://jinjjabg-hub.github.io/cardbook/save-to-cardbook.js"></script>
+  </body>
 </html>
