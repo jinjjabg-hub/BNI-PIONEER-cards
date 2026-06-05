@@ -3,600 +3,198 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>감성온도 | 김지현 대표</title>
+<title>BNI Pioneer | 디지털 명함 디렉토리</title>
 
-<!-- Open Graph (카카오톡/SNS 링크 미리보기) -->
-<meta property="og:title" content="감성온도 | 김지현 대표">
-<meta property="og:description" content="공간마다 감성과 온도를 디렉팅하는 공간디렉터. 숙박 공간 컨설팅 / 공간디렉터 | BNI Pioneer 8기 부의장">
-<meta property="og:image" content="https://i.imgur.com/S6POM8H.jpeg">
-<meta property="og:url" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/김지현">
+<meta property="og:title" content="BNI Pioneer 디지털 명함">
+<meta property="og:description" content="BNI 파이오니어 챕터 멤버 디지털 명함 디렉토리">
+<meta property="og:url" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="감성온도">
 
-<!-- 카카오톡 전용 -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="감성온도 | 김지현 대표">
-<meta name="twitter:description" content="공간마다 감성과 온도를 디렉팅하는 공간디렉터. 숙박 공간 컨설팅 / 공간디렉터">
-<meta name="twitter:image" content="https://i.imgur.com/S6POM8H.jpeg">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --pink-main:  #F2A7B8;
-    --pink-light: #FDE8EF;
-    --pink-deep:  #D96B8A;
-    --pink-soft:  #F7C5D2;
-    --pink-pale:  #FFF0F4;
-    --rose-gold:  #C9798A;
-    --cream:      #FBF5F0;
-    --warm-white: #FFFAF8;
-    --warm-gray:  #8C7B80;
-    --charcoal:   #3D2B30;
-    --dark-rose:  #8B3A52;
-    --sand:       #E8D5C0;
-  }
-  * { margin:0; padding:0; box-sizing:border-box; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
   body {
     font-family: 'Noto Sans KR', sans-serif;
-    background: #f0e6ea;
-    background-image: radial-gradient(ellipse at 20% 20%, rgba(242,167,184,0.3) 0%, transparent 50%),
-                      radial-gradient(ellipse at 80% 80%, rgba(232,213,192,0.3) 0%, transparent 50%);
+    background: #f5f0ff;
+    background-image:
+      radial-gradient(ellipse at 20% 10%, rgba(180,160,255,0.25) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 90%, rgba(255,180,200,0.2) 0%, transparent 50%);
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 32px 16px 60px;
+    padding: 48px 16px 80px;
   }
 
-  /* LANG BAR */
-  .lang-bar {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 20px;
+  header {
+    text-align: center;
+    margin-bottom: 40px;
   }
-  .lang-btn {
-    border: 1px solid var(--pink-main);
-    background: rgba(255,255,255,0.6);
-    color: var(--dark-rose);
-    padding: 5px 14px;
+  header .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.7);
+    border: 1px solid rgba(150,100,255,0.3);
+    color: #5b30cc;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    padding: 5px 16px;
     border-radius: 20px;
-    font-size: 12px;
-    font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 12px;
+  }
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #2d1a5e;
+    margin-bottom: 6px;
+  }
+  header p {
+    font-size: 13px;
+    color: #7a6a9a;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .member-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(90,50,200,0.1);
+    text-decoration: none;
+    display: block;
+    transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
-    transition: all 0.25s;
-    backdrop-filter: blur(6px);
   }
-  .lang-btn:hover, .lang-btn.active {
-    background: var(--pink-main);
-    color: white;
+  .member-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(90,50,200,0.18);
   }
 
-  /* CARD */
-  .card {
-    width: 100%;
-    max-width: 480px;
-    background: var(--warm-white);
-    border-radius: 28px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(139,58,82,0.15), 0 4px 16px rgba(242,167,184,0.2);
-  }
-
-  /* HERO */
   .card-hero {
+    height: 140px;
     position: relative;
-    height: 300px;
     overflow: hidden;
   }
-  .card-hero img.hero-img {
+  .card-hero img {
     width: 100%; height: 100%;
     object-fit: cover;
     object-position: center 30%;
-    display: block;
   }
   .card-hero::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, transparent 40%, rgba(61,43,48,0.7) 100%);
+    background: linear-gradient(to bottom, transparent 30%, rgba(30,15,60,0.6) 100%);
   }
-  .hero-logo {
+  .hero-name {
     position: absolute;
-    top: 16px; right: 16px;
-    z-index: 3;
-    width: 72px; height: 72px;
-    background: rgba(255,255,255,0.92);
-    border-radius: 16px;
-    padding: 8px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-    backdrop-filter: blur(8px);
-  }
-  .hero-logo img {
-    width: 100%; height: 100%;
-    object-fit: contain;
-    display: block;
-  }
-  .hero-label {
-    position: absolute;
-    bottom: 20px; left: 24px; right: 24px;
+    bottom: 14px;
+    left: 18px;
     z-index: 2;
     color: white;
-  }
-  .hero-label .category {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 13px;
-    color: var(--pink-soft);
-    letter-spacing: 0.2em;
-    margin-bottom: 4px;
-  }
-  .hero-label .co-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.1;
-  }
-
-  /* PROFILE ROW */
-  .profile-row {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 20px 24px;
-    border-bottom: 1px solid var(--pink-light);
-  }
-  .profile-avatar {
-    width: 72px; height: 72px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center top;
-    border: 3px solid var(--pink-main);
-    box-shadow: 0 4px 16px rgba(242,167,184,0.4);
-    flex-shrink: 0;
-  }
-  .profile-text h2 {
     font-size: 18px;
     font-weight: 700;
-    color: var(--charcoal);
-    margin-bottom: 2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
   }
-  .profile-text p {
-    font-size: 12px;
-    color: var(--warm-gray);
-    line-height: 1.6;
+  .hero-color {
+    width: 100%; height: 100%;
   }
-  .bni-badge {
-    margin-left: auto;
-    background: var(--pink-pale);
-    border: 1px solid var(--pink-soft);
-    color: var(--dark-rose);
-    font-size: 11px;
+
+  .card-body {
+    padding: 18px 18px 20px;
+  }
+  .card-company {
+    font-size: 15px;
     font-weight: 700;
-    padding: 5px 12px;
-    border-radius: 20px;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
-  /* BLOCKS */
-  .block {
-    padding: 24px;
-    border-bottom: 1px solid var(--pink-light);
-  }
-  .block-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--pink-deep);
-    margin-bottom: 10px;
-  }
-  .block-text {
-    font-size: 13.5px;
-    line-height: 1.9;
-    color: var(--warm-gray);
-  }
-
-  /* WHY CARDS */
-  .why-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
-    margin-top: 4px;
-  }
-  .why-card {
-    background: var(--pink-pale);
-    border: 1px solid var(--pink-soft);
-    border-radius: 14px;
-    padding: 14px 12px;
-    text-align: center;
-  }
-  .why-card .icon { font-size: 22px; margin-bottom: 6px; }
-  .why-card h5 {
-    font-size: 11px; font-weight: 700;
-    color: var(--dark-rose); margin-bottom: 6px; line-height: 1.4;
-  }
-  .why-card p { font-size: 11px; line-height: 1.6; color: var(--warm-gray); }
-
-  /* DIFF */
-  .diff-list { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
-  .diff-item {
-    display: flex; gap: 14px; align-items: flex-start;
-    background: var(--pink-pale); border-radius: 12px;
-    padding: 14px 16px; border: 1px solid var(--pink-soft);
-  }
-  .diff-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px; color: var(--pink-main);
-    line-height: 1; flex-shrink: 0; font-weight: 300;
-  }
-  .diff-item h5 { font-size: 13px; font-weight: 700; color: var(--charcoal); margin-bottom: 3px; }
-  .diff-item p { font-size: 12px; color: var(--warm-gray); line-height: 1.7; }
-
-  /* REFERRAL */
-  .ref-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
-  .ref-tag {
-    background: var(--pink-pale); border: 1px solid var(--pink-soft);
-    color: var(--dark-rose); font-size: 12px;
-    padding: 7px 14px; border-radius: 20px; line-height: 1.4;
-  }
-
-  /* BNI TIMELINE */
-  .bni-row {
-    display: flex; margin-top: 4px; position: relative;
-  }
-  .bni-row::before {
-    content: '';
-    position: absolute;
-    top: 10px; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--pink-main), var(--pink-soft));
-  }
-  .bni-step {
-    flex: 1; text-align: center;
-    padding-top: 28px; position: relative;
-  }
-  .bni-dot {
-    position: absolute;
-    top: 4px; left: 50%;
-    transform: translateX(-50%);
-    width: 13px; height: 13px;
-    background: var(--pink-main);
-    border-radius: 50%;
-    border: 2px solid white;
-    box-shadow: 0 0 0 2px var(--pink-main);
-  }
-  .bni-dot.active {
-    background: var(--dark-rose);
-    box-shadow: 0 0 0 3px rgba(139,58,82,0.3);
-    width: 15px; height: 15px; top: 3px;
-  }
-  .bni-period { font-size: 11px; font-weight: 700; color: var(--pink-deep); margin-bottom: 3px; }
-  .bni-role { font-size: 10.5px; color: var(--warm-gray); line-height: 1.5; }
-
-  /* QR BLOCK */
-  .qr-block {
-    padding: 24px;
-    border-bottom: 1px solid var(--pink-light);
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background: var(--pink-pale);
-  }
-  .qr-image {
-    width: 100px; height: 100px;
-    border-radius: 12px;
-    border: 2px solid var(--pink-soft);
-    object-fit: contain;
-    background: white;
-    padding: 6px;
-    flex-shrink: 0;
-  }
-  .qr-text h4 {
-    font-size: 14px; font-weight: 700;
-    color: var(--charcoal); margin-bottom: 6px;
-  }
-  .qr-text p {
-    font-size: 12px; color: var(--warm-gray); line-height: 1.7;
-  }
-  .qr-text .qr-url {
-    font-size: 11px; color: var(--rose-gold);
-    margin-top: 6px; word-break: break-all;
-  }
-
-  /* CONTACT */
-  .contact-block {
-    background: linear-gradient(135deg, var(--pink-pale) 0%, var(--cream) 100%);
-    padding: 28px 24px;
-    display: flex; flex-direction: column; gap: 10px;
-  }
-  .contact-block .block-label { margin-bottom: 4px; }
-  .contact-btn {
-    display: flex; align-items: center; justify-content: center;
-    gap: 8px; padding: 14px; border-radius: 14px;
-    font-size: 14px; font-weight: 500;
-    text-decoration: none; font-family: 'Noto Sans KR', sans-serif;
-    transition: all 0.25s; border: none;
-  }
-  .btn-call { background: var(--pink-main); color: white; box-shadow: 0 6px 20px rgba(242,167,184,0.5); }
-  .btn-web { background: white; color: var(--dark-rose); border: 1px solid var(--pink-soft); }
-  .btn-insta { background: var(--charcoal); color: white; }
-  .contact-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(242,167,184,0.4); }
-  .btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-
-  /* FOOTER */
-  .card-footer {
-    background: var(--charcoal); padding: 20px 24px;
-    text-align: center; color: var(--warm-gray);
-    font-size: 11px; line-height: 1.7;
-  }
-  .card-footer span { color: var(--pink-soft); }
-
-  /* MULTILANG */
-  [data-lang] { display: none; }
-  [data-lang].active { display: block; }
-
-  /* ═══ 저장 버튼 섹션 ═══ */
-  .save-sec {
-    background: var(--pink-pale);
-    padding: 20px 24px;
-    border-top: 1px solid var(--pink-light);
-    border-bottom: 1px solid var(--pink-light);
-  }
-  .save-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-  .save-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 14px 16px;
-    border-radius: 14px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    font-family: 'Noto Sans KR', sans-serif;
-    transition: all 0.2s;
-    width: 100%;
-  }
-  .save-btn.btn-primary {
-    background: var(--pink-main);
-    color: white;
-    box-shadow: 0 2px 8px rgba(242,167,184,0.3);
-  }
-  .save-btn.btn-secondary {
-    background: white;
-    color: var(--dark-rose);
-    border: 1px solid var(--pink-soft);
-  }
-  .save-btn:hover {
-    transform: translateY(-2px);
-    filter: brightness(0.96);
-  }
-  .save-btn span { font-size: 18px; }
-
-  /* LIGHTBOX */
-  .lightbox {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.95);
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .lightbox.open { display: flex; }
-  .lightbox-img {
-    max-width: 95vw;
-    max-height: 85vh;
-    object-fit: contain;
-    border-radius: 8px;
-  }
-  .lightbox-close {
-    position: absolute;
-    top: 16px; right: 20px;
-    background: none; border: none;
-    color: white; font-size: 32px;
-    cursor: pointer; line-height: 1;
-  }
-  .lightbox-prev, .lightbox-next {
-    position: absolute;
-    top: 50%; transform: translateY(-50%);
-    background: rgba(255,255,255,0.15);
-    border: none; color: white;
-    font-size: 36px; cursor: pointer;
-    padding: 12px 16px; border-radius: 8px;
-    transition: background 0.2s;
-  }
-  .lightbox-prev:hover, .lightbox-next:hover { background: rgba(255,255,255,0.3); }
-  .lightbox-prev { left: 12px; }
-  .lightbox-next { right: 12px; }
-  .lightbox-counter {
-    margin-top: 14px;
-    color: rgba(255,255,255,0.5);
-    font-size: 13px;
-    font-family: 'Noto Sans KR', sans-serif;
-  }
-
-  /* STAY BEYOND BUSINESS CAROUSEL */
-  .stay-block {
-    border-bottom: 1px solid var(--pink-light);
-    overflow: hidden;
-  }
-  .stay-btn {
-    width: 100%;
-    padding: 20px 24px;
-    background: linear-gradient(135deg, var(--charcoal) 0%, #2a1a1f 100%);
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: all 0.3s;
-  }
-  .stay-btn:hover { filter: brightness(1.2); }
-  .stay-btn-left { text-align: left; }
-  .stay-btn-tag {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    color: var(--pink-main);
+    color: #2d1a5e;
     margin-bottom: 4px;
-    font-family: 'Noto Sans KR', sans-serif;
   }
-  .stay-btn-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    font-style: italic;
-    color: white;
-    line-height: 1.2;
+  .card-role {
+    font-size: 12px;
+    color: #8878aa;
+    margin-bottom: 12px;
+    line-height: 1.5;
   }
-  .stay-chevron {
-    color: var(--pink-soft);
-    font-size: 24px;
-    transition: transform 0.3s;
-  }
-  .stay-btn.open .stay-chevron { transform: rotate(90deg); }
-
-  .carousel-wrap {
-    display: none;
-    position: relative;
-    overflow: hidden;
-    background: black;
-    touch-action: pan-y;
-  }
-  .carousel-wrap.open { display: block; }
-
-  .carousel-track {
-    display: flex;
-    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-  .carousel-slide {
-    min-width: 100%;
-    position: relative;
-  }
-  .carousel-slide img {
-    width: 100%;
-    height: auto;
-    max-height: 600px;
-    object-fit: contain;
-    display: block;
-    background: black;
-    user-select: none;
-    -webkit-user-drag: none;
-  }
-
-  .carousel-dots {
-    position: absolute;
-    bottom: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 6px;
-  }
-  .carousel-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.4);
-    transition: all 0.3s;
-  }
-  .carousel-dot.active {
-    background: white;
-    width: 18px;
-    border-radius: 3px;
-  }
-
-  .carousel-prev, .carousel-next {
-    position: absolute;
-    top: 50%; transform: translateY(-50%);
-    background: rgba(255,255,255,0.2);
-    border: none; color: white;
-    font-size: 28px; cursor: pointer;
-    padding: 10px 14px;
-    border-radius: 6px;
-    backdrop-filter: blur(4px);
-    transition: background 0.2s;
-    z-index: 2;
-  }
-  .carousel-prev:hover, .carousel-next:hover { background: rgba(255,255,255,0.35); }
-  .carousel-prev { left: 10px; }
-  .carousel-next { right: 10px; }
-
-  .lightbox {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.95);
-    z-index: 9999;
+  .card-link {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .lightbox.open { display: flex; }
-  .lightbox-img {
-    max-width: 95vw;
-    max-height: 85vh;
-    object-fit: contain;
-    border-radius: 8px;
-  }
-  .lightbox-close {
-    position: absolute;
-    top: 16px; right: 20px;
-    background: none; border: none;
-    color: white; font-size: 32px;
-    cursor: pointer; line-height: 1;
-  }
-  .lightbox-prev, .lightbox-next {
-    position: absolute;
-    top: 50%; transform: translateY(-50%);
-    background: rgba(255,255,255,0.15);
-    border: none; color: white;
-    font-size: 36px; cursor: pointer;
-    padding: 12px 16px; border-radius: 8px;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6640dd;
+    background: #f0eaff;
+    padding: 6px 14px;
+    border-radius: 20px;
     transition: background 0.2s;
   }
-  .lightbox-prev:hover, .lightbox-next:hover { background: rgba(255,255,255,0.3); }
-  .lightbox-prev { left: 12px; }
-  .lightbox-next { right: 12px; }
-  .lightbox-counter {
-    margin-top: 14px;
-    color: rgba(255,255,255,0.5);
-    font-size: 13px;
-    font-family: 'Noto Sans KR', sans-serif;
+  .member-card:hover .card-link {
+    background: #e0d4ff;
+  }
+  .card-link::after { content: '→'; }
+
+  footer {
+    text-align: center;
+    margin-top: 48px;
+    font-size: 11px;
+    color: #b0a8c8;
+    letter-spacing: 0.05em;
   }
 </style>
 </head>
 <body>
 
-<div class="lang-bar">
-  <button class="lang-btn active" onclick="setLang('ko',this)">한국어</button>
-  <button class="lang-btn" onclick="setLang('en',this)">English</button>
-  <button class="lang-btn" onclick="setLang('ja',this)">日本語</button>
-  <button class="lang-btn" onclick="setLang('zh',this)">中文</button>
+<header>
+  <div class="badge">BNI PIONEER CHAPTER</div>
+  <h1>디지털 명함 디렉토리</h1>
+  <p>멤버를 선택하면 디지털 명함으로 이동합니다</p>
+</header>
+
+<div class="grid">
+
+  <!-- 김지현 -->
+  <a class="member-card" href="./김지현/">
+    <div class="card-hero">
+      <img src="https://i.imgur.com/S6POM8H.jpeg" alt="감성온도">
+      <div class="hero-name">김지현</div>
+    </div>
+    <div class="card-body">
+      <div class="card-company">감성온도</div>
+      <div class="card-role">공간 디렉터 · 숙박 공간 컨설팅<br>BNI Pioneer 8기 부의장</div>
+      <span class="card-link">명함 보기</span>
+    </div>
+  </a>
+
+  <!-- 송승훈 -->
+  <a class="member-card" href="./송승훈/">
+    <div class="card-hero" style="background: linear-gradient(135deg, #1a2a4a 0%, #2d4a7a 100%);">
+      <div class="hero-name">송승훈</div>
+    </div>
+    <div class="card-body">
+      <div class="card-company">T.M / 토마랩</div>
+      <div class="card-role">웹·앱 개발 컨설팅 · 식당 컨설팅<br>BNI Pioneer 5·6기 의장</div>
+      <span class="card-link">명함 보기</span>
+    </div>
+  </a>
+
+  <!-- 이화춘 -->
+  <a class="member-card" href="./이화춘/">
+    <div class="card-hero" style="background: linear-gradient(135deg, #2a4a1a 0%, #4a7a2d 100%);">
+      <div class="hero-name">이화춘</div>
+    </div>
+    <div class="card-body">
+      <div class="card-company">-</div>
+      <div class="card-role">BNI Pioneer 멤버</div>
+      <span class="card-link">명함 보기</span>
+    </div>
+  </a>
+
 </div>
 
-<div class="card">
+<footer>© BNI Pioneer Chapter · Digital Cards by T.M</footer>
 
-  <!-- HERO + LOGO -->
-  <div class="card-hero">
-    <img class="hero-img" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAABIAAAAAQAAAEgAAAABAAKgAgAEAAAAAQAAAtCgAwAEAAAAAQAAA8AAAAAA/+0AOFBob3Rvc2hvcCAzLjAAOEJJTQQEAAAAAAAAOEJJTQQlAAAAAAAQ1B2M2Y8AsgTpgAmY7PhCfv/AABEIA8AC0AMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3ICnAUgpwpBqJRS4oxTEOFLSDFLQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB//9k=" alt="감성온도 공간">
-    <div class="hero-logo">
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAABIAAAAAQAAAEgAAAABAAKgAgAEAAAAAQAAA8GgAwAEAAAAAQAAA8EAAAAA/+0AOFBob3Rvc2hvcCAzLjAAOEJJTQQEAAAAAAAAOEJJTQQlAAAAAAAQ1B2M2Y8AsgTpgAmY7PhCfv/AABEIA8EDwQMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9sAQwACAgICAgIDAgIDBQMDAwUGBQUFBQYIBgYGBgYICggICAgICAoKCgoKCgoKDAwMDAwMDg4ODg4PDw8PDw8PDw8P/9oACAEBAAA/APyAooooA/9k=" alt="감성온도 로고">
-    </div>
-    <div class="hero-label">
-      <div class="category">
-        <span data-lang="ko active">공간 디렉터 · 숙박 컨설턴트</span>
-        <span data-lang="en">Space Director · Accommodation Consultant</span>
-        <span data-lang="ja">スペースディレクター</span>
-        <span data-lang="zh">空间总监 · 住宿顾问</span>
-      </div>
-      <div class="co-name">감성온도</div>
-    </div>
-  </div>
-
-  <!-- PROFILE -->
-  <div class="profile-row">
-    <img class="profile-avatar" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCARXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAABIAAAAAQAAAEgAAAABAAKgAgAEAAAAAQAAAq+gAwAEAAAAAQAAA8AAAAAA/+0AOFBob3Rvc2hvcCAzLjAAOEJJTQQEAAAAAAAAOEJJTQQlAAAAAAAQ1B2M2Y8AsgTpgAmY7PhCfv/AABEIA8ACrwMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD7gA5qYVCKtJ3pUi7ELcGqYcGpHlzVfms3K5aRoI4qUMMVlKxz1p4lNO7sRymjnIqI1GkpI5p/mCrRLQhphFObmmFaYiMimEU8im4piIiPWo2GanusnYrH/gNfI/xp/4KAfBf4WNc6Tpep/8JVrsWYxb2BDwRyDo0ko+UYP8K7j6gcGpquUI80jajSlUnyRPd5ZVhheV87UUscDPSvj/4qf8FJvg58PJrnTfDv2vxVqVv8ALi1Cx2wcdd87YBx/sBvwr4S+Kv7Wfxq+LW9xa/1s6LpUuR9g0rMCgHqrysXcj0yR9BXzDcXM9zK085LyOcsxOST6k1yKtOqnyPzPRlhaVH97Vfun0p8SP2s/jR8UjLaahr39k6bINrWGmD7PGV9GcEvIPoxA9q+Z7m4luJmnnkeWWRizPISSSe5J5JqGiuqMYxVkjzZ1JVHdqyCiiirMwoorU0LQ9Y8Q6hHpuiWUt7cucBIlzgereij1JArNtLc0jFydkZFFfZ3wh/ZPggiiv/AIg3PnzcMLCybCJ6eZKBlt3pGQR3r6w0HwpoHhq1S00XS7eyiQY+SMBj9W6n8TWUqqWx208NOesj4R+E/7LninxksOqeKA2iaU2GAlUm5lH/TOI9P+BMQPrX3L4N+HPhHwJZx2PhzTIIGQYM4QNLIe5aQ/Mc+mcV2QAHQUta1zcVmtaT3CiiiszUKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigCKa4ht0LzSJFGPu7iBk/SuV1n4k/D/QgTqviWwgI/56y5/IZNIaTZ1lLmuD1T4z/CjTCRN4qtHI/54wyS/+gqR+tchd/tKfCSAHy9XubjHSO3spsn6lkUD9aSlHualBxdmeudqO9fP1x+1j8OIzi307WLg
+</body>
+</html>
