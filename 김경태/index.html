@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>김경태 | 늘곁애 상조서비스</title>
+<meta property="og:title" content="김경태 | 늘곁애 상조서비스 지사장">
+<meta property="og:description" content="치솟는 물가에도 가입한 금액으로 100% 행사가 가능해 오르기 전 지금 가입하는 것이 가장 저렴합니다.">
+<meta property="og:image" content="images/og.png">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f8f5f0;
+  --bg2: #f0ebe2;
+  --bg3: #e8e0d0;
+  --gold: #8B6914;
+  --gold2: #b8931f;
+  --gold-light: #d4a843;
+  --gold-dim: rgba(139,105,20,0.08);
+  --gold-border: rgba(139,105,20,0.2);
+  --dark: #1c1409;
+  --dark2: #2d1f08;
+  --muted: #6b5535;
+  --muted2: rgba(28,20,9,0.45);
+  --outline: rgba(139,105,20,0.12);
+}
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+body {
+  background: var(--bg);
+  color: var(--dark);
+  font-family: 'Noto Sans KR', sans-serif;
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* NAV */
+.top-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(248,245,240,0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--outline);
+  padding: 10px 20px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-brand {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 13px; letter-spacing: 0.12em;
+  color: var(--gold); font-weight: 700;
+}
+.lang-buttons { display: flex; gap: 4px; }
+.lang-btn {
+  background: none; border: 1px solid var(--gold-border);
+  color: var(--muted); font-size: 11px; padding: 4px 10px;
+  border-radius: 20px; cursor: pointer; transition: all 0.2s;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.lang-btn.active { background: var(--gold); color: #fff; border-color: var(--gold); font-weight: 700; }
+
+/* HERO */
+.hero {
+  position: relative; height: 420px; overflow: hidden;
+  background: var(--dark2);
+}
+.hero img.hero-img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center top;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,6,2,0.95) 0%, rgba(10,6,2,0.35) 50%, rgba(10,6,2,0.05) 100%);
+}
+.hero-logo {
+  position: absolute; top: 18px; left: 20px;
+}
+.hero-logo img {
+  height: 52px; object-fit: contain;
+}
+.hero-content {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 24px 24px 28px;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(139,105,20,0.25);
+  border: 1px solid rgba(212,168,67,0.4);
+  color: var(--gold-light);
+  font-size: 10px; letter-spacing: 0.2em;
+  padding: 4px 12px; border-radius: 20px;
+  margin-bottom: 10px; text-transform: uppercase;
+}
+.hero-name {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 34px; font-weight: 700;
+  color: #fff; line-height: 1; margin-bottom: 7px;
+}
+.hero-title {
+  font-size: 12px; color: rgba(255,255,255,0.55);
+  letter-spacing: 0.12em;
+}
+
+/* GOLD LINE */
+.gold-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold2), transparent);
+}
+
+/* PROFILE ROW */
+.profile-row {
+  display: flex; align-items: center; gap: 16px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--outline);
+}
+.profile-img {
+  width: 76px; height: 76px; border-radius: 50%;
+  border: 2px solid var(--gold);
+  flex-shrink: 0; overflow: hidden;
+  background: var(--bg3);
+}
+.profile-img img { width: 100%; height: 100%; object-fit: cover; }
+.profile-info { flex: 1; }
+.profile-name { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 3px; }
+.profile-sub { font-size: 12px; color: var(--muted); letter-spacing: 0.02em; line-height: 1.5; }
+
+/* SECTION */
+.section { padding: 24px; border-bottom: 1px solid var(--outline); }
+.sec-label {
+  font-size: 10px; letter-spacing: 0.25em; color: var(--gold);
+  text-transform: uppercase; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 700;
+}
+.sec-label::after { content:''; flex:1; height:1px; background: var(--gold-border); }
+
+/* ABOUT */
+.about-text { font-size: 14px; line-height: 1.9; color: var(--muted); }
+
+/* WHY CARDS */
+.why-list { display: flex; flex-direction: column; gap: 12px; }
+.why-card {
+  background: #fff; border: 1px solid var(--outline);
+  border-radius: 14px; padding: 16px;
+  box-shadow: 0 2px 8px rgba(139,105,20,0.04);
+}
+.why-title {
+  font-size: 13px; font-weight: 700; color: var(--dark);
+  margin-bottom: 6px; display: flex; align-items: center; gap: 8px;
+}
+.why-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+.why-desc { font-size: 12px; color: var(--muted); line-height: 1.8; }
+
+/* DIFF GRID */
+.diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.diff-card {
+  background: #fff; border: 1px solid var(--outline);
+  border-radius: 14px; padding: 14px;
+  box-shadow: 0 2px 6px rgba(139,105,20,0.04);
+}
+.diff-title { font-size: 12px; font-weight: 700; color: var(--dark); margin-bottom: 5px; }
+.diff-desc { font-size: 11px; color: var(--muted); line-height: 1.65; }
+
+/* REFERRAL */
+.referral-list { display: flex; flex-direction: column; gap: 8px; }
+.referral-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 12px 14px;
+  background: var(--gold-dim); border: 1px solid var(--gold-border);
+  border-radius: 12px;
+  font-size: 13px; color: var(--dark); line-height: 1.5;
+}
+.referral-num {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 14px; color: var(--gold);
+  font-weight: 700; flex-shrink: 0; margin-top: 1px;
+}
+
+/* BNI STATS */
+.bni-stats {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+  margin-bottom: 20px;
+}
+.stat-card {
+  background: #fff; border: 1px solid var(--outline);
+  border-radius: 14px; padding: 16px; text-align: center;
+  box-shadow: 0 2px 6px rgba(139,105,20,0.04);
+}
+.stat-num {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 24px; font-weight: 700; color: var(--gold);
+  line-height: 1; margin-bottom: 6px;
+}
+.stat-label { font-size: 10px; color: var(--muted); letter-spacing: 0.02em; line-height: 1.55; }
+
+/* BNI HISTORY */
+.bni-list { display: flex; flex-direction: column; gap: 10px; }
+.bni-item {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding-bottom: 10px; border-bottom: 1px solid var(--outline);
+}
+.bni-item:last-child { border-bottom: none; padding-bottom: 0; }
+.bni-badge {
+  background: var(--gold-dim); border: 1px solid var(--gold-border);
+  color: var(--gold); font-size: 10px; font-weight: 700;
+  padding: 3px 8px; border-radius: 6px; flex-shrink: 0; margin-top: 2px;
+  letter-spacing: 0.05em; white-space: nowrap;
+}
+.bni-title { font-size: 13px; font-weight: 700; color: var(--dark); margin-bottom: 3px; }
+.bni-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+/* CONTACT */
+.contact-list { display: flex; flex-direction: column; }
+.contact-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 13px 0; border-bottom: 1px solid var(--outline);
+  text-decoration: none; color: inherit; transition: all 0.2s;
+}
+.contact-item:last-child { border-bottom: none; }
+.contact-icon-wrap {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: var(--gold-dim); border: 1px solid var(--gold-border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; flex-shrink: 0;
+}
+.contact-type { font-size: 10px; color: var(--muted2); letter-spacing: 0.1em; margin-bottom: 2px; }
+.contact-val { font-size: 13px; color: var(--dark); font-weight: 500; }
+
+/* SLIDE */
+.slide-section { padding: 24px; border-bottom: 1px solid var(--outline); }
+.slide-wrap { position:relative; overflow:hidden; border-radius:16px; }
+.slide-track {
+  display:flex; transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.slide-item {
+  flex-shrink:0; width:100%; aspect-ratio:4/3;
+  background: var(--bg3); border-radius:16px; overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+}
+.slide-item img { width:100%; height:100%; object-fit:cover; }
+.slide-placeholder-wrap {
+  width:100%; height:100%;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;
+}
+.slide-controls {
+  display:flex; justify-content:space-between; align-items:center;
+  margin-top:12px;
+}
+.slide-btn {
+  width:36px; height:36px; border-radius:50%;
+  background: var(--gold-dim); border:1px solid var(--gold-border);
+  color:var(--gold); font-size:18px; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  transition:all 0.2s;
+}
+.slide-btn:hover { background:var(--gold); color:#fff; }
+.slide-dots { display:flex; gap:6px; align-items:center; }
+.slide-dot {
+  width:6px; height:6px; border-radius:50%;
+  background:rgba(139,105,20,0.2); cursor:pointer; transition:all 0.2s;
+}
+.slide-dot.active { background:var(--gold); width:18px; border-radius:3px; }
+
+/* ACTION */
+.action-row { display: flex; gap: 10px; padding: 24px; }
+.btn-primary {
+  flex: 1; background: var(--gold); color: #fff;
+  border: none; border-radius: 30px; padding: 14px;
+  font-size: 13px; font-weight: 700;
+  font-family: 'Noto Sans KR', sans-serif;
+  cursor: pointer; transition: all 0.2s;
+}
+.btn-primary:hover { background: var(--gold2); }
+.btn-secondary {
+  flex: 1; background: none; color: var(--gold);
+  border: 1px solid var(--gold-border); border-radius: 30px; padding: 14px;
+  font-size: 13px; font-weight: 500;
+  font-family: 'Noto Sans KR', sans-serif;
+  cursor: pointer; transition: all 0.2s;
+}
+.btn-secondary:hover { border-color: var(--gold); background: var(--gold-dim); }
+
+/* FOOTER */
+.footer {
+  text-align: center; padding: 28px 24px;
+  border-top: 1px solid var(--gold-border);
+  background: var(--bg2);
+}
+.footer-logo { margin-bottom: 10px; }
+.footer-logo img { height: 40px; object-fit: contain; opacity: 0.7; }
+.footer-name {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 15px; color: var(--gold); font-weight: 700;
+  letter-spacing: 0.08em; margin-bottom: 4px;
+}
+.footer-sub { font-size: 10px; color: var(--muted2); letter-spacing: 0.12em; }
+
+/* LANG */
+[data-lang] { display: none; }
+[data-lang].active { display: block; }
+.hero-name [data-lang] { display: none; }
+.hero-name [data-lang].active { display: block; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="top-nav">
+  <span class="nav-brand">늘곁애 상조</span>
+  <div class="lang-buttons">
+    <button class="lang-btn active" onclick="setLang('kr')">KR</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('jp')">JP</button>
+    <button class="lang-btn" onclick="setLang('cn')">CN</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <img class="hero-img" src="images/hero.jpg" alt="늘곁애 상조서비스">
+  <div class="hero-overlay"></div>
+  <div class="hero-logo">
+    <img src="images/logo.png" alt="늘곁애">
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">BNI 파이오니어 챕터</div>
+    <div class="hero-name">
+      <span data-lang="kr" class="active">김경태</span>
+      <span data-lang="en">Kyung-Tae Kim</span>
+      <span data-lang="jp">キム・ギョンテ</span>
+      <span data-lang="cn">金京台</span>
+    </div>
+    <div class="hero-title">
+      <span data-lang="kr" class="active">지사장 · 늘곁애 상조서비스</span>
+      <span data-lang="en">Branch Director · Neul-Gyeolae Funeral Service</span>
+      <span data-lang="jp">支社長 · 늘곁애 葬儀サービス</span>
+      <span data-lang="cn">支社长 · 늘곁애 殡仪服务</span>
+    </div>
+  </div>
+</div>
+<div class="gold-line"></div>
+
+<!-- PROFILE ROW -->
+<div class="profile-row">
+  <div class="profile-img">
+    <img src="images/profile.png" alt="김경태">
+  </div>
+  <div class="profile-info">
+    <div class="profile-name">
+      <span data-lang="kr" class="active">김경태 지사장</span>
+      <span data-lang="en">Kyung-Tae Kim</span>
+      <span data-lang="jp">キム・ギョンテ 支社長</span>
+      <span data-lang="cn">金京台 支社长</span>
+    </div>
+    <div class="profile-sub">
+      <span data-lang="kr" class="active">늘곁애 상조서비스<br>장례 · 반려동물장례 · 가전제품전환 외</span>
+      <span data-lang="en">Neul-Gyeolae · Funeral · Pet Funeral &amp; More</span>
+      <span data-lang="jp">늘곁애 · 葬儀・ペット葬儀・家電転換 他</span>
+      <span data-lang="cn">늘곁애 · 葬仪·宠物葬仪·家电转换 等</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+  <div class="sec-label">
+    <span data-lang="kr" class="active">소개</span>
+    <span data-lang="en">About</span>
+    <span data-lang="jp">紹介</span>
+    <span data-lang="cn">简介</span>
+  </div>
+  <div data-lang="kr" class="active about-text">치솟는 물가에도 가입한 금액으로 100% 행사가 가능해 오르기 전 지금 가입하는 것이 가장 저렴합니다.</div>
+  <div data-lang="en" class="about-text">Even as prices soar, you receive 100% of the services at the price you enrolled. Joining now is always the best deal.</div>
+  <div data-lang="jp" class="about-text">物価が上がっても、加入時の金額で100%サービスが受けられます。今すぐ加入するのが最もお得です。</div>
+  <div data-lang="cn" class="about-text">即使物价飞涨，也能以入会时的金额享受100%服务。现在加入是最划算的。</div>
+</div>
+
+<!-- WHY -->
+<div class="section">
+  <div class="sec-label">Why 늘곁애</div>
+  <div class="why-list">
+    <div class="why-card">
+      <div class="why-title">
+        <span class="why-dot"></span>
+        <span data-lang="kr" class="active">월 5천원 멤버십</span>
+        <span data-lang="en">₩5,000/Month Membership</span>
+        <span data-lang="jp">月5千ウォン メンバーシップ</span>
+        <span data-lang="cn">月5千韩元会员制</span>
+      </div>
+      <div data-lang="kr" class="active why-desc">카드 제휴 할인 시 매월 5천원으로 상조서비스 가입 가능합니다.</div>
+      <div data-lang="en" class="why-desc">With card partnership discounts, join for just ₩5,000 per month.</div>
+      <div data-lang="jp" class="why-desc">提携カード割引で月わずか5,000ウォンで加入可能です。</div>
+      <div data-lang="cn" class="why-desc">通过联名卡折扣，每月仅需5,000韩元即可加入。</div>
+    </div>
+    <div class="why-card">
+      <div class="why-title">
+        <span class="why-dot"></span>
+        <span data-lang="kr" class="active">장례부터 가전제품 구입까지</span>
+        <span data-lang="en">Funerals to Appliances</span>
+        <span data-lang="jp">葬儀から家電購入まで</span>
+        <span data-lang="cn">从葬仪到家电购买</span>
+      </div>
+      <div data-lang="kr" class="active why-desc">장례, 반려동물장례, 여행, 크루즈, 웨딩, 가전제품 구입까지 인생의 빅 이벤트에 활용하세요.</div>
+      <div data-lang="en" class="why-desc">Use for funerals, pet services, travel, cruises, weddings, and major appliances — all life's big moments.</div>
+      <div data-lang="jp" class="why-desc">葬儀・ペット葬・旅行・クルーズ・ウェディング・家電購入など人生の大イベントにご利用いただけます。</div>
+      <div data-lang="cn" class="why-desc">可用于葬仪、宠物葬仪、旅行、邮轮、婚礼、家电购买等人生大事。</div>
+    </div>
+    <div class="why-card">
+      <div class="why-title">
+        <span class="why-dot"></span>
+        <span data-lang="kr" class="active">사진 인화 서비스</span>
+        <span data-lang="en">Photo Printing Service</span>
+        <span data-lang="jp">写真印刷サービス</span>
+        <span data-lang="cn">照片冲洗服务</span>
+      </div>
+      <div data-lang="kr" class="active why-desc">가족, 영정, 반려가족(선택) 사진 인화 서비스를 제공합니다.</div>
+      <div data-lang="en" class="why-desc">Photo printing for family portraits, memorial photos, and pet photos (optional).</div>
+      <div data-lang="jp" class="why-desc">家族写真・遺影・ペット写真（任意）の印刷サービスを提供します。</div>
+      <div data-lang="cn" class="why-desc">提供家庭照片、遗像、宠物照片（可选）的冲洗服务。</div>
+    </div>
+  </div>
+</div>
+
+<!-- DIFFERENCE -->
+<div class="section">
+  <div class="sec-label">
+    <span data-lang="kr" class="active">차별점</span>
+    <span data-lang="en">Difference</span>
+    <span data-lang="jp">差別化</span>
+    <span data-lang="cn">差异化</span>
+  </div>
+  <div class="diff-grid">
+    <div class="diff-card">
+      <div class="diff-title">
+        <span data-lang="kr" class="active">확정 가격제</span>
+        <span data-lang="en">Fixed Pricing</span>
+        <span data-lang="jp">確定価格制</span>
+        <span data-lang="cn">确定价格制</span>
+      </div>
+      <div data-lang="kr" class="active diff-desc">수십 년이 흘러도 처음 가입한 금액 그대로 서비스를 받을 수 있습니다.</div>
+      <div data-lang="en" class="diff-desc">Receive the same service at your enrollment price, no matter how many years pass.</div>
+      <div data-lang="jp" class="diff-desc">何十年経っても、加入時の金額でサービスが受けられます。</div>
+      <div data-lang="cn" class="diff-desc">无论过多少年，都能以入会时的价格享受服务。</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-title">
+        <span data-lang="kr" class="active">반려동물 특화</span>
+        <span data-lang="en">Pet Specialized</span>
+        <span data-lang="jp">ペット特化</span>
+        <span data-lang="cn">宠物专项</span>
+      </div>
+      <div data-lang="kr" class="active diff-desc">반려동물 장례는 늘곁애가 가장 믿음직합니다.</div>
+      <div data-lang="en" class="diff-desc">For pet funeral services, Neul-Gyeolae is the most trusted choice.</div>
+      <div data-lang="jp" class="diff-desc">ペットの葬儀は늘곁애が最も信頼できます。</div>
+      <div data-lang="cn" class="diff-desc">宠物葬仪，늘곁애最值得信赖。</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-title">
+        <span data-lang="kr" class="active">가전제품 활용</span>
+        <span data-lang="en">Appliance Benefits</span>
+        <span data-lang="jp">家電活用</span>
+        <span data-lang="cn">家电活用</span>
+      </div>
+      <div data-lang="kr" class="active diff-desc">냉장고, 에어컨 등 필수 가전제품 교체 시 멤버십 포인트로 사용하세요.</div>
+      <div data-lang="en" class="diff-desc">Use your membership for fridges, ACs, and other essential appliances.</div>
+      <div data-lang="jp" class="diff-desc">冷蔵庫・エアコンなど家電の交換にメンバーシップを使えます。</div>
+      <div data-lang="cn" class="diff-desc">可用会员积分更换冰箱、空调等必需家电。</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-title">
+        <span data-lang="kr" class="active">대형 사진 인화</span>
+        <span data-lang="en">Large Photo Print</span>
+        <span data-lang="jp">大型写真印刷</span>
+        <span data-lang="cn">大型照片冲洗</span>
+      </div>
+      <div data-lang="kr" class="active diff-desc">김경태와 함께하시면 대형 사진을 무료로 인화해 드립니다.</div>
+      <div data-lang="en" class="diff-desc">Join with Kyung-Tae Kim and get complimentary large-format photo printing.</div>
+      <div data-lang="jp" class="diff-desc">金京台と一緒に加入すると大型写真を無料で印刷いたします。</div>
+      <div data-lang="cn" class="diff-desc">与金京台一起加入，可免费冲洗大型照片。</div>
+    </div>
+  </div>
+</div>
+
+<!-- REFERRAL -->
+<div class="section">
+  <div class="sec-label">
+    <span data-lang="kr" class="active">이런 분을 소개해 주세요</span>
+    <span data-lang="en">Referral Request</span>
+    <span data-lang="jp">ご紹介ください</span>
+    <span data-lang="cn">欢迎介绍</span>
+  </div>
+  <div class="referral-list">
+    <div class="referral-item">
+      <span class="referral-num">01</span>
+      <span data-lang="kr" class="active">반려동물을 키우시는 분</span>
+      <span data-lang="en">Pet owners</span>
+      <span data-lang="jp">ペットを飼っている方</span>
+      <span data-lang="cn">养宠物的人士</span>
+    </div>
+    <div class="referral-item">
+      <span class="referral-num">02</span>
+      <span data-lang="kr" class="active">PET 관련 사업자</span>
+      <span data-lang="en">Pet-related business owners</span>
+      <span data-lang="jp">ペット関連事業者</span>
+      <span data-lang="cn">宠物相关业主</span>
+    </div>
+    <div class="referral-item">
+      <span class="referral-num">03</span>
+      <span data-lang="kr" class="active">영정사진이 필요하신 분</span>
+      <span data-lang="en">Those needing memorial portrait photos</span>
+      <span data-lang="jp">遺影写真が必要な方</span>
+      <span data-lang="cn">需要遗像照片的人士</span>
+    </div>
+    <div class="referral-item">
+      <span class="referral-num">04</span>
+      <span data-lang="kr" class="active">매장에 홍보배너 설치 가능한 사업자</span>
+      <span data-lang="en">Business owners who can install promotional banners</span>
+      <span data-lang="jp">店舗に宣伝バナーを設置できる事業者</span>
+      <span data-lang="cn">可在店铺安装宣传横幅的业主</span>
+    </div>
+  </div>
+</div>
+
+<!-- BNI -->
+<div class="section">
+  <div class="sec-label">
+    <span data-lang="kr" class="active">BNI 파이오니어 챕터</span>
+    <span data-lang="en">BNI Pioneer Chapter</span>
+    <span data-lang="jp">BNI パイオニア チャプター</span>
+    <span data-lang="cn">BNI 先锋分会</span>
+  </div>
+
+  <div class="bni-stats">
+    <div class="stat-card">
+      <div class="stat-num">
+        <span data-lang="kr" class="active">1호</span>
+        <span data-lang="en">No.1</span>
+        <span data-lang="jp">1号</span>
+        <span data-lang="cn">第1号</span>
+      </div>
+      <div class="stat-label">
+        <span data-lang="kr" class="active">파이오니아 챕터<br>기버스게인 멤버</span>
+        <span data-lang="en">Pioneer Chapter<br>Givers Gain Member</span>
+        <span data-lang="jp">パイオニア チャプター<br>ギバーズゲイン メンバー</span>
+        <span data-lang="cn">先锋分会<br>给予者获益会员</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">
+        <span data-lang="kr" class="active">3년</span>
+        <span data-lang="en">3 Yrs</span>
+        <span data-lang="jp">3年</span>
+        <span data-lang="cn">3年</span>
+      </div>
+      <div class="stat-label">
+        <span data-lang="kr" class="active">BNI 멤버십<br>활동 경력</span>
+        <span data-lang="en">BNI Membership<br>Activity Record</span>
+        <span data-lang="jp">BNI メンバーシップ<br>活動経歴</span>
+        <span data-lang="cn">BNI 会员<br>活动经历</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">1,000</div>
+      <div class="stat-label">
+        <span data-lang="kr" class="active">BNI 협업멤버<br>홍보문자 월 발송 건수</span>
+        <span data-lang="en">Monthly BNI<br>Promo Texts Sent</span>
+        <span data-lang="jp">BNI 協業メンバー<br>月間PR SMS送信件数</span>
+        <span data-lang="cn">BNI 协作会员<br>月发送宣传短信数</span>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">
+        <span data-lang="kr" class="active">5천원</span>
+        <span data-lang="en">₩5,000</span>
+        <span data-lang="jp">5千ウォン</span>
+        <span data-lang="cn">5千韩元</span>
+      </div>
+      <div class="stat-label">
+        <span data-lang="kr" class="active">월 늘곁애<br>멤버십 비용</span>
+        <span data-lang="en">Monthly Neul-Gyeolae<br>Membership Fee</span>
+        <span data-lang="jp">月々 늘곁애<br>会員費用</span>
+        <span data-lang="cn">每月 늘곁애<br>会员费用</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="bni-list">
+    <div class="bni-item">
+      <span class="bni-badge">4기</span>
+      <div>
+        <div class="bni-title">
+          <span data-lang="kr" class="active">파이오니어 챕터 멤버</span>
+          <span data-lang="en">Pioneer Chapter Member</span>
+          <span data-lang="jp">パイオニア チャプター メンバー</span>
+          <span data-lang="cn">先锋分会会员</span>
+        </div>
+        <div class="bni-desc">
+          <span data-lang="kr" class="active">첫 기수로 파이오니어 챕터에 합류</span>
+          <span data-lang="en">Joined Pioneer Chapter from the very first cohort</span>
+          <span data-lang="jp">第1期からパイオニア チャプターに参加</span>
+          <span data-lang="cn">首届加入先锋分会</span>
+        </div>
+      </div>
+    </div>
+    <div class="bni-item">
+      <span class="bni-badge">5·6기</span>
+      <div>
+        <div class="bni-title">
+          <span data-lang="kr" class="active">교육 코디네이터</span>
+          <span data-lang="en">Education Coordinator</span>
+          <span data-lang="jp">教育コーディネーター</span>
+          <span data-lang="cn">教育协调员</span>
+        </div>
+        <div class="bni-desc">
+          <span data-lang="kr" class="active">2기 연속 교육 코디네이터 역임</span>
+          <span data-lang="en">Served as Education Coordinator for 2 consecutive terms</span>
+          <span data-lang="jp">2期連続で教育コーディネーターを歴任</span>
+          <span data-lang="cn">连续2届担任教育协调员</span>
+        </div>
+      </div>
+    </div>
+    <div class="bni-item">
+      <span class="bni-badge">7기</span>
+      <div>
+        <div class="bni-title">
+          <span data-lang="kr" class="active">멤버십 위원</span>
+          <span data-lang="en">Membership Committee</span>
+          <span data-lang="jp">メンバーシップ委員</span>
+          <span data-lang="cn">会员委员</span>
+        </div>
+        <div class="bni-desc">
+          <span data-lang="kr" class="active">멤버십 성장 및 관리 담당</span>
+          <span data-lang="en">In charge of membership growth and management</span>
+          <span data-lang="jp">メンバーシップの成長と管理を担当</span>
+          <span data-lang="cn">负责会员成长及管理</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- IMAGE SLIDE (portfolio1~6) -->
+<div class="slide-section">
+  <div class="sec-label">
+    <span data-lang="kr" class="active">서비스 안내</span>
+    <span data-lang="en">Services</span>
+    <span data-lang="jp">サービス紹介</span>
+    <span data-lang="cn">服务介绍</span>
+  </div>
+  <div class="slide-wrap">
+    <div class="slide-track" id="slideTrack">
+      <div class="slide-item"><img src="images/portfolio1.jpg" alt="상조 가입 안내"></div>
+      <div class="slide-item"><img src="images/portfolio2.jpg" alt="멤버십 혜택"></div>
+      <div class="slide-item"><img src="images/portfolio3.jpg" alt="반려동물 장례 서비스"></div>
+      <div class="slide-item"><img src="images/portfolio4.jpg" alt="요양병원 프로모션"></div>
+      <div class="slide-item"><img src="images/portfolio5.jpg" alt="반려가족 사진 서비스"></div>
+      <div class="slide-item"><img src="images/portfolio6.jpg" alt="반려동물 추모"></div>
+    </div>
+  </div>
+  <div class="slide-controls">
+    <button class="slide-btn" onclick="slideMove(-1)">&#8249;</button>
+    <div class="slide-dots" id="slideDots"></div>
+    <button class="slide-btn" onclick="slideMove(1)">&#8250;</button>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="section">
+  <div class="sec-label">
+    <span data-lang="kr" class="active">연락처</span>
+    <span data-lang="en">Contact</span>
+    <span data-lang="jp">連絡先</span>
+    <span data-lang="cn">联系方式</span>
+  </div>
+  <div class="contact-list">
+    <a class="contact-item" href="tel:01044552655">
+      <div class="contact-icon-wrap">📞</div>
+      <div>
+        <div class="contact-type">Phone</div>
+        <div class="contact-val">010-4455-2655</div>
+      </div>
+    </a>
+    <a class="contact-item" href="mailto:momo2655@naver.com">
+      <div class="contact-icon-wrap">✉️</div>
+      <div>
+        <div class="contact-type">Email</div>
+        <div class="contact-val">momo2655@naver.com</div>
+      </div>
+    </a>
+    <a class="contact-item" href="https://www.aidclub.com/index" target="_blank">
+      <div class="contact-icon-wrap">🌐</div>
+      <div>
+        <div class="contact-type">Website</div>
+        <div class="contact-val">aidclub.com</div>
+      </div>
+    </a>
+    <a class="contact-item" href="https://naver.me/5ECpiZJf" target="_blank">
+      <div class="contact-icon-wrap">📝</div>
+      <div>
+        <div class="contact-type">
+          <span data-lang="kr" class="active">회원가입 링크</span>
+          <span data-lang="en">Join Link</span>
+          <span data-lang="jp">会員登録リンク</span>
+          <span data-lang="cn">会员注册链接</span>
+        </div>
+        <div class="contact-val">
+          <span data-lang="kr" class="active">지금 바로 가입하기 →</span>
+          <span data-lang="en">Join Now →</span>
+          <span data-lang="jp">今すぐ登録 →</span>
+          <span data-lang="cn">立即加入 →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- ACTION -->
+<div class="action-row">
+  <button class="btn-primary" onclick="saveContact()">
+    <span data-lang="kr" class="active">📞 연락처 저장</span>
+    <span data-lang="en">📞 Save Contact</span>
+    <span data-lang="jp">📞 連絡先保存</span>
+    <span data-lang="cn">📞 保存联系人</span>
+  </button>
+  <button class="btn-secondary" onclick="window.open('https://jinjjabg-hub.github.io/cardbook/','_blank')">
+    <span data-lang="kr" class="active">🗂️ 명함 저장</span>
+    <span data-lang="en">🗂️ Save Card</span>
+    <span data-lang="jp">🗂️ 名刺保存</span>
+    <span data-lang="cn">🗂️ 保存名片</span>
+  </button>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-logo">
+    <img src="images/logo.png" alt="늘곁애">
+  </div>
+  <div class="footer-name">
+    <span data-lang="kr" class="active">늘곁애 상조서비스</span>
+    <span data-lang="en">Neul-Gyeolae Funeral Service</span>
+    <span data-lang="jp">늘곁애 葬儀サービス</span>
+    <span data-lang="cn">늘곁애 殡仪服务</span>
+  </div>
+  <div class="footer-sub">
+    <span data-lang="kr" class="active">대한민국 1호 상조 · Since 1982</span>
+    <span data-lang="en">Korea's First Funeral Service · Since 1982</span>
+    <span data-lang="jp">韓国初の葬儀会社 · Since 1982</span>
+    <span data-lang="cn">韩国第一家殡仪公司 · Since 1982</span>
+  </div>
+</div>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+  });
+  document.querySelectorAll('.lang-btn').forEach((btn, i) => {
+    btn.classList.toggle('active', ['kr','en','jp','cn'][i] === lang);
+  });
+}
+
+function saveContact() {
+  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:김경태\nORG:늘곁애 상조서비스\nTITLE:지사장\nTEL:010-4455-2655\nEMAIL:momo2655@naver.com\nURL:https://www.aidclub.com/index\nEND:VCARD`;
+  const blob = new Blob([vcard], {type:'text/vcard'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'KimKyungTae_Neulgyeolae.vcf';
+  a.click();
+}
+
+let slideIdx = 0;
+const totalSlides = 6;
+function initSlide() {
+  const dots = document.getElementById('slideDots');
+  for (let i = 0; i < totalSlides; i++) {
+    const d = document.createElement('div');
+    d.className = 'slide-dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => goSlide(i);
+    dots.appendChild(d);
+  }
+}
+function goSlide(idx) {
+  slideIdx = Math.max(0, Math.min(idx, totalSlides - 1));
+  document.getElementById('slideTrack').style.transform = `translateX(-${slideIdx * 100}%)`;
+  document.querySelectorAll('.slide-dot').forEach((d, i) => d.classList.toggle('active', i === slideIdx));
+}
+function slideMove(dir) { goSlide(slideIdx + dir); }
+initSlide();
+</script>
+</body>
+</html>
