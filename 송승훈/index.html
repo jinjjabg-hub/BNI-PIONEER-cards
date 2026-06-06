@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<meta name="description" content="송승훈 | T.M Link 대표 | 디지털 명함 · 웹&앱 개발 전문가">
+<meta name="description" content="송승훈 | T.M 대표 | 디지털 명함 · 웹&앱 개발 전문가">
 <meta property="og:type" content="website">
-<meta property="og:title" content="송승훈 · T.M Link (Transition Makers)">
+<meta property="og:title" content="송승훈 · T.M (Transition Makers)">
 <meta property="og:description" content="걸림돌을 디딤돌로!">
-<meta property="og:image" content="./og_final2.jpg">
+<meta property="og:image" content="./og_final.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<title>송승훈 · T.M Link(Transition Makers)</title>
+<title>송승훈 · T.M (Transition Makers)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
@@ -97,7 +97,7 @@ body.theme-emerald{--dark:#0a2e20;--dark2:#071f16;--dark3:#0e3828;--main:#0a4a3a
 .theme-btn:nth-child(1){background:linear-gradient(135deg,#1a1a1a,#c9a84c);}
 .theme-btn:nth-child(2){background:linear-gradient(135deg,#f5f0e8,#C8102E);}
 .theme-btn:nth-child(3){background:linear-gradient(135deg,#0a7a3a,#00c853);}
-.lang-btns-wrap{display:flex;margin-right:20px;}
+.lang-btns-wrap{display:flex;justify-content:flex-end;}
 .lang-btn{
   padding:7px 13px;font-size:11px;font-weight:600;
   color:rgba(201,168,76,0.6);
@@ -137,6 +137,7 @@ body.theme-ivory .save-section .btn-secondary{border-color:#C8102E;color:#C8102E
 .hero-divider{width:40px;height:1px;background:var(--gold);margin:13px 0;}
 .hero-tagline{font-size:14px;color:rgba(240,234,216,0.82);line-height:1.75;font-weight:300;}
 .hero-tagline em{color:var(--gold);font-style:normal;font-weight:500}
+.hero-vertical-text{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-style:italic;font-size:36px;font-weight:400;color:var(--gold);letter-spacing:.15em;white-space:nowrap;opacity:0.85;writing-mode:vertical-rl;text-shadow:0 2px 20px rgba(0,0,0,0.5);}
 
 /* SECTIONS */
 .section{padding:56px 28px}
@@ -262,13 +263,14 @@ footer{background:var(--dark);padding:40px 28px 100px;text-align:center;border-t
 <section class="hero">
   <img src="./hero.jpg" alt="Song Seung-hun" class="hero-img">
   <div class="hero-overlay"></div>
+  <div class="hero-vertical-text">디지털 명함 시대</div>
   <div class="hero-content">
     <div class="hero-badge">
       <div class="bni-dot"></div>
-      <span class="lang-inline active" data-lang="ko">BNI 파이오니어 챕터 · 앰버서더</span>
-      <span class="lang-inline" data-lang="en">BNI Pioneer Chapter · Ambassador</span>
-      <span class="lang-inline" data-lang="ja">BNI パイオニアチャプター · アンバサダー</span>
-      <span class="lang-inline" data-lang="zh">BNI 先锋分会 · 大使</span>
+      <span class="lang-inline active" data-lang="ko">BNI 자이언츠 챕터 · 앰버서더</span>
+      <span class="lang-inline" data-lang="en">BNI Giants Chapter · Ambassador</span>
+      <span class="lang-inline" data-lang="ja">BNI ジャイアンツチャプター · アンバサダー</span>
+      <span class="lang-inline" data-lang="zh">BNI 巨人分会 · 大使</span>
     </div>
     <div class="hero-name-row">
       <div class="hero-name">
@@ -386,10 +388,10 @@ footer{background:var(--dark);padding:40px 28px 100px;text-align:center;border-t
 <section class="section diff-section">
   <div class="section-label">DIFFERENCE</div>
   <div class="section-title">
-    <span class="lang-inline active" data-lang="ko">왜 T.M Link 인가</span>
-    <span class="lang-inline" data-lang="en">Why T.M Link</span>
-    <span class="lang-inline" data-lang="ja">T.M Link</span>
-    <span class="lang-inline" data-lang="zh">为什么选择T.M Link</span>
+    <span class="lang-inline active" data-lang="ko">왜 송승훈인가</span>
+    <span class="lang-inline" data-lang="en">Why Song Seung-hun</span>
+    <span class="lang-inline" data-lang="ja">なぜソン・スンフンなのか</span>
+    <span class="lang-inline" data-lang="zh">为什么选择宋昇勳</span>
   </div>
   <div class="diff-list">
     <div class="diff-item">
@@ -423,33 +425,37 @@ footer{background:var(--dark);padding:40px 28px 100px;text-align:center;border-t
   </div>
 </section>
 
-<!-- PROFILE -->
+<!-- SERVICE -->
 <section class="section portfolio-section">
-  <div class="section-label">SERVICE</div>
+  <div class="section-label">HISTORY</div>
   <div class="section-title">
-    <span class="lang-inline active" data-lang="ko">T.M 서비스</span>
-    <span class="lang-inline" data-lang="en">T.M Service</span>
-    <span class="lang-inline" data-lang="ja">T.M サービス</span>
-    <span class="lang-inline" data-lang="zh">T.M 服务</span>
+    <span class="lang-inline active" data-lang="ko">이력사항</span>
+    <span class="lang-inline" data-lang="en">Career History</span>
+    <span class="lang-inline" data-lang="ja">経歴事項</span>
+    <span class="lang-inline" data-lang="zh">履历事项</span>
   </div>
   <div class="portfolio-scroll-wrap" id="portfolioWrap">
     <div class="portfolio-scroll-track">
-      <div class="portfolio-slide"><img src="./slide.jpg" alt="Slide" onerror="this.parentElement.style.display='none'"></div>
-      <div class="portfolio-slide"><img src="./slide3.jpg" alt="Slide3" onerror="this.parentElement.style.display='none'"></div>
-      <div class="portfolio-slide"><img src="./slide2.jpg" alt="Slide2" onerror="this.parentElement.style.display='none'"></div>
+      <div class="portfolio-slide"><img src="./slide1.jpg" alt="Slide 1" onerror="this.parentElement.style.display='none'"></div>
+      <div class="portfolio-slide"><img src="./slide01.jpg" alt="Slide 2" onerror="this.parentElement.style.display='none'"></div>
+      <div class="portfolio-slide"><img src="./slide2.png" alt="Slide 3" onerror="this.parentElement.style.display='none'"></div>
+      <div class="portfolio-slide"><img src="./slide3.png" alt="Slide 4" onerror="this.parentElement.style.display='none'"></div>
+      <div class="portfolio-slide"><img src="./hero.jpg" alt="Slide 5" onerror="this.parentElement.style.display='none'"></div>
     </div>
   </div>
   <div class="portfolio-dots" id="portfolioDots">
     <div class="portfolio-dot active" onclick="scrollToSlide(0)"></div>
     <div class="portfolio-dot" onclick="scrollToSlide(1)"></div>
     <div class="portfolio-dot" onclick="scrollToSlide(2)"></div>
+    <div class="portfolio-dot" onclick="scrollToSlide(3)"></div>
+    <div class="portfolio-dot" onclick="scrollToSlide(4)"></div>
   </div>
 </section>
 
 <!-- BNI -->
 <section class="section bni-section">
   <div class="bni-badge-row">
-    <img src="./profile.png" alt="BNI" style="height:44px;width:auto;object-fit:contain;">
+    <img src="./bni_logo.png" alt="BNI" style="height:44px;width:auto;object-fit:contain;">
     <div>
       <div class="section-label" style="margin:0">MEMBER</div>
       <div class="bni-chapter">
@@ -483,10 +489,12 @@ footer{background:var(--dark);padding:40px 28px 100px;text-align:center;border-t
         <span class="lang-inline" data-lang="zh">现任 ⭐</span>
       </div>
       <div class="bni-role bni-current">
-        <span class="lang-inline active" data-lang="ko">앰버서더 · BNI 그린클럽</span>
-        <span class="lang-inline" data-lang="en">Ambassador · BNI Green Club</span>
-        <span class="lang-inline" data-lang="ja">アンバサダー · BNIグリーンクラブ</span>
-        <span class="lang-inline" data-lang="zh">大使 · BNI绿色俱乐部</span>
+        <a href="https://jinjjabg-hub.github.io/T.M-LINK/" target="_blank" style="color:inherit;text-decoration:none;">
+        <span class="lang-inline active" data-lang="ko">자이언츠 챕터 앰버서더 · BNI 그린클럽 ↗</span>
+        <span class="lang-inline" data-lang="en">Giants Chapter Ambassador · BNI Green Club ↗</span>
+        <span class="lang-inline" data-lang="ja">ジャイアンツチャプター アンバサダー · BNIグリーンクラブ ↗</span>
+        <span class="lang-inline" data-lang="zh">巨人分会大使 · BNI绿色俱乐部 ↗</span>
+        </a>
       </div>
     </div>
   </div>
@@ -525,20 +533,20 @@ footer{background:var(--dark);padding:40px 28px 100px;text-align:center;border-t
 
 <!-- 저장 버튼 -->
 <div class="save-section">
-  <button class="save-btn btn-primary" onclick="savePhone({name:'송승훈',company:'T.M (Transition Makers)',title:'대표',phone:'010-5334-2544',email:'jinjjabg@gmail.com'})">
-  <span>📞</span>
-  <span class="lang-inline active" data-lang="ko">전화번호 저장하기</span>
-  <span class="lang-inline" data-lang="en">Save Contact</span>
-  <span class="lang-inline" data-lang="ja">連絡先を保存</span>
-  <span class="lang-inline" data-lang="zh">保存联系人</span>
-</button>
- <button class="save-btn btn-secondary" onclick="saveToCardbook({id:'song_seung_hun',name:'송승훈',nameEn:'Song Seung-hun',company:'T.M (Transition Makers)',title:'대표',phone:'010-5334-2544',email:'jinjjabg@gmail.com',chapter:'파이오니어',bni:'BNI 파이오니어 챕터 앰버서더'})">
-  <span>🗂️</span>
-  <span class="lang-inline active" data-lang="ko">명함 저장하기</span>
-  <span class="lang-inline" data-lang="en">Save to Cardbook</span>
-  <span class="lang-inline" data-lang="ja">名刺帳に保存</span>
-  <span class="lang-inline" data-lang="zh">保存到名片册</span>
-</button>
+  <a href="./송승훈.vcf" download class="save-btn btn-primary">
+    <span>📇</span>
+    <span class="lang-inline active" data-lang="ko">연락처 저장하기</span>
+    <span class="lang-inline" data-lang="en">Save Contact</span>
+    <span class="lang-inline" data-lang="ja">連絡先を保存</span>
+    <span class="lang-inline" data-lang="zh">保存联系人</span>
+  </a>
+  <button class="save-btn btn-secondary" onclick="saveToCardbook()">
+    <span>🗂️</span>
+    <span class="lang-inline active" data-lang="ko">명함첩에 저장</span>
+    <span class="lang-inline" data-lang="en">Save to Cardbook</span>
+    <span class="lang-inline" data-lang="ja">名刺帳に保存</span>
+    <span class="lang-inline" data-lang="zh">保存到名片册</span>
+  </button>
 </div>
 
 <!-- CONNECT -->
@@ -571,6 +579,18 @@ footer{background:var(--dark);padding:40px 28px 100px;text-align:center;border-t
         </div>
       </div>
     </a>
+    <a href="https://jinjjabg-hub.github.io/T.M-LINK/" target="_blank" class="contact-item">
+      <div class="contact-icon">🔗</div>
+      <div class="contact-info">
+        <div class="contact-label">T.M LINK</div>
+        <div class="contact-value">
+          <span class="lang-inline active" data-lang="ko">T.M 링크 페이지</span>
+          <span class="lang-inline" data-lang="en">T.M Link Page</span>
+          <span class="lang-inline" data-lang="ja">T.M リンクページ</span>
+          <span class="lang-inline" data-lang="zh">T.M 链接页面</span>
+        </div>
+      </div>
+    </a>
   </div>
 </section>
 
@@ -590,19 +610,15 @@ footer{background:var(--dark);padding:40px 28px 100px;text-align:center;border-t
     <span class="icon">✉️</span>
     <span class="lang-inline active" data-lang="ko">메일</span><span class="lang-inline" data-lang="en">Mail</span><span class="lang-inline" data-lang="ja">メール</span><span class="lang-inline" data-lang="zh">邮件</span>
   </a>
- <button onclick="savePhone({name:'송승훈',company:'T.M (Transition Makers)',title:'대표',phone:'010-5334-2544',email:'jinjjabg@gmail.com'})" class="float-btn highlight">
-  <span class="icon">📞</span>
-  <span class="lang-inline active" data-lang="ko">전화번호 저장</span>
-  <span class="lang-inline" data-lang="en">Save Contact</span>
-  <span class="lang-inline" data-lang="ja">連絡先を保存</span>
-  <span class="lang-inline" data-lang="zh">保存联系人</span>
-<button onclick="saveToCardbook({id:'song_seung_hun',name:'송승훈',nameEn:'Song Seung-hun',company:'T.M (Transition Makers)',title:'대표',phone:'010-5334-2544',email:'jinjjabg@gmail.com',chapter:'파이오니어',bni:'BNI 파이오니어 챕터 앰버서더'})" class="float-btn">
-  <span class="icon">🗂️</span>
-  <span class="lang-inline active" data-lang="ko">명함 저장</span>
-  <span class="lang-inline" data-lang="en">Save Card</span>
-  <span class="lang-inline" data-lang="ja">名刺を保存</span>
-  <span class="lang-inline" data-lang="zh">保存名片</span>
-</button>
+  <a href="./송승훈.vcf" download class="float-btn highlight">
+    <span class="icon">📇</span>
+    <span class="lang-inline active" data-lang="ko">저장</span><span class="lang-inline" data-lang="en">Save</span><span class="lang-inline" data-lang="ja">保存</span><span class="lang-inline" data-lang="zh">保存</span>
+  </a>
+  <button onclick="saveToCardbook()" class="float-btn">
+    <span class="icon">🗂️</span>
+    <span class="lang-inline active" data-lang="ko">명함첩</span><span class="lang-inline" data-lang="en">Cards</span><span class="lang-inline" data-lang="ja">名刺帳</span><span class="lang-inline" data-lang="zh">名片册</span>
+  </button>
+</div>
 
 <script>
 function setTheme(theme, btn) {
@@ -637,8 +653,26 @@ wrap.addEventListener('scroll',()=>{
   dots.forEach((d,i)=>d.classList.toggle('active',i===idx));
 });
 
-
+function saveToCardbook() {
+  const card = {
+    id:'tm-songseunghun',
+    name:'송승훈', nameEn:'Song Seung-hun',
+    title:'대표', company:'T.M (Transition Makers)',
+    phone:'010-5334-2544', email:'jinjjabg@gmail.com',
+    url:window.location.href, bni:'BNI 파이오니어 챕터 앰버서더',
+    savedAt:new Date().toLocaleDateString('ko-KR')
+  };
+  try {
+    const cards = JSON.parse(localStorage.getItem('bni_cards')||'[]');
+    if(cards.find(c=>c.id===card.id)){
+      if(confirm('✅ 이미 명함첩에 저장되어 있어요!\n명함첩 바로 보기?')) window.location.href='/명함첩.html';
+      return;
+    }
+    cards.push(card);
+    localStorage.setItem('bni_cards',JSON.stringify(cards));
+    if(confirm('✅ 명함첩에 저장되었습니다!\n명함첩 바로 보기?')) window.location.href='/명함첩.html';
+  } catch(e){ alert('저장 완료 ✓'); }
+}
 </script>
-  <script src="https://jinjjabg-hub.github.io/cardbook/save-to-cardbook.js"></script>
 </body>
 </html>
