@@ -655,24 +655,19 @@ wrap.addEventListener('scroll',()=>{
 });
 
 function saveToCardbook() {
-  const card = {
-    id:'tm-songseunghun',
-    name:'송승훈', nameEn:'Song Seung-hun',
-    title:'대표', company:'T.M (Transition Makers)',
-    phone:'010-5334-2544', email:'jinjjabg@gmail.com',
-    url:window.location.href, bni:'BNI 파이오니어 챕터 앰버서더',
-    savedAt:new Date().toLocaleDateString('ko-KR')
-  };
-  try {
-    const cards = JSON.parse(localStorage.getItem('bni_cards')||'[]');
-    if(cards.find(c=>c.id===card.id)){
-      if(confirm('✅ 이미 명함첩에 저장되어 있어요!\n명함첩 바로 보기?')) window.location.href='/명함첩.html';
-      return;
-    }
-    cards.push(card);
-    localStorage.setItem('bni_cards',JSON.stringify(cards));
-    if(confirm('✅ 명함첩에 저장되었습니다!\n명함첩 바로 보기?')) window.location.href='/명함첩.html';
-  } catch(e){ alert('저장 완료 ✓'); }
+  // 카드북으로 파라미터 전달 → 카드북이 자동으로 저장 팝업 표시
+  const params = new URLSearchParams({
+    name:    '송승훈',
+    nameEn:  'Song Seung-hun',
+    title:   '대표',
+    company: 'T.M (Transition Makers)',
+    phone:   '010-5334-2544',
+    email:   'jinjjabg@gmail.com',
+    chapter: '파이오니어',
+    bni:     'BNI 파이오니어 챕터 앰버서더',
+    from:    window.location.href
+  });
+  window.location.href = 'https://jinjjabg-hub.github.io/cardbook/?' + params.toString();
 }
 </script>
 </body>
