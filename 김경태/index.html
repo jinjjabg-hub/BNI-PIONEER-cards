@@ -11,30 +11,163 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #141210;
-  --bg2: #1a1714;
-  --bg3: #221e19;
-  --bg4: #2a2420;
-  --gold: #c9a84c;
-  --gold2: #e8c56a;
-  --gold-light: #f0d080;
-  --gold-dim: rgba(201,168,76,0.08);
-  --gold-border: rgba(201,168,76,0.22);
-  --dark: #f0ead8;
-  --dark2: #0d0b09;
-  --muted: #a89878;
-  --muted2: rgba(240,234,216,0.45);
-  --outline: rgba(201,168,76,0.14);
+  /* 다크 팔레트 */
+  --bg-dark:  #0e0c0a;
+  --bg-dark2: #141109;
+  --bg-dark3: #1c1810;
+  /* 라이트 팔레트 */
+  --bg-light:  #f5eed8;
+  --bg-light2: #ede4c8;
+  --bg-light3: #e4d8b4;
+  /* 골드 */
+  --gold: #d4a843;
+  --gold2: #f0c860;
+  --gold-light: #f8d878;
+  --gold-dim-dark:  rgba(212,168,67,0.1);
+  --gold-dim-light: rgba(160,110,10,0.1);
+  --gold-border-dark:  rgba(212,168,67,0.28);
+  --gold-border-light: rgba(160,110,10,0.25);
+  /* 텍스트 */
+  --text-on-dark:  #f5eed8;
+  --text-on-light: #1c1408;
+  --muted-on-dark:  #b89e6a;
+  --muted-on-light: #6b4e1a;
+  --outline-dark:  rgba(212,168,67,0.16);
+  --outline-light: rgba(160,110,10,0.18);
+  /* 하위 호환 */
+  --bg: #0e0c0a;
+  --bg2: #141109;
+  --bg3: #1c1810;
+  --dark: #f5eed8;
+  --dark2: #080604;
+  --muted: #b89e6a;
+  --muted2: rgba(245,238,216,0.45);
+  --gold-dim: rgba(212,168,67,0.1);
+  --gold-border: rgba(212,168,67,0.28);
+  --outline: rgba(212,168,67,0.16);
 }
 * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 body {
-  background: var(--bg);
-  color: var(--dark);
+  background: var(--bg-dark);
+  color: var(--text-on-dark);
   font-family: 'Noto Sans KR', sans-serif;
   max-width: 430px;
   margin: 0 auto;
   min-height: 100vh;
 }
+
+/* 섹션 교차 배경 */
+.sec-dark {
+  background: var(--bg-dark);
+  border-bottom: 1px solid var(--outline-dark);
+  padding: 24px;
+}
+.sec-dark .sec-label { color: var(--gold); }
+.sec-dark .sec-label::after { background: var(--gold-border-dark); }
+.sec-dark .about-text { color: var(--muted-on-dark); }
+
+.sec-light {
+  background: var(--bg-light);
+  border-bottom: 1px solid var(--outline-light);
+  padding: 24px;
+}
+.sec-light .sec-label { color: #8a5e10; }
+.sec-light .sec-label::after { background: var(--gold-border-light); }
+
+/* WHY 카드 (라이트 섹션) */
+.sec-light .why-card {
+  background: #fff;
+  border: 1px solid var(--gold-border-light);
+  border-radius: 14px; padding: 16px;
+  box-shadow: 0 2px 8px rgba(160,110,10,0.08);
+}
+.sec-light .why-title {
+  font-size: 13px; font-weight: 700; color: var(--text-on-light);
+  margin-bottom: 6px; display: flex; align-items: center; gap: 8px;
+}
+.sec-light .why-dot { background: #8a5e10; }
+.sec-light .why-desc { font-size: 12px; color: var(--muted-on-light); line-height: 1.8; }
+.sec-light .why-desc strong { color: #7a4a08; }
+
+/* DIFF 카드 (다크 섹션) */
+.sec-dark .diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.sec-dark .diff-card {
+  background: var(--bg-dark3);
+  border: 1px solid var(--gold-border-dark);
+  border-radius: 14px; padding: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+.sec-dark .diff-title { font-size: 12px; font-weight: 700; color: var(--text-on-dark); margin-bottom: 5px; }
+.sec-dark .diff-desc { font-size: 11px; color: var(--muted-on-dark); line-height: 1.65; }
+.sec-dark .diff-desc strong { color: var(--gold-light); }
+
+/* REFERRAL (라이트 섹션) */
+.sec-light .referral-list { display: flex; flex-direction: column; gap: 8px; }
+.sec-light .referral-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 12px 14px;
+  background: var(--gold-dim-light);
+  border: 1px solid var(--gold-border-light);
+  border-radius: 12px;
+  font-size: 13px; color: var(--text-on-light); line-height: 1.5;
+}
+.sec-light .referral-num {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 14px; color: #8a5e10;
+  font-weight: 700; flex-shrink: 0; margin-top: 1px;
+}
+
+/* BNI 스탯 (다크 섹션) */
+.sec-dark .bni-stats { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; margin-bottom: 20px; }
+.sec-dark .stat-card {
+  background: var(--bg-dark3); border: 1px solid var(--gold-border-dark);
+  border-radius: 14px; padding: 16px; text-align: center;
+}
+.sec-dark .stat-num {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 24px; font-weight: 700; color: var(--gold);
+  line-height: 1; margin-bottom: 6px;
+}
+.sec-dark .stat-label { font-size: 10px; color: var(--muted-on-dark); line-height: 1.55; }
+.sec-dark .bni-list { display: flex; flex-direction: column; gap: 10px; }
+.sec-dark .bni-item {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding-bottom: 10px; border-bottom: 1px solid var(--outline-dark);
+}
+.sec-dark .bni-item:last-child { border-bottom: none; padding-bottom: 0; }
+.sec-dark .bni-badge {
+  background: var(--gold-dim-dark); border: 1px solid var(--gold-border-dark);
+  color: var(--gold); font-size: 10px; font-weight: 700;
+  padding: 3px 8px; border-radius: 6px; flex-shrink: 0; margin-top: 2px;
+  white-space: nowrap;
+}
+.sec-dark .bni-title { font-size: 13px; font-weight: 700; color: var(--text-on-dark); margin-bottom: 3px; }
+.sec-dark .bni-desc { font-size: 12px; color: var(--muted-on-dark); line-height: 1.6; }
+
+/* 경력 (라이트 섹션) */
+.sec-light .bni-list { display: flex; flex-direction: column; gap: 10px; }
+.sec-light .bni-item {
+  display: flex; gap: 12px; align-items: flex-start;
+  padding-bottom: 10px; border-bottom: 1px solid var(--outline-light);
+}
+.sec-light .bni-item:last-child { border-bottom: none; padding-bottom: 0; }
+.sec-light .bni-badge {
+  background: var(--gold-dim-light); border: 1px solid var(--gold-border-light);
+  color: #8a5e10; font-size: 10px; font-weight: 700;
+  padding: 3px 8px; border-radius: 6px; flex-shrink: 0; margin-top: 2px;
+  white-space: nowrap;
+}
+.sec-light .bni-title { font-size: 13px; font-weight: 700; color: var(--text-on-light); margin-bottom: 3px; }
+.sec-light .bni-desc { font-size: 12px; color: var(--muted-on-light); line-height: 1.6; }
+
+/* SLIDE (다크) */
+.slide-section {
+  padding: 24px;
+  background: var(--bg-dark2);
+  border-bottom: 1px solid var(--outline-dark);
+}
+.slide-section .sec-label { color: var(--gold); }
+.slide-section .sec-label::after { background: var(--gold-border-dark); }
 
 /* NAV */
 .top-nav {
@@ -110,18 +243,19 @@ body {
 .profile-row {
   display: flex; align-items: center; gap: 16px;
   padding: 20px 24px;
-  border-bottom: 1px solid var(--outline);
+  background: var(--bg-dark);
+  border-bottom: 1px solid var(--outline-dark);
 }
 .profile-img {
   width: 76px; height: 76px; border-radius: 50%;
   border: 2px solid var(--gold);
   flex-shrink: 0; overflow: hidden;
-  background: var(--bg3);
+  background: var(--bg-dark3);
 }
 .profile-img img { width: 100%; height: 100%; object-fit: cover; }
 .profile-info { flex: 1; }
-.profile-name { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 3px; }
-.profile-sub { font-size: 12px; color: var(--muted); letter-spacing: 0.02em; line-height: 1.5; }
+.profile-name { font-size: 18px; font-weight: 700; color: var(--text-on-dark); margin-bottom: 3px; }
+.profile-sub { font-size: 12px; color: var(--muted-on-dark); letter-spacing: 0.02em; line-height: 1.5; }
 
 /* SECTION */
 .section { padding: 24px; border-bottom: 1px solid var(--outline); }
@@ -222,32 +356,38 @@ body {
 }
 .career-text { font-size: 13px; color: var(--dark); line-height: 1.5; }
 
-/* CONTACT */
+/* CONTACT (라이트 섹션) */
 .contact-list { display: flex; flex-direction: column; }
 .contact-item {
   display: flex; align-items: center; gap: 14px;
-  padding: 13px 0; border-bottom: 1px solid var(--outline);
+  padding: 13px 0; border-bottom: 1px solid var(--outline-light);
   text-decoration: none; color: inherit; transition: all 0.2s;
 }
 .contact-item:last-child { border-bottom: none; }
 .contact-icon-wrap {
   width: 38px; height: 38px; border-radius: 10px;
-  background: var(--gold-dim); border: 1px solid var(--gold-border);
+  background: var(--gold-dim-light); border: 1px solid var(--gold-border-light);
   display: flex; align-items: center; justify-content: center;
   font-size: 16px; flex-shrink: 0;
 }
-.contact-type { font-size: 10px; color: var(--muted2); letter-spacing: 0.1em; margin-bottom: 2px; }
-.contact-val { font-size: 13px; color: var(--dark); font-weight: 500; }
+.contact-type { font-size: 10px; color: var(--muted-on-light); letter-spacing: 0.1em; margin-bottom: 2px; opacity: 0.7; }
+.contact-val { font-size: 13px; color: var(--text-on-light); font-weight: 500; }
 
 /* SLIDE */
-.slide-section { padding: 24px; border-bottom: 1px solid var(--outline); }
+.slide-section {
+  padding: 24px;
+  background: var(--bg-dark2);
+  border-bottom: 1px solid var(--outline-dark);
+}
+.slide-section .sec-label { color: var(--gold); }
+.slide-section .sec-label::after { background: var(--gold-border-dark); }
 .slide-wrap { position:relative; overflow:hidden; border-radius:16px; }
 .slide-track {
   display:flex; transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
 }
 .slide-item {
   flex-shrink:0; width:100%; aspect-ratio:3/4;
-  background: var(--bg3); border-radius:16px; overflow:hidden;
+  background: var(--bg-dark3); border-radius:16px; overflow:hidden;
   display:flex; align-items:center; justify-content:center;
 }
 .slide-item img { width:100%; height:100%; object-fit:cover; }
@@ -261,23 +401,27 @@ body {
 }
 .slide-btn {
   width:36px; height:36px; border-radius:50%;
-  background: var(--gold-dim); border:1px solid var(--gold-border);
+  background: var(--gold-dim-dark); border:1px solid var(--gold-border-dark);
   color:var(--gold); font-size:18px; cursor:pointer;
   display:flex; align-items:center; justify-content:center;
   transition:all 0.2s;
 }
-.slide-btn:hover { background:var(--gold); color:#fff; }
+.slide-btn:hover { background:var(--gold); color:#1c1810; }
 .slide-dots { display:flex; gap:6px; align-items:center; }
 .slide-dot {
   width:6px; height:6px; border-radius:50%;
-  background:rgba(139,105,20,0.2); cursor:pointer; transition:all 0.2s;
+  background: rgba(212,168,67,0.25); cursor:pointer; transition:all 0.2s;
 }
 .slide-dot.active { background:var(--gold); width:18px; border-radius:3px; }
 
-/* ACTION */
-.action-row { display: flex; gap: 10px; padding: 24px; }
+/* ACTION (다크) */
+.action-row {
+  display: flex; gap: 10px; padding: 24px;
+  background: var(--bg-dark);
+  border-bottom: 1px solid var(--outline-dark);
+}
 .btn-primary {
-  flex: 1; background: var(--gold); color: #fff;
+  flex: 1; background: var(--gold); color: #1c1408;
   border: none; border-radius: 30px; padding: 14px;
   font-size: 13px; font-weight: 700;
   font-family: 'Noto Sans KR', sans-serif;
@@ -286,27 +430,27 @@ body {
 .btn-primary:hover { background: var(--gold2); }
 .btn-secondary {
   flex: 1; background: none; color: var(--gold);
-  border: 1px solid var(--gold-border); border-radius: 30px; padding: 14px;
+  border: 1px solid var(--gold-border-dark); border-radius: 30px; padding: 14px;
   font-size: 13px; font-weight: 500;
   font-family: 'Noto Sans KR', sans-serif;
   cursor: pointer; transition: all 0.2s;
 }
-.btn-secondary:hover { border-color: var(--gold); background: var(--gold-dim); }
+.btn-secondary:hover { border-color: var(--gold); background: var(--gold-dim-dark); }
 
-/* FOOTER */
+/* FOOTER (다크) */
 .footer {
   text-align: center; padding: 28px 24px;
-  border-top: 1px solid var(--gold-border);
-  background: var(--bg2);
+  border-top: 1px solid var(--gold-border-dark);
+  background: var(--bg-dark2);
 }
 .footer-logo { margin-bottom: 10px; }
-.footer-logo img { height: 40px; object-fit: contain; opacity: 0.7; }
+.footer-logo img { height: 40px; object-fit: contain; opacity: 0.6; filter: brightness(1.5); }
 .footer-name {
   font-family: 'Noto Serif KR', serif;
   font-size: 15px; color: var(--gold); font-weight: 700;
   letter-spacing: 0.08em; margin-bottom: 4px;
 }
-.footer-sub { font-size: 10px; color: var(--muted2); letter-spacing: 0.12em; }
+.footer-sub { font-size: 10px; color: var(--muted-on-dark); opacity: 0.6; letter-spacing: 0.12em; }
 
 /* LANG */
 [data-lang] { display: none; }
@@ -375,7 +519,7 @@ body {
 </div>
 
 <!-- ABOUT -->
-<div class="section">
+<div class="sec-dark">
   <div class="sec-label">
     <span data-lang="kr" class="active">소개</span>
     <span data-lang="en">About</span>
@@ -389,7 +533,7 @@ body {
 </div>
 
 <!-- WHY -->
-<div class="section">
+<div class="sec-light">
   <div class="sec-label">Why 늘곁애</div>
   <div class="why-list">
     <div class="why-card">
@@ -435,7 +579,7 @@ body {
 </div>
 
 <!-- DIFFERENCE -->
-<div class="section">
+<div class="sec-dark">
   <div class="sec-label">
     <span data-lang="kr" class="active">차별점</span>
     <span data-lang="en">Difference</span>
@@ -495,7 +639,7 @@ body {
 </div>
 
 <!-- REFERRAL -->
-<div class="section">
+<div class="sec-light">
   <div class="sec-label">
     <span data-lang="kr" class="active">이런 분을 소개해 주세요</span>
     <span data-lang="en">Referral Request</span>
@@ -535,7 +679,7 @@ body {
 </div>
 
 <!-- BNI -->
-<div class="section">
+<div class="sec-dark">
   <div class="sec-label">
     <span data-lang="kr" class="active">BNI 파이오니어 챕터</span>
     <span data-lang="en">BNI Pioneer Chapter</span>
@@ -652,6 +796,69 @@ body {
   </div>
 </div>
 
+<!-- CAREER -->
+<div class="sec-light">
+  <div class="sec-label">
+    <span data-lang="kr" class="active">주요 경력</span>
+    <span data-lang="en">Career</span>
+    <span data-lang="jp">主な経歴</span>
+    <span data-lang="cn">主要经历</span>
+  </div>
+  <div class="bni-list">
+    <div class="bni-item">
+      <span class="bni-badge">8년</span>
+      <div>
+        <div class="bni-title">
+          <span data-lang="kr" class="active">매일유업㈜ 근무</span>
+          <span data-lang="en">Maeil Dairies Co., Ltd.</span>
+          <span data-lang="jp">毎日乳業㈜ 勤務</span>
+          <span data-lang="cn">每日乳业㈜ 任职</span>
+        </div>
+        <div class="bni-desc">
+          <span data-lang="kr" class="active">국내 대표 유업 기업 8년 근무</span>
+          <span data-lang="en">8 years at one of Korea's leading dairy companies</span>
+          <span data-lang="jp">国内大手乳業企業で8年間勤務</span>
+          <span data-lang="cn">韩国知名乳业企业工作8年</span>
+        </div>
+      </div>
+    </div>
+    <div class="bni-item">
+      <span class="bni-badge">10년</span>
+      <div>
+        <div class="bni-title">
+          <span data-lang="kr" class="active">포인 평생교육원 운영</span>
+          <span data-lang="en">POIN Lifelong Education Center</span>
+          <span data-lang="jp">POIN 生涯教育院 運営</span>
+          <span data-lang="cn">POIN 终身教育院 运营</span>
+        </div>
+        <div class="bni-desc">
+          <span data-lang="kr" class="active">평생교육원 10년 운영</span>
+          <span data-lang="en">10 years operating a lifelong education center</span>
+          <span data-lang="jp">生涯教育院を10年間運営</span>
+          <span data-lang="cn">运营终身教育院10年</span>
+        </div>
+      </div>
+    </div>
+    <div class="bni-item">
+      <span class="bni-badge">8년</span>
+      <div>
+        <div class="bni-title">
+          <span data-lang="kr" class="active">뚝딱페이 결제서비스 영업본부장</span>
+          <span data-lang="en">Ddukddak Pay — Sales Director</span>
+          <span data-lang="jp">뚝딱페이 決済サービス 営業本部長</span>
+          <span data-lang="cn">뚝딱페이 支付服务 营业部长</span>
+        </div>
+        <div class="bni-desc">
+          <span data-lang="kr" class="active">결제서비스 영업본부장 8년</span>
+          <span data-lang="en">8 years as Sales Director at a payment service company</span>
+          <span data-lang="jp">決済サービス営業本部長として8年間勤務</span>
+          <span data-lang="cn">担任支付服务营业部长8年</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- IMAGE SLIDE (portfolio1~6) -->
 <div class="slide-section">
   <div class="sec-label">
@@ -678,7 +885,7 @@ body {
 </div>
 
 <!-- CONTACT -->
-<div class="section">
+<div class="sec-light">
   <div class="sec-label">
     <span data-lang="kr" class="active">연락처</span>
     <span data-lang="en">Contact</span>
