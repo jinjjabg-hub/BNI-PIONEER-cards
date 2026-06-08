@@ -11,19 +11,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #f8f5f0;
-  --bg2: #f0ebe2;
-  --bg3: #e8e0d0;
-  --gold: #8B6914;
-  --gold2: #b8931f;
-  --gold-light: #d4a843;
-  --gold-dim: rgba(139,105,20,0.08);
-  --gold-border: rgba(139,105,20,0.2);
-  --dark: #1c1409;
-  --dark2: #2d1f08;
-  --muted: #6b5535;
-  --muted2: rgba(28,20,9,0.45);
-  --outline: rgba(139,105,20,0.12);
+  --bg: #141210;
+  --bg2: #1a1714;
+  --bg3: #221e19;
+  --bg4: #2a2420;
+  --gold: #c9a84c;
+  --gold2: #e8c56a;
+  --gold-light: #f0d080;
+  --gold-dim: rgba(201,168,76,0.08);
+  --gold-border: rgba(201,168,76,0.22);
+  --dark: #f0ead8;
+  --dark2: #0d0b09;
+  --muted: #a89878;
+  --muted2: rgba(240,234,216,0.45);
+  --outline: rgba(201,168,76,0.14);
 }
 * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 body {
@@ -38,7 +39,7 @@ body {
 /* NAV */
 .top-nav {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(248,245,240,0.95);
+  background: rgba(20,18,16,0.96);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--outline);
   padding: 10px 20px;
@@ -138,9 +139,9 @@ body {
 /* WHY CARDS */
 .why-list { display: flex; flex-direction: column; gap: 12px; }
 .why-card {
-  background: #fff; border: 1px solid var(--outline);
+  background: var(--bg3); border: 1px solid var(--outline);
   border-radius: 14px; padding: 16px;
-  box-shadow: 0 2px 8px rgba(139,105,20,0.04);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 .why-title {
   font-size: 13px; font-weight: 700; color: var(--dark);
@@ -152,9 +153,9 @@ body {
 /* DIFF GRID */
 .diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .diff-card {
-  background: #fff; border: 1px solid var(--outline);
+  background: var(--bg3); border: 1px solid var(--outline);
   border-radius: 14px; padding: 14px;
-  box-shadow: 0 2px 6px rgba(139,105,20,0.04);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 .diff-title { font-size: 12px; font-weight: 700; color: var(--dark); margin-bottom: 5px; }
 .diff-desc { font-size: 11px; color: var(--muted); line-height: 1.65; }
@@ -180,9 +181,9 @@ body {
   margin-bottom: 20px;
 }
 .stat-card {
-  background: #fff; border: 1px solid var(--outline);
+  background: var(--bg3); border: 1px solid var(--outline);
   border-radius: 14px; padding: 16px; text-align: center;
-  box-shadow: 0 2px 6px rgba(139,105,20,0.04);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 .stat-num {
   font-family: 'Noto Serif KR', serif;
@@ -206,6 +207,20 @@ body {
 }
 .bni-title { font-size: 13px; font-weight: 700; color: var(--dark); margin-bottom: 3px; }
 .bni-desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+/* CAREER */
+.career-list { display: flex; flex-direction: column; gap: 8px; }
+.career-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 14px;
+  background: var(--bg3); border: 1px solid var(--outline);
+  border-radius: 12px;
+}
+.career-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--gold); flex-shrink: 0;
+}
+.career-text { font-size: 13px; color: var(--dark); line-height: 1.5; }
 
 /* CONTACT */
 .contact-list { display: flex; flex-direction: column; }
@@ -329,10 +344,10 @@ body {
       <span data-lang="cn">金京台</span>
     </div>
     <div class="hero-title">
-      <span data-lang="kr" class="active">지사장 · 늘곁애 상조서비스</span>
-      <span data-lang="en">Branch Director · Neul-Gyeolae Funeral Service</span>
-      <span data-lang="jp">支社長 · 늘곁애 葬儀サービス</span>
-      <span data-lang="cn">支社长 · 늘곁애 殡仪服务</span>
+      <span data-lang="kr" class="active">위드유 지사장 · 늘곁애 라이프온㈜</span>
+      <span data-lang="en">WithYou Director · Neul-Gyeolae LifeOn</span>
+      <span data-lang="jp">ウィズユー 支社長 · 늘곁애 ライフオン</span>
+      <span data-lang="cn">WithYou 支社长 · 늘곁애 LifeOn</span>
     </div>
   </div>
 </div>
@@ -345,16 +360,16 @@ body {
   </div>
   <div class="profile-info">
     <div class="profile-name">
-      <span data-lang="kr" class="active">김경태 지사장</span>
-      <span data-lang="en">Kyung-Tae Kim</span>
-      <span data-lang="jp">キム・ギョンテ 支社長</span>
-      <span data-lang="cn">金京台 支社长</span>
+      <span data-lang="kr" class="active">김경태 / 위드유 지사장</span>
+      <span data-lang="en">Kyung-Tae Kim / WithYou Director</span>
+      <span data-lang="jp">キム・ギョンテ / ウィズユー 支社長</span>
+      <span data-lang="cn">金京台 / WithYou 支社长</span>
     </div>
     <div class="profile-sub">
-      <span data-lang="kr" class="active">늘곁애 상조서비스<br>장례 · 반려동물장례 · 가전제품전환 외</span>
-      <span data-lang="en">Neul-Gyeolae · Funeral · Pet Funeral &amp; More</span>
-      <span data-lang="jp">늘곁애 · 葬儀・ペット葬儀・家電転換 他</span>
-      <span data-lang="cn">늘곁애 · 葬仪·宠物葬仪·家电转换 等</span>
+      <span data-lang="kr" class="active">늘곁애 라이프온㈜<br>장례 · 반려동물장례 · 가전제품전환 외</span>
+      <span data-lang="en">Neul-Gyeolae LifeOn · Funeral · Pet Funeral &amp; More</span>
+      <span data-lang="jp">늘곁애 ライフオン · 葬儀・ペット葬儀・家電転換 他</span>
+      <span data-lang="cn">늘곁애 LifeOn · 葬仪·宠物葬仪·家电转换 等</span>
     </div>
   </div>
 </div>
@@ -367,10 +382,10 @@ body {
     <span data-lang="jp">紹介</span>
     <span data-lang="cn">简介</span>
   </div>
-  <div data-lang="kr" class="active about-text">치솟는 물가에도 가입한 금액으로 100% 행사가 가능해 오르기 전 지금 가입하는 것이 가장 저렴합니다.</div>
-  <div data-lang="en" class="about-text">Even as prices soar, you receive 100% of the services at the price you enrolled. Joining now is always the best deal.</div>
-  <div data-lang="jp" class="about-text">物価が上がっても、加入時の金額で100%サービスが受けられます。今すぐ加入するのが最もお得です。</div>
-  <div data-lang="cn" class="about-text">即使物价飞涨，也能以入会时的金额享受100%服务。现在加入是最划算的。</div>
+  <div data-lang="kr" class="active about-text">늘곁애 멤버십은 치솟는 물가에도 가입한 금액으로 100% 행사가 가능해 오르기 전 지금 가입하는 것이 가장 저렴합니다.</div>
+  <div data-lang="en" class="about-text">Neul-Gyeolae Membership guarantees 100% service at your enrollment price, even as prices soar. Joining now is always the best deal.</div>
+  <div data-lang="jp" class="about-text">늘곁애メンバーシップは物価が上がっても加入時の金額で100%サービスが受けられます。今すぐ加入するのが最もお得です。</div>
+  <div data-lang="cn" class="about-text">늘곁애会员制即使物价飞涨，也能以入会时的金额享受100%服务。现在加入是最划算的。</div>
 </div>
 
 <!-- WHY -->
@@ -385,23 +400,23 @@ body {
         <span data-lang="jp">月5千ウォン メンバーシップ</span>
         <span data-lang="cn">月5千韩元会员制</span>
       </div>
-      <div data-lang="kr" class="active why-desc">카드 제휴 할인 시 매월 5천원으로 상조서비스 가입 가능합니다.</div>
-      <div data-lang="en" class="why-desc">With card partnership discounts, join for just ₩5,000 per month.</div>
-      <div data-lang="jp" class="why-desc">提携カード割引で月わずか5,000ウォンで加入可能です。</div>
-      <div data-lang="cn" class="why-desc">通过联名卡折扣，每月仅需5,000韩元即可加入。</div>
+      <div data-lang="kr" class="active why-desc">카드제휴 할인시 매월 5천원으로 <strong>모든 멤버십 서비스 이용이 가능</strong>합니다.</div>
+      <div data-lang="en" class="why-desc">With card partnership discounts, <strong>all membership services are available</strong> for just ₩5,000 per month.</div>
+      <div data-lang="jp" class="why-desc">提携カード割引で月わずか5,000ウォンで<strong>すべての会員サービスが利用可能</strong>です。</div>
+      <div data-lang="cn" class="why-desc">通过联名卡折扣，每月仅需5,000韩元即可<strong>使用所有会员服务</strong>。</div>
     </div>
     <div class="why-card">
       <div class="why-title">
         <span class="why-dot"></span>
-        <span data-lang="kr" class="active">장례부터 가전제품 구입까지</span>
-        <span data-lang="en">Funerals to Appliances</span>
-        <span data-lang="jp">葬儀から家電購入まで</span>
-        <span data-lang="cn">从葬仪到家电购买</span>
+        <span data-lang="kr" class="active">장례부터 가전제품 구입까지 다양한 사용처</span>
+        <span data-lang="en">From Funerals to Appliances</span>
+        <span data-lang="jp">葬儀から家電購入まで多様な用途</span>
+        <span data-lang="cn">从葬仪到家电的多种用途</span>
       </div>
-      <div data-lang="kr" class="active why-desc">장례, 반려동물장례, 여행, 크루즈, 웨딩, 가전제품 구입까지 인생의 빅 이벤트에 활용하세요.</div>
-      <div data-lang="en" class="why-desc">Use for funerals, pet services, travel, cruises, weddings, and major appliances — all life's big moments.</div>
-      <div data-lang="jp" class="why-desc">葬儀・ペット葬・旅行・クルーズ・ウェディング・家電購入など人生の大イベントにご利用いただけます。</div>
-      <div data-lang="cn" class="why-desc">可用于葬仪、宠物葬仪、旅行、邮轮、婚礼、家电购买等人生大事。</div>
+      <div data-lang="kr" class="active why-desc">장례, 반려동물장례, 여행, 크루즈, 웨딩, 가전제품 구입까지 <strong>인생의 중요한 순간에 사용이 가능</strong>합니다.</div>
+      <div data-lang="en" class="why-desc">Funerals, pet services, travel, cruises, weddings, appliances — <strong>available for all of life's important moments</strong>.</div>
+      <div data-lang="jp" class="why-desc">葬儀・ペット葬・旅行・クルーズ・ウェディング・家電購入まで<strong>人生の大切な瞬間にご利用いただけます</strong>。</div>
+      <div data-lang="cn" class="why-desc">葬仪、宠物葬仪、旅行、邮轮、婚礼、家电购买，<strong>可用于人生重要时刻</strong>。</div>
     </div>
     <div class="why-card">
       <div class="why-title">
@@ -411,10 +426,10 @@ body {
         <span data-lang="jp">写真印刷サービス</span>
         <span data-lang="cn">照片冲洗服务</span>
       </div>
-      <div data-lang="kr" class="active why-desc">가족, 영정, 반려가족(선택) 사진 인화 서비스를 제공합니다.</div>
-      <div data-lang="en" class="why-desc">Photo printing for family portraits, memorial photos, and pet photos (optional).</div>
-      <div data-lang="jp" class="why-desc">家族写真・遺影・ペット写真（任意）の印刷サービスを提供します。</div>
-      <div data-lang="cn" class="why-desc">提供家庭照片、遗像、宠物照片（可选）的冲洗服务。</div>
+      <div data-lang="kr" class="active why-desc">이 페이지 하단 <strong>'지금 바로 가입하기'</strong>를 클릭해서 가입하시는 회원님께는 특별히 가족, 영정, 반려가족(선택) 사진 인화 서비스를 제공합니다.</div>
+      <div data-lang="en" class="why-desc">Members who join via <strong>'Join Now'</strong> at the bottom of this page receive special family, memorial, and pet photo printing services.</div>
+      <div data-lang="jp" class="why-desc">このページ下部の<strong>「今すぐ登録」</strong>からご加入の会員様には、特別に家族・遺影・ペット写真の印刷サービスを提供します。</div>
+      <div data-lang="cn" class="why-desc">通过本页面底部<strong>「立即加入」</strong>注册的会员，将特别提供家庭、遗像、宠物照片冲洗服务。</div>
     </div>
   </div>
 </div>
@@ -435,10 +450,10 @@ body {
         <span data-lang="jp">確定価格制</span>
         <span data-lang="cn">确定价格制</span>
       </div>
-      <div data-lang="kr" class="active diff-desc">수십 년이 흘러도 처음 가입한 금액 그대로 서비스를 받을 수 있습니다.</div>
-      <div data-lang="en" class="diff-desc">Receive the same service at your enrollment price, no matter how many years pass.</div>
-      <div data-lang="jp" class="diff-desc">何十年経っても、加入時の金額でサービスが受けられます。</div>
-      <div data-lang="cn" class="diff-desc">无论过多少年，都能以入会时的价格享受服务。</div>
+      <div data-lang="kr" class="active diff-desc">가입 후 수십 년이 흘러도 처음 가입한 금액 그대로 서비스를 받을 수 있습니다.</div>
+      <div data-lang="en" class="diff-desc">After joining, receive the same service at your enrollment price, no matter how many years pass.</div>
+      <div data-lang="jp" class="diff-desc">加入後、何十年経っても加入時の金額でサービスが受けられます。</div>
+      <div data-lang="cn" class="diff-desc">加入后，无论过多少年，都能以入会时的价格享受服务。</div>
     </div>
     <div class="diff-card">
       <div class="diff-title">
@@ -447,10 +462,10 @@ body {
         <span data-lang="jp">ペット特化</span>
         <span data-lang="cn">宠物专项</span>
       </div>
-      <div data-lang="kr" class="active diff-desc">반려동물 장례는 늘곁애가 가장 믿음직합니다.</div>
-      <div data-lang="en" class="diff-desc">For pet funeral services, Neul-Gyeolae is the most trusted choice.</div>
-      <div data-lang="jp" class="diff-desc">ペットの葬儀は늘곁애が最も信頼できます。</div>
-      <div data-lang="cn" class="diff-desc">宠物葬仪，늘곁애最值得信赖。</div>
+      <div data-lang="kr" class="active diff-desc">반려동물 장례는 늘곁애가 좋습니다.</div>
+      <div data-lang="en" class="diff-desc">For pet funeral services, Neul-Gyeolae is the best choice.</div>
+      <div data-lang="jp" class="diff-desc">ペットの葬儀は늘곁애がおすすめです。</div>
+      <div data-lang="cn" class="diff-desc">宠物葬仪，늘곁애是最佳选择。</div>
     </div>
     <div class="diff-card">
       <div class="diff-title">
@@ -459,10 +474,10 @@ body {
         <span data-lang="jp">家電活用</span>
         <span data-lang="cn">家电活用</span>
       </div>
-      <div data-lang="kr" class="active diff-desc">냉장고, 에어컨 등 필수 가전제품 교체 시 멤버십 포인트로 사용하세요.</div>
-      <div data-lang="en" class="diff-desc">Use your membership for fridges, ACs, and other essential appliances.</div>
-      <div data-lang="jp" class="diff-desc">冷蔵庫・エアコンなど家電の交換にメンバーシップを使えます。</div>
-      <div data-lang="cn" class="diff-desc">可用会员积分更换冰箱、空调等必需家电。</div>
+      <div data-lang="kr" class="active diff-desc">필수가전제품 냉장고, 에어컨 바꿀 때 사용할 수 있습니다.</div>
+      <div data-lang="en" class="diff-desc">Use your membership when replacing essential appliances like fridges and ACs.</div>
+      <div data-lang="jp" class="diff-desc">冷蔵庫・エアコンなど必須家電の買い替えに使えます。</div>
+      <div data-lang="cn" class="diff-desc">可在更换冰箱、空调等必需家电时使用。</div>
     </div>
     <div class="diff-card">
       <div class="diff-title">
@@ -471,10 +486,10 @@ body {
         <span data-lang="jp">大型写真印刷</span>
         <span data-lang="cn">大型照片冲洗</span>
       </div>
-      <div data-lang="kr" class="active diff-desc">김경태와 함께하시면 대형 사진을 무료로 인화해 드립니다.</div>
-      <div data-lang="en" class="diff-desc">Join with Kyung-Tae Kim and get complimentary large-format photo printing.</div>
-      <div data-lang="jp" class="diff-desc">金京台と一緒に加入すると大型写真を無料で印刷いたします。</div>
-      <div data-lang="cn" class="diff-desc">与金京台一起加入，可免费冲洗大型照片。</div>
+      <div data-lang="kr" class="active diff-desc">이 페이지 하단 <strong>'지금 바로 가입하기'</strong>를 클릭해서 가입하시는 회원님께는 특별히 대형 사진을 인화해 드립니다.</div>
+      <div data-lang="en" class="diff-desc">Members who join via <strong>'Join Now'</strong> at the bottom receive complimentary large-format photo printing.</div>
+      <div data-lang="jp" class="diff-desc">このページ下部の<strong>「今すぐ登録」</strong>からご加入の会員様には特別に大型写真を印刷いたします。</div>
+      <div data-lang="cn" class="diff-desc">通过本页面底部<strong>「立即加入」</strong>注册的会员，将特别获赠大型照片冲洗服务。</div>
     </div>
   </div>
 </div>
@@ -490,31 +505,31 @@ body {
   <div class="referral-list">
     <div class="referral-item">
       <span class="referral-num">01</span>
-      <span data-lang="kr" class="active">반려동물을 키우시는 분</span>
+      <span data-lang="kr" class="active">반려동물 키우시는 분</span>
       <span data-lang="en">Pet owners</span>
       <span data-lang="jp">ペットを飼っている方</span>
       <span data-lang="cn">养宠物的人士</span>
     </div>
     <div class="referral-item">
       <span class="referral-num">02</span>
-      <span data-lang="kr" class="active">PET 관련 사업자</span>
-      <span data-lang="en">Pet-related business owners</span>
-      <span data-lang="jp">ペット関連事業者</span>
-      <span data-lang="cn">宠物相关业主</span>
+      <span data-lang="kr" class="active">동물병원 등 펫 관련 사업하시는 분</span>
+      <span data-lang="en">Pet-related business owners (vet clinics, etc.)</span>
+      <span data-lang="jp">動物病院などペット関連事業者</span>
+      <span data-lang="cn">动物医院等宠物相关业主</span>
     </div>
     <div class="referral-item">
       <span class="referral-num">03</span>
-      <span data-lang="kr" class="active">영정사진이 필요하신 분</span>
+      <span data-lang="kr" class="active">영정사진 필요하신 분</span>
       <span data-lang="en">Those needing memorial portrait photos</span>
       <span data-lang="jp">遺影写真が必要な方</span>
       <span data-lang="cn">需要遗像照片的人士</span>
     </div>
     <div class="referral-item">
       <span class="referral-num">04</span>
-      <span data-lang="kr" class="active">매장에 홍보배너 설치 가능한 사업자</span>
-      <span data-lang="en">Business owners who can install promotional banners</span>
-      <span data-lang="jp">店舗に宣伝バナーを設置できる事業者</span>
-      <span data-lang="cn">可在店铺安装宣传横幅的业主</span>
+      <span data-lang="kr" class="active">매장에 홍보배너 설치 가능한 점주님</span>
+      <span data-lang="en">Store owners who can install promotional banners</span>
+      <span data-lang="jp">店舗に宣伝バナーを設置できる店主様</span>
+      <span data-lang="cn">可在店铺安装宣传横幅的店主</span>
     </div>
   </div>
 </div>
