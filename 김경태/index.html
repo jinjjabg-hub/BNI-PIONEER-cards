@@ -945,7 +945,7 @@ body {
     <span data-lang="jp">📞 連絡先保存</span>
     <span data-lang="cn">📞 保存联系人</span>
   </button>
-  <button class="btn-secondary" onclick="window.open('https://jinjjabg-hub.github.io/cardbook/','_blank')">
+  <button class="btn-secondary" onclick="saveToCardbook()">
     <span data-lang="kr" class="active">🗂️ 명함 저장</span>
     <span data-lang="en">🗂️ Save Card</span>
     <span data-lang="jp">🗂️ 名刺保存</span>
@@ -973,6 +973,21 @@ body {
 </div>
 
 <script>
+function saveToCardbook() {
+  const params = new URLSearchParams({
+    name:    '김경태',
+    nameEn:  'Kyung-Tae Kim',
+    title:   '위드유 지사장',
+    company: '늘곁애 라이프온㈜',
+    phone:   '010-4455-2655',
+    email:   'momo2655@naver.com',
+    chapter: '파이오니어',
+    bni:     'BNI 파이오니어 챕터',
+    from:    window.location.href
+  });
+  window.location.href = 'https://jinjjabg-hub.github.io/cardbook/?' + params.toString();
+}
+
 function setLang(lang) {
   document.querySelectorAll('[data-lang]').forEach(el => {
     el.classList.toggle('active', el.getAttribute('data-lang') === lang);
