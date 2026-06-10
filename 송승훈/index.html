@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<meta name="description" content="송승훈 | T.M LINK 대표 | 디지털 명함 · 웹&앱 개발 전문가">
+<meta name="description" content="송승훈 | T.M 대표 | 디지털 명함 · 웹&앱 개발 전문가">
 <meta property="og:type" content="website">
-<meta property="og:title" content="송승훈 · T.M LINK(Transition Makers)">
+<meta property="og:title" content="송승훈 · T.M (Transition Makers)">
 <meta property="og:description" content="걸림돌을 디딤돌로!">
-<meta property="og:image" content="./og-image.jpg">
+<meta property="og:image" content="./og_final.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<title>송승훈 · T.M LINK(Transition Makers)</title>
+<title>송승훈 · T.M (Transition Makers)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
@@ -67,7 +67,6 @@ body.theme-ivory .contact-icon{background:rgba(200,16,46,0.15);}
 body.theme-ivory .contact-item{border-color:rgba(200,16,46,0.2);}
 body.theme-ivory .contact-item:hover{border-color:#C8102E;background:rgba(200,16,46,0.1);}
 /* 아이보리 테마: 밝은 섹션은 배경 고정 + 텍스트 어둡게 */
-  
 body.theme-ivory .about-section,
 body.theme-ivory .diff-section,
 body.theme-ivory .referral-section{background:#f5f0e8;}
@@ -93,21 +92,22 @@ body.theme-emerald{--dark:#0a2e20;--dark2:#071f16;--dark3:#0e3828;--main:#0a4a3a
 /* LANG BAR */
 .lang-bar{position:fixed;top:0;left:50%;transform:translateX(-50%);width:430px;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);display:flex;justify-content:space-between;align-items:center;z-index:200;border-bottom:1px solid rgba(186,153,99,0.25);padding:0 4px 0 40px;}
 .theme-btns{display:flex;gap:5px;flex-shrink:0;padding:6px 0;}
-.theme-btn{width:20px;height:20px;border-radius:50%;border:1px solid rgba(255,255,255,0.3);cursor:pointer;transition:all .3s;flex-shrink:0;}
+.theme-btn{width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);cursor:pointer;transition:all .3s;flex-shrink:0;}
 .theme-btn.active{border-color:#fff;transform:scale(1.2);}
 .theme-btn:nth-child(1){background:linear-gradient(135deg,#1a1a1a,#c9a84c);}
 .theme-btn:nth-child(2){background:linear-gradient(135deg,#f5f0e8,#C8102E);}
 .theme-btn:nth-child(3){background:linear-gradient(135deg,#0a7a3a,#00c853);}
-.lang-btns-wrap{display:flex;justify-content:flex-end;}
+.lang-btns-wrap{display:flex;justify-content:center;flex-wrap:nowrap;gap:4px;padding:0 12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.lang-btns-wrap::-webkit-scrollbar{display:none;}
 .lang-btn{
-  padding:7px 13px;font-size:11px;font-weight:600;
+  padding:6px 10px;font-size:11px;font-weight:600;
   color:rgba(201,168,76,0.6);
   background:rgba(201,168,76,0.08);
   border:1px solid rgba(201,168,76,0.3);
   border-radius:6px;
-  cursor:pointer;transition:all .25s;letter-spacing:.05em;
+  cursor:pointer;transition:all .25s;letter-spacing:.03em;
   font-family:'Noto Sans KR',sans-serif;min-height:34px;
-  margin:5px 3px;
+  margin:5px 0;flex-shrink:0;
 }
 .lang-btn.active{
   background:var(--gold);color:#1a1209;
@@ -124,7 +124,7 @@ body.theme-ivory .save-section .btn-primary{background:#C8102E;color:#fff;}
 body.theme-ivory .save-section .btn-secondary{border-color:#C8102E;color:#C8102E;}
 /* HERO */
 .hero{position:relative;height:100vh;min-height:600px;overflow:hidden;padding-top:44px;}
-.hero-img{width:100%;height:100%;object-fit:cover;object-position:60% 40%;position:absolute;top:0;left:0;}
+.hero-img{width:100%;height:100%;object-fit:contain;object-position:center top;position:absolute;top:0;left:0;background:#0a0a0a;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,0.1) 0%,rgba(10,10,10,0.3) 40%,rgba(10,10,10,0.85) 72%,rgba(10,10,10,0.97) 100%);}
 .hero-content{position:absolute;bottom:0;left:0;right:0;padding:36px 28px 52px;}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(186,153,99,0.12);border:1px solid rgba(186,153,99,0.35);border-radius:20px;padding:5px 14px;margin-bottom:18px;}
@@ -437,10 +437,10 @@ footer{background:var(--dark);padding:40px 28px 100px;text-align:center;border-t
   </div>
   <div class="portfolio-scroll-wrap" id="portfolioWrap">
     <div class="portfolio-scroll-track">
-      <div class="portfolio-slide"><img src="./slide.jpg" alt="Slide" onerror="this.parentElement.style.display='none'"></div>
-      <div class="portfolio-slide"><img src="./slide2.jpg" alt="Slide 2" onerror="this.parentElement.style.display='none'"></div>
-      <div class="portfolio-slide"><img src="./slide3.jpg" alt="Slide 3" onerror="this.parentElement.style.display='none'"></div>
-      <div class="portfolio-slide"><img src="./slide1.png" alt="Slide 1" onerror="this.parentElement.style.display='none'"></div>
+      <div class="portfolio-slide"><img src="./slide1.jpg" alt="Slide 1" onerror="this.parentElement.style.display='none'"></div>
+      <div class="portfolio-slide"><img src="./slide01.jpg" alt="Slide 2" onerror="this.parentElement.style.display='none'"></div>
+      <div class="portfolio-slide"><img src="./slide2.png" alt="Slide 3" onerror="this.parentElement.style.display='none'"></div>
+      <div class="portfolio-slide"><img src="./slide3.png" alt="Slide 4" onerror="this.parentElement.style.display='none'"></div>
       <div class="portfolio-slide"><img src="./hero.jpg" alt="Slide 5" onerror="this.parentElement.style.display='none'"></div>
     </div>
   </div>
@@ -456,7 +456,7 @@ footer{background:var(--dark);padding:40px 28px 100px;text-align:center;border-t
 <!-- BNI -->
 <section class="section bni-section">
   <div class="bni-badge-row">
-    <img src="./profile.png" alt="BNI" style="height:44px;width:auto;object-fit:contain;">
+    <img src="./bni_logo.png" alt="BNI" style="height:44px;width:auto;object-fit:contain;">
     <div>
       <div class="section-label" style="margin:0">MEMBER</div>
       <div class="bni-chapter">
@@ -585,11 +585,33 @@ footer{background:var(--dark);padding:40px 28px 100px;text-align:center;border-t
       <div class="contact-info">
         <div class="contact-label">T.M LINK</div>
         <div class="contact-value">
-          <span class="lang-inline active" data-lang="ko">T.M LINK 홈페이지</span>
+          <span class="lang-inline active" data-lang="ko">T.M 링크 페이지</span>
           <span class="lang-inline" data-lang="en">T.M Link Page</span>
           <span class="lang-inline" data-lang="ja">T.M リンクページ</span>
           <span class="lang-inline" data-lang="zh">T.M 链接页面</span>
         </div>
+      </div>
+    </a>
+    <a href="https://www.instagram.com/t.m_link/" target="_blank" class="contact-item">
+      <div class="contact-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#ig-grad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <defs>
+            <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#f09433"/>
+              <stop offset="25%" stop-color="#e6683c"/>
+              <stop offset="50%" stop-color="#dc2743"/>
+              <stop offset="75%" stop-color="#cc2366"/>
+              <stop offset="100%" stop-color="#bc1888"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4.5"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="url(#ig-grad)" stroke="none"/>
+        </svg>
+      </div>
+      <div class="contact-info">
+        <div class="contact-label">INSTAGRAM</div>
+        <div class="contact-value">@t.m_link</div>
       </div>
     </a>
   </div>
@@ -655,19 +677,24 @@ wrap.addEventListener('scroll',()=>{
 });
 
 function saveToCardbook() {
-  // 카드북으로 파라미터 전달 → 카드북이 자동으로 저장 팝업 표시
-  const params = new URLSearchParams({
-    name:    '송승훈',
-    nameEn:  'Song Seung-hun',
-    title:   '대표',
-    company: 'T.M (Transition Makers)',
-    phone:   '010-5334-2544',
-    email:   'jinjjabg@gmail.com',
-    chapter: '파이오니어',
-    bni:     'BNI 파이오니어 챕터 앰버서더',
-    from:    window.location.href
-  });
-  window.location.href = 'https://jinjjabg-hub.github.io/cardbook/?' + params.toString();
+  const card = {
+    id:'tm-songseunghun',
+    name:'송승훈', nameEn:'Song Seung-hun',
+    title:'대표', company:'T.M (Transition Makers)',
+    phone:'010-5334-2544', email:'jinjjabg@gmail.com',
+    url:window.location.href, bni:'BNI 파이오니어 챕터 앰버서더',
+    savedAt:new Date().toLocaleDateString('ko-KR')
+  };
+  try {
+    const cards = JSON.parse(localStorage.getItem('bni_cards')||'[]');
+    if(cards.find(c=>c.id===card.id)){
+      if(confirm('✅ 이미 명함첩에 저장되어 있어요!\n명함첩 바로 보기?')) window.location.href='/명함첩.html';
+      return;
+    }
+    cards.push(card);
+    localStorage.setItem('bni_cards',JSON.stringify(cards));
+    if(confirm('✅ 명함첩에 저장되었습니다!\n명함첩 바로 보기?')) window.location.href='/명함첩.html';
+  } catch(e){ alert('저장 완료 ✓'); }
 }
 </script>
 </body>
