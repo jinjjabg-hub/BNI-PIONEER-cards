@@ -90,17 +90,17 @@ body.theme-ivory .referral-tag:hover{background:rgba(200,16,46,0.08);color:#1a1a
 body.theme-emerald{--dark:#0a2e20;--dark2:#071f16;--dark3:#0e3828;--main:#0a4a3a;--main-light:#0e6050;--gold:#c9a84c;--gold-light:#e0c06a;--cream:#f0ead8;--cream2:#e5ddc8;}
 
 /* LANG BAR */
-.lang-bar{position:fixed;top:0;left:50%;transform:translateX(-50%);width:430px;background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);display:flex;justify-content:space-between;align-items:center;z-index:200;border-bottom:1px solid rgba(186,153,99,0.25);padding:0 4px 0 40px;}
+.lang-bar{position:fixed;top:0;left:50%;transform:translateX(-50%);width:min(430px,100vw);background:rgba(10,10,10,0.95);backdrop-filter:blur(12px);display:flex;justify-content:space-between;align-items:center;z-index:200;border-bottom:1px solid rgba(186,153,99,0.25);padding:0 6px;}
 .theme-btns{display:flex;gap:5px;flex-shrink:0;padding:6px 0;}
 .theme-btn{width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,0.3);cursor:pointer;transition:all .3s;flex-shrink:0;}
 .theme-btn.active{border-color:#fff;transform:scale(1.2);}
 .theme-btn:nth-child(1){background:linear-gradient(135deg,#1a1a1a,#c9a84c);}
 .theme-btn:nth-child(2){background:linear-gradient(135deg,#f5f0e8,#C8102E);}
 .theme-btn:nth-child(3){background:linear-gradient(135deg,#0a7a3a,#00c853);}
-.lang-btns-wrap{display:flex;justify-content:center;flex-wrap:nowrap;gap:4px;padding:0 12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.lang-btns-wrap{display:flex;justify-content:center;flex-wrap:nowrap;gap:3px;padding:0 4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
 .lang-btns-wrap::-webkit-scrollbar{display:none;}
 .lang-btn{
-  padding:6px 10px;font-size:11px;font-weight:600;
+  padding:5px 7px;font-size:11px;font-weight:600;
   color:rgba(201,168,76,0.6);
   background:rgba(201,168,76,0.08);
   border:1px solid rgba(201,168,76,0.3);
@@ -124,7 +124,7 @@ body.theme-ivory .save-section .btn-primary{background:#C8102E;color:#fff;}
 body.theme-ivory .save-section .btn-secondary{border-color:#C8102E;color:#C8102E;}
 /* HERO */
 .hero{position:relative;height:100vh;min-height:600px;overflow:hidden;padding-top:44px;}
-.hero-img{width:100%;height:100%;object-fit:contain;object-position:center top;position:absolute;top:0;left:0;background:#0a0a0a;}
+.hero-img{width:100%;height:100%;object-fit:cover;object-position:center top;position:absolute;top:0;left:0;background:#0a0a0a;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,10,10,0.1) 0%,rgba(10,10,10,0.3) 40%,rgba(10,10,10,0.85) 72%,rgba(10,10,10,0.97) 100%);}
 .hero-content{position:absolute;bottom:0;left:0;right:0;padding:36px 28px 52px;}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(186,153,99,0.12);border:1px solid rgba(186,153,99,0.35);border-radius:20px;padding:5px 14px;margin-bottom:18px;}
@@ -437,11 +437,10 @@ footer{background:var(--dark);padding:40px 28px 100px;text-align:center;border-t
   </div>
   <div class="portfolio-scroll-wrap" id="portfolioWrap">
     <div class="portfolio-scroll-track">
-      <div class="portfolio-slide"><img src="./slide1.jpg" alt="Slide 1" onerror="this.parentElement.style.display='none'"></div>
-      <div class="portfolio-slide"><img src="./slide01.jpg" alt="Slide 2" onerror="this.parentElement.style.display='none'"></div>
-      <div class="portfolio-slide"><img src="./slide2.png" alt="Slide 3" onerror="this.parentElement.style.display='none'"></div>
-      <div class="portfolio-slide"><img src="./slide3.png" alt="Slide 4" onerror="this.parentElement.style.display='none'"></div>
-      <div class="portfolio-slide"><img src="./hero.jpg" alt="Slide 5" onerror="this.parentElement.style.display='none'"></div>
+      <div class="portfolio-slide"><img src="./slide.jpg" alt="Slide 1" onerror="this.parentElement.style.display='none'"></div>
+      <div class="portfolio-slide"><img src="./slide2.jpg" alt="Slide 2" onerror="this.parentElement.style.display='none'"></div>
+      <div class="portfolio-slide"><img src="./slide3.jpg" alt="Slide 3" onerror="this.parentElement.style.display='none'"></div>
+      <div class="portfolio-slide"><img src="./hero.jpg" alt="Slide 4" onerror="this.parentElement.style.display='none'"></div>
     </div>
   </div>
   <div class="portfolio-dots" id="portfolioDots">
@@ -449,7 +448,6 @@ footer{background:var(--dark);padding:40px 28px 100px;text-align:center;border-t
     <div class="portfolio-dot" onclick="scrollToSlide(1)"></div>
     <div class="portfolio-dot" onclick="scrollToSlide(2)"></div>
     <div class="portfolio-dot" onclick="scrollToSlide(3)"></div>
-    <div class="portfolio-dot" onclick="scrollToSlide(4)"></div>
   </div>
 </section>
 
