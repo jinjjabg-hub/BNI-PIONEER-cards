@@ -211,8 +211,10 @@ section { padding: 36px 18px; }
 .car-desc { font-size: 0.74rem; color: var(--muted-light); line-height: 1.5; }
 
 /* PORTFOLIO 3열 */
-.port-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
-.port-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 6px; display: block; }
+.port-grid { display: flex; flex-direction: column; gap: 8px; }
+.port-row { display: grid; gap: 8px; }
+.port-row-2 { grid-template-columns: 1fr 1fr; }
+.port-img { width: 100%; display: block; border-radius: 8px; background: #111; }
 
 /* CONTACT */
 .con-list { display: flex; flex-direction: column; gap: 10px; }
@@ -481,9 +483,16 @@ div[data-lang].active { display: block !important; }
   <div class="sec-label"><span data-lang="kr" class="active">포트폴리오</span><span data-lang="en">Portfolio</span><span data-lang="jp">ポートフォリオ</span><span data-lang="cn">作品集</span></div>
   <div class="sec-title"><span data-lang="kr" class="active">PM 건강 솔루션</span><span data-lang="en">PM Health Solutions</span><span data-lang="jp">PM健康ソリューション</span><span data-lang="cn">PM健康解决方案</span></div>
   <div class="port-grid">
-    <img src="portfolio1.jpg" alt="포트폴리오 1" class="port-img">
-    <img src="portfolio2.jpg" alt="포트폴리오 2" class="port-img">
-    <img src="portfolio3.jpg" alt="포트폴리오 3" class="port-img">
+    <!-- 가로형 2장 나란히 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <img src="portfolio1.jpg" alt="포트폴리오 1" class="port-img">
+      <img src="portfolio2.jpg" alt="포트폴리오 2" class="port-img">
+    </div>
+    <!-- 세로형 2장 나란히 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <img src="portfolio.jpg" alt="포트폴리오 3" class="port-img">
+      <img src="portfolio3.jpg" alt="포트폴리오 4" class="port-img">
+    </div>
   </div>
 </section>
 
