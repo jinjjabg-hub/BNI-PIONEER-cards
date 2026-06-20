@@ -253,6 +253,9 @@ footer{background:var(--dark);padding:40px 28px 100px;text-align:center;border-t
     <div class="theme-btn" onclick="setTheme('emerald',this)" title="에메랄드+골드"></div>
   </div>
   <div class="lang-btns-wrap">
+    <button class="btn btn-blue" onclick="shareCard()">
+  📤 <span data-lang="kr" class="active">명함 공유하기</span><span data-lang="en">Share Card</span><span data-lang="jp">名刺を共有</span><span data-lang="cn">分享名片</span>
+</button>
     <button class="lang-btn active" onclick="setLang('ko')">한국어</button>
     <button class="lang-btn" onclick="setLang('en')">English</button>
     <button class="lang-btn" onclick="setLang('ja')">日本語</button>
@@ -693,6 +696,19 @@ function saveToCardbook() {
     localStorage.setItem('bni_cards',JSON.stringify(cards));
     if(confirm('✅ 명함첩에 저장되었습니다!\n명함첩 바로 보기?')) window.location.href='/명함첩.html';
   } catch(e){ alert('저장 완료 ✓'); }
+}
+function shareCard() {
+  if (navigator.share) {
+    navigator.share({
+      title: document.title,
+      text: document.querySelector('meta[property="og:description"]')?.content || '',
+      url: window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      alert('링크가 복사되었습니다!');
+    });
+  }
 }
 </script>
 </body>
