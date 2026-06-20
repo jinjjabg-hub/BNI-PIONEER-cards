@@ -127,9 +127,6 @@ body{font-family:'P',sans-serif;font-weight:400;background:var(--bg);color:var(-
 </style></head><body>
 
 <div class="lang-bar">
-<button class="btn btn-blue" onclick="shareCard()">
-  📤 <span data-lang="kr" class="active">명함 공유하기</span><span data-lang="en">Share Card</span><span data-lang="jp">名刺を共有</span><span data-lang="cn">分享名片</span>
-</button>
 <button class="lb on" onclick="setLang('ko',this)">한국어</button><button class="lb" onclick="setLang('en',this)">EN</button><button class="lb" onclick="setLang('ja',this)">日本語</button><button class="lb" onclick="setLang('zh',this)">中文</button>
 </div>
 
@@ -282,18 +279,5 @@ function saveContact() {
 
 
 </script>
-<script src="https://jinjjabg-hub.github.io/cardbook/save-to-cardbook.js">function shareCard() {
-  if (navigator.share) {
-    navigator.share({
-      title: document.title,
-      text: document.querySelector('meta[property="og:description"]')?.content || '',
-      url: window.location.href
-    });
-  } else {
-    navigator.clipboard.writeText(window.location.href).then(() => {
-      alert('링크가 복사되었습니다!');
-    });
-  }
-}
-</script>
+<script src="https://jinjjabg-hub.github.io/cardbook/save-to-cardbook.js"></script>
 </body></html>
