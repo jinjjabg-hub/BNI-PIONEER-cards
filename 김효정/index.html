@@ -211,10 +211,28 @@ section { padding: 36px 18px; }
 .car-desc { font-size: 0.74rem; color: var(--muted-light); line-height: 1.5; }
 
 /* PORTFOLIO 3열 */
-.port-grid { display: flex; flex-direction: column; gap: 8px; }
-.port-row { display: grid; gap: 8px; }
-.port-row-2 { grid-template-columns: 1fr 1fr; }
-.port-img { width: 100%; display: block; border-radius: 8px; background: #111; }
+/* 슬라이드 */
+.slide-wrap { position: relative; overflow: hidden; border-radius: 10px; background:#111; }
+.slide-track { display: flex; transition: transform 0.35s ease; }
+.slide-item { min-width: 100%; }
+.slide-item img { width: 100%; display: block; aspect-ratio: 16/9; object-fit: cover; }
+.slide-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(0,0,0,0.55); color: #fff; border: none;
+  width: 36px; height: 36px; border-radius: 50%; font-size: 1rem;
+  cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center;
+}
+.slide-btn-l { left: 8px; }
+.slide-btn-r { right: 8px; }
+.slide-dots { display: flex; justify-content: center; gap: 6px; margin-top: 10px; }
+.slide-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: rgba(201,162,39,0.3); cursor: pointer; transition: all 0.2s;
+}
+.slide-dot.active { background: var(--gold); width: 18px; border-radius: 3px; }
+/* 경력 이미지 */
+.career-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
+.career-img { width: 100%; display: block; border-radius: 8px; object-fit: cover; }
 
 /* CONTACT */
 .con-list { display: flex; flex-direction: column; gap: 10px; }
@@ -343,18 +361,13 @@ div[data-lang].active { display: block !important; }
   <div class="why-cards">
     <div class="why-card">
       <div class="why-num"><span data-lang="kr" class="active">이유 01</span><span data-lang="en">WHY 01</span><span data-lang="jp">理由 01</span><span data-lang="cn">理由 01</span></div>
-      <div class="why-title"><span data-lang="kr" class="active">세포 건강이 인생을 바꾼다</span><span data-lang="en">Cell Health Changes Life</span><span data-lang="jp">細胞の健康が人生を変える</span><span data-lang="cn">细胞健康改变人生</span></div>
-      <div class="why-desc"><span data-lang="kr" class="active">건강한 세포가 건강한 인생을 만든다고 믿기에, <strong>독보적인 기술력</strong>으로 개발된 독일PM 건강 솔루션으로 삶의 질 향상을 돕습니다.</span><span data-lang="en">Believing healthy cells create a healthy life, I help improve your quality of life through <strong>PM's unique technology</strong>.</span><span data-lang="jp">健康な細胞が健康な人生を作ると信じ、<strong>独自技術</strong>のドイツPMで生活の質向上を支援。</span><span data-lang="cn">相信健康细胞创造健康人生，通过<strong>独特技术</strong>的德国PM健康方案提升生活品质。</span></div>
+      <div class="why-title"><span data-lang="kr" class="active">세포 건강을 통한 근본적인 삶의 변화</span><span data-lang="en">Fundamental Life Change Through Cell Health</span><span data-lang="jp">細胞の健康による根本的な人生の変化</span><span data-lang="cn">通过细胞健康实现人生根本改变</span></div>
+      <div class="why-desc"><span data-lang="kr" class="active">건강한 세포가 건강한 인생을 만든다는 확신으로, 독일 PM의 독보적인 기술력을 통해 맞춤형 웰니스를 설계합니다.</span><span data-lang="en">With the conviction that healthy cells create a healthy life, I design personalized wellness through <strong>Germany PM's unrivaled technology</strong>.</span><span data-lang="jp">健康な細胞が健康な人生を作るという確信で、ドイツPMの<strong>独自技術</strong>でウェルネスを設計します。</span><span data-lang="cn">坚信健康细胞造就健康人生，通过德国PM的<strong>独特技术</strong>量身定制健康方案。</span></div>
     </div>
     <div class="why-card">
       <div class="why-num"><span data-lang="kr" class="active">이유 02</span><span data-lang="en">WHY 02</span><span data-lang="jp">理由 02</span><span data-lang="cn">理由 02</span></div>
-      <div class="why-title"><span data-lang="kr" class="active">세계가 인정한 품질</span><span data-lang="en">World-Recognized Quality</span><span data-lang="jp">世界が認めた品質</span><span data-lang="cn">世界认可的品质</span></div>
-      <div class="why-desc"><span data-lang="kr" class="active">전 제품 <strong>최고의 품질·안전성 검증</strong>. 세계 TOP 운동선수들이 선택한 올인원 영양주스.</span><span data-lang="en"><strong>Highest quality & safety verified</strong> products chosen by world-class athletes.</span><span data-lang="jp">全製品<strong>最高品質・安全性検証済</strong>。世界トップアスリートが選ぶオールインワン栄養ジュース。</span><span data-lang="cn">全产品<strong>最高品质·安全认证</strong>，世界顶级运动员的选择。</span></div>
-    </div>
-    <div class="why-card">
-      <div class="why-num"><span data-lang="kr" class="active">이유 03</span><span data-lang="en">WHY 03</span><span data-lang="jp">理由 03</span><span data-lang="cn">理由 03</span></div>
-      <div class="why-title"><span data-lang="kr" class="active">세포까지 전달되는 영양소</span><span data-lang="en">Nutrients Delivered to Cells</span><span data-lang="jp">細胞まで届く栄養素</span><span data-lang="cn">营养素直达细胞</span></div>
-      <div class="why-desc"><span data-lang="kr" class="active">특허받은 <strong>NTC 영양전달 컨셉</strong>으로 조직에서 세포까지 정확하게 필요한 영양소를 전달합니다.</span><span data-lang="en">Patented <strong>NTC Nutrient Transfer Concept</strong> delivers nutrients precisely from tissue to cell.</span><span data-lang="jp">特許<strong>NTC栄養伝達コンセプト</strong>で組織から細胞まで正確に届けます。</span><span data-lang="cn">专利<strong>NTC营养传递技术</strong>从组织到细胞精准输送。</span></div>
+      <div class="why-title"><span data-lang="kr" class="active">전 세계 탑클래스 선수들의 선택</span><span data-lang="en">Chosen by World Top-Class Athletes</span><span data-lang="jp">世界トップクラス選手たちの選択</span><span data-lang="cn">全球顶级运动员的选择</span></div>
+      <div class="why-desc"><span data-lang="kr" class="active">전 제품 독일 쾰른 리스트(Cologne List®) 등재로 도핑 걱정 제로! 올림픽 메달리스트들이 경기 중에도 안전하게 섭취하는 검증된 프리미엄 올인원 영양주스입니다.</span><span data-lang="en">All products on Germany's <strong>Cologne List®</strong> — zero doping concerns! A verified premium all-in-one nutritional juice safely used by Olympic medalists even during competition.</span><span data-lang="jp">全製品が<strong>ケルンリスト(Cologne List®)登録</strong>でドーピング心配ゼロ！オリンピックメダリストも試合中に安全に摂取できる検証済みジュース。</span><span data-lang="cn">所有产品均列入<strong>科隆列表(Cologne List®)</strong>，零兴奋剂顾虑！奥运奖牌得主在比赛中也能安全饮用的认证全能营养果汁。</span></div>
     </div>
   </div>
 </section>
@@ -398,19 +411,19 @@ div[data-lang].active { display: block !important; }
   <div class="ref-list">
     <div class="ref-item">
       <div class="ref-num">1</div>
-      <div class="ref-text"><span data-lang="kr" class="active">기존 건강보조식품과 <strong>차별성 있는 제품</strong>을 찾는 분</span><span data-lang="en">Those seeking health supplements <strong>different from before</strong></span><span data-lang="jp">今までと<strong>違うサプリ</strong>をお探しの方</span><span data-lang="cn">寻找<strong>差异化产品</strong>的朋友</span></div>
+      <div class="ref-text"><span data-lang="kr" class="active">기존 건강보조식품과 차별화된 확실한 제품을 원하시는 분</span><span data-lang="en">Those who want a <strong>clearly differentiated product</strong> from conventional supplements</span><span data-lang="jp">既存のサプリメントと<strong>明確に差別化された製品</strong>をお求めの方</span><span data-lang="cn">希望找到与普通保健品<strong>明显差异化产品</strong>的朋友</span></div>
     </div>
     <div class="ref-item">
       <div class="ref-num">2</div>
-      <div class="ref-text"><span data-lang="kr" class="active">사업 권유 없이 <strong>제품만 순수하게</strong> 드시고 싶은 분</span><span data-lang="en">Those who want to <strong>just use the product</strong> without business pressure</span><span data-lang="jp">勧誘なく<strong>製品だけ</strong>使いたい方</span><span data-lang="cn">只想<strong>单纯使用产品</strong>的朋友</span></div>
+      <div class="ref-text"><span data-lang="kr" class="active">사업 권유나 복잡한 절차 없이, 오직 제품의 가치와 순수한 섭취에만 집중하고 싶으신 분</span><span data-lang="en">Those who want to focus <strong>only on the product's value</strong>, without business pressure or complicated procedures</span><span data-lang="jp">勧誘や複雑な手続きなしに、<strong>製品の価値と純粋な摂取だけ</strong>に集中したい方</span><span data-lang="cn">只想专注于<strong>产品价值和纯粹使用</strong>，无需业务劝诱或复杂手续的朋友</span></div>
     </div>
     <div class="ref-item">
       <div class="ref-num">3</div>
-      <div class="ref-text"><span data-lang="kr" class="active"><strong>수면장애·만성 피로</strong>로 고생하시는 분</span><span data-lang="en">Those suffering from <strong>sleep disorders or chronic fatigue</strong></span><span data-lang="jp"><strong>睡眠障害・慢性疲労</strong>でお悩みの方</span><span data-lang="cn">有<strong>睡眠障碍·慢性疲劳</strong>困扰的朋友</span></div>
+      <div class="ref-text"><span data-lang="kr" class="active">이유 없는 수면 장애, 만성 피로로 삶의 활력을 잃어버리신 분</span><span data-lang="en">Those who have lost their vitality due to <strong>unexplained sleep disorders or chronic fatigue</strong></span><span data-lang="jp">原因不明の<strong>睡眠障害・慢性疲労</strong>で活力を失った方</span><span data-lang="cn">因不明原因的<strong>睡眠障碍·慢性疲劳</strong>而失去生活活力的朋友</span></div>
     </div>
     <div class="ref-item">
       <div class="ref-num">4</div>
-      <div class="ref-text"><span data-lang="kr" class="active"><strong>헬스케어·미용실·네일샵</strong> 원장님</span><span data-lang="en">Owners of <strong>healthcare·salon·nail shops</strong></span><span data-lang="jp"><strong>ヘルスケア・サロン・ネイル</strong>オーナー</span><span data-lang="cn"><strong>健康护理·美发·美甲店</strong>负责人</span></div>
+      <div class="ref-text"><span data-lang="kr" class="active">샵인샵(Shop in Shop) 매출 증대 및 새로운 비즈니스 성장 모멘텀을 찾고 계신 헬스케어·미용실·네일샵 원장님</span><span data-lang="en"><strong>Healthcare·salon·nail shop</strong> owners seeking <strong>shop-in-shop revenue growth</strong> and new business momentum</span><span data-lang="jp"><strong>ショップインショップ売上増加</strong>と新たなビジネス成長を求める<strong>ヘルスケア・サロン・ネイルショップ</strong>オーナー</span><span data-lang="cn">正在寻找<strong>店中店营收增长</strong>和新业务成长动力的<strong>健康护理·美发·美甲店</strong>负责人</span></div>
     </div>
   </div>
 </section>
@@ -474,6 +487,10 @@ div[data-lang].active { display: block !important; }
       </div>
     </div>
   </div>
+  <div class="career-imgs">
+    <img src="career1.jpg" alt="수상 사진" class="career-img">
+    <img src="career2.jpg" alt="광고 모델" class="career-img">
+  </div>
 </section>
 
 <div class="gold-line"></div>
@@ -482,18 +499,21 @@ div[data-lang].active { display: block !important; }
 <section class="dark3">
   <div class="sec-label"><span data-lang="kr" class="active">포트폴리오</span><span data-lang="en">Portfolio</span><span data-lang="jp">ポートフォリオ</span><span data-lang="cn">作品集</span></div>
   <div class="sec-title"><span data-lang="kr" class="active">PM 건강 솔루션</span><span data-lang="en">PM Health Solutions</span><span data-lang="jp">PM健康ソリューション</span><span data-lang="cn">PM健康解决方案</span></div>
-  <div class="port-grid">
-    <!-- 가로형 2장 나란히 -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-      <img src="portfolio1.jpg" alt="포트폴리오 1" class="port-img">
-      <img src="portfolio2.jpg" alt="포트폴리오 2" class="port-img">
+  <div class="slide-wrap" id="slide-port">
+    <div class="slide-track" id="slide-track-port">
+      <div class="slide-item"><img src="portfolio1.jpg" alt="슬라이드1"></div>
+      <div class="slide-item"><img src="portfolio2.jpg" alt="슬라이드2"></div>
+      <div class="slide-item"><img src="portfolio3.jpg" alt="슬라이드3"></div>
+      <div class="slide-item"><img src="portfolio4.jpg" alt="슬라이드4"></div>
+      <div class="slide-item"><img src="portfolio5.jpg" alt="슬라이드5"></div>
+      <div class="slide-item"><img src="portfolio6.jpg" alt="슬라이드6"></div>
+      <div class="slide-item"><img src="portfolio7.jpg" alt="슬라이드7"></div>
+      <div class="slide-item"><img src="portfolio8.jpg" alt="슬라이드8"></div>
     </div>
-    <!-- 세로형 2장 나란히 -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-      <img src="portfolio.jpg" alt="포트폴리오 3" class="port-img">
-      <img src="portfolio3.jpg" alt="포트폴리오 4" class="port-img">
-    </div>
+    <button class="slide-btn slide-btn-l" onclick="portSlide(-1)">‹</button>
+    <button class="slide-btn slide-btn-r" onclick="portSlide(1)">›</button>
   </div>
+  <div class="slide-dots" id="slide-dots-port"></div>
 </section>
 
 <div class="gold-line"></div>
@@ -514,6 +534,13 @@ div[data-lang].active { display: block !important; }
     <a href="https://www.instagram.com/healing_32/" target="_blank" class="con-item">
       <div class="con-icon">📷</div>
       <div><div class="con-lbl">Instagram</div><div class="con-val">@healing_32</div></div>
+    </a>
+    <a href="https://open.kakao.com/o/s1pmoBxb" target="_blank" class="con-item">
+      <div class="con-icon">💬</div>
+      <div>
+        <div class="con-lbl"><span data-lang="kr" class="active">카카오 오픈채팅</span><span data-lang="en">KakaoTalk Open Chat</span><span data-lang="jp">カカオオープンチャット</span><span data-lang="cn">Kakao开放聊天</span></div>
+        <div class="con-val"><span data-lang="kr" class="active">채팅 바로가기 →</span><span data-lang="en">Open Chat →</span><span data-lang="jp">チャットはこちら →</span><span data-lang="cn">进入聊天 →</span></div>
+      </div>
     </a>
   </div>
 </section>
@@ -566,6 +593,43 @@ function setLang(lang) {
     btn.classList.toggle('active', ['kr','en','jp','cn'][i] === lang);
   });
 }
+let portIdx = 0;
+const portTotal = 8;
+
+function initPortSlide() {
+  const dots = document.getElementById('slide-dots-port');
+  if (!dots) return;
+  dots.innerHTML = '';
+  for (let i = 0; i < portTotal; i++) {
+    const d = document.createElement('div');
+    d.className = 'slide-dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => goPortSlide(i);
+    dots.appendChild(d);
+  }
+}
+function goPortSlide(idx) {
+  portIdx = (idx + portTotal) % portTotal;
+  document.getElementById('slide-track-port').style.transform = `translateX(-${portIdx * 100}%)`;
+  document.querySelectorAll('#slide-dots-port .slide-dot').forEach((d, i) => {
+    d.classList.toggle('active', i === portIdx);
+  });
+}
+function portSlide(dir) { goPortSlide(portIdx + dir); }
+
+// 터치 스와이프
+(function() {
+  let sx = 0;
+  const track = document.getElementById('slide-track-port');
+  if (!track) return;
+  track.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - sx;
+    if (Math.abs(dx) > 40) portSlide(dx < 0 ? 1 : -1);
+  }, {passive:true});
+})();
+
+document.addEventListener('DOMContentLoaded', initPortSlide);
+
 function saveContact() {
   const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:김효정\nN:김;효정;;;\nORG:PM-International\nTITLE:대표\nTEL;TYPE=CELL:010-5878-6599\nURL:https://www.pmi-korea.com/main.do\nEND:VCARD`;
   const blob = new Blob([vcard], {type:'text/vcard'});
