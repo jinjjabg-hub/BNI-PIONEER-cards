@@ -371,7 +371,7 @@ div[data-lang].active { display: block !important; }
     <div class="why-card">
       <div class="why-num"><span data-lang="kr" class="active">이유 03</span><span data-lang="en">WHY 03</span><span data-lang="de">GRUND 03</span><span data-lang="cn">理由 03</span></div>
       <div class="why-title"><span data-lang="kr" class="active">세포까지 전달되는 영양소</span><span data-lang="en">Nutrients Delivered to Your Cells</span><span data-lang="de">Nährstoffe, die bis in Ihre Zellen gelangen</span><span data-lang="cn">直达细胞的营养素</span></div>
-      <div class="why-desc"><span data-lang="kr" class="active">특허받은 NTC 영양전달 컨셉으로 조직에서 세포까지 정확하게 필요한 영양소를 전달합니다.</span><span data-lang="en">With the patented NTC Nutrient Transfer Concept, essential nutrients are delivered precisely from tissue to cell.</span><span data-lang="de">Mit dem patentierten NTC-Nährstoffübertragungskonzept werden die notwendigen Nährstoffe präzise vom Gewebe bis in die Zelle transportiert.</span><span data-lang="cn">通过专利NTC营养传递概念，将所需营养素从组织精准传递至细胞。</span></div>
+      <div class="why-desc"><span data-lang="kr" class="active">특허받은 NTC 영양전달 컨셉으로 입점막 흡수를 통해 세포까지 정확하게 필요한 영양소를 전달합니다.</span><span data-lang="en">With the patented NTC Nutrient Transfer Concept, essential nutrients are delivered precisely to cells through mucosal absorption.</span><span data-lang="de">Mit dem patentierten NTC-Nährstoffübertragungskonzept werden die notwendigen Nährstoffe über die Mundschleimhaut präzise bis in die Zelle transportiert.</span><span data-lang="cn">通过专利NTC营养传递概念，经由口腔黏膜吸收将所需营养素精准传递至细胞。</span></div>
     </div>
   </div>
 </section>
@@ -486,7 +486,7 @@ div[data-lang].active { display: block !important; }
     <div class="car-item">
       <div class="car-badge"><span data-lang="kr" class="active">경리</span><span data-lang="en">Accounting</span><span data-lang="de">Buchhaltung</span><span data-lang="cn">会计</span></div>
       <div>
-        <div class="car-title"><span data-lang="kr" class="active">아파트·오피스 건물 회계담당</span><span data-lang="en">Apartment & Office Building Accountant</span><span data-lang="de">Buchhalterin für Wohn- und Bürogebäude</span><span data-lang="cn">公寓及办公楼会计</span></div>
+        <div class="car-title"><span data-lang="kr" class="active">아파트·오피스 건물 회계담당 · 20년 경력</span><span data-lang="en">Apartment & Office Building Accountant · 20 Years</span><span data-lang="de">Buchhalterin für Wohn- und Bürogebäude · 20 Jahre</span><span data-lang="cn">公寓及办公楼会计 · 20年经验</span></div>
       </div>
     </div>
   </div>
@@ -551,6 +551,12 @@ div[data-lang].active { display: block !important; }
 <!-- ACTION BUTTONS -->
 <div class="action-sec">
   <div class="btn-stack">
+    <button class="btn btn-out" onclick="shareCard()">
+      <span data-lang="kr" class="active">📤 명함 공유하기</span>
+      <span data-lang="en">📤 Share Card</span>
+      <span data-lang="de">📤 Karte teilen</span>
+      <span data-lang="cn">📤 分享名片</span>
+    </button>
     <button class="btn btn-gold" onclick="saveContact()">
       <span data-lang="kr" class="active">📞 연락처 저장</span>
       <span data-lang="en">📞 Save Contact</span>
@@ -632,6 +638,24 @@ function portSlide(dir) { goPortSlide(portIdx + dir); }
 })();
 
 document.addEventListener('DOMContentLoaded', initPortSlide);
+
+function shareCard() {
+  const url = 'https://jinjjabg-hub.github.io/BNI-PIONEER-cards/김효정/';
+  const title = '김효정 | 대표 · PM-International';
+  const text = '건강한 몸과 정신으로 더 나은 삶을 설계하는 PM 건강 코치입니다.';
+
+  if (navigator.share) {
+    navigator.share({ title, text, url })
+      .catch(err => console.log('공유 취소:', err));
+  } else {
+    // 공유 API 미지원 시 URL 복사
+    navigator.clipboard.writeText(url).then(() => {
+      alert('링크가 복사됐습니다!\n' + url);
+    }).catch(() => {
+      prompt('아래 링크를 복사하세요:', url);
+    });
+  }
+}
 
 function saveContact() {
   const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:김효정\nN:김;효정;;;\nORG:PM-International\nTITLE:대표\nTEL;TYPE=CELL:010-5878-6599\nURL:https://www.pmi-korea.com/main.do\nEND:VCARD`;
