@@ -160,9 +160,8 @@ section { padding: 36px 18px; }
   border-radius: 10px; padding: 16px 12px; text-align: center;
 }
 .diff-icon { font-size: 1.5rem; margin-bottom: 7px; }
-.diff-title { font-size: 0.78rem; font-weight: 700; color: var(--gold); margin-bottom: 6px; }
-.diff-desc { font-size: 0.72rem; line-height: 1.55; color: var(--muted-dark); }
-.diff-desc strong { color: var(--gold2); }
+.diff-title { font-size: 0.86rem; font-weight: 700; color: var(--gold); margin-bottom: 6px; }
+.diff-desc { font-size: 0.86rem; font-weight: 700; line-height: 1.55; color: var(--muted-dark); }
 
 /* REFERRAL */
 .ref-list { display: flex; flex-direction: column; gap: 10px; }
@@ -215,7 +214,7 @@ section { padding: 36px 18px; }
 .slide-wrap { position: relative; overflow: hidden; border-radius: 10px; background:#111; }
 .slide-track { display: flex; transition: transform 0.35s ease; }
 .slide-item { min-width: 100%; }
-.slide-item img { width: 100%; display: block; aspect-ratio: 16/9; object-fit: cover; }
+.slide-item img { width: 100%; display: block; aspect-ratio: 1.741; object-fit: contain; background: #111; }
 .slide-btn {
   position: absolute; top: 50%; transform: translateY(-50%);
   background: rgba(0,0,0,0.55); color: #fff; border: none;
@@ -369,6 +368,11 @@ div[data-lang].active { display: block !important; }
       <div class="why-title"><span data-lang="kr" class="active">전 세계 탑클래스 선수들의 선택</span><span data-lang="en">The Choice of World-Class Athletes</span><span data-lang="de">Die Wahl von Weltklasse-Athleten</span><span data-lang="cn">全球顶级运动员的选择</span></div>
       <div class="why-desc"><span data-lang="kr" class="active">전 제품 독일 쾰른 리스트(Cologne List®) 등재로 도핑 걱정 제로! 올림픽 메달리스트들이 경기 중에도 안전하게 섭취하는 검증된 프리미엄 올인원 영양주스입니다.</span><span data-lang="en">All products registered on Germany's Cologne List® — zero doping concerns! A verified premium all-in-one nutritional juice safely consumed by Olympic medalists even during competition.</span><span data-lang="de">Alle Produkte sind auf der deutschen Kölner Liste® registriert – null Doping-Bedenken! Ein geprüfter Premium-All-in-One-Nährstoffsaft, den Olympia-Medaillengewinner auch während des Wettkampfs sicher konsumieren.</span><span data-lang="cn">所有产品均已登录德国科隆列表(Cologne List®)，零兴奋剂顾虑！奥运奖牌得主在比赛期间也能安全饮用的经过验证的高端全能营养果汁。</span></div>
     </div>
+    <div class="why-card">
+      <div class="why-num"><span data-lang="kr" class="active">이유 03</span><span data-lang="en">WHY 03</span><span data-lang="de">GRUND 03</span><span data-lang="cn">理由 03</span></div>
+      <div class="why-title"><span data-lang="kr" class="active">세포까지 전달되는 영양소</span><span data-lang="en">Nutrients Delivered to Your Cells</span><span data-lang="de">Nährstoffe, die bis in Ihre Zellen gelangen</span><span data-lang="cn">直达细胞的营养素</span></div>
+      <div class="why-desc"><span data-lang="kr" class="active">특허받은 NTC 영양전달 컨셉으로 조직에서 세포까지 정확하게 필요한 영양소를 전달합니다.</span><span data-lang="en">With the patented NTC Nutrient Transfer Concept, essential nutrients are delivered precisely from tissue to cell.</span><span data-lang="de">Mit dem patentierten NTC-Nährstoffübertragungskonzept werden die notwendigen Nährstoffe präzise vom Gewebe bis in die Zelle transportiert.</span><span data-lang="cn">通过专利NTC营养传递概念，将所需营养素从组织精准传递至细胞。</span></div>
+    </div>
   </div>
 </section>
 
@@ -382,22 +386,21 @@ div[data-lang].active { display: block !important; }
     <div class="diff-card">
       <div class="diff-icon">🔬</div>
       <div class="diff-title"><span data-lang="kr" class="active">근본적 접근</span><span data-lang="en">Root Approach</span><span data-lang="de">Grundlegender Ansatz</span><span data-lang="cn">根本性方法</span></div>
-      <div class="diff-desc"><span data-lang="kr" class="active">증상이 아닌 <strong>세포 영양</strong> 공급</span><span data-lang="en">Supply <strong>cell nutrients</strong>, not just symptoms</span><span data-lang="de"><strong>Zellnährstoffe</strong> liefern, nicht nur Symptome behandeln</span><span data-lang="cn">供给<strong>细胞营养</strong>而非治症</span></div>
+      <div class="diff-desc"><span data-lang="kr" class="active">증상이 아닌 세포 영양 공급</span><span data-lang="en">Supply cell nutrients, not just symptoms</span><span data-lang="de">Zellnährstoffe liefern, nicht nur Symptome behandeln</span><span data-lang="cn">供给细胞营养而非治症</span></div>
     </div>
     <div class="diff-card">
       <div class="diff-icon">🎯</div>
       <div class="diff-title"><span data-lang="kr" class="active">맞춤 솔루션</span><span data-lang="en">Custom Solution</span><span data-lang="de">Individuelle Lösung</span><span data-lang="cn">个性化方案</span></div>
-      <div class="diff-desc"><span data-lang="kr" class="active">개인 맞춤 <strong>건강 솔루션</strong></span><span data-lang="en">Personalized <strong>health solutions</strong></span><span data-lang="de">Personalisierte <strong>Gesundheitslösungen</strong></span><span data-lang="cn">个性化<strong>健康方案</strong></span></div>
+      <div class="diff-desc"><span data-lang="kr" class="active">개인 맞춤 건강 솔루션</span><span data-lang="en">Personalized health solutions</span><span data-lang="de">Personalisierte Gesundheitslösungen</span><span data-lang="cn">个性化健康方案</span></div>
     </div>
     <div class="diff-card">
       <div class="diff-icon">🌱</div>
-      <div class="diff-title"><span data-lang="kr" class="active">장기 관리</span><span data-lang="en">Long-term Care</span><span data-lang="de">Langzeitbetreuung</span><span data-lang="cn">长期管理</span></div>
-      <div class="diff-desc"><span data-lang="kr" class="active"><strong>근본적 건강</strong> 관리 케어</span><span data-lang="en"><strong>Fundamental health</strong> management care</span><span data-lang="de"><strong>Grundlegende Gesundheit</strong>spflege</span><span data-lang="cn"><strong>根本健康</strong>管理护理</span></div>
+      <div class="diff-title"><span data-lang="kr" class="active">장기 관리<br>통합 건강케어</span><span data-lang="en">Holistic Health Care</span><span data-lang="de">Ganzheitliche Gesundheitspflege</span><span data-lang="cn">综合健康护理</span></div>
     </div>
     <div class="diff-card">
       <div class="diff-icon">🤝</div>
       <div class="diff-title"><span data-lang="kr" class="active">지속 동행</span><span data-lang="en">Ongoing Support</span><span data-lang="de">Kontinuierliche Begleitung</span><span data-lang="cn">持续陪伴</span></div>
-      <div class="diff-desc"><span data-lang="kr" class="active">판매 후에도 <strong>꾸준히 함께</strong></span><span data-lang="en"><strong>Together consistently</strong> even after purchase</span><span data-lang="de">Auch nach dem Kauf <strong>stets gemeinsam</strong></span><span data-lang="cn">购买后<strong>持续陪伴</strong></span></div>
+      <div class="diff-desc"><span data-lang="kr" class="active">판매 후에도 꾸준히 함께</span><span data-lang="en">Together consistently even after purchase</span><span data-lang="de">Auch nach dem Kauf stets gemeinsam</span><span data-lang="cn">购买后持续陪伴</span></div>
     </div>
   </div>
 </section>
@@ -637,6 +640,7 @@ function saveContact() {
   a.href = URL.createObjectURL(blob);
   a.download = 'KimHyojeong_PM.vcf';
   a.click();
-}</script>
+}
+</script>
 </body>
 </html>
