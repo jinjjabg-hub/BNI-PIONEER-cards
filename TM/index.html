@@ -115,6 +115,9 @@ body{font-family:'Noto Sans KR',sans-serif;background:#111;color:#fff;overflow-x
 <body>
 
 <div class="lang-bar">
+  <button class="btn btn-blue" onclick="shareCard()">
+  📤 <span data-lang="kr" class="active">명함 공유하기</span><span data-lang="en">Share Card</span><span data-lang="jp">名刺を共有</span><span data-lang="cn">分享名片</span>
+</button>
   <button class="lang-btn on" onclick="setLang('kr',this)">KR</button>
   <button class="lang-btn" onclick="setLang('en',this)">EN</button>
   <button class="lang-btn" onclick="setLang('jp',this)">JP</button>
@@ -558,6 +561,19 @@ const io = new IntersectionObserver(e => e.forEach(el => {
 }), {threshold:0.1});
 fades.forEach(el => io.observe(el));
 
+function shareCard() {
+  if (navigator.share) {
+    navigator.share({
+      title: document.title,
+      text: document.querySelector('meta[property="og:description"]')?.content || '',
+      url: window.location.href
+    });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      alert('링크가 복사되었습니다!');
+    });
+  }
+}
 </script>
 </body>
 </html>
