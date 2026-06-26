@@ -31,7 +31,11 @@
 * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 body {
   font-family:'Noto Sans KR',sans-serif;
-  background:#fff;
+  background-color:#07125A;
+  background-image:url('./bg.png');
+  background-size:100% auto;
+  background-repeat:repeat-y;
+  background-attachment:scroll;
   color:var(--text-light);
   max-width:430px;
   margin:0 auto;
@@ -47,7 +51,7 @@ div[data-lang].active { display:block !important; }
 /* ── NAV ── */
 nav {
   display:flex; justify-content:space-between; align-items:center;
-  padding:10px 16px; background:var(--bg-dark3);
+  padding:10px 16px; background:rgba(3,10,56,0.90);
   position:sticky; top:0; z-index:100;
 }
 .nav-brand { color:#fff; font-size:12px; font-weight:700; letter-spacing:1.5px; }
@@ -88,7 +92,7 @@ nav {
 
 /* ── PROFILE ROW ── */
 .profile-row {
-  background:var(--bg-dark); padding:20px;
+  background:rgba(7,18,90,0.82); padding:20px;
   display:flex; align-items:center; gap:14px;
 }
 .profile-img {
@@ -106,9 +110,9 @@ nav {
 
 /* ── 공통 섹션 ── */
 .sec { padding:36px 20px; }
-.sec-dark  { background:var(--bg-dark);  color:var(--text-dark); }
-.sec-dark3 { background:var(--bg-dark3); color:var(--text-dark); }
-.sec-light { background:var(--bg-light); color:var(--text-light); }
+.sec-dark  { background:rgba(7,18,90,0.82);  color:var(--text-dark); }
+.sec-dark3 { background:rgba(3,10,56,0.85); color:var(--text-dark); }
+.sec-light { background:rgba(240,242,248,0.88); color:var(--text-light); }
 
 .sec-label {
   font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:6px;
@@ -191,7 +195,7 @@ nav {
 .con-value { font-size:13px; font-weight:600; margin-top:1px; }
 
 /* ── 액션버튼 ── */
-.action-sec { background:var(--bg-dark3); padding:24px 20px; display:flex; flex-direction:column; gap:10px; }
+.action-sec { background:rgba(3,10,56,0.88); padding:24px 20px; display:flex; flex-direction:column; gap:10px; }
 .btn {
   display:flex; align-items:center; justify-content:center; gap:8px;
   padding:15px; border-radius:12px; font-size:14px; font-weight:700;
@@ -209,7 +213,7 @@ nav {
 .qr-caption { font-size:11px; color:var(--muted-dark); }
 
 /* ── FOOTER ── */
-footer { background:var(--bg-dark3); padding:28px 20px; text-align:center; }
+footer { background:rgba(3,10,56,0.90); padding:28px 20px; text-align:center; }
 .footer-logo { height:26px; margin-bottom:10px; display:block; margin-left:auto; margin-right:auto; }
 .footer-co { font-size:13px; color:#fff; font-weight:700; }
 .footer-slogan { font-size:11px; color:var(--muted-dark); margin-top:4px; font-style:italic; }
