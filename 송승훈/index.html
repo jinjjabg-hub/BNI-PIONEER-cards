@@ -64,14 +64,25 @@ div[data-lang].active,p[data-lang].active{display:block;}
 .kw-tag{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);color:rgba(255,255,255,0.8);font-size:11px;font-weight:700;padding:6px 12px;border-radius:16px;}
 .kw-tag.hot{background:rgba(212,165,55,0.13);border-color:rgba(212,165,55,0.5);color:var(--gold-soft);}
 
+
+/* ===== BG 섹션 (v7) ===== */
+.bg-section{position:relative;overflow:hidden;}
+.bg-img{position:absolute;inset:0;background-size:cover;background-position:center;}
+.bg-ov{position:absolute;inset:0;}
+.bg-section .sec{position:relative;z-index:1;}
+.why-bg{background-image:url('portfolio5.jpg');}
+.why-ov{background:rgba(21,59,49,0.82);}
+.svc-bg{background-image:url('portfolio5.jpg');background-position:center bottom;}
+.svc-ov{background:rgba(21,59,49,0.62);}
+
 /* ===== WHY ===== */
-.why-card{background:var(--dark2);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:22px 20px;margin-bottom:12px;}
+.why-card{background:rgba(21,59,49,0.55);backdrop-filter:blur(3px);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:22px 20px;margin-bottom:12px;}
 .why-num{font-size:11px;color:var(--gold);font-weight:700;letter-spacing:0.16em;margin-bottom:8px;}
 .why-t{font-size:16.5px;font-weight:900;margin-bottom:9px;line-height:1.35;}
 .why-d{font-size:13px;line-height:1.75;color:rgba(255,255,255,0.72);}
 
 /* ===== DIFFERENCE ===== */
-.diff{background:var(--dark2);}
+.diff{background:transparent;}
 .diff-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.08);}
 .diff-item:last-child{border-bottom:none;}
 .diff-num{font-size:20px;font-weight:900;color:var(--gold);min-width:34px;line-height:1.2;}
@@ -215,6 +226,9 @@ footer{background:var(--light);text-align:center;padding:28px 24px 40px;}
   </div>
 
   <!-- WHY -->
+  <div class="bg-section">
+  <div class="bg-img why-bg"></div>
+  <div class="bg-ov why-ov"></div>
   <div class="sec">
     <div class="sec-label">WHY T.M</div>
     <div class="sec-title">
@@ -273,7 +287,12 @@ footer{background:var(--light);text-align:center;padding:28px 24px 40px;}
     </div>
   </div>
 
+  </div>
+
   <!-- DIFFERENCE -->
+  <div class="bg-section">
+  <div class="bg-img svc-bg"></div>
+  <div class="bg-ov svc-ov"></div>
   <div class="sec diff">
     <div class="sec-label">DIFFERENCE</div>
     <div class="sec-title">
@@ -354,6 +373,8 @@ footer{background:var(--light);text-align:center;padding:28px 24px 40px;}
         </div>
       </div>
     </div>
+  </div>
+
   </div>
 
   <!-- REFERRAL -->
