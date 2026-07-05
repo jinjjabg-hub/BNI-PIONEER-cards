@@ -3,10 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#07125A">
+<title>박선영 | SHIELD Y PRO 대표</title>
+<meta property="og:title" content="박선영 | 대표 · SHIELD Y PRO">
+<meta property="og:description" content="Beyond Supply, Building Trust. 안전용품 및 건축자재 종합유통 · Total Safety Partner">
+<meta property="og:image" content="./og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/박선영/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
 :root {
   --main: #07125A;
+  --main2: #0a1a6e;
   --accent: #4A90D9;
   --accent2: #6AAFF0;
   --red: #C8102E;
@@ -16,34 +27,24 @@
 
 body {
   font-family:'Noto Sans KR',sans-serif;
-  /* 수채화 블루 — bg.png 대체 그라디언트 */
-  background:
-    radial-gradient(ellipse at 10% 20%, rgba(7,18,90,0.95) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 10%, rgba(74,144,217,0.6) 0%, transparent 40%),
-    radial-gradient(ellipse at 30% 50%, rgba(106,175,240,0.4) 0%, transparent 45%),
-    radial-gradient(ellipse at 90% 60%, rgba(7,18,90,0.7) 0%, transparent 40%),
-    radial-gradient(ellipse at 20% 80%, rgba(74,144,217,0.5) 0%, transparent 45%),
-    radial-gradient(ellipse at 70% 90%, rgba(200,220,255,0.6) 0%, transparent 40%),
-    linear-gradient(160deg, #07125A 0%, #1a4a9e 30%, #a8cef0 60%, #e8f4ff 80%, #c5ddf5 100%);
-  background-attachment: fixed;
-  min-height: 100vh;
-  max-width: 430px;
-  margin: 0 auto;
-  overflow-x: hidden;
+  background: linear-gradient(165deg, #0a1a6e 0%, #07125A 30%, #050e47 60%, #030a38 100%);
+  background-attachment:fixed;
+  color:#fff;
+  max-width:430px;
+  margin:0 auto;
+  overflow-x:hidden;
+  min-height:100vh;
 }
 
-/* 언어 토글 */
 [data-lang] { display:none !important; }
 [data-lang].active { display:block !important; }
 span[data-lang].active { display:inline !important; }
 
-/* ── NAV (glass) ── */
 nav {
   display:flex; justify-content:space-between; align-items:center;
   padding:12px 18px;
   background: rgba(3,10,56,0.55);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255,255,255,0.12);
   position:sticky; top:0; z-index:100;
 }
@@ -54,177 +55,147 @@ nav {
   background:transparent; color:rgba(255,255,255,0.65); font-size:11px;
   cursor:pointer; font-family:inherit; min-height:30px; transition:all .2s;
 }
-.lang-btn.active { background:rgba(255,255,255,0.9); color:var(--main); font-weight:700; }
+.lang-btn.active { background:rgba(255,255,255,0.92); color:var(--main); font-weight:700; }
 
-/* ── HERO ── */
 .hero {
-  position:relative; aspect-ratio:3/4; overflow:hidden;
-  background: linear-gradient(180deg, #07125A 0%, #1a3a8a 100%);
+  position:relative; aspect-ratio:1/1; overflow:hidden;
+  background:linear-gradient(135deg, #07125A 0%, #1a3a8a 50%, #4A90D9 100%);
 }
-.hero img { width:100%; height:100%; object-fit:cover; object-position:center top; }
+.hero img { width:100%; height:100%; object-fit:contain; object-position:center center; }
 .hero-overlay {
   position:absolute; inset:0;
-  background:linear-gradient(to bottom,
-    rgba(0,0,0,0.02) 0%,
-    rgba(3,10,56,0.6) 70%,
-    rgba(3,10,56,0.97) 100%);
+  background:linear-gradient(to bottom, transparent 0%, transparent 55%,
+    rgba(3,10,56,0.85) 82%, rgba(3,10,56,0.97) 100%);
 }
-.hero-content { position:absolute; bottom:0; left:0; right:0; padding:28px 20px 32px; }
+.hero-content { position:absolute; bottom:0; left:0; right:0; padding:24px 20px 28px; }
 .hero-badge {
   display:inline-flex; align-items:center; gap:5px;
   background:var(--red); color:#fff;
-  padding:4px 12px; border-radius:20px; font-size:10px; font-weight:700; margin-bottom:12px;
+  padding:4px 12px; border-radius:20px; font-size:10px; font-weight:700; margin-bottom:10px;
 }
-.hero-name { font-size:36px; font-weight:900; color:#fff; letter-spacing:-1px; line-height:1.1; }
-.hero-name-sub { font-size:11px; color:rgba(255,255,255,0.45); letter-spacing:2.5px; margin-top:6px; }
-.hero-title { font-size:13px; color:rgba(255,255,255,0.75); margin-top:8px; }
+.hero-name { font-size:34px; font-weight:900; color:#fff; letter-spacing:-1px; line-height:1.1; }
+.hero-name-sub { font-size:11px; color:rgba(255,255,255,0.5); letter-spacing:2.5px; margin-top:6px; }
+.hero-title { font-size:12px; color:rgba(255,255,255,0.78); margin-top:8px; }
 
-/* ── GLASS 카드 (공통) ── */
 .glass {
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.14);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.25);
   border-radius: 16px;
 }
 .glass-dark {
   background: rgba(7,18,90,0.45);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 16px;
 }
 .glass-white {
-  background: rgba(255,255,255,0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255,255,255,0.78);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255,255,255,0.5);
   border-radius: 16px;
 }
-
-/* ── PROFILE ROW ── */
-.profile-row {
-  margin: 16px; padding: 18px;
+.navy-anchor {
+  background: linear-gradient(160deg, #12256e 0%, #1a3a8a 55%, #0a1a6e 100%);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(3,10,56,0.5);
 }
-.profile-inner { display:flex; align-items:center; gap:14px; }
+
+.sec { padding:8px 16px 12px; }
+.profile-inner { display:flex; align-items:center; gap:14px; padding:18px; }
 .profile-img {
   width:76px; height:76px; border-radius:50%;
   object-fit:cover; object-position:center top;
   border:2px solid rgba(255,255,255,0.5); flex-shrink:0;
 }
-.profile-ph {
-  width:76px; height:76px; border-radius:50%;
-  background:rgba(74,144,217,0.3);
-  border:2px solid rgba(255,255,255,0.4);
-  display:flex; align-items:center; justify-content:center;
-  font-size:28px; flex-shrink:0;
-}
 .profile-name { font-size:17px; font-weight:800; color:#fff; }
 .profile-sub { font-size:12px; color:rgba(255,255,255,0.65); margin-top:3px; }
 .profile-tag {
   display:inline-block; margin-top:7px;
-  background:rgba(74,144,217,0.25);
-  border:1px solid rgba(74,144,217,0.5);
+  background:rgba(74,144,217,0.25); border:1px solid rgba(74,144,217,0.5);
   color:var(--accent2); font-size:10px; padding:3px 10px; border-radius:10px;
 }
 
-/* ── 섹션 공통 ── */
-.sec { padding:8px 16px 16px; }
 .sec-label { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:6px; color:rgba(255,255,255,0.5); }
 .sec-title { font-size:20px; font-weight:800; line-height:1.35; margin-bottom:16px; color:#fff; }
-.sec-title.dark { color:var(--main); }
+.pad-in { padding:22px 20px; }
 
-/* ── ABOUT ── */
 .about-quote {
-  border-left:3px solid var(--accent2);
-  padding:10px 14px; margin-bottom:14px;
-  background:rgba(74,144,217,0.15);
-  border-radius:0 10px 10px 0;
+  border-left:3px solid var(--accent2); padding:10px 14px; margin-bottom:14px;
+  background:rgba(74,144,217,0.15); border-radius:0 10px 10px 0;
   font-size:14px; font-style:italic; color:rgba(255,255,255,0.9); line-height:1.7;
 }
 .about-desc { font-size:14px; line-height:1.9; color:rgba(255,255,255,0.85); }
 
-/* ── WHY 카드 ── */
 .why-cards { display:flex; flex-direction:column; gap:10px; }
 .why-card { padding:16px 18px; }
 .why-num { font-size:10px; font-weight:800; color:var(--accent2); letter-spacing:2px; margin-bottom:5px; }
 .why-text { font-size:13px; line-height:1.75; color:rgba(255,255,255,0.9); }
 .why-text strong { color:#fff; font-weight:800; }
 
-/* ── SERVICES 2x2 ── */
 .svc-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
 .svc-card { padding:16px 14px; }
 .svc-icon { font-size:22px; margin-bottom:8px; }
 .svc-title { font-size:12px; font-weight:700; color:var(--main); margin-bottom:5px; }
 .svc-desc { font-size:11px; line-height:1.7; color:rgba(7,18,90,0.7); }
 
-/* ── REFERRAL ── */
-.ref-list { display:flex; flex-direction:column; gap:10px; }
-.ref-item { padding:14px 16px; display:flex; gap:12px; align-items:flex-start; }
-.ref-num {
-  width:24px; height:24px; border-radius:50%;
-  background:rgba(7,18,90,0.15); color:var(--main);
-  font-size:11px; font-weight:800;
-  display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px;
-  border:1px solid rgba(7,18,90,0.2);
-}
-.ref-text { font-size:13px; line-height:1.75; color:rgba(7,18,90,0.85); }
-.ref-text strong { color:var(--main); font-weight:800; }
+.ref-intro { font-size:13px; line-height:1.7; color:rgba(255,255,255,0.85); margin-bottom:14px; }
+.ref-intro strong { color:#fff; }
+.cat-list { display:flex; flex-direction:column; gap:10px; }
+.cat-card { padding:14px 16px; }
+.cat-head { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+.cat-icon { font-size:18px; }
+.cat-title { font-size:13px; font-weight:800; color:var(--main); }
+.cat-items { font-size:12px; line-height:1.7; color:rgba(7,18,90,0.7); }
 
-/* ── CAREER ── */
-.career-list { display:flex; flex-direction:column; gap:10px; }
-.career-item { padding:14px 16px; display:flex; gap:12px; align-items:flex-start; }
+.career-list { display:flex; flex-direction:column; gap:12px; }
+.career-item { display:flex; gap:10px; align-items:flex-start; }
 .career-badge {
-  background:rgba(7,18,90,0.12); color:var(--main);
-  border:1px solid rgba(7,18,90,0.2);
+  background:rgba(255,255,255,0.15); color:#fff; border:1px solid rgba(255,255,255,0.25);
   font-size:10px; font-weight:700; padding:3px 9px; border-radius:10px;
   flex-shrink:0; margin-top:2px; white-space:nowrap;
 }
-.career-title { font-size:13px; font-weight:700; color:var(--main); }
-.career-desc  { font-size:12px; color:rgba(7,18,90,0.6); margin-top:2px; }
+.career-title { font-size:13px; font-weight:700; color:#fff; }
+.career-desc  { font-size:12px; color:rgba(255,255,255,0.55); margin-top:2px; }
 
-/* ── CONTACT ── */
 .con-list { display:flex; flex-direction:column; gap:8px; }
 .con-item {
   display:flex; align-items:center; gap:14px;
   padding:14px 16px; border-radius:14px;
   text-decoration:none; color:var(--main);
-  background:rgba(255,255,255,0.7);
-  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,0.72);
+  backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
   border:1px solid rgba(255,255,255,0.5);
 }
 .con-icon { width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
 .con-label { font-size:11px; color:rgba(7,18,90,0.5); }
 .con-value { font-size:13px; font-weight:600; margin-top:1px; color:var(--main); }
 
-/* ── 액션버튼 ── */
 .action-sec { padding:16px; display:flex; flex-direction:column; gap:10px; }
 .btn {
   display:flex; align-items:center; justify-content:center; gap:8px;
   padding:15px; border-radius:14px; font-size:14px; font-weight:700;
-  cursor:pointer; border:none; font-family:inherit; min-height:50px;
+  cursor:pointer; border:none; font-family:inherit; min-height:52px;
   text-decoration:none; width:100%; transition:opacity .2s;
   backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
 }
-.btn-primary { background:rgba(74,144,217,0.85); color:#fff; border:1px solid rgba(74,144,217,0.4); }
-.btn-outline  { background:rgba(255,255,255,0.15); color:#fff; border:1px solid rgba(255,255,255,0.3); }
-.btn-link     { background:rgba(255,255,255,0.08); color:#fff; border:1px solid rgba(255,255,255,0.15); }
+.btn:active { opacity:.85; }
+.btn-primary { background:rgba(74,144,217,0.9); color:#fff; border:1px solid rgba(74,144,217,0.4); }
+.btn-outline { background:rgba(255,255,255,0.15); color:#fff; border:1px solid rgba(255,255,255,0.3); }
 
-/* ── FOOTER ── */
-footer {
-  margin:16px; padding:24px 20px;
-  text-align:center;
-}
+footer { padding:16px; }
+.footer-inner { padding:24px 20px; text-align:center; }
 .footer-co { font-size:13px; color:#fff; font-weight:700; }
 .footer-slogan { font-size:11px; color:rgba(255,255,255,0.5); margin-top:4px; font-style:italic; }
-.footer-credit { font-size:10px; color:rgba(255,255,255,0.25); margin-top:16px; }
+.footer-credit { font-size:10px; color:rgba(255,255,255,0.3); margin-top:16px; }
+.footer-credit a { color:rgba(255,255,255,0.4); text-decoration:none; }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <div class="nav-brand">KYOUNGDONG CORP.</div>
+  <div class="nav-brand">SHIELD Y PRO</div>
   <div class="lang-btns">
     <button class="lang-btn active" onclick="setLang('kr')">KR</button>
     <button class="lang-btn" onclick="setLang('en')">EN</button>
@@ -233,15 +204,11 @@ footer {
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
-  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;">
-    <div style="font-size:56px;opacity:0.2;">🖼️</div>
-    <div style="font-size:11px;color:rgba(255,255,255,0.2);letter-spacing:1px;">hero.jpg</div>
-  </div>
+  <img src="./hero.png" alt="SHIELD Y PRO">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-badge">🏗️ 안전용품·건축자재 종합유통</div>
+    <div class="hero-badge">🛡️ SHIELD Y PRO · Total Safety Partner</div>
     <div class="hero-name">
       <span data-lang="kr" class="active">박선영</span>
       <span data-lang="en">Park Sun Young</span>
@@ -255,31 +222,29 @@ footer {
       <span data-lang="cn">박선영 · Park Sun Young</span>
     </div>
     <div class="hero-title">
-      <span data-lang="kr" class="active">대표 · CEO | Kyoungdong Corp.</span>
-      <span data-lang="en">CEO | Kyoungdong Corp.</span>
-      <span data-lang="jp">代表取締役 | Kyoungdong Corp.</span>
-      <span data-lang="cn">代表 · CEO | Kyoungdong Corp.</span>
+      <span data-lang="kr" class="active">대표 · CEO | SHIELD Y PRO (Kyoungdong Corp.)</span>
+      <span data-lang="en">CEO | SHIELD Y PRO (Kyoungdong Corp.)</span>
+      <span data-lang="jp">代表取締役 | SHIELD Y PRO (Kyoungdong Corp.)</span>
+      <span data-lang="cn">代表 · CEO | SHIELD Y PRO (Kyoungdong Corp.)</span>
     </div>
   </div>
 </div>
 
-<!-- PROFILE -->
 <div class="sec">
-  <div class="glass-dark profile-row">
+  <div class="glass-dark">
     <div class="profile-inner">
-      <div class="profile-ph">👩</div>
+      <img class="profile-img" src="./profil.png" alt="박선영">
       <div>
         <div class="profile-name"><span data-lang="kr" class="active">박선영 대표</span><span data-lang="en">Sun Young Park, CEO</span><span data-lang="jp">パク・ソニョン 代表</span><span data-lang="cn">朴宣映 代表</span></div>
-        <div class="profile-sub">Kyoungdong Corp.</div>
+        <div class="profile-sub">SHIELD Y PRO · Kyoungdong Corp.</div>
         <div class="profile-tag"><span data-lang="kr" class="active">⚡ Beyond Supply, Building Trust.</span><span data-lang="en">⚡ Beyond Supply, Building Trust.</span><span data-lang="jp">⚡ 供給を超え、信頼を築く。</span><span data-lang="cn">⚡ 超越供应，创造信任。</span></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ABOUT -->
 <div class="sec">
-  <div class="glass-dark" style="padding:22px 20px;">
+  <div class="glass-dark pad-in">
     <div class="sec-label">About</div>
     <div class="sec-title"><span data-lang="kr" class="active">현장에 필요한 모든 것,<br>신뢰로 공급합니다.</span><span data-lang="en">Everything the site needs,<br>supplied with trust.</span><span data-lang="jp">現場に必要なすべてを、<br>信頼でお届けします。</span><span data-lang="cn">现场所需一切，<br>以信任供应。</span></div>
     <div class="about-quote"><span data-lang="kr" class="active">Beyond Supply, Building Trust.<br>공급을 넘어, 신뢰를 만듭니다.</span><span data-lang="en">Beyond Supply, Building Trust.</span><span data-lang="jp">供給を超え、信頼を築く。</span><span data-lang="cn">超越供应，创造信任。</span></div>
@@ -287,7 +252,6 @@ footer {
   </div>
 </div>
 
-<!-- WHY -->
 <div class="sec">
   <div class="sec-label" style="padding:0 4px;">Why Us</div>
   <div class="sec-title" style="padding:0 4px;"><span data-lang="kr" class="active">우리와 함께해야 하는 이유</span><span data-lang="en">Why Choose Us</span><span data-lang="jp">私たちを選ぶ理由</span><span data-lang="cn">为什么选择我们</span></div>
@@ -298,64 +262,79 @@ footer {
     </div>
     <div class="glass why-card">
       <div class="why-num">WHY 02</div>
-      <div class="why-text"><span data-lang="kr" class="active"><strong>더 많은 제품이 아닌, 더 큰 가치</strong>를 공급합니다.</span><span data-lang="en">Not more products — <strong>greater value</strong>.</span><span data-lang="jp"><strong>より大きな価値</strong>を提供します。</span><span data-lang="cn"><strong>更大价值</strong>的供应。</span></div>
+      <div class="why-text"><span data-lang="kr" class="active"><strong>더 많은 제품이 아닌, 더 큰 가치</strong>를 공급합니다. Value Driven Supply.</span><span data-lang="en">Not more products — <strong>greater value</strong>. Value Driven Supply.</span><span data-lang="jp">より多くの製品ではなく、<strong>より大きな価値</strong>を提供します。</span><span data-lang="cn">不是更多产品，而是<strong>更大价值</strong>的供应。</span></div>
     </div>
     <div class="glass why-card">
       <div class="why-num">WHY 03</div>
-      <div class="why-text"><span data-lang="kr" class="active"><strong>시간과 비용을 줄이는</strong> 공급 시스템을 제공합니다.</span><span data-lang="en">A supply system that <strong>reduces time and cost</strong>.</span><span data-lang="jp"><strong>時間とコストを削減する</strong>供給システム。</span><span data-lang="cn"><strong>节省时间和成本</strong>的供应系统。</span></div>
+      <div class="why-text"><span data-lang="kr" class="active">다양한 경험을 바탕으로 <strong>시간과 비용을 줄이는</strong> 공급 시스템을 제공합니다.</span><span data-lang="en">A supply system that <strong>reduces time and cost</strong>.</span><span data-lang="jp"><strong>時間とコストを削減する</strong>供給システムを提供します。</span><span data-lang="cn">提供<strong>节省时间和成本</strong>的供应系统。</span></div>
     </div>
   </div>
 </div>
 
-<!-- SERVICES -->
 <div class="sec">
   <div class="sec-label" style="padding:0 4px;">Services</div>
   <div class="sec-title" style="padding:0 4px;"><span data-lang="kr" class="active">우리가 다른 이유</span><span data-lang="en">What Makes Us Different</span><span data-lang="jp">私たちが違う理由</span><span data-lang="cn">我们的差异所在</span></div>
   <div class="svc-grid">
-    <div class="glass-white svc-card"><div class="svc-icon">🏗️</div><div class="svc-title"><span data-lang="kr" class="active">현장 효율까지</span><span data-lang="en">Site Efficiency</span><span data-lang="jp">現場効率まで</span><span data-lang="cn">提升效率</span></div><div class="svc-desc"><span data-lang="kr" class="active">단순 납품을 넘어 효율과 경쟁력까지.</span><span data-lang="en">Beyond delivery — efficiency too.</span><span data-lang="jp">効率と競争力も提供。</span><span data-lang="cn">连效率一并提供。</span></div></div>
+    <div class="glass-white svc-card"><div class="svc-icon">🏗️</div><div class="svc-title"><span data-lang="kr" class="active">현장 효율까지</span><span data-lang="en">Site Efficiency</span><span data-lang="jp">現場効率まで</span><span data-lang="cn">提升现场效率</span></div><div class="svc-desc"><span data-lang="kr" class="active">단순 납품을 넘어 효율과 경쟁력까지.</span><span data-lang="en">Beyond delivery — efficiency too.</span><span data-lang="jp">効率と競争力も提供。</span><span data-lang="cn">连效率一并提供。</span></div></div>
     <div class="glass-white svc-card"><div class="svc-icon">🤝</div><div class="svc-title"><span data-lang="kr" class="active">진정한 파트너</span><span data-lang="en">True Partner</span><span data-lang="jp">真のパートナー</span><span data-lang="cn">真正的伙伴</span></div><div class="svc-desc"><span data-lang="kr" class="active">시간·비용·효율 모두 고려.</span><span data-lang="en">Time, cost, efficiency considered.</span><span data-lang="jp">時間・コスト・効率まで。</span><span data-lang="cn">时间成本效率兼顾。</span></div></div>
     <div class="glass-white svc-card"><div class="svc-icon">⚡</div><div class="svc-title"><span data-lang="kr" class="active">즉시 대응</span><span data-lang="en">Instant Response</span><span data-lang="jp">即時対応</span><span data-lang="cn">即时响应</span></div><div class="svc-desc"><span data-lang="kr" class="active">빠른 피드백과 즉각적 해결책.</span><span data-lang="en">Fast feedback, immediate solutions.</span><span data-lang="jp">迅速なフィードバック。</span><span data-lang="cn">快速反馈即时解决。</span></div></div>
     <div class="glass-white svc-card"><div class="svc-icon">📦</div><div class="svc-title"><span data-lang="kr" class="active">원스톱 공급</span><span data-lang="en">All-in-One</span><span data-lang="jp">ワンストップ</span><span data-lang="cn">一站式供应</span></div><div class="svc-desc"><span data-lang="kr" class="active">안전용품부터 건축자재까지.</span><span data-lang="en">Safety to construction, all covered.</span><span data-lang="jp">安全用品から建材まで。</span><span data-lang="cn">从安全用品到建材。</span></div></div>
   </div>
 </div>
 
-<!-- REFERRAL -->
 <div class="sec">
   <div class="sec-label" style="padding:0 4px;">Referral</div>
   <div class="sec-title" style="padding:0 4px;"><span data-lang="kr" class="active">이런 분을 소개해 주세요 🙏</span><span data-lang="en">Ideal Referrals</span><span data-lang="jp">こんな方をご紹介ください</span><span data-lang="cn">期待这样的引荐</span></div>
-  <div class="ref-list">
-    <div class="glass-white ref-item"><div class="ref-num">1</div><div class="ref-text"><span data-lang="kr" class="active">🏗️ <strong>현장이 멈추지 않는 서비스</strong>를 원하는 현장소장</span><span data-lang="en">🏗️ Site managers who need <strong>uninterrupted service</strong></span><span data-lang="jp">🏗️ <strong>現場が止まらないサービス</strong>を求める所長</span><span data-lang="cn">🏗️ 需要<strong>不间断服务</strong>的现场经理</span></div></div>
-    <div class="glass-white ref-item"><div class="ref-num">2</div><div class="ref-text"><span data-lang="kr" class="active">🦺 <strong>빠른 해결과 피드백</strong>을 선호하는 안전관리자</span><span data-lang="en">🦺 Safety managers who prefer <strong>quick response</strong></span><span data-lang="jp">🦺 <strong>迅速な解決</strong>を好む安全管理者</span><span data-lang="cn">🦺 偏好<strong>快速响应</strong>的安全管理员</span></div></div>
-    <div class="glass-white ref-item"><div class="ref-num">3</div><div class="ref-text"><span data-lang="kr" class="active">🏢 <strong>즉시 대응해주는 업체</strong>를 찾는 건설관계자</span><span data-lang="en">🏢 Construction pros seeking <strong>immediate response</strong></span><span data-lang="jp">🏢 <strong>即時対応する業者</strong>を求める建設関係者</span><span data-lang="cn">🏢 寻找<strong>即时响应供应商</strong>的建设人员</span></div></div>
+  <div class="ref-intro" style="padding:0 4px;">
+    <span data-lang="kr" class="active"><strong>SHIELD Y PRO의 12대 핵심 비즈니스 파트너</strong>입니다. 아래 분야의 분들을 소개해 주시면 안전이라는 공동 가치로 함께 성장합니다.</span>
+    <span data-lang="en"><strong>SHIELD Y PRO's 12 key business partners.</strong> Refer people in these fields, and we grow together through the shared value of safety.</span>
+    <span data-lang="jp"><strong>SHIELD Y PROの12大コアビジネスパートナー</strong>です。以下の分野の方をご紹介いただければ、安全という共通価値で共に成長します。</span>
+    <span data-lang="cn"><strong>SHIELD Y PRO的12大核心业务伙伴。</strong>引荐以下领域的人士，我们将以安全的共同价值共同成长。</span>
+  </div>
+  <div class="cat-list">
+    <div class="glass-white cat-card">
+      <div class="cat-head"><span class="cat-icon">🏗️</span><span class="cat-title"><span data-lang="kr" class="active">건설 · 시공</span><span data-lang="en">Construction</span><span data-lang="jp">建設・施工</span><span data-lang="cn">建设·施工</span></span></div>
+      <div class="cat-items"><span data-lang="kr" class="active">건설회사 · 건축사/설계사무소 · 종합/전문건설업체</span><span data-lang="en">Construction firms · Architects/design offices · General & specialty contractors</span><span data-lang="jp">建設会社・建築士/設計事務所・総合/専門建設業者</span><span data-lang="cn">建设公司·建筑师/设计事务所·综合/专业建设企业</span></div>
+    </div>
+    <div class="glass-white cat-card">
+      <div class="cat-head"><span class="cat-icon">🦺</span><span class="cat-title"><span data-lang="kr" class="active">안전 · 관리</span><span data-lang="en">Safety & Management</span><span data-lang="jp">安全・管理</span><span data-lang="cn">安全·管理</span></span></div>
+      <div class="cat-items"><span data-lang="kr" class="active">산업안전관리 컨설턴트 · 산업재해 노무사 · 소방시설 업체</span><span data-lang="en">Industrial safety consultants · Occupational accident labor attorneys · Fire safety firms</span><span data-lang="jp">産業安全管理コンサルタント・産業災害労務士・消防施設業者</span><span data-lang="cn">工业安全管理顾问·工伤劳务师·消防设施企业</span></div>
+    </div>
+    <div class="glass-white cat-card">
+      <div class="cat-head"><span class="cat-icon">⚡</span><span class="cat-title"><span data-lang="kr" class="active">시설 · 설비</span><span data-lang="en">Facility & Equipment</span><span data-lang="jp">施設・設備</span><span data-lang="cn">设施·设备</span></span></div>
+      <div class="cat-items"><span data-lang="kr" class="active">전기공사업체 · 제조공장 대표 · 시설관리(FM) 업체</span><span data-lang="en">Electrical contractors · Factory owners · Facility management (FM) firms</span><span data-lang="jp">電気工事業者・製造工場代表・施設管理(FM)業者</span><span data-lang="cn">电气工程企业·制造工厂代表·设施管理(FM)企业</span></div>
+    </div>
+    <div class="glass-white cat-card">
+      <div class="cat-head"><span class="cat-icon">🤝</span><span class="cat-title"><span data-lang="kr" class="active">지원 · 서비스</span><span data-lang="en">Support & Service</span><span data-lang="jp">支援・サービス</span><span data-lang="cn">支持·服务</span></span></div>
+      <div class="cat-items"><span data-lang="kr" class="active">인력파견/아웃소싱 · 기업 보험설계사 · 간판/광고/인쇄 업체</span><span data-lang="en">Staffing/outsourcing · Corporate insurance planners · Signage/advertising/printing firms</span><span data-lang="jp">人材派遣/アウトソーシング・企業保険設計士・看板/広告/印刷業者</span><span data-lang="cn">人力派遣/外包·企业保险规划师·招牌/广告/印刷企业</span></div>
+    </div>
   </div>
 </div>
 
-<!-- CAREER -->
 <div class="sec">
-  <div class="glass-dark" style="padding:22px 20px;">
+  <div class="navy-anchor pad-in">
     <div class="sec-label">Career &amp; Network</div>
     <div class="sec-title"><span data-lang="kr" class="active">활동 이력</span><span data-lang="en">Activities</span><span data-lang="jp">活動履歴</span><span data-lang="cn">活动履历</span></div>
     <div class="career-list">
-      <div style="display:flex;gap:10px;align-items:flex-start;">
-        <div style="background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.2);font-size:10px;font-weight:700;padding:3px 9px;border-radius:10px;flex-shrink:0;margin-top:2px;">BNI</div>
+      <div class="career-item">
+        <div class="career-badge">BNI</div>
         <div>
-          <div style="font-size:13px;font-weight:700;color:#fff;"><span data-lang="kr" class="active">BNI 파이오니아 챕터 멤버</span><span data-lang="en">BNI Pioneer Chapter Member</span><span data-lang="jp">BNI パイオニアチャプターメンバー</span><span data-lang="cn">BNI先驱分会成员</span></div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.55);margin-top:2px;"><span data-lang="kr" class="active">Givers Gain 기반 비즈니스 네트워크</span><span data-lang="en">Givers Gain based business network</span><span data-lang="jp">ギバーズゲイン型ネットワーク</span><span data-lang="cn">基于Givers Gain的商业网络</span></div>
+          <div class="career-title"><span data-lang="kr" class="active">BNI 파이오니아 챕터 멤버</span><span data-lang="en">BNI Pioneer Chapter Member</span><span data-lang="jp">BNI パイオニアチャプターメンバー</span><span data-lang="cn">BNI先驱分会成员</span></div>
+          <div class="career-desc"><span data-lang="kr" class="active">Givers Gain 기반 비즈니스 네트워크</span><span data-lang="en">Givers Gain based business network</span><span data-lang="jp">ギバーズゲイン型ビジネスネットワーク</span><span data-lang="cn">基于Givers Gain的商业网络</span></div>
         </div>
       </div>
-      <div style="display:flex;gap:10px;align-items:flex-start;">
-        <div style="background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.2);font-size:10px;font-weight:700;padding:3px 9px;border-radius:10px;flex-shrink:0;margin-top:2px;">상공</div>
-        <div style="font-size:13px;font-weight:700;color:#fff;padding-top:2px;"><span data-lang="kr" class="active">부산 상공회의소 회원</span><span data-lang="en">Busan Chamber of Commerce</span><span data-lang="jp">釜山商工会議所会員</span><span data-lang="cn">釜山商工会议所会员</span></div>
+      <div class="career-item">
+        <div class="career-badge">상공</div>
+        <div class="career-title" style="padding-top:2px;"><span data-lang="kr" class="active">부산 상공회의소 회원</span><span data-lang="en">Busan Chamber of Commerce Member</span><span data-lang="jp">釜山商工会議所会員</span><span data-lang="cn">釜山商工会议所会员</span></div>
       </div>
-      <div style="display:flex;gap:10px;align-items:flex-start;">
-        <div style="background:rgba(255,255,255,0.15);color:#fff;border:1px solid rgba(255,255,255,0.2);font-size:10px;font-weight:700;padding:3px 9px;border-radius:10px;flex-shrink:0;margin-top:2px;">여성</div>
-        <div style="font-size:13px;font-weight:700;color:#fff;padding-top:2px;"><span data-lang="kr" class="active">여성기업인 협회 회원</span><span data-lang="en">Women Entrepreneurs Association</span><span data-lang="jp">女性起業家協会会員</span><span data-lang="cn">女性企业家协会会员</span></div>
+      <div class="career-item">
+        <div class="career-badge">여성</div>
+        <div class="career-title" style="padding-top:2px;"><span data-lang="kr" class="active">여성기업인 협회 회원</span><span data-lang="en">Women Entrepreneurs Association Member</span><span data-lang="jp">女性起業家協会会員</span><span data-lang="cn">女性企业家协会会员</span></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- CONTACT -->
 <div class="sec">
   <div class="sec-label" style="padding:0 4px;">Contact</div>
   <div class="sec-title" style="padding:0 4px;"><span data-lang="kr" class="active">연락하기</span><span data-lang="en">Get in Touch</span><span data-lang="jp">お問い合わせ</span><span data-lang="cn">联系我们</span></div>
@@ -363,29 +342,29 @@ footer {
     <a class="con-item" href="tel:010-6649-8882"><div class="con-icon" style="background:rgba(7,18,90,0.08);">📞</div><div><div class="con-label">Phone</div><div class="con-value">010-6649-8882</div></div></a>
     <a class="con-item" href="https://kdshieldy.com/" target="_blank"><div class="con-icon" style="background:rgba(7,18,90,0.08);">🌐</div><div><div class="con-label">Website</div><div class="con-value">kdshieldy.com</div></div></a>
     <a class="con-item" href="https://www.instagram.com/kyoungdong_/" target="_blank"><div class="con-icon" style="background:rgba(200,16,46,0.08);">📸</div><div><div class="con-label">Instagram</div><div class="con-value">@kyoungdong_</div></div></a>
-    <a class="con-item" href="kakaolink://open?user_id=sy2326"><div class="con-icon" style="background:rgba(254,229,0,0.2);">💬</div><div><div class="con-label">KakaoTalk</div><div class="con-value">sy2326</div></div></a>
+    <a class="con-item" href="kakaolink://open?user_id=sy2326"><div class="con-icon" style="background:rgba(254,229,0,0.25);">💬</div><div><div class="con-label">KakaoTalk</div><div class="con-value">sy2326</div></div></a>
   </div>
 </div>
 
-<!-- 액션버튼 -->
 <div class="action-sec">
-  <button class="btn btn-primary">📤 <span data-lang="kr" class="active">명함 공유하기</span><span data-lang="en">Share Card</span><span data-lang="jp">名刺をシェア</span><span data-lang="cn">分享名片</span></button>
-  <button class="btn btn-outline">📞 <span data-lang="kr" class="active">연락처 저장</span><span data-lang="en">Save Contact</span><span data-lang="jp">連絡先を保存</span><span data-lang="cn">保存联系人</span></button>
-  <button class="btn btn-outline">🗂️ <span data-lang="kr" class="active">명함첩 저장</span><span data-lang="en">Save to CardBook</span><span data-lang="jp">名刺帳に保存</span><span data-lang="cn">保存到名片册</span></button>
-  <a class="btn btn-link" href="https://www.instagram.com/kyoungdong_/" target="_blank">📸 <span data-lang="kr" class="active">인스타그램</span><span data-lang="en">Instagram</span><span data-lang="jp">インスタグラム</span><span data-lang="cn">Instagram</span></a>
-  <a class="btn btn-link" href="https://kdshieldy.com/" target="_blank">🌐 <span data-lang="kr" class="active">홈페이지</span><span data-lang="en">Website</span><span data-lang="jp">ホームページ</span><span data-lang="cn">官网</span></a>
-  <a class="btn btn-primary" href="tel:010-6649-8882">💬 <span data-lang="kr" class="active">상담 문의하기</span><span data-lang="en">Contact Us</span><span data-lang="jp">お問い合わせ</span><span data-lang="cn">咨询联系</span></a>
+  <button class="btn btn-primary" onclick="shareCard()">📤 <span data-lang="kr" class="active">명함 공유하기</span><span data-lang="en">Share Card</span><span data-lang="jp">名刺をシェア</span><span data-lang="cn">分享名片</span></button>
+  <button class="btn btn-outline" onclick="saveContact()">📞 <span data-lang="kr" class="active">연락처 저장</span><span data-lang="en">Save Contact</span><span data-lang="jp">連絡先を保存</span><span data-lang="cn">保存联系人</span></button>
+  <button class="btn btn-outline" onclick="saveToCardbook({
+    id:'parksunyoung', name:'박선영', nameEn:'Park Sun Young',
+    title:'대표', company:'SHIELD Y PRO (Kyoungdong Corp.)',
+    phone:'010-6649-8882', email:'', chapter:'파이오니어', bni:'멤버', url:window.location.href
+  })">🗂️ <span data-lang="kr" class="active">명함첩 저장</span><span data-lang="en">Save to CardBook</span><span data-lang="jp">名刺帳に保存</span><span data-lang="cn">保存到名片册</span></button>
 </div>
 
-<!-- FOOTER -->
 <footer>
-  <div class="glass-dark" style="padding:24px 20px;">
-    <div class="footer-co">KYOUNGDONG CORP.</div>
+  <div class="glass-dark footer-inner">
+    <div class="footer-co">SHIELD Y PRO · Kyoungdong Corp.</div>
     <div class="footer-slogan">Beyond Supply, Building Trust.</div>
-    <div class="footer-credit">Digital Card by T.M LINK</div>
+    <div class="footer-credit">Digital Card by <a href="https://tmlink.kr" target="_blank">T.M LINK</a></div>
   </div>
 </footer>
 
+<script src="https://jinjjabg-hub.github.io/cardbook/save-to-cardbook.js"></script>
 <script>
 function setLang(lang) {
   document.querySelectorAll('[data-lang]').forEach(el => {
@@ -394,6 +373,19 @@ function setLang(lang) {
   document.querySelectorAll('.lang-btn').forEach((btn, i) => {
     btn.classList.toggle('active', ['kr','en','jp','cn'][i] === lang);
   });
+}
+function shareCard() {
+  if (navigator.share) {
+    navigator.share({ title: document.title, text: document.querySelector('meta[property="og:description"]')?.content || '', url: window.location.href });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => alert('링크가 복사되었습니다!'));
+  }
+}
+function saveContact() {
+  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:박선영\nN:박;선영;;;\nORG:SHIELD Y PRO (Kyoungdong Corp.)\nTITLE:대표\nTEL;TYPE=CELL:010-6649-8882\nURL:https://kdshieldy.com/\nEND:VCARD`;
+  const blob = new Blob([vcard], {type:'text/vcard'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'ParkSunYoung_SHIELDYPRO.vcf'; a.click();
 }
 setLang('kr');
 </script>
