@@ -945,7 +945,13 @@ body {
     <span data-lang="jp">📞 連絡先保存</span>
     <span data-lang="cn">📞 保存联系人</span>
   </button>
-  <button class="btn-secondary" onclick="saveToCardbook({id:'kimkyungtae',name:'김경태',nameEn:'Kyung-Tae Kim',title:'위드유 지사장',company:'늘곁애 라이프온(주)',phone:'010-4455-2655',email:'momo2655@naver.com',chapter:'파이오니어',bni:'BNI 파이오니어 챕터',url:window.location.href})">
+  <button class="btn-secondary" onclick="shareCard()">
+    <span data-lang="kr" class="active">📤 명함 저장</span>
+    <span data-lang="en">📤 Save Card</span>
+    <span data-lang="jp">📤 名刺保存</span>
+    <span data-lang="cn">📤 保存名片</span>
+  </button>
+    <button class="btn-secondary" onclick="saveToCardbook({dicaUrl:'https://jinjjabg-hub.github.io/BNI-PIONEER-cards/김경태/',id:'kimkyungtae',name:'김경태',nameEn:'Kyung-Tae Kim',title:'위드유 지사장',company:'늘곁애 라이프온(주)',phone:'010-4455-2655',email:'momo2655@naver.com',chapter:'파이오니어',bni:'BNI 파이오니어 챕터',url:window.location.href})">
     <span data-lang="kr" class="active">🗂️ 명함 저장</span>
     <span data-lang="en">🗂️ Save Card</span>
     <span data-lang="jp">🗂️ 名刺保存</span>
@@ -1011,5 +1017,15 @@ function slideMove(dir) { goSlide(slideIdx + dir); }
 initSlide();
 </script>
 <script src="https://jinjjabg-hub.github.io/cardbook/save-to-cardbook.js"></script>
+
+<script>
+/* v8 표준 공유 */
+if(typeof shareCard==='undefined'){
+  window.shareCard=function(){
+    if(navigator.share){navigator.share({title:document.title,url:window.location.href}).catch(function(){});}
+    else{navigator.clipboard.writeText(window.location.href).then(function(){alert('링크가 복사되었습니다!');});}
+  };
+}
+</script>
 </body>
 </html>
