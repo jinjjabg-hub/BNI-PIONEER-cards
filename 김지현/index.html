@@ -730,7 +730,14 @@
           <span>이름·상호·전화번호</span>
         </div>
       </a>
-      <button class="save-btn" onclick="saveToCardbook({id:'kimjihyun',name:'김지현',nameEn:'Kim Jihyun',company:'감성온도',title:'대표 / 공간디렉터',phone:'010-7319-1279',email:'gamsung.ondo@gmail.com',chapter:'pioneer',bni:'BNI Pioneer Chapter 8기 부의장',url:window.location.href})">
+      <button class="save-btn" onclick="shareCard()">
+        <span class="save-icon">📋</span>
+        <div class="save-info">
+          <strong>명함 공유하기</strong>
+          <span>내 명함첩에 보관하기</span>
+        </div>
+      </button>
+    <button class="save-btn" onclick="saveToCardbook({dicaUrl:'https://jinjjabg-hub.github.io/BNI-PIONEER-cards/김지현/',id:'kimjihyun',name:'김지현',nameEn:'Kim Jihyun',company:'감성온도',title:'대표 / 공간디렉터',phone:'010-7319-1279',email:'gamsung.ondo@gmail.com',chapter:'pioneer',bni:'BNI Pioneer Chapter 8기 부의장',url:window.location.href})">
         <span class="save-icon">📋</span>
         <div class="save-info">
           <strong>명함첩에 저장</strong>
@@ -848,5 +855,15 @@ document.querySelectorAll('[data-lang="ko active"]').forEach(el => {
 
 </script>
 <script src="https://jinjjabg-hub.github.io/cardbook/save-to-cardbook.js"></script>
+
+<script>
+/* v8 표준 공유 */
+if(typeof shareCard==='undefined'){
+  window.shareCard=function(){
+    if(navigator.share){navigator.share({title:document.title,url:window.location.href}).catch(function(){});}
+    else{navigator.clipboard.writeText(window.location.href).then(function(){alert('링크가 복사되었습니다!');});}
+  };
+}
+</script>
 </body>
 </html>
