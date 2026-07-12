@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>박미성 | 울림컴퍼니</title>
+<meta property="og:title" content="박미성 | 대표 · 울림컴퍼니">
+<meta property="og:description" content="기업의 가능성을 성과로 연결하는 비즈니스 성장 파트너">
+<meta property="og:image" content="og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinjjabg-hub.github.io/NAMECARD/박미성/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2.css">
+<style>
+:root{
+  --bg-dark:#1b1512;
+  --bg-dark2:#241c17;
+  --bg-dark3:#120e0c;
+  --bg-light:#fff8f2;
+  --orange:#ef8e36;
+  --orange2:#eb6826;
+  --text-dark:#ffffff;
+  --text-light:#1b1512;
+  --muted-dark:rgba(255,255,255,.62);
+  --muted-light:#5c5049;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:'Pretendard',sans-serif;background:#0a0807;color:var(--text-dark);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:430px;margin:0 auto;background:var(--bg-dark);overflow:hidden}
+h1,h2,h3,.font-t{font-family:'Paperlogy','Pretendard',sans-serif;letter-spacing:-.02em}
+
+[data-lang]{display:none !important}
+[data-lang].active{display:block !important}
+span[data-lang].active{display:inline !important}
+div[data-lang].active{display:block !important}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+  padding:14px 20px;background:rgba(27,21,18,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(239,142,54,.18)}
+.nav-brand{font-family:'Paperlogy',sans-serif;font-size:16px;font-weight:800;color:var(--orange);letter-spacing:.02em}
+.lang-btns{display:flex;gap:4px}
+.lang-btn{background:transparent;border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.5);
+  font-size:10px;font-weight:700;padding:5px 8px;border-radius:6px;cursor:pointer;transition:.2s}
+.lang-btn.active{background:var(--orange);border-color:var(--orange);color:#1b1512}
+
+/* HERO — 원본 2228x1480 = 3:2 가로형 */
+.hero{position:relative;aspect-ratio:3/2;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,
+  rgba(20,12,6,.05) 0%,rgba(20,12,6,.25) 40%,rgba(20,12,6,.82) 78%,rgba(27,21,18,.98) 100%)}
+.hero-content{position:absolute;left:0;right:0;bottom:0;padding:0 24px 22px}
+.hero-badge{display:inline-block;background:var(--orange2);color:#fff;font-size:11px;font-weight:800;
+  padding:5px 12px;border-radius:100px;margin-bottom:10px}
+.hero-name{font-family:'Paperlogy',sans-serif;font-size:34px;font-weight:800;line-height:1.1;margin-bottom:6px}
+.hero-title{font-size:13px;color:rgba(255,255,255,.78);font-weight:600}
+
+/* PROFILE */
+.profile-row{display:flex;align-items:center;gap:16px;padding:22px 24px;background:var(--bg-dark)}
+.profile-img{width:78px;height:78px;border-radius:50%;object-fit:cover;object-position:center 18%;
+  border:2.5px solid var(--orange);flex-shrink:0}
+.profile-name{font-family:'Paperlogy',sans-serif;font-size:19px;font-weight:800;margin-bottom:3px}
+.profile-sub{font-size:12.5px;color:var(--muted-dark);margin-bottom:7px}
+.profile-tag{display:inline-block;font-size:11px;font-weight:700;color:var(--orange);
+  background:rgba(239,142,54,.12);border:1px solid rgba(239,142,54,.3);padding:4px 10px;border-radius:100px}
+
+/* SECTION 공통 */
+.sec{padding:38px 24px}
+.sec-dark{background:var(--bg-dark)}
+.sec-dark3{background:var(--bg-dark3)}
+.sec-light{background:var(--bg-light);color:var(--text-light)}
+.sec-label{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--orange2);margin-bottom:10px}
+.sec-title{font-family:'Paperlogy',sans-serif;font-size:24px;font-weight:800;line-height:1.28;margin-bottom:20px}
+.sec-light .sec-title{color:var(--text-light)}
+
+/* ABOUT */
+.quote{border-left:3px solid var(--orange);padding:10px 0 10px 14px;margin-bottom:18px;
+  font-family:'Paperlogy',sans-serif;font-size:17px;font-weight:700;line-height:1.45;color:#fff}
+.about-txt{font-size:14px;color:var(--muted-dark);margin-bottom:12px}
+.about-key{font-size:14.5px;font-weight:700;color:var(--orange)}
+
+/* WHY */
+.why-card{background:#fff;border:1px solid rgba(27,21,18,.08);border-left:4px solid var(--orange2);
+  border-radius:14px;padding:18px;margin-bottom:12px;box-shadow:0 2px 14px rgba(27,21,18,.05)}
+.why-num{font-family:'Paperlogy',sans-serif;font-size:12px;font-weight:800;color:var(--orange2);margin-bottom:6px}
+.why-t{font-family:'Paperlogy',sans-serif;font-size:16px;font-weight:800;margin-bottom:7px;color:var(--text-light)}
+.why-d{font-size:13px;color:var(--muted-light);line-height:1.62}
+
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.svc-card{background:rgba(255,255,255,.045);border:1px solid rgba(239,142,54,.2);border-radius:14px;padding:16px}
+.svc-ico{font-size:22px;margin-bottom:8px}
+.svc-t{font-family:'Paperlogy',sans-serif;font-size:13.5px;font-weight:800;color:var(--orange);margin-bottom:6px;line-height:1.3}
+.svc-d{font-size:11.5px;color:var(--muted-dark);line-height:1.58}
+
+/* REFERRAL */
+.ref-item{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px dashed rgba(27,21,18,.12)}
+.ref-item:last-child{border-bottom:none}
+.ref-num{width:24px;height:24px;flex-shrink:0;border-radius:50%;background:var(--orange2);color:#fff;
+  font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.ref-t{font-size:13.5px;font-weight:600;color:var(--text-light);line-height:1.55}
+
+/* CAREER */
+.car-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px}
+.car-dot{width:7px;height:7px;border-radius:50%;background:var(--orange2);flex-shrink:0;margin-top:8px}
+.car-t{font-size:13.5px;color:var(--muted-light);line-height:1.6}
+.car-t b{color:var(--text-light);font-weight:700}
+.client-box{margin-top:18px;background:#fff;border:1px solid rgba(27,21,18,.08);border-radius:14px;padding:16px}
+.client-lb{font-size:11px;font-weight:800;letter-spacing:.1em;color:var(--orange2);margin-bottom:8px}
+.client-tags{display:flex;flex-wrap:wrap;gap:6px}
+.client-tag{font-size:11.5px;font-weight:700;color:var(--text-light);background:var(--bg-light);
+  border:1px solid rgba(27,21,18,.1);padding:5px 10px;border-radius:100px}
+
+/* CONTACT */
+.con-item{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid rgba(27,21,18,.08);
+  border-radius:12px;padding:14px 16px;margin-bottom:9px;text-decoration:none;color:var(--text-light)}
+.con-ico{font-size:18px}
+.con-lb{font-size:10.5px;color:var(--muted-light);font-weight:600}
+.con-v{font-size:14px;font-weight:700}
+
+/* BUTTONS */
+.btn-sec{background:var(--bg-dark);padding:30px 24px 36px}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;
+  font-family:'Pretendard',sans-serif;font-size:14.5px;font-weight:700;padding:15px;border-radius:13px;
+  margin-bottom:9px;cursor:pointer;text-decoration:none;border:none;transition:.2s}
+.btn-blue{background:linear-gradient(135deg,var(--orange) 0%,var(--orange2) 100%);color:#fff;
+  box-shadow:0 4px 16px rgba(235,104,38,.28)}
+.btn-out{background:transparent;border:1.5px solid rgba(255,255,255,.2);color:#fff}
+.btn-dark{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#fff}
+.btn:active{transform:scale(.98)}
+.btn-row{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.btn-row .btn{margin-bottom:9px}
+
+footer{background:var(--bg-dark3);text-align:center;padding:24px;border-top:1px solid rgba(239,142,54,.14)}
+.f-brand{font-family:'Paperlogy',sans-serif;font-size:15px;font-weight:800;color:var(--orange);margin-bottom:5px}
+.f-txt{font-size:11px;color:rgba(255,255,255,.32);line-height:1.7}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">WOOLIM COMPANY</div>
+  <div class="lang-btns">
+    <button class="lang-btn active" onclick="setLang('kr')">KR</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('jp')">JP</button>
+    <button class="lang-btn" onclick="setLang('cn')">CN</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <img src="hero.png" alt="울림컴퍼니">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span data-lang="kr" class="active">경영컨설팅</span>
+      <span data-lang="en">Management Consulting</span>
+      <span data-lang="jp">経営コンサルティング</span>
+      <span data-lang="cn">经营咨询</span>
+    </div>
+    <div class="hero-name">
+      <span data-lang="kr" class="active">박미성</span>
+      <span data-lang="en">Park Mi-sung</span>
+      <span data-lang="jp">朴美成</span>
+      <span data-lang="cn">朴美成</span>
+    </div>
+    <div class="hero-title">
+      <span data-lang="kr" class="active">대표 · 울림컴퍼니</span>
+      <span data-lang="en">CEO · Woolim Company</span>
+      <span data-lang="jp">代表 · ウリムカンパニー</span>
+      <span data-lang="cn">代表 · 울림公司</span>
+    </div>
+  </div>
+</div>
+
+<!-- PROFILE -->
+<div class="profile-row">
+  <img src="profil.png" alt="박미성 대표" class="profile-img">
+  <div>
+    <div class="profile-name">
+      <span data-lang="kr" class="active">박미성 대표</span>
+      <span data-lang="en">Park Mi-sung, CEO</span>
+      <span data-lang="jp">朴美成 代表</span>
+      <span data-lang="cn">朴美成 代表</span>
+    </div>
+    <div class="profile-sub">
+      <span data-lang="kr" class="active">울림컴퍼니 · 경영컨설팅</span>
+      <span data-lang="en">Woolim Company · Consulting</span>
+      <span data-lang="jp">ウリムカンパニー · 経営コンサル</span>
+      <span data-lang="cn">울림公司 · 经营咨询</span>
+    </div>
+    <div class="profile-tag">
+      <span data-lang="kr" class="active">⚡ 국가공인 경영지도사 33기</span>
+      <span data-lang="en">⚡ Certified Management Consultant</span>
+      <span data-lang="jp">⚡ 国家公認 経営指導士</span>
+      <span data-lang="cn">⚡ 国家认证 经营指导师</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="sec sec-dark">
+  <div class="sec-label">ABOUT</div>
+  <div class="quote">
+    <span data-lang="kr" class="active">기업의 성장이 곧<br>울림의 성장이라는 믿음</span>
+    <span data-lang="en">Your growth is<br>our growth.</span>
+    <span data-lang="jp">企業の成長こそが<br>ウリムの成長である</span>
+    <span data-lang="cn">企业的成长<br>就是울림的成长</span>
+  </div>
+  <div class="about-txt">
+    <span data-lang="kr" class="active">기업의 가능성을 성과로 연결하는 비즈니스 성장 파트너입니다. 자금조달, 정부지원사업, 기업인증, 사업계획서, IR/PPT, 브랜드 디자인까지 — 성장에 필요한 전 과정을 한곳에서 설계합니다.</span>
+    <span data-lang="en">A business growth partner who turns potential into results. Funding, government programs, certifications, business plans, IR decks and brand design — the entire growth process, designed in one place.</span>
+    <span data-lang="jp">企業の可能性を成果に繋げる成長パートナーです。資金調達・政府支援事業・企業認証・事業計画書・IR資料・ブランドデザインまで、成長に必要な全過程を一箇所で設計します。</span>
+    <span data-lang="cn">将企业潜力转化为成果的成长伙伴。从资金筹措、政府支援项目、企业认证、商业计划书、IR资料到品牌设计，成长所需的全过程在一处完成。</span>
+  </div>
+  <div class="about-key">
+    <span data-lang="kr" class="active">진단부터 문서화까지, 따로가 아닌 하나의 흐름으로.</span>
+    <span data-lang="en">From diagnosis to documentation — one connected flow.</span>
+    <span data-lang="jp">診断から文書化まで、一つの流れで。</span>
+    <span data-lang="cn">从诊断到文件化，连成一条线。</span>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="sec sec-light">
+  <div class="sec-label">WHY WOOLIM</div>
+  <div class="sec-title">
+    <span data-lang="kr" class="active">왜 울림컴퍼니인가</span>
+    <span data-lang="en">Why Woolim Company</span>
+    <span data-lang="jp">なぜウリムカンパニーか</span>
+    <span data-lang="cn">为何选择울림公司</span>
+  </div>
+
+  <div class="why-card">
+    <div class="why-num">01</div>
+    <div class="why-t">
+      <span data-lang="kr" class="active">원스톱 그로스</span>
+      <span data-lang="en">One-stop Growth</span>
+      <span data-lang="jp">ワンストップ・グロース</span>
+      <span data-lang="cn">一站式成长</span>
+    </div>
+    <div class="why-d">
+      <span data-lang="kr" class="active">자금조달·정부지원사업·기업인증·사업계획서·IR/PPT·디자인을 각각 따로 맡기지 않습니다. 현 상황 진단부터 문서화까지, 성장에 필요한 전 과정을 한곳에서 연결해 설계합니다.</span>
+      <span data-lang="en">No more scattering funding, government programs, certifications, business plans, IR decks and design across separate vendors. From diagnosis to documentation, everything is designed under one roof.</span>
+      <span data-lang="jp">資金調達・政府支援・企業認証・事業計画書・IR・デザインを別々に依頼する必要はありません。現状診断から文書化まで一箇所で設計します。</span>
+      <span data-lang="cn">资金、政府项目、企业认证、商业计划书、IR、设计不再分散委托。从现状诊断到文件化，全程一处设计。</span>
+    </div>
+  </div>
+
+  <div class="why-card">
+    <div class="why-num">02</div>
+    <div class="why-t">
+      <span data-lang="kr" class="active">인하우스 올인원</span>
+      <span data-lang="en">In-house All-in-one</span>
+      <span data-lang="jp">インハウス・オールインワン</span>
+      <span data-lang="cn">内部一体化</span>
+    </div>
+    <div class="why-d">
+      <span data-lang="kr" class="active">외주 용역으로 넘기지 않습니다. 컨설팅팀·디자인팀·경영지원팀이 상주하며, 초기 상담부터 서류 기획, 디자인까지 내부에서 직접 진행합니다.</span>
+      <span data-lang="en">Nothing is outsourced. Consulting, design and management support teams work in-house — from the first consultation through document planning to final design.</span>
+      <span data-lang="jp">外注しません。コンサル・デザイン・経営支援チームが常駐し、初期相談から書類企画・デザインまで社内で直接進めます。</span>
+      <span data-lang="cn">不做外包。咨询、设计、经营支援团队常驻，从初期咨询到文件企划、设计全部内部完成。</span>
+    </div>
+  </div>
+
+  <div class="why-card">
+    <div class="why-num">03</div>
+    <div class="why-t">
+      <span data-lang="kr" class="active">검증된 전문성</span>
+      <span data-lang="en">Certified Expertise</span>
+      <span data-lang="jp">検証された専門性</span>
+      <span data-lang="cn">经验证的专业性</span>
+    </div>
+    <div class="why-d">
+      <span data-lang="kr" class="active">국가공인 경영지도사 33기 대표가 직접 진단합니다. 가톨릭대학교 창업멘토(2026), 중기부 소관 컨설팅 공급기업, 진입 2년 만에 지원사업 20억 원 이상 유치, 2026 고객만족브랜드대상 경영컨설팅 1위.</span>
+      <span data-lang="en">The CEO — a nationally certified management consultant — diagnoses in person. Startup mentor at Catholic University (2026), registered consulting supplier under the Ministry of SMEs, over 2 billion KRW in funding secured within two years, and #1 in Management Consulting at the 2026 Customer Satisfaction Brand Awards.</span>
+      <span data-lang="jp">国家公認経営指導士の代表が直接診断します。カトリック大学創業メンター(2026)、中小ベンチャー企業部所管コンサル供給企業、参入2年で支援事業20億ウォン以上を誘致、2026顧客満足ブランド大賞 経営コンサルティング1位。</span>
+      <span data-lang="cn">由国家认证经营指导师亲自诊断。天主教大学创业导师(2026)、中小风险企业部咨询供应企业、进入行业2年吸引支援项目20亿韩元以上、2026顾客满意品牌大奖经营咨询第1名。</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec sec-dark3">
+  <div class="sec-label">DIFFERENCE</div>
+  <div class="sec-title">
+    <span data-lang="kr" class="active">울림만의 차별점</span>
+    <span data-lang="en">What Sets Us Apart</span>
+    <span data-lang="jp">ウリムの差別点</span>
+    <span data-lang="cn">울림的差异化</span>
+  </div>
+  <div class="svc-grid">
+
+    <div class="svc-card">
+      <div class="svc-ico">🗺️</div>
+      <div class="svc-t">
+        <span data-lang="kr" class="active">그로스 로드맵</span>
+        <span data-lang="en">Growth Roadmap</span>
+        <span data-lang="jp">グロースロードマップ</span>
+        <span data-lang="cn">成长路线图</span>
+      </div>
+      <div class="svc-d">
+        <span data-lang="kr" class="active">단일 과제만 해결하고 끝내지 않습니다. 기업 상황을 먼저 읽고 성장 단계 전체에 맞춘 맞춤 로드맵을 제안합니다.</span>
+        <span data-lang="en">We don't stop at a single task. We read your situation first, then map a plan across every growth stage.</span>
+        <span data-lang="jp">単一課題で終わりません。企業状況を読み、成長段階全体に合わせたロードマップを提案します。</span>
+        <span data-lang="cn">不止解决单一课题。先读懂企业现状，再提出贯穿成长各阶段的路线图。</span>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-ico">💰</div>
+      <div class="svc-t">
+        <span data-lang="kr" class="active">펀딩 커넥트</span>
+        <span data-lang="en">Funding Connect</span>
+        <span data-lang="jp">ファンディング・コネクト</span>
+        <span data-lang="cn">融资连接</span>
+      </div>
+      <div class="svc-d">
+        <span data-lang="kr" class="active">융자 안내에 그치지 않습니다. 정책자금·정부지원사업·투자유치까지 이어지는 자금 흐름을 함께 설계합니다.</span>
+        <span data-lang="en">More than loan guidance. We design the full flow — policy funds, government programs and investment.</span>
+        <span data-lang="jp">融資案内に留まりません。政策資金・政府支援・投資誘致まで資金の流れを設計します。</span>
+        <span data-lang="cn">不止于贷款指引。政策资金、政府支援、投资引进的资金流一并设计。</span>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-ico">📄</div>
+      <div class="svc-t">
+        <span data-lang="kr" class="active">설득형 문서 설계</span>
+        <span data-lang="en">Persuasive Docs</span>
+        <span data-lang="jp">説得型ドキュメント</span>
+        <span data-lang="cn">说服型文件设计</span>
+      </div>
+      <div class="svc-d">
+        <span data-lang="kr" class="active">단순 디자인이 아닙니다. 목적·흐름·핵심 메시지를 먼저 설계한 뒤 기획형 디자인으로 심사자를 설득합니다.</span>
+        <span data-lang="en">Not just design. Purpose, flow and message come first — then design that convinces reviewers.</span>
+        <span data-lang="jp">単なるデザインではありません。目的・流れ・核心メッセージを設計し、審査者を説得します。</span>
+        <span data-lang="cn">不只是设计。先设计目的、脉络与核心讯息，再以企划型设计说服评审。</span>
+      </div>
+    </div>
+
+    <div class="svc-card">
+      <div class="svc-ico">🏭</div>
+      <div class="svc-t">
+        <span data-lang="kr" class="active">전 산업 대응력</span>
+        <span data-lang="en">Full-Industry Coverage</span>
+        <span data-lang="jp">全産業対応力</span>
+        <span data-lang="cn">全产业应对力</span>
+      </div>
+      <div class="svc-d">
+        <span data-lang="kr" class="active">기술 스타트업부터 제조업까지, 전 산업의 사업성을 이해하고 대응합니다.</span>
+        <span data-lang="en">From tech startups to manufacturing — we understand the viability of every industry.</span>
+        <span data-lang="jp">技術スタートアップから製造業まで、全産業の事業性を理解し対応します。</span>
+        <span data-lang="cn">从科技创业到制造业，理解并应对全产业的事业性。</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- REFERRAL -->
+<section class="sec sec-light">
+  <div class="sec-label">REFERRAL</div>
+  <div class="sec-title">
+    <span data-lang="kr" class="active">이런 분을 찾습니다</span>
+    <span data-lang="en">Who We're Looking For</span>
+    <span data-lang="jp">こんな方を探しています</span>
+    <span data-lang="cn">我们在寻找这样的您</span>
+  </div>
+
+  <div class="ref-item"><div class="ref-num">1</div><div class="ref-t">
+    <span data-lang="kr" class="active">3~7년 이내의 예비·초기 창업자</span>
+    <span data-lang="en">Pre-launch and early-stage founders (within 3–7 years)</span>
+    <span data-lang="jp">3〜7年以内の予備・初期創業者</span>
+    <span data-lang="cn">3~7年内的预备及初期创业者</span>
+  </div></div>
+
+  <div class="ref-item"><div class="ref-num">2</div><div class="ref-t">
+    <span data-lang="kr" class="active">사업계획서·IR·입찰 서류가 필요한 성장기업 대표</span>
+    <span data-lang="en">Growth-stage CEOs needing business plans, IR decks or bid documents</span>
+    <span data-lang="jp">事業計画書・IR・入札書類が必要な成長企業の代表</span>
+    <span data-lang="cn">需要商业计划书、IR、投标文件的成长期企业代表</span>
+  </div></div>
+
+  <div class="ref-item"><div class="ref-num">3</div><div class="ref-t">
+    <span data-lang="kr" class="active">벤처·이노비즈 등 기업인증을 준비하는 기업</span>
+    <span data-lang="en">Companies preparing for Venture or Inno-Biz certification</span>
+    <span data-lang="jp">ベンチャー・イノビズなど企業認証を準備する企業</span>
+    <span data-lang="cn">正在准备风险企业、Inno-Biz等企业认证的公司</span>
+  </div></div>
+
+  <div class="ref-item"><div class="ref-num">4</div><div class="ref-t">
+    <span data-lang="kr" class="active">로고·카탈로그·브로셔 등 브랜드 디자인이 필요한 사업자</span>
+    <span data-lang="en">Businesses needing brand design — logos, catalogs, brochures</span>
+    <span data-lang="jp">ロゴ・カタログ・ブローシャーなどブランドデザインが必要な事業者</span>
+    <span data-lang="cn">需要标志、目录、宣传册等品牌设计的经营者</span>
+  </div></div>
+
+  <div class="ref-item"><div class="ref-num">5</div><div class="ref-t">
+    <span data-lang="kr" class="active">대기업·플랫폼·백화점 입점 제안을 준비하는 사업자</span>
+    <span data-lang="en">Businesses preparing proposals for large corporations, platforms or department stores</span>
+    <span data-lang="jp">大手企業・プラットフォーム・百貨店への出店提案を準備する事業者</span>
+    <span data-lang="cn">准备向大企业、平台、百货商店提案入驻的经营者</span>
+  </div></div>
+</section>
+
+<!-- CAREER -->
+<section class="sec sec-dark">
+  <div class="sec-label">CAREER</div>
+  <div class="sec-title" style="color:#fff">
+    <span data-lang="kr" class="active">업력 &amp; 자격</span>
+    <span data-lang="en">Experience &amp; Credentials</span>
+    <span data-lang="jp">実績と資格</span>
+    <span data-lang="cn">履历与资格</span>
+  </div>
+
+  <div class="car-item"><div class="car-dot"></div><div class="car-t" style="color:var(--muted-dark)">
+    <span data-lang="kr" class="active"><b style="color:#fff">국가공인 경영지도사 33기</b> (2018, 중소벤처기업부)</span>
+    <span data-lang="en"><b style="color:#fff">Nationally Certified Management Consultant, 33rd class</b> (2018, Ministry of SMEs and Startups)</span>
+    <span data-lang="jp"><b style="color:#fff">国家公認 経営指導士 33期</b> (2018, 中小ベンチャー企業部)</span>
+    <span data-lang="cn"><b style="color:#fff">国家认证经营指导师 33期</b> (2018, 中小风险企业部)</span>
+  </div></div>
+
+  <div class="car-item"><div class="car-dot"></div><div class="car-t" style="color:var(--muted-dark)">
+    <span data-lang="kr" class="active"><b style="color:#fff">재기컨설팅 기술사업성분석 부문</b> 공급기업 (중소벤처기업부)</span>
+    <span data-lang="en"><b style="color:#fff">Registered supplier</b> for Technology Feasibility Analysis, Restart Consulting (Ministry of SMEs)</span>
+    <span data-lang="jp"><b style="color:#fff">再起コンサル 技術事業性分析部門</b> 供給企業 (中小ベンチャー企業部)</span>
+    <span data-lang="cn"><b style="color:#fff">再起咨询 技术事业性分析部门</b> 供应企业 (中小风险企业部)</span>
+  </div></div>
+
+  <div class="car-item"><div class="car-dot"></div><div class="car-t" style="color:var(--muted-dark)">
+    <span data-lang="kr" class="active"><b style="color:#fff">부산가톨릭대학교 창업멘토</b> (2026. 01)</span>
+    <span data-lang="en"><b style="color:#fff">Startup Mentor, Catholic University of Pusan</b> (Jan 2026)</span>
+    <span data-lang="jp"><b style="color:#fff">釜山カトリック大学 創業メンター</b> (2026.01)</span>
+    <span data-lang="cn"><b style="color:#fff">釜山天主教大学 创业导师</b> (2026.01)</span>
+  </div></div>
+
+  <div class="car-item"><div class="car-dot"></div><div class="car-t" style="color:var(--muted-dark)">
+    <span data-lang="kr" class="active"><b style="color:#fff">비즈니스 지원단 클리닉 위원</b> (2022 · 2026, 중소벤처기업부)</span>
+    <span data-lang="en"><b style="color:#fff">Business Support Clinic Committee Member</b> (2022 · 2026, Ministry of SMEs)</span>
+    <span data-lang="jp"><b style="color:#fff">ビジネス支援団クリニック委員</b> (2022・2026, 中小ベンチャー企業部)</span>
+    <span data-lang="cn"><b style="color:#fff">商务支援团诊所委员</b> (2022 · 2026, 中小风险企业部)</span>
+  </div></div>
+
+  <div class="car-item"><div class="car-dot"></div><div class="car-t" style="color:var(--muted-dark)">
+    <span data-lang="kr" class="active"><b style="color:#fff">2026 고객만족브랜드대상</b> 경영컨설팅 부문 1위</span>
+    <span data-lang="en"><b style="color:#fff">2026 Customer Satisfaction Brand Awards</b> — #1 in Management Consulting</span>
+    <span data-lang="jp"><b style="color:#fff">2026 顧客満足ブランド大賞</b> 経営コンサル部門1位</span>
+    <span data-lang="cn"><b style="color:#fff">2026 顾客满意品牌大奖</b> 经营咨询部门第1名</span>
+  </div></div>
+
+  <div class="client-box" style="background:rgba(255,255,255,.045);border-color:rgba(239,142,54,.2)">
+    <div class="client-lb">PARTNERS</div>
+    <div class="car-t" style="color:var(--muted-dark);margin-bottom:10px;font-size:12.5px">
+      <span data-lang="kr" class="active">기획 · 디자인 협력업체로 함께하고 있습니다</span>
+      <span data-lang="en">Planning &amp; design partner for</span>
+      <span data-lang="jp">企画・デザイン協力企業として</span>
+      <span data-lang="cn">作为企划·设计协力企业</span>
+    </div>
+    <div class="client-tags">
+      <span class="client-tag" style="background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.12)">CJ</span>
+      <span class="client-tag" style="background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.12)">SKMU</span>
+      <span class="client-tag" style="background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.12)">한국수자원공사</span>
+      <span class="client-tag" style="background:rgba(255,255,255,.06);color:#fff;border-color:rgba(255,255,255,.12)">KB</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec sec-light">
+  <div class="sec-label">CONTACT</div>
+  <div class="sec-title">
+    <span data-lang="kr" class="active">연락처</span>
+    <span data-lang="en">Get in Touch</span>
+    <span data-lang="jp">お問い合わせ</span>
+    <span data-lang="cn">联系方式</span>
+  </div>
+
+  <a href="tel:010-9522-0350" class="con-item">
+    <span class="con-ico">📞</span>
+    <span>
+      <span class="con-lb" style="display:block">
+        <span data-lang="kr" class="active">전화</span><span data-lang="en">Phone</span><span data-lang="jp">電話</span><span data-lang="cn">电话</span>
+      </span>
+      <span class="con-v">010-9522-0350</span>
+    </span>
+  </a>
+
+  <a href="http://pf.kakao.com/_xjSKdG" target="_blank" class="con-item">
+    <span class="con-ico">💬</span>
+    <span>
+      <span class="con-lb" style="display:block">
+        <span data-lang="kr" class="active">카카오톡 채널</span><span data-lang="en">KakaoTalk Channel</span><span data-lang="jp">カカオトークチャンネル</span><span data-lang="cn">KakaoTalk 频道</span>
+      </span>
+      <span class="con-v">울림컴퍼니</span>
+    </span>
+  </a>
+
+  <a href="https://woolim-site.vercel.app/" target="_blank" class="con-item">
+    <span class="con-ico">🌐</span>
+    <span>
+      <span class="con-lb" style="display:block">
+        <span data-lang="kr" class="active">홈페이지</span><span data-lang="en">Website</span><span data-lang="jp">ホームページ</span><span data-lang="cn">官网</span>
+      </span>
+      <span class="con-v">woolim-site.vercel.app</span>
+    </span>
+  </a>
+</section>
+
+<!-- ACTION BUTTONS -->
+<section class="btn-sec">
+  <button class="btn btn-blue" onclick="shareCard()">📤
+    <span data-lang="kr" class="active">명함 공유하기</span>
+    <span data-lang="en">Share Card</span>
+    <span data-lang="jp">名刺を共有</span>
+    <span data-lang="cn">分享名片</span>
+  </button>
+
+  <div class="btn-row">
+    <button class="btn btn-out" onclick="saveContact()">📞
+      <span data-lang="kr" class="active">연락처 저장</span>
+      <span data-lang="en">Save Contact</span>
+      <span data-lang="jp">連絡先保存</span>
+      <span data-lang="cn">保存联系人</span>
+    </button>
+    <button class="btn btn-out" onclick="saveToCardbook({
+      name:'박미성', company:'울림컴퍼니', role:'대표', phone:'010-9522-0350',
+      field:'경영컨설팅', url:window.location.href, photo:'profil.png'
+    })">🗂️
+      <span data-lang="kr" class="active">명함첩 저장</span>
+      <span data-lang="en">Save to Cardbook</span>
+      <span data-lang="jp">名刺帳に保存</span>
+      <span data-lang="cn">保存到名片夹</span>
+    </button>
+  </div>
+
+  <a href="https://woolim-site.vercel.app/" target="_blank" class="btn btn-dark">🌐
+    <span data-lang="kr" class="active">홈페이지</span>
+    <span data-lang="en">Website</span>
+    <span data-lang="jp">ホームページ</span>
+    <span data-lang="cn">官方网站</span>
+  </a>
+
+  <div class="btn-row">
+    <a href="https://www.instagram.com/woolimcompany.official" target="_blank" class="btn btn-dark">📸
+      <span data-lang="kr" class="active">인스타 (컨설팅)</span>
+      <span data-lang="en">IG (Consulting)</span>
+      <span data-lang="jp">IG (コンサル)</span>
+      <span data-lang="cn">IG (咨询)</span>
+    </a>
+    <a href="https://www.instagram.com/wlc_0109/" target="_blank" class="btn btn-dark">🎨
+      <span data-lang="kr" class="active">인스타 (디자인)</span>
+      <span data-lang="en">IG (Design)</span>
+      <span data-lang="jp">IG (デザイン)</span>
+      <span data-lang="cn">IG (设计)</span>
+    </a>
+  </div>
+
+  <div class="btn-row">
+    <a href="https://blog.naver.com/ygamsjzys" target="_blank" class="btn btn-dark">📝
+      <span data-lang="kr" class="active">블로그 (컨설팅)</span>
+      <span data-lang="en">Blog (Consulting)</span>
+      <span data-lang="jp">ブログ (コンサル)</span>
+      <span data-lang="cn">博客 (咨询)</span>
+    </a>
+    <a href="https://blog.naver.com/wl_0109" target="_blank" class="btn btn-dark">🖼️
+      <span data-lang="kr" class="active">블로그 (포트폴리오)</span>
+      <span data-lang="en">Blog (Portfolio)</span>
+      <span data-lang="jp">ブログ (作品集)</span>
+      <span data-lang="cn">博客 (作品集)</span>
+    </a>
+  </div>
+
+  <a href="https://www.threads.com/@wlc_0109" target="_blank" class="btn btn-dark">🧵
+    <span data-lang="kr" class="active">쓰레드</span>
+    <span data-lang="en">Threads</span>
+    <span data-lang="jp">Threads</span>
+    <span data-lang="cn">Threads</span>
+  </a>
+
+  <a href="http://pf.kakao.com/_xjSKdG" target="_blank" class="btn btn-blue" style="margin-top:6px">💬
+    <span data-lang="kr" class="active">상담 문의하기</span>
+    <span data-lang="en">Request a Consultation</span>
+    <span data-lang="jp">相談する</span>
+    <span data-lang="cn">咨询洽谈</span>
+  </a>
+</section>
+
+<footer>
+  <div class="f-brand">WOOLIM COMPANY</div>
+  <div class="f-txt">
+    <span data-lang="kr" class="active">박미성 대표 · 경영컨설팅<br>기업의 성장이 곧 울림의 성장입니다</span>
+    <span data-lang="en">Park Mi-sung, CEO · Management Consulting<br>Your growth is our growth</span>
+    <span data-lang="jp">朴美成 代表 · 経営コンサルティング<br>企業の成長こそウリムの成長</span>
+    <span data-lang="cn">朴美成 代表 · 经营咨询<br>企业的成长就是울림的成长</span>
+  </div>
+  <div class="f-txt" style="margin-top:10px;font-size:10px;opacity:.6">Digital Card by T.M LINK</div>
+</footer>
+
+</div>
+
+<script src="https://jinjjabg-hub.github.io/cardbook/save-to-cardbook.js"></script>
+<script>
+function setLang(lang){
+  document.querySelectorAll('[data-lang]').forEach(el=>{
+    el.classList.toggle('active', el.getAttribute('data-lang')===lang);
+  });
+  document.querySelectorAll('.lang-btn').forEach((btn,i)=>{
+    btn.classList.toggle('active', ['kr','en','jp','cn'][i]===lang);
+  });
+}
+
+function shareCard(){
+  if(navigator.share){
+    navigator.share({
+      title: document.title,
+      text: document.querySelector('meta[property="og:description"]')?.content || '',
+      url: window.location.href
+    });
+  }else{
+    navigator.clipboard.writeText(window.location.href).then(()=>alert('링크가 복사되었습니다!'));
+  }
+}
+
+function saveContact(){
+  const vcard=[
+    'BEGIN:VCARD',
+    'VERSION:3.0',
+    'FN:박미성',
+    'N:박;미성;;;',
+    'ORG:울림컴퍼니',
+    'TITLE:대표',
+    'TEL;TYPE=CELL:010-9522-0350',
+    'URL:https://woolim-site.vercel.app/',
+    'NOTE:경영컨설팅 | 국가공인 경영지도사 33기',
+    'END:VCARD'
+  ].join('\n');
+  const blob=new Blob([vcard],{type:'text/vcard;charset=utf-8'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='박미성_울림컴퍼니.vcf';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(a.href);
+}
+</script>
+</body>
+</html>
