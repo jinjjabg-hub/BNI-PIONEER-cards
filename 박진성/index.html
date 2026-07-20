@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>박진성 | ㈜진성부동산중개법인</title>
+<meta property="og:title" content="박진성 | 대표이사 · ㈜진성부동산중개법인">
+<meta property="og:description" content="부·울·경 최고·최대 규모의 종합부동산 회사입니다. 70여 명의 공인중개사가 함께합니다.<br><br>시행부지, 빌딩, 호텔, 공장, 주거용 부동산 중개부터 시행대행·분양대행·부동산 투자 및 개발까지 한 곳에서 처리합니다.<br><br>"부동산은 진성이다." 그 말을 듣기 위해 일합니다.">
+<meta property="og:image" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EB%B0%95%EC%A7%84%EC%84%B1/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/박진성/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- 언어팩에 따라 폰트 추가: references/languages.md 참고 -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --navy: #a81c1c;
+  --navy2: #bb2222;
+  --navy3: #7f1313;
+  --gold: #ffffff;
+  --gold2: #ffd9d4;
+  --light: #fff4f2;
+  --text-dark: #ffffff;
+  --text-light: #2a1010;
+  --muted-dark: rgba(255,255,255,0.85);
+  --muted-light: #8a5450;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color: transparent; }
+html { font-size: 16px; }
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--navy);
+  color: var(--text-dark);
+  max-width: 480px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+[data-lang="si"] { font-family: 'Noto Sans Sinhala', sans-serif; }
+[data-lang="ur"] { font-family: 'Noto Nastaliq Urdu', serif; direction: rtl; }
+[data-lang] { display: none; }
+[data-lang].active { display: block; }
+span[data-lang].active { display: inline; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:100;
+  max-width: 480px; margin: 0 auto;
+  background: rgba(168,28,28,0.97);
+  backdrop-filter: blur(10px);
+  padding: 10px 16px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.28);
+}
+.nav-brand { font-size: 12px; font-weight: 700; color: #ffffff; white-space: nowrap; }
+.lang-btns { display:flex; gap:4px; }
+.lang-btn {
+  padding: 5px 8px;
+  border: 1px solid rgba(255,255,255,0.45);
+  background: transparent;
+  color: var(--muted-dark);
+  font-size: 10px; font-weight: 700;
+  cursor: pointer; border-radius: 5px;
+  transition: all 0.2s;
+  min-width: 40px; min-height: 32px;
+  display: flex; align-items:center; justify-content:center;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.lang-btn.active { background: #ffffff; color: #a81c1c; border-color: var(--gold); }
+
+/* ── HERO ── */
+.hero {
+  margin-top: 54px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+.hero img.hero-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.hero-overlay {
+  position: absolute; inset:0;
+  background: linear-gradient(
+    to bottom,
+    rgba(168,28,28,0.05) 0%,
+    rgba(90,12,12,0.20) 40%,
+    rgba(90,12,12,0.82) 75%,
+    rgba(168,28,28,0.97) 100%
+  );
+}
+.hero-content {
+  position: absolute; bottom:0; left:0; right:0; z-index:2;
+  padding: 24px 20px 22px;
+}
+.hero-badge {
+  display: inline-block;
+  background: #ffffff;
+  color: #a81c1c;
+  font-size: 10px; font-weight: 700;
+  padding: 4px 12px; border-radius: 20px;
+  margin-bottom: 10px; letter-spacing: 1.5px;
+}
+.hero-name {
+  font-size: 34px; font-weight: 700;
+  color: #fff; line-height: 1.15;
+  margin-bottom: 7px; letter-spacing: -0.5px;
+}
+.hero-name [data-lang="ur"] { font-size: 26px; }
+.hero-title { font-size: 13px; color: #ffd9d4; opacity: 0.95; line-height: 1.5; }
+
+/* ── PROFILE ROW ── */
+.profile-row {
+  background: var(--navy2);
+  padding: 16px 20px;
+  display: flex; align-items: center; gap:14px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+.profile-img {
+  width: 64px; height: 64px; min-width:64px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  overflow: hidden; flex-shrink: 0;
+}
+.profile-img img { width:100%; height:100%; object-fit:cover; object-position: center top; }
+.profile-info h2 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.profile-info p { font-size: 12px; color: var(--muted-dark); line-height: 1.5; }
+
+/* ── 공통 섹션 ── */
+section { padding: 40px 20px; }
+.section-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: #ffd9d4; margin-bottom: 6px;
+}
+.section-title { font-size: 22px; font-weight: 700; line-height: 1.35; margin-bottom: 22px; }
+
+/* ── ABOUT ── */
+.about { background: var(--navy); }
+.about .section-title { color: #fff; }
+.slogan {
+  font-size: 15px; font-weight: 700;
+  color: #ffd9d4; margin-bottom: 14px;
+  font-style: italic; line-height: 1.6;
+}
+.about-text { font-size: 14px; line-height: 1.9; color: var(--text-dark); opacity: 0.85; }
+.about-text [data-lang="ur"] { font-size: 15px; line-height: 2.2; }
+
+/* ── WHY ── */
+.why { background: var(--light); }
+.why .section-label { color: var(--muted-light); }
+.why .section-title { color: var(--text-light); }
+.why-cards { display: flex; flex-direction: column; gap:14px; }
+.why-card {
+  background: #fff;
+  border: 1px solid rgba(168,28,28,0.20);
+  border-left: 4px solid var(--gold);
+  border-radius: 10px; padding: 18px 16px;
+}
+.why-card h3 { font-size: 15px; font-weight: 700; color: var(--text-light); margin-bottom: 8px; line-height: 1.4; }
+.why-card p { font-size: 13px; line-height: 1.85; color: #444; }
+.why-card p [data-lang="ur"] { font-size: 14px; line-height: 2.2; }
+.why-card p strong { color: #a81c1c; font-weight: 700; }
+
+/* ── DIFFERENCE ── */
+.difference { background: var(--navy2); }
+.difference .section-title { color: #fff; }
+.diff-grid { display: flex; flex-direction: column; gap:12px; }
+.diff-card {
+  background: var(--navy3);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px; padding: 18px 16px;
+}
+.diff-card h3 { font-size: 14px; font-weight: 700; color: #ffd9d4; margin-bottom: 8px; line-height: 1.4; }
+.diff-card p { font-size: 13px; line-height: 1.8; color: var(--text-dark); opacity: 0.8; }
+.diff-card p [data-lang="ur"] { font-size: 14px; line-height: 2.2; }
+
+/* ── REFERRAL ── */
+.referral { background: var(--light); }
+.referral .section-label { color: var(--muted-light); }
+.referral .section-title { color: var(--text-light); }
+.ref-list { display: flex; flex-direction: column; gap:10px; }
+.ref-item {
+  display: flex; gap:12px; align-items:flex-start;
+  background: #fff; border-radius: 10px;
+  padding: 15px 14px; border: 1px solid rgba(0,0,0,0.05);
+}
+.ref-num {
+  width: 26px; height: 26px; min-width:26px;
+  border-radius: 50%; background: #a81c1c;
+  color: #ffffff; font-weight: 700; font-size: 12px;
+  display: flex; align-items:center; justify-content:center;
+  flex-shrink: 0; margin-top: 1px;
+}
+.ref-item p { font-size: 13px; line-height: 1.8; color: #333; }
+.ref-item p strong { color:#a81c1c; font-weight:700; }
+.ref-item p [data-lang="ur"] { font-size: 14px; line-height: 2.2; }
+
+/* ── CAREER ── */
+.career {
+  position: relative;
+  background-color: #fff4f2;
+  background-size: 150%;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+.career .section-label { position: relative; z-index:1; color: var(--muted-light); }
+.career .section-title { color: var(--text-light); position: relative; z-index:1; }
+.career-list { display: flex; flex-direction: column; gap:18px; position: relative; z-index:1; }
+.career-item {
+  display: flex; gap:12px; align-items:flex-start;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.career-item:last-child { border-bottom: none; padding-bottom: 0; }
+.career-badge {
+  background: #a81c1c; color: #fff;
+  font-size: 10px; font-weight: 700;
+  padding: 4px 10px; border-radius: 4px;
+  white-space: nowrap; flex-shrink: 0; margin-top: 2px;
+}
+.career-content { background: rgba(255,255,255,0.82); border-radius: 8px; padding: 12px 14px; flex:1; }
+.career-item h3 { font-size: 14px; font-weight: 700; color: var(--text-light); margin-bottom: 7px; line-height: 1.4; }
+.career-item p { font-size: 12px; line-height: 1.85; color: #555; }
+
+
+/* ── PORTFOLIO ── */
+.portfolio { background: var(--navy3); }
+.portfolio .section-title { color:#fff; }
+.slide-wrap { position:relative; border-radius:12px; overflow:hidden; background:#5a0c0c; }
+.slide-track { display:flex; transition: transform .35s ease; }
+.slide-item { min-width:100%; }
+.slide-item img { width:100%; display:block; }
+.slide-btn {
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:36px; height:36px; border-radius:50%; border:none;
+  background:rgba(0,0,0,0.45); color:#fff; font-size:20px; cursor:pointer; z-index:3;
+}
+.slide-btn-l { left:8px; } .slide-btn-r { right:8px; }
+.slide-dots { display:flex; justify-content:center; gap:7px; margin-top:14px; }
+.slide-dot { width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.35); cursor:pointer; }
+.slide-dot.active { background:#ffffff; width:20px; border-radius:4px; }
+
+/* ── CONTACT ── */
+.contact { background: var(--light); }
+.contact .section-label { color: var(--muted-light); }
+.contact .section-title { color: var(--text-light); }
+.contact-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.contact-item {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 5px; text-align: center;
+  background: #fff; border-radius: 10px;
+  padding: 11px 8px; border: 1px solid rgba(0,0,0,0.05);
+  text-decoration: none; min-height: 74px;
+}
+.contact-item:active { transform: scale(0.97); }
+.contact-icon {
+  width: 34px; height: 34px; min-width:34px;
+  border-radius: 50%; background: #a81c1c;
+  display: flex; align-items:center; justify-content:center;
+  font-size: 15px; flex-shrink: 0;
+}
+.contact-label { font-size: 9px; color: #999; }
+.contact-value { font-size: 11px; font-weight: 600; color: var(--text-light); line-height: 1.4; word-break: break-all; }
+
+/* ── ACTION ── */
+.action { background: var(--navy2); padding: 32px 20px; }
+.btn-group { display: flex; flex-direction: column; gap:12px; }
+.btn {
+  display: block; width: 100%; padding: 17px 16px;
+  border: none; border-radius: 10px;
+  font-size: 15px; font-weight: 700;
+  cursor: pointer; text-align: center;
+  transition: all 0.15s; font-family: 'Noto Sans KR', sans-serif;
+  min-height: 54px; letter-spacing: 0.3px;
+}
+.btn-primary { background: #ffffff; color: #a81c1c; }
+.btn-secondary { background: transparent; border: 2px solid #ffffff; color: #ffffff; }
+.btn-mandu {
+  background: linear-gradient(135deg, #6d0f0f, #a81c1c);
+  color: #fff; border: none;
+}
+.btn-share { background: linear-gradient(135deg, #3d0a0a, #7f1313); color: #fff; border: none; }
+.btn:active { transform: scale(0.97); opacity: 0.9; }
+
+/* 공유 바텀시트 */
+.share-sheet { display:none; position:fixed; inset:0; z-index:200; }
+.share-backdrop { position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+.share-panel {
+  position:absolute; bottom:0; left:0; right:0;
+  max-width:480px; margin:0 auto;
+  background:#fff; border-radius:20px 20px 0 0;
+  padding:20px 20px 40px;
+}
+.share-handle { width:40px; height:4px; background:#ddd; border-radius:2px; margin:0 auto 18px; }
+.share-title { font-size:13px; color:#999; text-align:center; margin-bottom:20px; font-weight:600; }
+.share-btns { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:16px; }
+.share-btn { display:flex; flex-direction:column; align-items:center; gap:8px; background:none; border:none; cursor:pointer; padding:8px 4px; }
+.share-btn-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:26px; }
+.share-btn span { font-size:11px; color:#333; font-weight:600; font-family:'Noto Sans KR',sans-serif; }
+.share-cancel { width:100%; padding:14px; background:#f2f2f2; border:none; border-radius:10px; font-size:15px; font-weight:700; color:#444; cursor:pointer; font-family:'Noto Sans KR',sans-serif; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy); padding: 24px 20px;
+  text-align: center; border-top: 1px solid rgba(255,255,255,0.15);
+}
+footer .company { font-size: 13px; font-weight: 700; color: #ffffff; margin-bottom: 5px; }
+footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacing: 0.5px; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">㈜진성부동산중개법인</div>
+  <div class="lang-btns">
+    <button class="lang-btn active" onclick="setLang('kr')">한국어</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('jp')">日本語</button>
+    <button class="lang-btn" onclick="setLang('cn')">中文</button>
+  </div>
+</nav>
+
+<!-- HERO : hero.png = 세로 3:4 인물 사진 -->
+<div class="hero">
+  <img class="hero-img" src="hero.jpg" alt="박진성">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span data-lang="kr" class="active">부동산중개 · 컨설팅</span>
+      <span data-lang="en">REAL ESTATE</span>
+      <span data-lang="jp">不動産仲介</span>
+      <span data-lang="cn">房地产中介</span>
+    </div>
+    <div class="hero-name">
+      <span data-lang="kr" class="active">박 진 성</span>
+      <span data-lang="en">Jinsung Park</span>
+      <span data-lang="jp">パク・ジンソン</span>
+      <span data-lang="cn">朴真成</span>
+    </div>
+    <div class="hero-title">
+      <span data-lang="kr" class="active">대표이사 · ㈜진성부동산중개법인</span>
+      <span data-lang="en">CEO · Jinsung Realty Co., Ltd.</span>
+      <span data-lang="jp">代表理事 · ジンソン不動産仲介法人</span>
+      <span data-lang="cn">董事长 · 真成不动产中介法人</span>
+    </div>
+  </div>
+</div>
+
+<!-- PROFILE ROW : profil.png = 정사각 얼굴 사진 -->
+<div class="profile-row">
+  <div class="profile-img">
+    <img src="profil.jpg" alt="박진성">
+  </div>
+  <div class="profile-info">
+    <h2>박진성 · Jinsung Park</h2>
+    <p>
+      <span data-lang="kr" class="active">부동산 중개 · 컨설팅 · 개발 | 부·울·경 최대 규모</span>
+      <span data-lang="en">Brokerage · Consulting · Development | Largest in Busan area</span>
+      <span data-lang="jp">仲介・コンサル・開発 | 釜山圏最大規模</span>
+      <span data-lang="cn">中介 · 咨询 · 开发 | 釜山地区最大规模</span>
+    </p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="section-label">About</div>
+  <div class="slogan">
+    <span data-lang="kr" class="active">"최선을 다 하는 것은 프로가 아니다. 잘 해야 프로다."</span>
+    <span data-lang="en">"Trying your best is not professional. Doing it well is."</span>
+    <span data-lang="jp">「最善を尽くすのがプロではない。結果を出すのがプロだ。」</span>
+    <span data-lang="cn">"尽力而为不是专业，做到最好才是专业。"</span>
+  </div>
+  <p class="about-text">
+    <span data-lang="kr" class="active">부·울·경 최고·최대 규모의 종합부동산 회사입니다. 70여 명의 공인중개사가 함께합니다.<br><br>시행부지, 빌딩, 호텔, 공장, 주거용 부동산 중개부터 시행대행·분양대행·부동산 투자 및 개발까지 한 곳에서 처리합니다.<br><br>"부동산은 진성이다." 그 말을 듣기 위해 일합니다.</span>
+    <span data-lang="en">Jinsung Realty is the largest full-service real estate firm in the Busan·Ulsan·Gyeongnam region, with over 70 licensed brokers.<br><br>From development sites, buildings, hotels, factories and residential brokerage to development agency, sales agency, investment and development — all handled in one place.<br><br>We work to hear one thing: "For real estate, go to Jinsung."</span>
+    <span data-lang="jp">釜山・蔚山・慶南地域で最大規模の総合不動産会社です。70名以上の公認仲介士が在籍しています。<br><br>開発用地、ビル、ホテル、工場、住宅の仲介から、開発代行・分譲代行・不動産投資および開発まで一括で対応します。<br><br>「不動産はジンソン」。その一言のために働いています。</span>
+    <span data-lang="cn">我们是釜山·蔚山·庆南地区规模最大的综合性房地产公司，拥有70余名执业中介师。<br><br>从开发用地、大厦、酒店、工厂、住宅中介，到开发代理、销售代理、房地产投资与开发，一站式处理。<br><br>"房地产就找真成"——我们为这句话而工作。</span>
+  </p>
+</section>
+
+<!-- WHY : why-card 3개 (①②③) -->
+<section class="why">
+  <div class="section-label">Why Us</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">왜 ㈜진성부동산중개법인인가</span>
+    <span data-lang="en">Why Jinsung Realty Co., Ltd.?</span>
+    <span data-lang="jp">なぜジンソン不動産仲介法人なのか</span>
+    <span data-lang="cn">为什么选择真成不动产中介法人</span>
+  </div>
+  <div class="why-cards">
+    <div class="why-card">
+      <h3>
+        <span data-lang="kr" class="active">① 공인중개사 <strong>70여 명</strong>이 함께 찾습니다</span>
+        <span data-lang="en">① <strong>70+</strong> licensed brokers on one team</span>
+        <span data-lang="jp">① <strong>70名以上</strong>の公認仲介士が動きます</span>
+        <span data-lang="cn">① <strong>70余名</strong>执业中介师共同寻找</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">한 사람이 아니라 조직이 매물을 찾습니다. 부·울·경 최대 규모의 중개 네트워크가 <strong>중개·개발·컨설팅·시행/분양</strong> 4개 팀으로 움직입니다.</span>
+        <span data-lang="en">Not one agent — an organization works for you. The region's largest network operates in <strong>four teams</strong>: brokerage, development, consulting and sales.</span>
+        <span data-lang="jp">一人ではなく組織が物件を探します。地域最大の仲介ネットワークが<strong>仲介・開発・コンサル・分譲</strong>の4チームで動きます。</span>
+        <span data-lang="cn">不是一个人，而是一个组织在为您寻找。区域最大的中介网络以<strong>中介·开发·咨询·分销</strong>四个团队运作。</span>
+      </p>
+    </div>
+    <div class="why-card">
+      <h3>
+        <span data-lang="kr" class="active">② 실무교육을 <strong>6년째 무료</strong>로 합니다</span>
+        <span data-lang="en">② <strong>6 years</strong> of free practical training</span>
+        <span data-lang="jp">② 実務教育を<strong>6年間無料</strong>で</span>
+        <span data-lang="cn">② 实务培训<strong>已免费开展6年</strong></span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">2주 과정의 부동산 실무교육을 6년째 무상 운영 중입니다. 누적 수강 공인중개사 <strong>400여 명</strong>. 아는 사람이 많은 게 아니라, 가르친 사람이 많습니다.</span>
+        <span data-lang="en">A two-week practical program, run free of charge for six years. <strong>400+</strong> brokers trained. We don't just know people — we trained them.</span>
+        <span data-lang="jp">2週間の実務教育を6年間無償で運営。累計受講者は<strong>400名以上</strong>。知り合いが多いのではなく、教えた人が多いのです。</span>
+        <span data-lang="cn">为期两周的实务课程，已免费运营六年，累计培训中介师<strong>400余名</strong>。不是认识的人多，而是教过的人多。</span>
+      </p>
+    </div>
+    <div class="why-card">
+      <h3>
+        <span data-lang="kr" class="active">③ 현장 경력 <strong>31년</strong></span>
+        <span data-lang="en">③ <strong>31 years</strong> in the field</span>
+        <span data-lang="jp">③ 現場経験<strong>31年</strong></span>
+        <span data-lang="cn">③ 一线经验<strong>31年</strong></span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">전국 850여 가맹 프랜차이즈 본사 대표 <strong>13년</strong>, 외국계 생명보험 대한민국 챔피언(TOT) <strong>10년</strong>, 부동산 <strong>8년</strong>. 조직을 만들고 굴려본 사람이 부동산을 합니다.</span>
+        <span data-lang="en"><strong>13 years</strong> leading a 850-branch franchise HQ, <strong>10 years</strong> as a national champion (TOT) in life insurance, <strong>8 years</strong> in real estate. Someone who has built and run organizations now runs this one.</span>
+        <span data-lang="jp">全国850店舗のフランチャイズ本社代表<strong>13年</strong>、外資系生命保険の全国チャンピオン(TOT)<strong>10年</strong>、不動産<strong>8年</strong>。組織を作り動かしてきた人間が不動産をやっています。</span>
+        <span data-lang="cn">全国850余家加盟连锁总部代表<strong>13年</strong>，外资寿险全国冠军(TOT)<strong>10年</strong>，房地产<strong>8年</strong>。由建过并运营过组织的人来做房地产。</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENCE : diff-card 2~3개 -->
+<section class="difference">
+  <div class="section-label">Difference</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">차별점</span>
+    <span data-lang="en">What Makes Us Different</span>
+    <span data-lang="jp">差別化ポイント</span>
+    <span data-lang="cn">差异化优势</span>
+  </div>
+  <div class="diff-grid">
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">4개 전문 조직</span>
+        <span data-lang="en">Four specialist teams</span>
+        <span data-lang="jp">4つの専門組織</span>
+        <span data-lang="cn">四大专业团队</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">부동산중개팀 · 부동산개발팀 · 컨설팅팀 · 시행/분양팀. 매물 성격에 맞는 팀이 직접 붙습니다.</span>
+        <span data-lang="en">Brokerage · Development · Consulting · Project sales. The right team is assigned to your property.</span>
+        <span data-lang="jp">仲介チーム・開発チーム・コンサルチーム・分譲チーム。物件に合ったチームが直接担当します。</span>
+        <span data-lang="cn">中介团队·开发团队·咨询团队·分销团队。根据物件性质配备对应团队。</span>
+      </p>
+    </div>
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">계약부터 사후관리까지</span>
+        <span data-lang="en">From contract to aftercare</span>
+        <span data-lang="jp">契約から事後管理まで</span>
+        <span data-lang="cn">从签约到后续管理</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">도장 찍고 끝나지 않습니다. 잔금, 명도, 임대 관리까지 이어서 봅니다. 그래야 다음 거래가 옵니다.</span>
+        <span data-lang="en">It does not end at signing. Balance payment, handover and lease management follow — that is how the next deal comes.</span>
+        <span data-lang="jp">契約で終わりません。残金、明渡し、賃貸管理まで続けて対応します。だから次の取引が来ます。</span>
+        <span data-lang="cn">签约不是终点。尾款、交房、租赁管理一路跟进，下一笔交易才会到来。</span>
+      </p>
+    </div>
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">시행·분양까지 직접</span>
+        <span data-lang="en">Development & sales in-house</span>
+        <span data-lang="jp">開発・分譲まで自社で</span>
+        <span data-lang="cn">开发与分销一体化</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">시행부지 발굴, 시행대행, 분양대행, 투자·개발까지 회사 안에서 처리합니다. 중개만 하는 회사와 보는 눈이 다릅니다.</span>
+        <span data-lang="en">Site sourcing, development agency, sales agency, investment and development are handled in-house — a different perspective from brokerage-only firms.</span>
+        <span data-lang="jp">用地発掘、開発代行、分譲代行、投資・開発まで社内で完結。仲介だけの会社とは視点が違います。</span>
+        <span data-lang="cn">用地发掘、开发代理、销售代理、投资开发均在公司内部完成，视角不同于纯中介公司。</span>
+      </p>
+    </div>
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">부·울·경 지점 네트워크</span>
+        <span data-lang="en">Branch network across the region</span>
+        <span data-lang="jp">釜山圏の支店ネットワーク</span>
+        <span data-lang="cn">釜山地区分支网络</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">연제구 본사에 수영·남구·해운대·강서 분사무소. 지역이 달라도 같은 회사가 붙습니다.</span>
+        <span data-lang="en">HQ in Yeonje-gu with branches in Suyeong, Nam-gu, Haeundae and Gangseo. Different district, same company.</span>
+        <span data-lang="jp">蓮堤区の本社に加え、水営・南区・海雲台・江西の支店。地域が違っても同じ会社が対応します。</span>
+        <span data-lang="cn">总部位于莲堤区，另设水营、南区、海云台、江西分公司。地区不同，公司相同。</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- REFERRAL : BNI 핵심 섹션. ref-item 2~3개 -->
+<section class="referral">
+  <div class="section-label">Referral</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">이런 분을 소개해 주세요</span>
+    <span data-lang="en">Please refer people like this</span>
+    <span data-lang="jp">こんな方をご紹介ください</span>
+    <span data-lang="cn">请介绍这样的客户</span>
+  </div>
+  <div class="ref-list">
+    <div class="ref-item">
+      <div class="ref-num">1</div>
+      <p>
+        <span data-lang="kr" class="active"><strong>진성을 믿고, 진성에게만 일을 맡기는 의뢰인</strong>. 한 건 팔고 끝나는 관계가 아니라, 다음 부동산도 함께 볼 분을 찾습니다.</span>
+        <span data-lang="en"><strong>Clients who trust Jinsung and work only with Jinsung.</strong> Not a one-off deal — we look for people we will handle their next property with, too.</span>
+        <span data-lang="jp"><strong>ジンソンを信じ、ジンソンにだけ任せてくださる依頼者</strong>。一度きりの取引ではなく、次の不動産も一緒に見ていける方を探しています。</span>
+        <span data-lang="cn"><strong>信任真成、只把业务交给真成的委托人</strong>。不是一锤子买卖，而是希望下一处房产也能一起把关的客户。</span>
+      </p>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">2</div>
+      <p>
+        <span data-lang="kr" class="active">건물·상가·토지를 <strong>내놓으려는데 어디에 맡길지 고민 중인 임대인·건물주</strong>. 부·울·경 어느 지역이든 담당 팀을 붙여 드립니다.</span>
+        <span data-lang="en"><strong>Landlords or building owners</strong> who want to sell or lease a building, retail space or land but are unsure whom to trust. Any district in the region — we assign a team.</span>
+        <span data-lang="jp">ビル・店舗・土地を<strong>売りたい／貸したいが、どこに任せるか迷っている貸主・オーナー</strong>。釜山圏のどの地域でも担当チームを付けます。</span>
+        <span data-lang="cn">想出售或出租大厦、商铺、土地，却<strong>不知该托付给谁的房东与业主</strong>。釜山圈任何地区，我们都会配备专属团队。</span>
+      </p>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">3</div>
+      <p>
+        <span data-lang="kr" class="active">공장 부지, 시행 부지, 창고를 <strong>찾고 있는 법인 대표님</strong>. 매물 검색이 아니라 조건에 맞는 부지를 직접 발굴해 드립니다.</span>
+        <span data-lang="en"><strong>Company owners looking for</strong> factory sites, development land or warehouses. We source sites that fit the conditions, not just search listings.</span>
+        <span data-lang="jp">工場用地・開発用地・倉庫を<strong>探している法人代表</strong>。掲載物件を探すのではなく、条件に合う用地を発掘します。</span>
+        <span data-lang="cn">正在寻找厂房用地、开发用地或仓库的<strong>企业负责人</strong>。不只是检索房源，而是主动发掘符合条件的用地。</span>
+      </p>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">4</div>
+      <p>
+        <span data-lang="kr" class="active">공인중개사 자격증은 땄는데 <strong>실무를 몰라 개업이 망설여지는 분</strong>. 2주 실무교육을 무료로 받으실 수 있습니다.</span>
+        <span data-lang="en"><strong>Newly licensed brokers</strong> who hesitate to open an office because they lack practical experience. Our two-week training is free.</span>
+        <span data-lang="jp">資格は取ったが<strong>実務が分からず開業を迷っている公認仲介士</strong>。2週間の実務教育を無料で受けられます。</span>
+        <span data-lang="cn">已取得中介师资格，却因<strong>不懂实务而犹豫开业的人</strong>。可免费参加为期两周的实务培训。</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER : career-item 2~3개. career-badge = 현재 / 경력 / 강점 / 자격 -->
+<section class="career">
+  <div class="section-label">Career</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">경력 및 전문 분야</span>
+    <span data-lang="en">Career &amp; Expertise</span>
+    <span data-lang="jp">経歴・専門分野</span>
+    <span data-lang="cn">经历与专业领域</span>
+  </div>
+  <div class="career-list">
+    <div class="career-item">
+      <div class="career-badge"><span data-lang="kr" class="active">현재</span><span data-lang="en">Now</span><span data-lang="jp">現在</span><span data-lang="cn">现在</span></div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">㈜진성부동산중개법인 대표이사 (8년차)</span>
+        <span data-lang="en">CEO, Jinsung Realty Co., Ltd. (8 years)</span>
+        <span data-lang="jp">ジンソン不動産仲介法人 代表理事（8年目）</span>
+        <span data-lang="cn">真成不动产中介法人 董事长（第8年）</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">2018년 진성공인중개사사무소 설립 → 2021년 법인 전환. 본사 및 수영·남구·해운대·강서 분사무소 운영.</span>
+        <span data-lang="en">Founded in 2018, incorporated in 2021. Operates HQ and branches in Suyeong, Nam-gu, Haeundae and Gangseo.</span>
+        <span data-lang="jp">2018年に事務所設立、2021年に法人化。本社と水営・南区・海雲台・江西の支店を運営。</span>
+        <span data-lang="cn">2018年设立事务所，2021年转为法人。运营总部及水营、南区、海云台、江西分公司。</span>
+        </p>
+      </div>
+    </div>
+    <div class="career-item">
+      <div class="career-badge"><span data-lang="kr" class="active">경력</span><span data-lang="en">Career</span><span data-lang="jp">経歴</span><span data-lang="cn">经历</span></div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">프랜차이즈 13년 · 생명보험 10년</span>
+        <span data-lang="en">13 years franchise · 10 years insurance</span>
+        <span data-lang="jp">フランチャイズ13年・生命保険10年</span>
+        <span data-lang="cn">连锁13年·寿险10年</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">이스턴영어(전국 850여 가맹) 학원장 → 본부장 → 본사 대표 13년. 이후 외국계 생명보험사 대한민국 챔피언(TOT) 10년.</span>
+        <span data-lang="en">Eastern English (850+ branches): director → head → CEO for 13 years. Then 10 years as national champion (TOT) at a global life insurer.</span>
+        <span data-lang="jp">イースタン英語（全国850店舗）で塾長→本部長→本社代表を13年。その後、外資系生命保険で全国チャンピオン(TOT)を10年。</span>
+        <span data-lang="cn">Eastern英语（全国850余家加盟）院长→本部长→总部代表13年。之后在外资寿险公司担任全国冠军(TOT)10年。</span>
+        </p>
+      </div>
+    </div>
+    <div class="career-item">
+      <div class="career-badge"><span data-lang="kr" class="active">수상</span><span data-lang="en">Awards</span><span data-lang="jp">受賞</span><span data-lang="cn">获奖</span></div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">서울경제신문 참보험인 대상</span>
+        <span data-lang="en">Seoul Economic Daily — Insurance Professional Award</span>
+        <span data-lang="jp">ソウル経済新聞 参保険人大賞</span>
+        <span data-lang="cn">首尔经济日报 诚信保险人大奖</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">CEO인사이트 인터뷰 게재.</span>
+        <span data-lang="en">Featured in a CEO Insight interview.</span>
+        <span data-lang="jp">CEOインサイトのインタビュー掲載。</span>
+        <span data-lang="cn">曾接受《CEO Insight》专访报道。</span>
+        </p>
+      </div>
+    </div>
+    <div class="career-item">
+      <div class="career-badge"><span data-lang="kr" class="active">BNI</span><span data-lang="en">BNI</span><span data-lang="jp">BNI</span><span data-lang="cn">BNI</span></div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">BNI 파이오니어 챕터 2년차</span>
+        <span data-lang="en">BNI Pioneer Chapter, 2nd year</span>
+        <span data-lang="jp">BNIパイオニアチャプター 2年目</span>
+        <span data-lang="cn">BNI先锋分会 第2年</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">교육코디로 활동 중입니다.</span>
+        <span data-lang="en">Serving as Education Coordinator.</span>
+        <span data-lang="jp">教育コーディネーターとして活動中。</span>
+        <span data-lang="cn">担任教育协调员。</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio">
+  <div class="section-label">Portfolio</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">회사 소개 자료</span>
+    <span data-lang="en">Company Profile</span>
+    <span data-lang="jp">会社紹介資料</span>
+    <span data-lang="cn">公司介绍资料</span>
+  </div>
+  <div class="slide-wrap">
+    <div class="slide-track" id="slide-track-port">
+      <div class="slide-item"><img src="portfolio1.jpg" alt="portfolio 1" loading="lazy"></div>
+      <div class="slide-item"><img src="portfolio2.jpg" alt="portfolio 2" loading="lazy"></div>
+      <div class="slide-item"><img src="portfolio3.jpg" alt="portfolio 3" loading="lazy"></div>
+      <div class="slide-item"><img src="portfolio4.jpg" alt="portfolio 4" loading="lazy"></div>
+      <div class="slide-item"><img src="portfolio5.jpg" alt="portfolio 5" loading="lazy"></div>
+    </div>
+    <button class="slide-btn slide-btn-l" onclick="portSlide(-1)">‹</button>
+    <button class="slide-btn slide-btn-r" onclick="portSlide(1)">›</button>
+  </div>
+  <div class="slide-dots" id="slide-dots-port"></div>
+</section>
+
+<!-- CONTACT : 2열 그리드. 없는 항목은 <a> 통째로 삭제 (빈칸 금지) -->
+<section class="contact">
+  <div class="section-label">Contact</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">연락하기</span>
+    <span data-lang="en">Contact</span>
+    <span data-lang="jp">お問い合わせ</span>
+    <span data-lang="cn">联系方式</span>
+  </div>
+  <div class="contact-list">
+    <a class="contact-item" href="tel:010-4562-1605">
+      <div class="contact-icon">📞</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">전화</span>
+        <span data-lang="en">Phone</span>
+        <span data-lang="jp">電話</span>
+        <span data-lang="cn">电话</span>
+      </div>
+      <div class="contact-value">010-4562-1605</div>
+    </a>
+    <a class="contact-item" href="mailto:jinspark25@naver.com">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-label">Email</div>
+      <div class="contact-value">jinspark25@naver.com</div>
+    </a>
+    <a class="contact-item" href="https://www.jsrealty.co.kr" target="_blank">
+      <div class="contact-icon">💻</div>
+      <div class="contact-label">Homepage</div>
+      <div class="contact-value">jsrealty.co.kr</div>
+    </a>
+    <a class="contact-item" href="https://instagram.com/jsrealty1605" target="_blank">
+      <div class="contact-icon">📷</div>
+      <div class="contact-label">Instagram</div>
+      <div class="contact-value">@jsrealty1605</div>
+    </a>
+    <a class="contact-item" href="https://tiktok.com/@jsrealty1605" target="_blank">
+      <div class="contact-icon">🎵</div>
+      <div class="contact-label">TikTok</div>
+      <div class="contact-value">@jsrealty1605</div>
+    </a>
+    <a class="contact-item" href="https://jinjjabg-hub.github.io/MANDU/?u=YOUR_MANDU_ID" target="_blank">
+      <div class="contact-icon">💬</div>
+      <div class="contact-label">MANDU</div>
+      <div class="contact-value">
+        <span data-lang="kr" class="active">실시간 번역 메신저</span>
+        <span data-lang="en">Live translation chat</span>
+        <span data-lang="jp">リアルタイム翻訳チャット</span>
+        <span data-lang="cn">实时翻译聊天</span>
+      </div>
+    </a>
+    <a class="contact-item" style="grid-column: 1 / -1;" href="https://map.kakao.com/link/search/부산광역시 연제구 중앙대로 1080" target="_blank">
+      <div class="contact-icon">📍</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">주소 (탭하면 지도 열림)</span>
+        <span data-lang="en">Address (tap to open map)</span>
+        <span data-lang="jp">住所（タップで地図）</span>
+        <span data-lang="cn">地址（点击打开地图）</span>
+      </div>
+      <div class="contact-value">
+        <span data-lang="kr" class="active">부산광역시 연제구 중앙대로 1080, 2층</span>
+        <span data-lang="en">2F, 1080 Jungang-daero, Yeonje-gu, Busan</span>
+        <span data-lang="jp">부산광역시 연제구 중앙대로 1080, 2층</span>
+        <span data-lang="cn">부산광역시 연제구 중앙대로 1080, 2층</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ACTION -->
+<div class="action">
+  <div class="btn-group">
+    <button class="btn btn-primary" onclick="saveContact()">
+      <span data-lang="kr" class="active">📞 연락처 저장</span>
+      <span data-lang="en">📞 Save contact</span>
+      <span data-lang="jp">📞 連絡先を保存</span>
+      <span data-lang="cn">📞 保存联系人</span>
+    </button>
+    <button class="btn btn-secondary" onclick="saveToCardbook({id:'park-jinsung',name:'박진성',nameEn:'Jinsung Park',title:'대표이사',company:'진성부동산중개법인',phone:'010-4562-1605',email:'jinspark25@naver.com',chapter:'파이오니어',bni:'부동산중개',url:window.location.href})">
+      <span data-lang="kr" class="active">🗂️ 명함 저장 (CardBook)</span>
+      <span data-lang="en">🗂️ Save to CardBook</span>
+      <span data-lang="jp">🗂️ 名刺を保存</span>
+      <span data-lang="cn">🗂️ 保存名片</span>
+    </button>
+    <button class="btn btn-share" onclick="shareCard()">
+      <span data-lang="kr" class="active">📤 명함 전달하기</span>
+      <span data-lang="en">📤 Share this card</span>
+      <span data-lang="jp">📤 名刺を共有</span>
+      <span data-lang="cn">📤 分享名片</span>
+    </button>
+  </div>
+</div>
+
+<!-- 공유 바텀시트 (Web Share API 미지원 브라우저 폴백) -->
+<div class="share-sheet" id="shareSheet">
+  <div class="share-backdrop" onclick="closeShare()"></div>
+  <div class="share-panel">
+    <div class="share-handle"></div>
+    <div class="share-title">명함 전달하기</div>
+    <div class="share-btns">
+      <button class="share-btn" onclick="shareKakao()">
+        <div class="share-btn-icon" style="background:#FEE500;">💬</div><span>카카오톡</span>
+      </button>
+      <button class="share-btn" onclick="shareSMS()">
+        <div class="share-btn-icon" style="background:#34c759;">✉️</div><span>문자</span>
+      </button>
+      <button class="share-btn" onclick="copyLink()">
+        <div class="share-btn-icon" style="background:#e8e8e8;">🔗</div><span>링크 복사</span>
+      </button>
+      <button class="share-btn" onclick="shareQR()">
+        <div class="share-btn-icon" style="background:#a81c1c;">📱</div><span>QR 보기</span>
+      </button>
+    </div>
+    <button class="share-cancel" onclick="closeShare()">취소</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="company">
+    <span data-lang="kr" class="active">㈜진성부동산중개법인</span>
+    <span data-lang="en">Jinsung Realty Co., Ltd.</span>
+    <span data-lang="jp">ジンソン不動産仲介法人</span>
+    <span data-lang="cn">真成不动产中介法人</span>
+  </div>
+  <div class="slogan-footer">"Trying your best is not professional. Doing it well is."</div>
+</footer>
+
+<script src="https://jinjjabg-hub.github.io/cardbook/save-to-cardbook.js"></script>
+<script>
+function setLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    const m = btn.getAttribute('onclick').match(/'(\w+)'/);
+    btn.classList.toggle('active', m && m[1] === lang);
+  });
+}
+function saveContact() {
+  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:박진성\nORG:㈜진성부동산중개법인\nTITLE:대표이사\nTEL:010-4562-1605\nEMAIL:jinspark25@naver.com\nURL:https://jinjjabg-hub.github.io/BNI-PIONEER-cards/박진성/\nADR:;;부산광역시 연제구 중앙대로 1080, 2층;;;;\nEND:VCARD`;
+  const blob = new Blob([vcard], {type:'text/vcard'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'ParkJinsung_JinsungRealty.vcf';
+  a.click();
+}
+
+/* ── 명함 전달하기 ── */
+const CARD_URL = 'https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EB%B0%95%EC%A7%84%EC%84%B1/';
+const CARD_TITLE = '박진성 | ㈜진성부동산중개법인';
+const CARD_TEXT = '박진성 대표이사 | ㈜진성부동산중개법인 — 부·울·경 최대 규모 종합부동산';
+
+function shareCard() {
+  if (navigator.share) {
+    navigator.share({ title: CARD_TITLE, text: CARD_TEXT, url: CARD_URL }).catch(() => {});
+  } else {
+    document.getElementById('shareSheet').style.display = 'block';
+  }
+}
+function closeShare() { document.getElementById('shareSheet').style.display = 'none'; }
+function shareKakao() {
+  window.open('https://sharer.kakao.com/talk/friends/picker/link?app_key=&url=' + encodeURIComponent(CARD_URL), '_blank');
+  closeShare();
+}
+function shareSMS() {
+  location.href = 'sms:?body=' + encodeURIComponent(CARD_TITLE + '\n' + CARD_URL);
+  closeShare();
+}
+function copyLink() {
+  navigator.clipboard.writeText(CARD_URL).then(() => alert('링크가 복사되었습니다!')).catch(() => {
+    const t = document.createElement('textarea');
+    t.value = CARD_URL;
+    document.body.appendChild(t); t.select(); document.execCommand('copy');
+    document.body.removeChild(t);
+    alert('링크가 복사되었습니다!');
+  });
+  closeShare();
+}
+
+/* ── 포트폴리오 슬라이드 ── */
+let portIdx = 0;
+const portTotal = 5;
+function initPortSlide() {
+  const dots = document.getElementById('slide-dots-port');
+  if (!dots) return;
+  dots.innerHTML = '';
+  for (let i = 0; i < portTotal; i++) {
+    const d = document.createElement('div');
+    d.className = 'slide-dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => goPortSlide(i);
+    dots.appendChild(d);
+  }
+}
+function goPortSlide(idx) {
+  portIdx = (idx + portTotal) % portTotal;
+  document.getElementById('slide-track-port').style.transform = `translateX(-${portIdx * 100}%)`;
+  document.querySelectorAll('#slide-dots-port .slide-dot').forEach((d, i) => {
+    d.classList.toggle('active', i === portIdx);
+  });
+}
+function portSlide(dir) { goPortSlide(portIdx + dir); }
+(function() {
+  let sx = 0;
+  const track = document.getElementById('slide-track-port');
+  if (!track) return;
+  track.addEventListener('touchstart', e => { sx = e.touches[0].clientX; }, {passive:true});
+  track.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - sx;
+    if (Math.abs(dx) > 40) portSlide(dx < 0 ? 1 : -1);
+  }, {passive:true});
+})();
+document.addEventListener('DOMContentLoaded', initPortSlide);
+
+function shareQR() { window.open('qr.png', '_blank'); closeShare(); }
+</script>
+</body>
+</html>
