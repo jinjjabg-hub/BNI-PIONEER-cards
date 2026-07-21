@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0a0a0a">
+<title>이채홍 | 검인 법무사사무소 대표</title>
+<meta property="og:title" content="이채홍 | 대표 법무사 · 검인 법무사사무소">
+<meta property="og:description" content="정확한 상담은 고민 해결의 시작 · 형사·민사·회생파산 전문 법무사">
+<meta property="og:image" content="./og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/이채홍/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --main: #0a0a0a;
+  --main2: #1a1a1a;
+  --accent: #C9A84C;
+  --accent2: #e0c374;
+  --white: #ffffff;
+}
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+
+body {
+  font-family:'Noto Sans KR',sans-serif;
+  background: linear-gradient(165deg, #1a1a1a 0%, #0a0a0a 30%, #050505 60%, #000000 100%);
+  background-attachment:fixed;
+  color:#fff;
+  max-width:430px;
+  margin:0 auto;
+  overflow-x:hidden;
+  min-height:100vh;
+}
+
+[data-lang] { display:none !important; }
+[data-lang].active { display:block !important; }
+span[data-lang].active { display:inline !important; }
+
+nav {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:12px 18px;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  position:sticky; top:0; z-index:100;
+}
+.nav-brand { color:#fff; font-size:13px; font-weight:700; letter-spacing:2px; }
+.lang-btns { display:flex; gap:4px; }
+.lang-btn {
+  padding:4px 9px; border:1px solid rgba(255,255,255,0.3); border-radius:20px;
+  background:transparent; color:rgba(255,255,255,0.65); font-size:12px;
+  cursor:pointer; font-family:inherit; min-height:30px; transition:all .2s;
+}
+.lang-btn.active { background:rgba(255,255,255,0.92); color:var(--main); font-weight:700; }
+
+.hero {
+  position:relative; aspect-ratio:1/1; overflow:hidden;
+  background:linear-gradient(135deg, #0a0a0a 0%, #2a2410 55%, #C9A84C 130%);
+}
+.hero-fallback {
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  font-size:181px; font-weight:900; color:rgba(201,168,76,0.35);
+}
+.hero img { width:100%; height:100%; object-fit:cover; object-position:center top; position:relative; z-index:1; }
+.hero-overlay {
+  position:absolute; inset:0; z-index:1;
+  background:linear-gradient(to bottom, transparent 0%, transparent 50%,
+    rgba(0,0,0,0.85) 82%, rgba(0,0,0,0.97) 100%);
+}
+.hero-content { position:absolute; bottom:0; left:0; right:0; padding:24px 20px 28px; z-index:2; }
+.hero-badge {
+  display:inline-flex; align-items:center; gap:5px;
+  background:var(--accent); color:#0a0a0a;
+  padding:4px 12px; border-radius:20px; font-size:11px; font-weight:700; margin-bottom:10px;
+}
+.hero-name { font-size:35px; font-weight:900; color:#fff; letter-spacing:-1px; line-height:1.1; }
+.hero-name-sub { font-size:12px; color:rgba(255,255,255,0.5); letter-spacing:2.5px; margin-top:6px; }
+.hero-title { font-size:13px; color:rgba(255,255,255,0.78); margin-top:8px; }
+
+.glass {
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.20);
+  border-radius: 16px;
+}
+.glass-dark {
+  background: rgba(10,10,10,0.55);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+}
+.glass-white {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 16px;
+}
+.gold-anchor {
+  background: linear-gradient(160deg, #1c1c1c 0%, #2a2410 55%, #0a0a0a 100%);
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.sec { padding:8px 16px 12px; }
+.profile-inner { display:flex; align-items:center; gap:14px; padding:18px; }
+.profile-img, .profile-fallback {
+  width:76px; height:76px; border-radius:50%; flex-shrink:0;
+  object-fit:cover; object-position:center top;
+  border:2px solid rgba(201,168,76,0.5);
+}
+.profile-fallback {
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(201,168,76,0.15); color:var(--accent2); font-size:29px; font-weight:800;
+}
+.profile-name { font-size:18px; font-weight:800; color:#fff; }
+.profile-sub { font-size:13px; color:rgba(255,255,255,0.65); margin-top:3px; }
+.profile-tag {
+  display:inline-block; margin-top:7px;
+  background:rgba(201,168,76,0.2); border:1px solid rgba(201,168,76,0.5);
+  color:var(--accent2); font-size:11px; padding:3px 10px; border-radius:10px;
+}
+
+.sec-label { font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:6px; color:rgba(255,255,255,0.5); }
+.sec-title { font-size:21px; font-weight:800; line-height:1.35; margin-bottom:16px; color:#fff; }
+.pad-in { padding:22px 20px; }
+
+.about-quote {
+  border-left:3px solid var(--accent2); padding:10px 14px; margin-bottom:14px;
+  background:rgba(201,168,76,0.12); border-radius:0 10px 10px 0;
+  font-size:15px; font-style:italic; color:rgba(255,255,255,0.9); line-height:1.7;
+}
+.about-desc { font-size:15px; line-height:1.9; color:rgba(255,255,255,0.85); }
+
+.why-cards, .diff-cards { display:flex; flex-direction:column; gap:10px; }
+.why-card { padding:16px 18px; }
+.why-num { font-size:11px; font-weight:800; color:var(--accent2); letter-spacing:2px; margin-bottom:5px; }
+.why-text { font-size:14px; line-height:1.75; color:rgba(255,255,255,0.9); }
+.why-text strong { color:#fff; font-weight:800; }
+
+.ref-intro { font-size:14px; line-height:1.7; color:rgba(255,255,255,0.85); margin-bottom:14px; }
+.ref-intro strong { color:#fff; }
+.cat-list { display:flex; flex-direction:column; gap:10px; }
+.cat-card { padding:14px 16px; }
+.cat-head { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+.cat-icon { font-size:19px; }
+.cat-title { font-size:14px; font-weight:800; color:var(--main); }
+.cat-items { font-size:13px; line-height:1.7; color:rgba(10,10,10,0.7); }
+
+.career-list { display:flex; flex-direction:column; gap:12px; }
+.career-item { display:flex; gap:10px; align-items:flex-start; }
+.career-badge {
+  background:rgba(201,168,76,0.15); color:var(--accent2); border:1px solid rgba(201,168,76,0.35);
+  font-size:11px; font-weight:700; padding:3px 9px; border-radius:10px;
+  flex-shrink:0; margin-top:2px; white-space:nowrap;
+}
+.career-title { font-size:14px; font-weight:700; color:#fff; }
+.career-desc  { font-size:13px; color:rgba(255,255,255,0.55); margin-top:2px; }
+
+.con-list { display:flex; flex-direction:column; gap:8px; }
+.con-item {
+  display:flex; align-items:center; gap:14px;
+  padding:14px 16px; border-radius:14px;
+  text-decoration:none; color:var(--main);
+  background:rgba(255,255,255,0.82);
+  backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.5);
+}
+.con-icon { width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:19px; flex-shrink:0; background:rgba(10,10,10,0.08); }
+.con-label { font-size:12px; color:rgba(10,10,10,0.5); }
+.con-value { font-size:14px; font-weight:600; margin-top:1px; color:var(--main); }
+
+.action-sec { padding:16px; display:flex; flex-direction:column; gap:10px; }
+.btn {
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  padding:15px; border-radius:14px; font-size:15px; font-weight:700;
+  cursor:pointer; border:none; font-family:inherit; min-height:52px;
+  text-decoration:none; width:100%; transition:opacity .2s;
+  backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+}
+.btn:active { opacity:.85; }
+.btn-primary { background:rgba(201,168,76,0.92); color:#0a0a0a; border:1px solid rgba(201,168,76,0.4); }
+.btn-outline { background:rgba(255,255,255,0.12); color:#fff; border:1px solid rgba(255,255,255,0.3); }
+
+footer { padding:16px; }
+.footer-inner { padding:24px 20px; text-align:center; }
+.footer-co { font-size:14px; color:#fff; font-weight:700; }
+.footer-slogan { font-size:12px; color:rgba(255,255,255,0.5); margin-top:4px; font-style:italic; }
+.footer-credit { font-size:11px; color:rgba(255,255,255,0.3); margin-top:16px; }
+.footer-credit a { color:rgba(255,255,255,0.4); text-decoration:none; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">검인 법무사사무소</div>
+  <div class="lang-btns">
+    <button class="lang-btn active" onclick="setLang('kr')">KR</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('jp')">JP</button>
+    <button class="lang-btn" onclick="setLang('cn')">CN</button>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-fallback">李</div>
+  <img src="./hero.png" alt="이채홍" style="display:none;"
+    onload="this.style.display='block'; this.previousElementSibling.style.display='none';"
+    onerror="this.remove();">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">⚖️ <span data-lang="kr" class="active">검인 법무사사무소 · 형사·민사·회생파산 전문</span><span data-lang="en">Gumin Law Office · Criminal, Civil, Rehabilitation &amp; Bankruptcy</span><span data-lang="jp">検認法務士事務所・刑事/民事/個人再生専門</span><span data-lang="cn">检认法务士事务所·刑事民事回生破产专长</span></div>
+    <div class="hero-name">
+      <span data-lang="kr" class="active">이채홍</span>
+      <span data-lang="en">Lee Chae Hong</span>
+      <span data-lang="jp">イ・チェホン</span>
+      <span data-lang="cn">李彩洪</span>
+    </div>
+    <div class="hero-name-sub">
+      <span data-lang="kr" class="active">李彩洪 · Lee Chae Hong</span>
+      <span data-lang="en">이채홍 · 李彩洪</span>
+      <span data-lang="jp">이채홍 · 李彩洪</span>
+      <span data-lang="cn">이채홍 · Lee Chae Hong</span>
+    </div>
+    <div class="hero-title">
+      <span data-lang="kr" class="active">대표 법무사 | 법률통합서비스 검인 법무사사무소</span>
+      <span data-lang="en">Certified Judicial Scrivener, CEO | Gumin Law Office</span>
+      <span data-lang="jp">代表法務士 | 検認法務士事務所</span>
+      <span data-lang="cn">代表法务士 | 检认法务士事务所</span>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="glass-dark">
+    <div class="profile-inner">
+      <div class="profile-fallback">李</div>
+      <img class="profile-img" src="./profil.png" alt="이채홍" style="display:none;"
+        onload="this.style.display='block'; this.previousElementSibling.style.display='none';"
+        onerror="this.remove();">
+      <div>
+        <div class="profile-name"><span data-lang="kr" class="active">이채홍 대표</span><span data-lang="en">Chae Hong Lee, CEO</span><span data-lang="jp">イ・チェホン 代表</span><span data-lang="cn">李彩洪 代表</span></div>
+        <div class="profile-sub">법률통합서비스 검인 법무사사무소</div>
+        <div class="profile-tag"><span data-lang="kr" class="active">⚡ 정확한 상담은 고민 해결의 시작</span><span data-lang="en">⚡ Accurate consultation is the beginning of solving your problems.</span><span data-lang="jp">⚡ 正確な相談が悩み解決の始まりです</span><span data-lang="cn">⚡ 准确的咨询是解决烦恼的开始</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="glass-dark pad-in">
+    <div class="sec-label">About</div>
+    <div class="sec-title"><span data-lang="kr" class="active">고민이 깊어지는 건,<br>몰라서입니다.</span><span data-lang="en">Worries deepen<br>when you don't know the answer.</span><span data-lang="jp">悩みが深まるのは、<br>知らないからです。</span><span data-lang="cn">烦恼加深，<br>是因为不知道答案。</span></div>
+    <div class="about-quote"><span data-lang="kr" class="active">정확한 상담은<br>고민 해결의 시작입니다.</span><span data-lang="en">Accurate consultation is<br>the beginning of solving your problems.</span><span data-lang="jp">正確な相談が<br>悩み解決の始まりです。</span><span data-lang="cn">准确的咨询<br>是解决烦恼的开始。</span></div>
+    <div class="about-desc"><span data-lang="kr" class="active">고민이 깊어지는 것은 해결책을 모르기 때문입니다. 알게 해 드리고, 선택하실 수 있는 상담을 해드립니다.</span><span data-lang="en">Deep worries come from not knowing the solution. We help you understand your situation so you can choose the right path.</span><span data-lang="jp">悩みが深まるのは解決策を知らないからです。ご理解いただき、選択できるご相談を提供します。</span><span data-lang="cn">烦恼加深是因为不知道解决方法。我们帮助您了解情况，并做出选择。</span></div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-label" style="padding:0 4px;">Why Us</div>
+  <div class="sec-title" style="padding:0 4px;"><span data-lang="kr" class="active">이채홍과 함께해야 하는 이유</span><span data-lang="en">Why Choose Chae Hong Lee</span><span data-lang="jp">イ・チェホンを選ぶ理由</span><span data-lang="cn">为什么选择李彩洪</span></div>
+  <div class="why-cards">
+    <div class="glass why-card">
+      <div class="why-num">WHY 01</div>
+      <div class="why-text">
+        <span data-lang="kr" class="active"><strong>형사사건 특화</strong><br>검찰청 수사관 25년, 수사부서 21년 이상 현장 노하우로 사건 진행 절차와 예상 결과까지 먼저 알려드립니다.</span>
+        <span data-lang="en"><strong>Criminal Case Specialist</strong><br>25 years as a prosecutor's investigator (21+ years in investigation) — we explain the process and likely outcome from the start.</span>
+        <span data-lang="jp"><strong>刑事事件専門</strong><br>検察庁捜査官25年、捜査部門21年以上の現場ノウハウで、手続きと予想結果まで先にご説明します。</span>
+        <span data-lang="cn"><strong>刑事案件专长</strong><br>检察厅侦查官25年、侦查部门21年以上经验，事先说明程序与预期结果。</span>
+      </div>
+    </div>
+    <div class="glass why-card">
+      <div class="why-num">WHY 02</div>
+      <div class="why-text">
+        <span data-lang="kr" class="active"><strong>민사소송 전문</strong><br>승소 가능성부터 집행 완료까지 처음부터 끝까지 맡아 처리하고, 법무비용도 상대방이 부담하도록 합니다.</span>
+        <span data-lang="en"><strong>Civil Litigation Expert</strong><br>We handle everything from win probability to final enforcement — and recover legal costs from the other party.</span>
+        <span data-lang="jp"><strong>民事訴訟専門</strong><br>勝訴可能性から強制執行完了まで一貫して対応し、費用も相手方に負担させます。</span>
+        <span data-lang="cn"><strong>民事诉讼专长</strong><br>从胜诉可能性到强制执行全程负责，并让对方承担诉讼费用。</span>
+      </div>
+    </div>
+    <div class="glass why-card">
+      <div class="why-num">WHY 03</div>
+      <div class="why-text">
+        <span data-lang="kr" class="active"><strong>회생·파산 전문</strong><br>개인회생 인가율 100%, 탕감률 최대 95%. 신청부터 면책까지 1:1로 심도 깊게 진행합니다.</span>
+        <span data-lang="en"><strong>Rehabilitation &amp; Bankruptcy</strong><br>100% approval rate, up to 95% debt reduction. One-on-one guidance from filing to discharge.</span>
+        <span data-lang="jp"><strong>個人再生・破産専門</strong><br>認可率100%、最大95%減免。申請から免責まで1対1で対応します。</span>
+        <span data-lang="cn"><strong>个人回生·破产专长</strong><br>认可率100%，最高减免95%。从申请到免责全程一对一。</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-label" style="padding:0 4px;">Difference</div>
+  <div class="sec-title" style="padding:0 4px;"><span data-lang="kr" class="active">이채홍이 다른 이유</span><span data-lang="en">What Makes Chae Hong Different</span><span data-lang="jp">イ・チェホンが違う理由</span><span data-lang="cn">李彩洪的差异所在</span></div>
+  <div class="diff-cards">
+    <div class="glass-white cat-card">
+      <div class="cat-head"><span class="cat-icon">📄</span><span class="cat-title"><span data-lang="kr" class="active">고소사건 3종 세트</span><span data-lang="en">3-Part Criminal Complaint Package</span><span data-lang="jp">告訴事件3点セット</span><span data-lang="cn">控告案件三件套</span></span></div>
+      <div class="cat-items"><span data-lang="kr" class="active">고소장·고소보충의견서·피해 진술조서 초안까지, 오랜 수사 경력으로만 가능한 전국 유일 서비스입니다.</span><span data-lang="en">Complaint, supplementary opinion, and victim statement draft — a service only possible with decades of investigation experience.</span><span data-lang="jp">告訴状・補充意見書・被害陳述調書草案まで、豊富な捜査経験だからこそ可能なサービスです。</span><span data-lang="cn">控告状、补充意见书、受害陈述笔录草案，凭借丰富侦查经验提供的独家服务。</span></div>
+    </div>
+    <div class="glass-white cat-card">
+      <div class="cat-head"><span class="cat-icon">🛡️</span><span class="cat-title"><span data-lang="kr" class="active">피고소사건 대응</span><span data-lang="en">Defense Against Accusations</span><span data-lang="jp">被告訴事件対応</span><span data-lang="cn">被控告案件应对</span></span></div>
+      <div class="cat-items"><span data-lang="kr" class="active">변호사 필요 여부부터 판단해 드리고, 불필요하면 의견서 작성과 조사 대응법까지 현실적으로 도와드립니다.</span><span data-lang="en">We assess whether a lawyer is needed, then provide practical help — from opinion drafts to investigation response strategy.</span><span data-lang="jp">弁護士の必要性から判断し、不要な場合は意見書作成や取調べ対応まで現実的にサポートします。</span><span data-lang="cn">先判断是否需要律师，不需要时协助撰写意见书及应对调查。</span></div>
+    </div>
+    <div class="glass-white cat-card">
+      <div class="cat-head"><span class="cat-icon">💰</span><span class="cat-title"><span data-lang="kr" class="active">강력한 채권 확보</span><span data-lang="en">Strong Debt Recovery</span><span data-lang="jp">強力な債権回収</span><span data-lang="cn">强力债权追讨</span></span></div>
+      <div class="cat-items"><span data-lang="kr" class="active">대여금·투자금·납품대금 등, 형사고소부터 강제집행까지 한 번의 상담으로 실비 전담 처리합니다.</span><span data-lang="en">From criminal complaint to forced execution, we handle loans, investments, and unpaid dues in a single consultation.</span><span data-lang="jp">貸付金・投資金・納品代金など、告訴から強制執行まで一度のご相談で対応します。</span><span data-lang="cn">借款、投资款、货款等，从控告到强制执行一次咨询全程处理。</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-label" style="padding:0 4px;">Referral</div>
+  <div class="sec-title" style="padding:0 4px;"><span data-lang="kr" class="active">이런 분을 소개해 주세요 🙏</span><span data-lang="en">Ideal Referrals</span><span data-lang="jp">こんな方をご紹介ください</span><span data-lang="cn">期待这样的引荐</span></div>
+  <div class="cat-list">
+    <div class="glass-white cat-card">
+      <div class="cat-head"><span class="cat-icon">①</span><span class="cat-title"><span data-lang="kr" class="active">피해를 입었거나 의심되는 분</span><span data-lang="en">Possible victims</span><span data-lang="jp">被害を受けた・疑いのある方</span><span data-lang="cn">疑似或已受害人士</span></span></div>
+      <div class="cat-items"><span data-lang="kr" class="active">피해를 입었거나 입은 것 같은데 대응 방법을 모르는 분, 사업자·법인 대표</span><span data-lang="en">Business owners or executives who may have suffered harm and don't know how to respond</span><span data-lang="jp">被害を受けた、または受けたと思われる事業主・法人代表の方</span><span data-lang="cn">疑似受害或已受害、不知如何应对的企业主、法人代表</span></div>
+    </div>
+    <div class="glass-white cat-card">
+      <div class="cat-head"><span class="cat-icon">②</span><span class="cat-title"><span data-lang="kr" class="active">받을 돈을 못 받고 있는 분</span><span data-lang="en">Unpaid debts</span><span data-lang="jp">未回収の債権がある方</span><span data-lang="cn">被拖欠款项人士</span></span></div>
+      <div class="cat-items"><span data-lang="kr" class="active">투자금·납품대금 등 지급을 미루고 있는 상대 때문에 힘드신 분</span><span data-lang="en">Anyone struggling to recover investments, unpaid dues, or other money owed to them</span><span data-lang="jp">投資金・納品代金などお金を回収できずお困りの方</span><span data-lang="cn">因投资款、货款等被拖欠而烦恼的人士</span></div>
+    </div>
+    <div class="glass-white cat-card">
+      <div class="cat-head"><span class="cat-icon">③</span><span class="cat-title"><span data-lang="kr" class="active">회생·파산을 고민 중인 분</span><span data-lang="en">Considering rehabilitation/bankruptcy</span><span data-lang="jp">個人再生・破産を検討中の方</span><span data-lang="cn">考虑回生或破产人士</span></span></div>
+      <div class="cat-items"><span data-lang="kr" class="active">채무 과다로 회생이나 파산 가능 여부를 정확히 알고 싶은 분</span><span data-lang="en">Anyone with excessive debt who wants to know if rehabilitation or bankruptcy is possible</span><span data-lang="jp">過剰債務で個人再生・破産の可否を正確に知りたい方</span><span data-lang="cn">因债务过多想确认是否可回生或破产的人士</span></div>
+    </div>
+    <div class="glass-white cat-card">
+      <div class="cat-head"><span class="cat-icon">④</span><span class="cat-title"><span data-lang="kr" class="active">법률 상담이 필요한 분</span><span data-lang="en">Needs legal consultation</span><span data-lang="jp">法律相談が必要な方</span><span data-lang="cn">需要法律咨询人士</span></span></div>
+      <div class="cat-items"><span data-lang="kr" class="active">변호사 상담이 필요하다고 느끼거나, 주변에서 권유받은 분</span><span data-lang="en">Anyone who feels they need legal consultation, or has been advised to seek one</span><span data-lang="jp">弁護士相談が必要だと感じている、または勧められた方</span><span data-lang="cn">认为需要法律咨询或被建议咨询的人士</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="gold-anchor pad-in">
+    <div class="sec-label">Career &amp; Network</div>
+    <div class="sec-title"><span data-lang="kr" class="active">활동 이력</span><span data-lang="en">Career</span><span data-lang="jp">活動履歴</span><span data-lang="cn">活动履历</span></div>
+    <div class="career-list">
+      <div class="career-item">
+        <div class="career-badge">검찰</div>
+        <div>
+          <div class="career-title"><span data-lang="kr" class="active">검찰청 수사관 25년 근무</span><span data-lang="en">25 Years as a Prosecutor's Investigator</span><span data-lang="jp">検察庁捜査官25年勤務</span><span data-lang="cn">检察厅侦查官25年</span></div>
+          <div class="career-desc"><span data-lang="kr" class="active">수사부서 21년 · 특수부·공안부·형사부 근무 (명예퇴직)</span><span data-lang="en">21+ years in investigation — Special, Public Security &amp; Criminal divisions (honorable retirement)</span><span data-lang="jp">捜査部門21年・特捜部/公安部/刑事部（名誉退職）</span><span data-lang="cn">侦查部门21年·特搜部/公安部/刑事部（荣誉退休）</span></div>
+        </div>
+      </div>
+      <div class="career-item">
+        <div class="career-badge">법무</div>
+        <div>
+          <div class="career-title"><span data-lang="kr" class="active">변호사 사무실 사무국장</span><span data-lang="en">Law Office Chief Administrator</span><span data-lang="jp">弁護士事務所事務局長</span><span data-lang="cn">律师事务所秘书长</span></div>
+          <div class="career-desc"><span data-lang="kr" class="active">형사사건 전문 상담 및 의견서 작성 2년</span><span data-lang="en">2 years of criminal case consultation &amp; opinion drafting</span><span data-lang="jp">刑事事件専門相談・意見書作成2年</span><span data-lang="cn">刑事案件专门咨询及意见书撰写2年</span></div>
+        </div>
+      </div>
+      <div class="career-item">
+        <div class="career-badge">BNI</div>
+        <div>
+          <div class="career-title"><span data-lang="kr" class="active">BNI 파이오니어 챕터 멤버</span><span data-lang="en">BNI Pioneer Chapter Member</span><span data-lang="jp">BNIパイオニアチャプターメンバー</span><span data-lang="cn">BNI先驱分会成员</span></div>
+          <div class="career-desc"><span data-lang="kr" class="active">1년차</span><span data-lang="en">1st year</span><span data-lang="jp">1年目</span><span data-lang="cn">第1年</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-label" style="padding:0 4px;">Contact</div>
+  <div class="sec-title" style="padding:0 4px;"><span data-lang="kr" class="active">연락하기</span><span data-lang="en">Get in Touch</span><span data-lang="jp">お問い合わせ</span><span data-lang="cn">联系我们</span></div>
+  <div class="con-list">
+    <a class="con-item" href="tel:010-5486-0273"><div class="con-icon">📞</div><div><div class="con-label">Phone</div><div class="con-value">010-5486-0273</div></div></a>
+    <a class="con-item" href="https://blog.naver.com/law_gumin" target="_blank"><div class="con-icon">📝</div><div><div class="con-label">Blog</div><div class="con-value">blog.naver.com/law_gumin</div></div></a>
+  </div>
+</div>
+
+<div class="action-sec">
+  <button class="btn btn-primary" onclick="shareCard()">📤 <span data-lang="kr" class="active">명함 공유하기</span><span data-lang="en">Share Card</span><span data-lang="jp">名刺をシェア</span><span data-lang="cn">分享名片</span></button>
+  <button class="btn btn-outline" onclick="saveContact()">📞 <span data-lang="kr" class="active">연락처 저장</span><span data-lang="en">Save Contact</span><span data-lang="jp">連絡先を保存</span><span data-lang="cn">保存联系人</span></button>
+  <button class="btn btn-outline" onclick="saveToCardbook({dicaUrl:'https://jinjjabg-hub.github.io/BNI-PIONEER-cards/이채홍/',
+    id:'leechaehong', name:'이채홍', nameEn:'Lee Chae Hong',
+    title:'대표 법무사', company:'법률통합서비스 검인 법무사사무소',
+    phone:'010-5486-0273', email:'', chapter:'파이오니어', bni:'멤버', url:window.location.href
+  })">🗂️ <span data-lang="kr" class="active">명함첩 저장</span><span data-lang="en">Save to CardBook</span><span data-lang="jp">名刺帳に保存</span><span data-lang="cn">保存到名片册</span></button>
+</div>
+
+<footer>
+  <div class="glass-dark footer-inner">
+    <div class="footer-co">법률통합서비스 검인 법무사사무소</div>
+    <div class="footer-slogan">Accurate consultation is the beginning of solving your problems.</div>
+    <div class="footer-credit">Digital Card by <a href="https://tmlink.kr" target="_blank">T.M LINK</a></div>
+  </div>
+</footer>
+
+<script src="https://jinjjabg-hub.github.io/cardbook/save-to-cardbook.js"></script>
+<script>
+function setLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+  });
+  document.querySelectorAll('.lang-btn').forEach((btn, i) => {
+    btn.classList.toggle('active', ['kr','en','jp','cn'][i] === lang);
+  });
+}
+function shareCard() {
+  if (navigator.share) {
+    navigator.share({ title: document.title, text: document.querySelector('meta[property="og:description"]')?.content || '', url: window.location.href });
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => alert('링크가 복사되었습니다!'));
+  }
+}
+function saveContact() {
+  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:이채홍\nN:이;채홍;;;\nORG:법률통합서비스 검인 법무사사무소\nTITLE:대표 법무사\nTEL;TYPE=CELL:010-5486-0273\nURL:https://blog.naver.com/law_gumin\nEND:VCARD`;
+  const blob = new Blob([vcard], {type:'text/vcard'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'LeeChaeHong_GuminLaw.vcf'; a.click();
+}
+setLang('kr');
+</script>
+</body>
+</html>
