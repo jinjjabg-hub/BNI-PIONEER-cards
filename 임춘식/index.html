@@ -143,7 +143,11 @@ section { padding: 40px 20px; }
 .section-title { font-size: 22px; font-weight: 700; line-height: 1.35; margin-bottom: 22px; }
 
 /* ── ABOUT ── */
-.about { background: var(--navy); }
+.about {
+  background-color: var(--navy);
+  background-image: linear-gradient(rgba(22,54,43,0.62), rgba(22,54,43,0.62)), url('assets/bgv-field-dark.jpg');
+  background-size: cover; background-position: top center; background-repeat: no-repeat;
+}
 .about .section-title { color: #fff; }
 .slogan {
   font-size: 15px; font-weight: 700;
@@ -154,7 +158,11 @@ section { padding: 40px 20px; }
 .about-text [data-lang="ur"] { font-size: 15px; line-height: 2.2; }
 
 /* ── WHY ── */
-.why { background: var(--light); }
+.why {
+  background-color: var(--light);
+  background-image: linear-gradient(rgba(253,245,244,0.65), rgba(253,245,244,0.65)), url('assets/bgv-field-light.jpg');
+  background-size: cover; background-position: top center; background-repeat: no-repeat;
+}
 .why .section-label { color: var(--muted-light); }
 .why .section-title { color: var(--text-light); }
 .why-cards { display: flex; flex-direction: column; gap:14px; }
@@ -170,7 +178,11 @@ section { padding: 40px 20px; }
 .why-card p strong { color: var(--navy); font-weight: 700; }
 
 /* ── DIFFERENCE ── */
-.difference { background: var(--navy2); }
+.difference {
+  background-color: var(--navy2);
+  background-image: linear-gradient(rgba(29,68,54,0.62), rgba(29,68,54,0.62)), url('assets/bgv-field-dark.jpg');
+  background-size: cover; background-position: bottom center; background-repeat: no-repeat;
+}
 .difference .section-title { color: #fff; }
 .diff-grid { display: flex; flex-direction: column; gap:12px; }
 .diff-card {
@@ -183,7 +195,11 @@ section { padding: 40px 20px; }
 .diff-card p [data-lang="ur"] { font-size: 14px; line-height: 2.2; }
 
 /* ── REFERRAL ── */
-.referral { background: var(--light); }
+.referral {
+  background-color: var(--light);
+  background-image: linear-gradient(rgba(253,245,244,0.65), rgba(253,245,244,0.65)), url('assets/bgv-field-light.jpg');
+  background-size: cover; background-position: top center; background-repeat: no-repeat;
+}
 .referral .section-label { color: var(--muted-light); }
 .referral .section-title { color: var(--text-light); }
 .ref-list { display: flex; flex-direction: column; gap:10px; }
@@ -206,9 +222,9 @@ section { padding: 40px 20px; }
 .career {
   position: relative;
   background-color: #f7efec;
-  background-image: none;
-  background-size: 150%;
-  background-position: left bottom;
+  background-image: linear-gradient(rgba(247,239,236,0.65), rgba(247,239,236,0.65)), url('assets/bgv-field-light.jpg');
+  background-size: cover;
+  background-position: top center;
   background-repeat: no-repeat;
 }
 .career .section-label { position: relative; z-index:1; color: var(--muted-light); }
@@ -231,7 +247,11 @@ section { padding: 40px 20px; }
 .career-item p { font-size: 12px; line-height: 1.85; color: #555; }
 
 /* ── CONTACT ── */
-.contact { background: var(--light); }
+.contact {
+  background-color: var(--light);
+  background-image: linear-gradient(rgba(253,245,244,0.65), rgba(253,245,244,0.65)), url('assets/bgv-field-light.jpg');
+  background-size: cover; background-position: top center; background-repeat: no-repeat;
+}
 .contact .section-label { color: var(--muted-light); }
 .contact .section-title { color: var(--text-light); }
 .contact-list {
@@ -258,7 +278,11 @@ section { padding: 40px 20px; }
 .contact-value { font-size: 12px; font-weight: 600; color: var(--text-light); line-height: 1.4; word-break: break-all; }
 
 /* ── PORTFOLIO (슬라이더) ── */
-.portfolio { background: var(--light); }
+.portfolio {
+  background-color: var(--light);
+  background-image: linear-gradient(rgba(253,245,244,0.78), rgba(253,245,244,0.78)), url('assets/bgv-field-light.jpg');
+  background-size: cover; background-position: bottom center; background-repeat: no-repeat;
+}
 .portfolio .section-label { color: var(--muted-light); }
 .portfolio .section-title { color: var(--text-light); }
 .slider { margin: 0 -20px; }               /* 좌우 여백까지 꽉 차게 */
@@ -286,6 +310,12 @@ section { padding: 40px 20px; }
   text-align: center; font-size: 11px; color: var(--muted-light);
   margin-top: 12px; letter-spacing: 0.5px;
 }
+
+/* ── BOUGAINVILLEA ACCENTS (A안: 가벼운 장식) ── */
+.bgv-divider-wrap { display:flex; justify-content:center; padding: 4px 0 2px; background: inherit; }
+.bgv-divider-wrap img { width: 220px; height: auto; opacity: 0.9; }
+.section-title-row { display:flex; align-items:center; gap:8px; }
+.section-title-row img.bgv-sprig { width: 34px; height: 34px; opacity: 0.85; transform: scaleX(-1); }
 
 /* ── ACTION ── */
 .action { background: var(--navy2); padding: 32px 20px; }
@@ -391,11 +421,14 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 <!-- ABOUT -->
 <section class="about">
   <div class="section-label">About</div>
-  <div class="slogan">
-    <span data-lang="kr" class="active">모든 분께 사랑과 정성, 감동을 전합니다</span>
-    <span data-lang="en">Delivering love, care, and heartfelt moments to everyone</span>
-    <span data-lang="jp">すべての方へ、愛と真心、感動をお届けします</span>
-    <span data-lang="cn">为每一位客户传递爱、真诚与感动</span>
+  <div class="section-title-row">
+    <img class="bgv-sprig" src="assets/bgv-sprig.svg" alt="">
+    <div class="slogan">
+      <span data-lang="kr" class="active">모든 분께 사랑과 정성, 감동을 전합니다</span>
+      <span data-lang="en">Delivering love, care, and heartfelt moments to everyone</span>
+      <span data-lang="jp">すべての方へ、愛と真心、感動をお届けします</span>
+      <span data-lang="cn">为每一位客户传递爱、真诚与感动</span>
+    </div>
   </div>
   <p class="about-text">
     <span data-lang="kr" class="active">전국 어디든 신속하고 품격 있게 전달되는 전문 화훼 서비스입니다. 축하·감사·위로의 순간, 꽃가람이 마음을 대신 전합니다.</span>
@@ -404,6 +437,7 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
     <span data-lang="cn">面向全国、快速而有格调的专业花艺服务。在庆祝、感谢与慰问的时刻，꽃가람为您用鲜花传递心意。</span>
   </p>
 </section>
+<div class="bgv-divider-wrap"><img src="assets/bgv-divider.svg" alt=""></div>
 
 <!-- PORTFOLIO : 작품 갤러리 -->
 <section class="portfolio">
