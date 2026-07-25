@@ -221,14 +221,14 @@ section { padding: 40px 20px; }
 /* ── CAREER ── */
 .career {
   position: relative;
-  background-color: #f7efec;
-  background-image: linear-gradient(rgba(247,239,236,0.65), rgba(247,239,236,0.65)), url('assets/bgv-field-light.jpg');
+  background-color: var(--navy2);
+  background-image: linear-gradient(rgba(29,68,54,0.62), rgba(29,68,54,0.62)), url('assets/bgv-field-dark.jpg');
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
 }
-.career .section-label { position: relative; z-index:1; color: var(--muted-light); }
-.career .section-title { color: var(--text-light); position: relative; z-index:1; }
+.career .section-label { position: relative; z-index:1; }
+.career .section-title { color: #fff; position: relative; z-index:1; }
 .career-list { display: flex; flex-direction: column; gap:18px; position: relative; z-index:1; }
 .career-item {
   display: flex; gap:12px; align-items:flex-start;
@@ -237,7 +237,7 @@ section { padding: 40px 20px; }
 }
 .career-item:last-child { border-bottom: none; padding-bottom: 0; }
 .career-badge {
-  background: var(--navy); color: #fff;
+  background: var(--gold); color: var(--navy);
   font-size: 10px; font-weight: 700;
   padding: 4px 10px; border-radius: 4px;
   white-space: nowrap; flex-shrink: 0; margin-top: 2px;
@@ -310,6 +310,18 @@ section { padding: 40px 20px; }
   text-align: center; font-size: 11px; color: var(--muted-light);
   margin-top: 12px; letter-spacing: 0.5px;
 }
+.slider { position: relative; }
+.slide-arrow {
+  position: absolute; top: 40%; transform: translateY(-50%);
+  z-index: 3; width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(22,54,43,0.55); color: #fff; border: none;
+  font-size: 20px; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s;
+}
+.slide-arrow:hover, .slide-arrow:active { background: rgba(22,54,43,0.8); }
+.slide-prev { left: 8px; }
+.slide-next { right: 8px; }
 
 /* ── BOUGAINVILLEA ACCENTS (A안: 가벼운 장식) ── */
 .bgv-divider-wrap { display:flex; justify-content:center; padding: 4px 0 2px; background: inherit; }
@@ -330,11 +342,8 @@ section { padding: 40px 20px; }
 }
 .btn-primary { background: var(--gold); color: var(--navy); }
 .btn-secondary { background: transparent; border: 2px solid var(--gold); color: var(--gold); }
-.btn-mandu {
-  background: linear-gradient(135deg, #1a3a6b, #0d5ca8);
-  color: #fff; border: none;
-}
-.btn-share { background: linear-gradient(135deg, #1a6b3a, #0d8a4a); color: #fff; border: none; }
+.btn-mandu { background: #fdf5f4; color: var(--navy); border: none; }
+.btn-share { background: transparent; border: 2px solid #fdf5f4; color: #fdf5f4; }
 .btn:active { transform: scale(0.97); opacity: 0.9; }
 
 /* 공유 바텀시트 */
@@ -439,16 +448,18 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 </section>
 <div class="bgv-divider-wrap"><img src="assets/bgv-divider.svg" alt=""></div>
 
-<!-- PORTFOLIO : 작품 갤러리 -->
+<!-- PORTFOLIO : 상품 -->
 <section class="portfolio">
-  <div class="section-label">Portfolio</div>
+  <div class="section-label">Products</div>
   <div class="section-title">
-    <span data-lang="kr" class="active">작품 갤러리</span>
-    <span data-lang="en">Our Work</span>
-    <span data-lang="jp">作品ギャラリー</span>
-    <span data-lang="cn">作品展示</span>
+    <span data-lang="kr" class="active">상품</span>
+    <span data-lang="en">Products</span>
+    <span data-lang="jp">商品</span>
+    <span data-lang="cn">商品</span>
   </div>
   <div class="slider">
+    <button class="slide-arrow slide-prev" onclick="slidePortfolio(this,-1)" aria-label="prev">‹</button>
+    <button class="slide-arrow slide-next" onclick="slidePortfolio(this,1)" aria-label="next">›</button>
     <div class="slides">
       <div class="slide">
         <img src="gallery/red.jpg" alt="축하 장미 꽃바구니" loading="lazy">
@@ -829,6 +840,13 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 
 <script src="https://jinjjabg-hub.github.io/cardbook/save-to-cardbook.js"></script>
 <script>
+function slidePortfolio(btn, dir) {
+  const slides = btn.closest('.slider').querySelector('.slides');
+  const slide = slides.querySelector('.slide');
+  const gap = 12; // CSS gap value
+  const step = slide.getBoundingClientRect().width + gap;
+  slides.scrollBy({ left: dir * step, behavior: 'smooth' });
+}
 function setLang(lang) {
   document.querySelectorAll('[data-lang]').forEach(el => {
     el.classList.toggle('active', el.getAttribute('data-lang') === lang);
