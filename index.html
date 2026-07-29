@@ -141,6 +141,74 @@
     color: #b0a8c8;
     letter-spacing: 0.05em;
   }
+
+  /* 트래픽 라이트 배너 */
+  .tl-banner {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    max-width: 900px;
+    margin: 0 auto 28px;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #2d1a5e 0%, #4527a0 100%);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(90,50,200,0.22);
+    text-decoration: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .tl-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px rgba(90,50,200,0.3);
+  }
+  .tl-banner::after {
+    content: '›';
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    color: rgba(255,255,255,0.5);
+  }
+  .tl-lights {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+  .tl-dot {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+  }
+  .tl-dot.g { background: #27ae60; box-shadow: 0 0 8px rgba(39,174,96,.6); }
+  .tl-dot.a { background: #f0c419; opacity: .6; }
+  .tl-dot.r { background: #ef314f; opacity: .4; }
+  .tl-txt { flex: 1; padding-right: 20px; }
+  .tl-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #d8c8ff;
+    font-size: 9.5px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+  }
+  .tl-title {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+  }
+  .tl-sub {
+    font-size: 11.5px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+  }
 </style>
 </head>
 <body>
@@ -150,6 +218,19 @@
   <h1>디지털 명함 디렉토리</h1>
   <p>멤버를 선택하면 디지털 명함으로 이동합니다</p>
 </header>
+
+<a class="tl-banner" href="https://jinjjabg-hub.github.io/BNI-TL/" target="_blank" rel="noopener">
+  <div class="tl-lights">
+    <span class="tl-dot g"></span>
+    <span class="tl-dot a"></span>
+    <span class="tl-dot r"></span>
+  </div>
+  <div class="tl-txt">
+    <span class="tl-badge">CHAPTER TOOL</span>
+    <div class="tl-title">트래픽 라이트</div>
+    <div class="tl-sub">멤버 활동 점수 대시보드 · 6개월 롤링</div>
+  </div>
+</a>
 
 <div class="grid">
 
