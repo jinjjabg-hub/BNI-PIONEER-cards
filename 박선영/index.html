@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#07125A">
-<title>박선영 | SHIELD Y PRO 대표</title>
-<meta property="og:title" content="박선영 | 대표 · SHIELD Y PRO">
+<title>박선영 | SHIELD Y 대표</title>
+<meta property="og:title" content="박선영 | 대표 · SHIELD Y">
 <meta property="og:description" content="Beyond Supply, Building Trust. 안전용품 및 건축자재 종합유통 · Total Safety Partner">
 <meta property="og:image" content="./og.png">
 <meta property="og:image:width" content="1200">
@@ -48,34 +48,27 @@ nav {
   border-bottom: 1px solid rgba(255,255,255,0.12);
   position:sticky; top:0; z-index:100;
 }
-.nav-brand { color:#fff; font-size:12px; font-weight:700; letter-spacing:2px; }
+.nav-brand { color:#fff; font-size:14px; font-weight:700; letter-spacing:2px; }
 .lang-btns { display:flex; gap:4px; }
 .lang-btn {
-  padding:4px 9px; border:1px solid rgba(255,255,255,0.3); border-radius:20px;
-  background:transparent; color:rgba(255,255,255,0.65); font-size:11px;
+  padding:5px 11px; border:1px solid rgba(255,255,255,0.3); border-radius:20px;
+  background:transparent; color:rgba(255,255,255,0.65); font-size:12px;
   cursor:pointer; font-family:inherit; min-height:30px; transition:all .2s;
 }
 .lang-btn.active { background:rgba(255,255,255,0.92); color:var(--main); font-weight:700; }
 
 .hero {
-  position:relative; aspect-ratio:1/1; overflow:hidden;
+  position:relative; aspect-ratio:11/6; overflow:hidden;
   background:linear-gradient(135deg, #07125A 0%, #1a3a8a 50%, #4A90D9 100%);
 }
-.hero img { width:100%; height:100%; object-fit:contain; object-position:center center; }
-.hero-overlay {
-  position:absolute; inset:0;
-  background:linear-gradient(to bottom, transparent 0%, transparent 55%,
-    rgba(3,10,56,0.85) 82%, rgba(3,10,56,0.97) 100%);
-}
-.hero-content { position:absolute; bottom:0; left:0; right:0; padding:24px 20px 28px; }
+.hero img { width:100%; height:100%; object-fit:cover; object-position:center center; }
 .hero-badge {
   display:inline-flex; align-items:center; gap:5px;
   background:var(--red); color:#fff;
-  padding:4px 12px; border-radius:20px; font-size:10px; font-weight:700; margin-bottom:10px;
+  padding:6px 14px; border-radius:20px; font-size:12px; font-weight:800;
+  box-shadow:0 4px 14px rgba(200,16,46,0.4);
+  white-space:nowrap;
 }
-.hero-name { font-size:34px; font-weight:900; color:#fff; letter-spacing:-1px; line-height:1.1; }
-.hero-name-sub { font-size:11px; color:rgba(255,255,255,0.5); letter-spacing:2.5px; margin-top:6px; }
-.hero-title { font-size:12px; color:rgba(255,255,255,0.78); margin-top:8px; }
 
 .glass {
   background: rgba(255,255,255,0.14);
@@ -105,49 +98,51 @@ nav {
 .sec { padding:8px 16px 12px; }
 .profile-inner { display:flex; align-items:center; gap:14px; padding:18px; }
 .profile-img {
-  width:76px; height:76px; border-radius:50%;
-  object-fit:cover; object-position:center top;
+  width:80px; height:80px; border-radius:50%;
+  object-fit:cover; object-position:center 20%;
+  background:#fff;
   border:2px solid rgba(255,255,255,0.5); flex-shrink:0;
 }
-.profile-name { font-size:17px; font-weight:800; color:#fff; }
-.profile-sub { font-size:12px; color:rgba(255,255,255,0.65); margin-top:3px; }
+.profile-name { font-size:22px; font-weight:800; color:#fff; }
+.profile-name-sub { font-size:11px; color:rgba(255,255,255,0.5); letter-spacing:1.5px; margin-top:3px; }
+.profile-sub { font-size:14px; color:rgba(255,255,255,0.7); margin-top:5px; }
 .profile-tag {
   display:inline-block; margin-top:7px;
   background:rgba(74,144,217,0.25); border:1px solid rgba(74,144,217,0.5);
-  color:var(--accent2); font-size:10px; padding:3px 10px; border-radius:10px;
+  color:var(--accent2); font-size:12px; padding:3px 10px; border-radius:10px;
 }
 
-.sec-label { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:6px; color:rgba(255,255,255,0.5); }
-.sec-title { font-size:20px; font-weight:800; line-height:1.35; margin-bottom:16px; color:#fff; }
+.sec-label { font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:6px; color:rgba(255,255,255,0.5); }
+.sec-title { font-size:23px; font-weight:800; line-height:1.35; margin-bottom:16px; color:#fff; }
 .pad-in { padding:22px 20px; }
 
 .about-quote {
   border-left:3px solid var(--accent2); padding:10px 14px; margin-bottom:14px;
   background:rgba(74,144,217,0.15); border-radius:0 10px 10px 0;
-  font-size:14px; font-style:italic; color:rgba(255,255,255,0.9); line-height:1.7;
+  font-size:15px; font-style:italic; color:rgba(255,255,255,0.9); line-height:1.7;
 }
-.about-desc { font-size:14px; line-height:1.9; color:rgba(255,255,255,0.85); }
+.about-desc { font-size:15px; line-height:1.9; color:rgba(255,255,255,0.85); }
 
 .why-cards { display:flex; flex-direction:column; gap:10px; }
 .why-card { padding:16px 18px; }
-.why-num { font-size:10px; font-weight:800; color:var(--accent2); letter-spacing:2px; margin-bottom:5px; }
-.why-text { font-size:13px; line-height:1.75; color:rgba(255,255,255,0.9); }
+.why-num { font-size:11px; font-weight:800; color:var(--accent2); letter-spacing:2px; margin-bottom:5px; }
+.why-text { font-size:14px; line-height:1.75; color:rgba(255,255,255,0.9); }
 .why-text strong { color:#fff; font-weight:800; }
 
 .svc-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
 .svc-card { padding:16px 14px; }
 .svc-icon { font-size:22px; margin-bottom:8px; }
-.svc-title { font-size:12px; font-weight:700; color:var(--main); margin-bottom:5px; }
-.svc-desc { font-size:11px; line-height:1.7; color:rgba(7,18,90,0.7); }
+.svc-title { font-size:13px; font-weight:700; color:var(--main); margin-bottom:5px; }
+.svc-desc { font-size:12px; line-height:1.7; color:rgba(7,18,90,0.7); }
 
-.ref-intro { font-size:13px; line-height:1.7; color:rgba(255,255,255,0.85); margin-bottom:14px; }
+.ref-intro { font-size:14px; line-height:1.7; color:rgba(255,255,255,0.85); margin-bottom:14px; }
 .ref-intro strong { color:#fff; }
 .cat-list { display:flex; flex-direction:column; gap:10px; }
 .cat-card { padding:14px 16px; }
 .cat-head { display:flex; align-items:center; gap:8px; margin-bottom:6px; }
 .cat-icon { font-size:18px; }
-.cat-title { font-size:13px; font-weight:800; color:var(--main); }
-.cat-items { font-size:12px; line-height:1.7; color:rgba(7,18,90,0.7); }
+.cat-title { font-size:14px; font-weight:800; color:var(--main); }
+.cat-items { font-size:13px; line-height:1.7; color:rgba(7,18,90,0.7); }
 
 .career-list { display:flex; flex-direction:column; gap:12px; }
 .career-item { display:flex; gap:10px; align-items:flex-start; }
@@ -156,8 +151,8 @@ nav {
   font-size:10px; font-weight:700; padding:3px 9px; border-radius:10px;
   flex-shrink:0; margin-top:2px; white-space:nowrap;
 }
-.career-title { font-size:13px; font-weight:700; color:#fff; }
-.career-desc  { font-size:12px; color:rgba(255,255,255,0.55); margin-top:2px; }
+.career-title { font-size:14px; font-weight:700; color:#fff; }
+.career-desc  { font-size:13px; color:rgba(255,255,255,0.55); margin-top:2px; }
 
 .con-list { display:flex; flex-direction:column; gap:8px; }
 .con-item {
@@ -169,13 +164,13 @@ nav {
   border:1px solid rgba(255,255,255,0.5);
 }
 .con-icon { width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:18px; flex-shrink:0; }
-.con-label { font-size:11px; color:rgba(7,18,90,0.5); }
-.con-value { font-size:13px; font-weight:600; margin-top:1px; color:var(--main); }
+.con-label { font-size:12px; color:rgba(7,18,90,0.5); }
+.con-value { font-size:15px; font-weight:600; margin-top:1px; color:var(--main); }
 
 .action-sec { padding:16px; display:flex; flex-direction:column; gap:10px; }
 .btn {
   display:flex; align-items:center; justify-content:center; gap:8px;
-  padding:15px; border-radius:14px; font-size:14px; font-weight:700;
+  padding:16px; border-radius:14px; font-size:15px; font-weight:700;
   cursor:pointer; border:none; font-family:inherit; min-height:52px;
   text-decoration:none; width:100%; transition:opacity .2s;
   backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
@@ -186,8 +181,8 @@ nav {
 
 footer { padding:16px; }
 .footer-inner { padding:24px 20px; text-align:center; }
-.footer-co { font-size:13px; color:#fff; font-weight:700; }
-.footer-slogan { font-size:11px; color:rgba(255,255,255,0.5); margin-top:4px; font-style:italic; }
+.footer-co { font-size:15px; color:#fff; font-weight:700; }
+.footer-slogan { font-size:12px; color:rgba(255,255,255,0.5); margin-top:4px; font-style:italic; }
 .footer-credit { font-size:10px; color:rgba(255,255,255,0.3); margin-top:16px; }
 .footer-credit a { color:rgba(255,255,255,0.4); text-decoration:none; }
 </style>
@@ -195,7 +190,7 @@ footer { padding:16px; }
 <body>
 
 <nav>
-  <div class="nav-brand">SHIELD Y PRO</div>
+  <div class="nav-brand">SHIELD Y</div>
   <div class="lang-btns">
     <button class="lang-btn active" onclick="setLang('kr')">KR</button>
     <button class="lang-btn" onclick="setLang('en')">EN</button>
@@ -205,29 +200,7 @@ footer { padding:16px; }
 </nav>
 
 <div class="hero">
-  <img src="./hero.png" alt="SHIELD Y PRO">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge">🛡️ SHIELD Y PRO · Total Safety Partner</div>
-    <div class="hero-name">
-      <span data-lang="kr" class="active">박선영</span>
-      <span data-lang="en">Park Sun Young</span>
-      <span data-lang="jp">パク・ソニョン</span>
-      <span data-lang="cn">朴宣映</span>
-    </div>
-    <div class="hero-name-sub">
-      <span data-lang="kr" class="active">朴宣映 · Park Sun Young</span>
-      <span data-lang="en">박선영 · 朴宣映</span>
-      <span data-lang="jp">박선영 · 朴宣映</span>
-      <span data-lang="cn">박선영 · Park Sun Young</span>
-    </div>
-    <div class="hero-title">
-      <span data-lang="kr" class="active">대표 · CEO | SHIELD Y PRO (Kyoungdong Corp.)</span>
-      <span data-lang="en">CEO | SHIELD Y PRO (Kyoungdong Corp.)</span>
-      <span data-lang="jp">代表取締役 | SHIELD Y PRO (Kyoungdong Corp.)</span>
-      <span data-lang="cn">代表 · CEO | SHIELD Y PRO (Kyoungdong Corp.)</span>
-    </div>
-  </div>
+  <img src="./hero.png" alt="SHIELD Y">
 </div>
 
 <div class="sec">
@@ -235,9 +208,14 @@ footer { padding:16px; }
     <div class="profile-inner">
       <img class="profile-img" src="./profil.png" alt="박선영">
       <div>
-        <div class="profile-name"><span data-lang="kr" class="active">박선영 대표</span><span data-lang="en">Sun Young Park, CEO</span><span data-lang="jp">パク・ソニョン 代表</span><span data-lang="cn">朴宣映 代表</span></div>
-        <div class="profile-sub">SHIELD Y PRO · Kyoungdong Corp.</div>
-        <div class="profile-tag"><span data-lang="kr" class="active">⚡ Beyond Supply, Building Trust.</span><span data-lang="en">⚡ Beyond Supply, Building Trust.</span><span data-lang="jp">⚡ 供給を超え、信頼を築く。</span><span data-lang="cn">⚡ 超越供应，创造信任。</span></div>
+        <div class="profile-name"><span data-lang="kr" class="active">박선영</span><span data-lang="en">Park Sun Young</span><span data-lang="jp">パク・ソニョン</span><span data-lang="cn">朴宣映</span></div>
+        <div class="profile-name-sub">
+          <span data-lang="kr" class="active">朴宣映 · Park Sun Young</span>
+          <span data-lang="en">박선영 · 朴宣映</span>
+          <span data-lang="jp">박선영 · 朴宣映</span>
+          <span data-lang="cn">박선영 · Park Sun Young</span>
+        </div>
+        <div class="profile-sub"><span data-lang="kr" class="active">대표 · CEO | Kyoungdong Corp.</span><span data-lang="en">CEO | Kyoungdong Corp.</span><span data-lang="jp">代表取締役 | Kyoungdong Corp.</span><span data-lang="cn">代表 · CEO | Kyoungdong Corp.</span></div>
       </div>
     </div>
   </div>
@@ -245,6 +223,12 @@ footer { padding:16px; }
 
 <div class="sec">
   <div class="glass-dark pad-in">
+    <div class="hero-badge" style="margin-bottom:14px;">
+      <span data-lang="kr" class="active">🛡️ SHIELD Y · Total Safety Partner</span>
+      <span data-lang="en">🛡️ SHIELD Y · Total Safety Partner</span>
+      <span data-lang="jp">🛡️ SHIELD Y · Total Safety Partner</span>
+      <span data-lang="cn">🛡️ SHIELD Y · Total Safety Partner</span>
+    </div>
     <div class="sec-label">About</div>
     <div class="sec-title"><span data-lang="kr" class="active">현장에 필요한 모든 것,<br>신뢰로 공급합니다.</span><span data-lang="en">Everything the site needs,<br>supplied with trust.</span><span data-lang="jp">現場に必要なすべてを、<br>信頼でお届けします。</span><span data-lang="cn">现场所需一切，<br>以信任供应。</span></div>
     <div class="about-quote"><span data-lang="kr" class="active">Beyond Supply, Building Trust.<br>공급을 넘어, 신뢰를 만듭니다.</span><span data-lang="en">Beyond Supply, Building Trust.</span><span data-lang="jp">供給を超え、信頼を築く。</span><span data-lang="cn">超越供应，创造信任。</span></div>
@@ -286,10 +270,10 @@ footer { padding:16px; }
   <div class="sec-label" style="padding:0 4px;">Referral</div>
   <div class="sec-title" style="padding:0 4px;"><span data-lang="kr" class="active">이런 분을 소개해 주세요 🙏</span><span data-lang="en">Ideal Referrals</span><span data-lang="jp">こんな方をご紹介ください</span><span data-lang="cn">期待这样的引荐</span></div>
   <div class="ref-intro" style="padding:0 4px;">
-    <span data-lang="kr" class="active"><strong>SHIELD Y PRO의 12대 핵심 비즈니스 파트너</strong>입니다. 아래 분야의 분들을 소개해 주시면 안전이라는 공동 가치로 함께 성장합니다.</span>
-    <span data-lang="en"><strong>SHIELD Y PRO's 12 key business partners.</strong> Refer people in these fields, and we grow together through the shared value of safety.</span>
-    <span data-lang="jp"><strong>SHIELD Y PROの12大コアビジネスパートナー</strong>です。以下の分野の方をご紹介いただければ、安全という共通価値で共に成長します。</span>
-    <span data-lang="cn"><strong>SHIELD Y PRO的12大核心业务伙伴。</strong>引荐以下领域的人士，我们将以安全的共同价值共同成长。</span>
+    <span data-lang="kr" class="active"><strong>SHIELD Y의 12대 핵심 비즈니스 파트너</strong>입니다. 아래 분야의 분들을 소개해 주시면 안전이라는 공동 가치로 함께 성장합니다.</span>
+    <span data-lang="en"><strong>SHIELD Y's 12 key business partners.</strong> Refer people in these fields, and we grow together through the shared value of safety.</span>
+    <span data-lang="jp"><strong>SHIELD Yの12大コアビジネスパートナー</strong>です。以下の分野の方をご紹介いただければ、安全という共通価値で共に成長します。</span>
+    <span data-lang="cn"><strong>SHIELD Y的12大核心业务伙伴。</strong>引荐以下领域的人士，我们将以安全的共同价值共同成长。</span>
   </div>
   <div class="cat-list">
     <div class="glass-white cat-card">
@@ -342,7 +326,6 @@ footer { padding:16px; }
     <a class="con-item" href="tel:010-6649-8882"><div class="con-icon" style="background:rgba(7,18,90,0.08);">📞</div><div><div class="con-label">Phone</div><div class="con-value">010-6649-8882</div></div></a>
     <a class="con-item" href="https://kdshieldy.com/" target="_blank"><div class="con-icon" style="background:rgba(7,18,90,0.08);">🌐</div><div><div class="con-label">Website</div><div class="con-value">kdshieldy.com</div></div></a>
     <a class="con-item" href="https://www.instagram.com/kyoungdong_/" target="_blank"><div class="con-icon" style="background:rgba(200,16,46,0.08);">📸</div><div><div class="con-label">Instagram</div><div class="con-value">@kyoungdong_</div></div></a>
-    <a class="con-item" href="kakaolink://open?user_id=sy2326"><div class="con-icon" style="background:rgba(254,229,0,0.25);">💬</div><div><div class="con-label">KakaoTalk</div><div class="con-value">sy2326</div></div></a>
   </div>
 </div>
 
@@ -351,14 +334,14 @@ footer { padding:16px; }
   <button class="btn btn-outline" onclick="saveContact()">📞 <span data-lang="kr" class="active">연락처 저장</span><span data-lang="en">Save Contact</span><span data-lang="jp">連絡先を保存</span><span data-lang="cn">保存联系人</span></button>
   <button class="btn btn-outline" onclick="saveToCardbook({
     id:'parksunyoung', name:'박선영', nameEn:'Park Sun Young',
-    title:'대표', company:'SHIELD Y PRO (Kyoungdong Corp.)',
+    title:'대표', company:'SHIELD Y (Kyoungdong Corp.)',
     phone:'010-6649-8882', email:'', chapter:'파이오니어', bni:'멤버', url:window.location.href
-  })">🗂️ <span data-lang="kr" class="active">명함첩 저장</span><span data-lang="en">Save to CardBook</span><span data-lang="jp">名刺帳に保存</span><span data-lang="cn">保存到名片册</span></button>
+  })">🗂️ <span data-lang="kr" class="active">명함 저장</span><span data-lang="en">Save Card</span><span data-lang="jp">名刺を保存</span><span data-lang="cn">保存名片</span></button>
 </div>
 
 <footer>
   <div class="glass-dark footer-inner">
-    <div class="footer-co">SHIELD Y PRO · Kyoungdong Corp.</div>
+    <div class="footer-co">SHIELD Y · Kyoungdong Corp.</div>
     <div class="footer-slogan">Beyond Supply, Building Trust.</div>
     <div class="footer-credit">Digital Card by <a href="https://tmlink.kr" target="_blank">T.M LINK</a></div>
   </div>
@@ -382,10 +365,10 @@ function shareCard() {
   }
 }
 function saveContact() {
-  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:박선영\nN:박;선영;;;\nORG:SHIELD Y PRO (Kyoungdong Corp.)\nTITLE:대표\nTEL;TYPE=CELL:010-6649-8882\nURL:https://kdshieldy.com/\nEND:VCARD`;
+  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:박선영\nN:박;선영;;;\nORG:SHIELD Y (Kyoungdong Corp.)\nTITLE:대표\nTEL;TYPE=CELL:010-6649-8882\nURL:https://kdshieldy.com/\nEND:VCARD`;
   const blob = new Blob([vcard], {type:'text/vcard'});
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob); a.download = 'ParkSunYoung_SHIELDYPRO.vcf'; a.click();
+  a.href = URL.createObjectURL(blob); a.download = 'ParkSunYoung_SHIELDY.vcf'; a.click();
 }
 setLang('kr');
 </script>
