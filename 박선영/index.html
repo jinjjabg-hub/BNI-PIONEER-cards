@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#07125A">
 <title>박선영 | SHIELD Y 대표</title>
-<meta property="og:title" content="박선영 | 대표 · SHIELD Y">
-<meta property="og:description" content="Beyond Supply, Building Trust. 안전용품 및 건축자재 종합유통 · Total Safety Partner">
-<meta property="og:image" content="./og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/박선영/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<meta property=":title" content="박선영 | 대표 · SHIELD Y">
+<meta property=":description" content="Beyond Supply, Building Trust. 안전용품 및 건축자재 종합유통 · Total Safety Partner">
+<meta property=":image" content="./.png">
+<meta property=":image:width" content="1200">
+<meta property=":image:height" content="630">
+<meta property=":type" content="website">
+<meta property=":url" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/박선영/">
+<link rel="preconnect" href="https://fonts.goleapis.com">
+<link href="https://fonts.goleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 <style>
 :root {
   --main: #07125A;
@@ -182,7 +182,7 @@ nav {
 footer { padding:16px; }
 .footer-inner { padding:24px 20px; text-align:center; }
 .footer-co { font-size:15px; color:#fff; font-weight:700; }
-.footer-slogan { font-size:12px; color:rgba(255,255,255,0.5); margin-top:4px; font-style:italic; }
+.footer-slan { font-size:12px; color:rgba(255,255,255,0.5); margin-top:4px; font-style:italic; }
 .footer-credit { font-size:10px; color:rgba(255,255,255,0.3); margin-top:16px; }
 .footer-credit a { color:rgba(255,255,255,0.4); text-decoration:none; }
 </style>
@@ -271,7 +271,7 @@ footer { padding:16px; }
   <div class="sec-title" style="padding:0 4px;"><span data-lang="kr" class="active">이런 분을 소개해 주세요 🙏</span><span data-lang="en">Ideal Referrals</span><span data-lang="jp">こんな方をご紹介ください</span><span data-lang="cn">期待这样的引荐</span></div>
   <div class="ref-intro" style="padding:0 4px;">
     <span data-lang="kr" class="active"><strong>SHIELD Y의 12대 핵심 비즈니스 파트너</strong>입니다. 아래 분야의 분들을 소개해 주시면 안전이라는 공동 가치로 함께 성장합니다.</span>
-    <span data-lang="en"><strong>SHIELD Y's 12 key business partners.</strong> Refer people in these fields, and we grow together through the shared value of safety.</span>
+    <span data-lang="en"><strong>SHIELD Y's 12 key business partners.</strong> Refer people in these fields, and we grow tether through the shared value of safety.</span>
     <span data-lang="jp"><strong>SHIELD Yの12大コアビジネスパートナー</strong>です。以下の分野の方をご紹介いただければ、安全という共通価値で共に成長します。</span>
     <span data-lang="cn"><strong>SHIELD Y的12大核心业务伙伴。</strong>引荐以下领域的人士，我们将以安全的共同价值共同成长。</span>
   </div>
@@ -342,7 +342,7 @@ footer { padding:16px; }
 <footer>
   <div class="glass-dark footer-inner">
     <div class="footer-co">SHIELD Y · Kyoungdong Corp.</div>
-    <div class="footer-slogan">Beyond Supply, Building Trust.</div>
+    <div class="footer-slan">Beyond Supply, Building Trust.</div>
     <div class="footer-credit">Digital Card by <a href="https://tmlink.kr" target="_blank">T.M LINK</a></div>
   </div>
 </footer>
@@ -351,15 +351,15 @@ footer { padding:16px; }
 <script>
 function setLang(lang) {
   document.querySelectorAll('[data-lang]').forEach(el => {
-    el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+    el.classList.tgle('active', el.getAttribute('data-lang') === lang);
   });
   document.querySelectorAll('.lang-btn').forEach((btn, i) => {
-    btn.classList.toggle('active', ['kr','en','jp','cn'][i] === lang);
+    btn.classList.tgle('active', ['kr','en','jp','cn'][i] === lang);
   });
 }
 function shareCard() {
   if (navigator.share) {
-    navigator.share({ title: document.title, text: document.querySelector('meta[property="og:description"]')?.content || '', url: window.location.href });
+    navigator.share({ title: document.title, text: document.querySelector('meta[property=":description"]')?.content || '', url: window.location.href });
   } else {
     navigator.clipboard.writeText(window.location.href).then(() => alert('링크가 복사되었습니다!'));
   }
