@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>정상현 | 아메리츠 파이낸셜</title>
+<meta property="og:title" content="정상현 | 아시아 마케팅 디렉터 · 아메리츠 파이낸셜">
+<meta property="og:description" content=""숫자는 거짓말을 하지 않습니다." 객관적인 팩트 체크를 통해 해외금융의 효율성을 진단하고, 안전한 달러 자산 포트폴리오를 제안합니다.">
+<meta property="og:image" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%A0%95%EC%83%81%ED%98%84/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/정상현/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- 언어팩에 따라 폰트 추가: references/languages.md 참고 -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Sans+TC:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --navy: #1a3d2e;
+  --navy2: #12291f;
+  --navy3: #234d3a;
+  --gold: #c9a15a;
+  --gold2: #ddbb7f;
+  --light: #f7f4ed;
+  --text-dark: #f0ece0;
+  --text-light: #1a1a2e;
+  --muted-dark: #b7a97e;
+  --muted-light: #5c4a2e;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color: transparent; }
+html { font-size: 16px; }
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--navy);
+  color: var(--text-dark);
+  max-width: 480px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+[data-lang="si"] { font-family: 'Noto Sans Sinhala', sans-serif; }
+[data-lang="ur"] { font-family: 'Noto Nastaliq Urdu', serif; direction: rtl; }
+[data-lang] { display: none; }
+[data-lang].active { display: block; }
+span[data-lang].active { display: inline; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:100;
+  max-width: 480px; margin: 0 auto;
+  background: rgba(13,27,62,0.97);
+  backdrop-filter: blur(10px);
+  padding: 10px 16px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid rgba(201,168,76,0.25);
+}
+.nav-brand { font-size: 12px; font-weight: 700; color: var(--gold); white-space: nowrap; }
+.lang-btns { display:flex; gap:4px; }
+.lang-btn {
+  padding: 5px 8px;
+  border: 1px solid rgba(201,168,76,0.35);
+  background: transparent;
+  color: var(--muted-dark);
+  font-size: 10px; font-weight: 700;
+  cursor: pointer; border-radius: 5px;
+  transition: all 0.2s;
+  min-width: 40px; min-height: 32px;
+  display: flex; align-items:center; justify-content:center;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.lang-btn.active { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+
+/* ── HERO ── */
+.hero {
+  margin-top: 54px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+.hero img.hero-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.hero-overlay {
+  position: absolute; inset:0;
+  background: linear-gradient(
+    to bottom,
+    rgba(13,27,62,0.1) 0%,
+    rgba(13,27,62,0.15) 40%,
+    rgba(13,27,62,0.75) 75%,
+    rgba(13,27,62,0.95) 100%
+  );
+}
+.hero-content {
+  position: absolute; bottom:0; left:0; right:0; z-index:2;
+  padding: 24px 20px 22px;
+}
+.hero-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 10px; font-weight: 700;
+  padding: 4px 12px; border-radius: 20px;
+  margin-bottom: 10px; letter-spacing: 1.5px;
+}
+.hero-name {
+  font-size: 34px; font-weight: 700;
+  color: #fff; line-height: 1.15;
+  margin-bottom: 7px; letter-spacing: -0.5px;
+}
+.hero-name [data-lang="ur"] { font-size: 26px; }
+.hero-title { font-size: 13px; color: var(--gold); opacity: 0.95; line-height: 1.5; }
+
+/* ── PROFILE ROW ── */
+.profile-row {
+  background: var(--navy2);
+  padding: 16px 20px;
+  display: flex; align-items: center; gap:14px;
+  border-bottom: 1px solid rgba(201,168,76,0.12);
+}
+.profile-img {
+  width: 64px; height: 64px; min-width:64px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  overflow: hidden; flex-shrink: 0;
+}
+.profile-img img { width:100%; height:100%; object-fit:cover; object-position: center top; }
+.profile-info h2 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.profile-info p { font-size: 12px; color: var(--muted-dark); line-height: 1.5; }
+
+/* ── 공통 섹션 ── */
+section { padding: 40px 20px; }
+.section-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 6px;
+}
+.section-title { font-size: 22px; font-weight: 700; line-height: 1.35; margin-bottom: 22px; }
+
+/* ── ABOUT ── */
+.about { background: var(--navy); }
+.about .section-title { color: #fff; }
+.slogan {
+  font-size: 15px; font-weight: 700;
+  color: var(--gold); margin-bottom: 14px;
+  font-style: italic; line-height: 1.6;
+}
+.about-text { font-size: 14px; line-height: 1.9; color: var(--text-dark); opacity: 0.85; }
+.about-text [data-lang="ur"] { font-size: 15px; line-height: 2.2; }
+
+/* ── WHY ── */
+.why { background: var(--light); }
+.why .section-label { color: var(--muted-light); }
+.why .section-title { color: var(--text-light); }
+.why-cards { display: flex; flex-direction: column; gap:14px; }
+.why-card {
+  background: #fff;
+  border: 1px solid rgba(201,168,76,0.18);
+  border-left: 4px solid var(--gold);
+  border-radius: 10px; padding: 18px 16px;
+}
+.why-card h3 { font-size: 15px; font-weight: 700; color: var(--text-light); margin-bottom: 8px; line-height: 1.4; }
+.why-card p { font-size: 13px; line-height: 1.85; color: #444; }
+.why-card p [data-lang="ur"] { font-size: 14px; line-height: 2.2; }
+.why-card p strong { color: var(--navy); font-weight: 700; }
+
+/* ── DIFFERENCE ── */
+.difference { background: var(--navy2); }
+.difference .section-title { color: #fff; }
+.diff-grid { display: flex; flex-direction: column; gap:12px; }
+.diff-card {
+  background: var(--navy3);
+  border: 1px solid rgba(201,168,76,0.12);
+  border-radius: 10px; padding: 18px 16px;
+}
+.diff-card h3 { font-size: 14px; font-weight: 700; color: var(--gold); margin-bottom: 8px; line-height: 1.4; }
+.diff-card p { font-size: 13px; line-height: 1.8; color: var(--text-dark); opacity: 0.8; }
+.diff-card p [data-lang="ur"] { font-size: 14px; line-height: 2.2; }
+
+/* ── REFERRAL ── */
+.referral { background: var(--light); }
+.referral .section-label { color: var(--muted-light); }
+.referral .section-title { color: var(--text-light); }
+.ref-list { display: flex; flex-direction: column; gap:10px; }
+.ref-item {
+  display: flex; gap:12px; align-items:flex-start;
+  background: #fff; border-radius: 10px;
+  padding: 15px 14px; border: 1px solid rgba(0,0,0,0.05);
+}
+.ref-num {
+  width: 26px; height: 26px; min-width:26px;
+  border-radius: 50%; background: var(--gold);
+  color: var(--navy); font-weight: 700; font-size: 12px;
+  display: flex; align-items:center; justify-content:center;
+  flex-shrink: 0; margin-top: 1px;
+}
+.ref-item p { font-size: 13px; line-height: 1.8; color: #333; }
+.ref-item p [data-lang="ur"] { font-size: 14px; line-height: 2.2; }
+
+/* ── CAREER ── */
+.career {
+  position: relative;
+  background-color: #f0f4ff;
+  background-image: url('career-bg.png');
+  background-size: 150%;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+.career .section-label { position: relative; z-index:1; color: var(--muted-light); }
+.career .section-title { color: var(--text-light); position: relative; z-index:1; }
+.career-list { display: flex; flex-direction: column; gap:18px; position: relative; z-index:1; }
+.career-item {
+  display: flex; gap:12px; align-items:flex-start;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.career-item:last-child { border-bottom: none; padding-bottom: 0; }
+.career-badge {
+  background: var(--navy); color: #fff;
+  font-size: 10px; font-weight: 700;
+  padding: 4px 10px; border-radius: 4px;
+  white-space: nowrap; flex-shrink: 0; margin-top: 2px;
+}
+.career-content { background: rgba(255,255,255,0.82); border-radius: 8px; padding: 12px 14px; flex:1; }
+.career-item h3 { font-size: 14px; font-weight: 700; color: var(--text-light); margin-bottom: 7px; line-height: 1.4; }
+.career-item p { font-size: 12px; line-height: 1.85; color: #555; }
+
+/* ── PORTFOLIO (선택 섹션 — portfolio1.jpg 이상 있을 때만 사용) ── */
+.portfolio { background: var(--navy); }
+.portfolio .section-title { color: #fff; }
+.portfolio-track-wrap { overflow: hidden; border-radius: 12px; }
+.portfolio-track { display: flex; transition: transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94); }
+.portfolio-slide { min-width: 100%; aspect-ratio: 3/4; overflow: hidden; }
+.portfolio-slide img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+.portfolio-nav { display:flex; align-items:center; justify-content:center; gap:16px; margin-top:14px; }
+.portfolio-btn {
+  background: transparent; border: 1px solid rgba(201,168,76,0.35);
+  color: var(--gold); width: 30px; height: 30px; border-radius: 50%;
+  font-size: 15px; cursor: pointer; display:flex; align-items:center; justify-content:center;
+}
+.portfolio-dots { display:flex; gap:6px; }
+.portfolio-dot { width:6px; height:6px; border-radius:50%; background: rgba(201,168,76,0.3); transition: all 0.25s; }
+.portfolio-dot.active { background: var(--gold); width:18px; border-radius:3px; }
+
+/* ── CONTACT ── */
+.contact { background: var(--light); }
+.contact .section-label { color: var(--muted-light); }
+.contact .section-title { color: var(--text-light); }
+.contact-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.contact-item {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 8px; text-align: center;
+  background: #fff; border-radius: 12px;
+  padding: 16px 10px; border: 1px solid rgba(0,0,0,0.05);
+  text-decoration: none; min-height: 100px;
+}
+.contact-item:active { transform: scale(0.97); }
+.contact-icon {
+  width: 42px; height: 42px; min-width:42px;
+  border-radius: 50%; background: var(--navy);
+  display: flex; align-items:center; justify-content:center;
+  font-size: 18px; flex-shrink: 0;
+}
+.contact-label { font-size: 10px; color: #999; }
+.contact-value { font-size: 12px; font-weight: 600; color: var(--text-light); line-height: 1.4; word-break: break-all; }
+
+/* ── ACTION ── */
+.action { background: var(--navy2); padding: 32px 20px; }
+.btn-group { display: flex; flex-direction: column; gap:12px; }
+.btn {
+  display: block; width: 100%; padding: 17px 16px;
+  border: none; border-radius: 10px;
+  font-size: 15px; font-weight: 700;
+  cursor: pointer; text-align: center;
+  transition: all 0.15s; font-family: 'Noto Sans KR', sans-serif;
+  min-height: 54px; letter-spacing: 0.3px;
+}
+.btn-primary { background: var(--gold); color: var(--navy); }
+.btn-secondary { background: transparent; border: 2px solid var(--gold); color: var(--gold); }
+.btn-share { background: linear-gradient(135deg, #1a6b3a, #0d8a4a); color: #fff; border: none; }
+.btn:active { transform: scale(0.97); opacity: 0.9; }
+
+/* 공유 바텀시트 */
+.share-sheet { display:none; position:fixed; inset:0; z-index:200; }
+.share-backdrop { position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+.share-panel {
+  position:absolute; bottom:0; left:0; right:0;
+  max-width:480px; margin:0 auto;
+  background:#fff; border-radius:20px 20px 0 0;
+  padding:20px 20px 40px;
+}
+.share-handle { width:40px; height:4px; background:#ddd; border-radius:2px; margin:0 auto 18px; }
+.share-title { font-size:13px; color:#999; text-align:center; margin-bottom:20px; font-weight:600; }
+.share-btns { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:16px; }
+.share-btn { display:flex; flex-direction:column; align-items:center; gap:8px; background:none; border:none; cursor:pointer; padding:8px 4px; }
+.share-btn-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:26px; }
+.share-btn span { font-size:11px; color:#333; font-weight:600; font-family:'Noto Sans KR',sans-serif; }
+.share-cancel { width:100%; padding:14px; background:#f2f2f2; border:none; border-radius:10px; font-size:15px; font-weight:700; color:#444; cursor:pointer; font-family:'Noto Sans KR',sans-serif; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy); padding: 24px 20px;
+  text-align: center; border-top: 1px solid rgba(201,168,76,0.12);
+}
+footer .company { font-size: 13px; font-weight: 700; color: var(--gold); margin-bottom: 5px; }
+footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacing: 0.5px; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">아메리츠 파이낸셜</div>
+  <div class="lang-btns">
+    <button class="lang-btn active" onclick="setLang('kr')">한국어</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('hk')">繁體中文</button>
+    <button class="lang-btn" onclick="setLang('cn')">中文</button>
+  </div>
+</nav>
+
+<!-- HERO : hero.png = 세로 3:4 인물 사진 -->
+<div class="hero">
+  <img class="hero-img" src="hero.png" alt="정상현">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span data-lang="kr" class="active">아시아 마케팅 디렉터</span>
+      <span data-lang="en">Asian Marketing Director</span>
+      <span data-lang="hk">亞洲市場總監</span>
+      <span data-lang="cn">亚洲市场总监</span>
+    </div>
+    <div class="hero-name">
+      <span data-lang="kr" class="active">정 상 현</span>
+      <span data-lang="en">JEONG SANGHYEON</span>
+      <span data-lang="hk">鄭相賢</span>
+      <span data-lang="cn">郑相贤</span>
+    </div>
+    <div class="hero-title">
+      <span data-lang="kr" class="active">아시아 마케팅 디렉터 · 아메리츠 파이낸셜</span>
+      <span data-lang="en">Asian Marketing Director · Allmerits Financial</span>
+      <span data-lang="hk">亞洲市場總監 · Allmerits Financial</span>
+      <span data-lang="cn">亚洲市场总监 · Allmerits Financial</span>
+    </div>
+  </div>
+</div>
+
+<!-- PROFILE ROW : profil.png = 정사각 얼굴 사진 -->
+<div class="profile-row">
+  <div class="profile-img">
+    <img src="profil.png" alt="정상현">
+  </div>
+  <div class="profile-info">
+    <h2>정상현 · JEONG SANGHYEON</h2>
+    <p>
+      <span data-lang="kr" class="active">해외금융컨설팅 · 해외보험</span>
+      <span data-lang="en">Overseas Financial Consulting · Overseas Insurance</span>
+      <span data-lang="hk">海外金融諮詢 · 海外保險</span>
+      <span data-lang="cn">海外金融咨询 · 海外保险</span>
+    </p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="section-label">About</div>
+  <div class="slogan">
+    <span data-lang="kr" class="active">남들과는 '달라'야죠! 당신의 자산을 '달러(Dollar)'로 세팅하는 해외금융 전문가</span>
+    <span data-lang="en">Stand out, by design. Setting your assets in Dollars — your trusted overseas finance expert.</span>
+    <span data-lang="hk">與眾不同，為您的資產配置美元資產——您的海外金融專家</span>
+    <span data-lang="cn">与众不同，为您的资产配置美元资产——您的海外金融专家</span>
+  </div>
+  <p class="about-text">
+    <span data-lang="kr" class="active">"숫자는 거짓말을 하지 않습니다." 객관적인 팩트 체크를 통해 해외금융의 효율성을 진단하고, 안전한 달러 자산 포트폴리오를 제안합니다.</span>
+    <span data-lang="en">"Numbers don't lie." Through objective fact-checking, I diagnose the efficiency of your overseas finances and design a safe Dollar-asset portfolio.</span>
+    <span data-lang="hk">「數字不會說謊。」透過客觀的事實查核，診斷海外金融的效率，為您規劃安全的美元資產組合。</span>
+    <span data-lang="cn">"数字不会说谎。"通过客观的事实核查，诊断海外金融的效率，为您规划安全的美元资产投资组合。</span>
+  </p>
+</section>
+
+<!-- WHY : why-card 3개 (①②③) -->
+<section class="why">
+  <div class="section-label">Why Us</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">왜 아메리츠 파이낸셜인가</span>
+    <span data-lang="en">Why Allmerits Financial?</span>
+    <span data-lang="hk">為何選擇Allmerits Financial</span>
+    <span data-lang="cn">为什么选择Allmerits Financial</span>
+  </div>
+  <div class="why-cards">
+    <div class="why-card">
+      <h3>
+        <span data-lang="kr" class="active">① 10년 경력의 전문성</span>
+        <span data-lang="en">① 10 Years of Expertise</span>
+        <span data-lang="hk">① 10年專業經驗</span>
+        <span data-lang="cn">① 10年专业经验</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active"><strong>10년 경력</strong>의 해외금융(달러 자산) 특화 전문가입니다.</span>
+        <span data-lang="en">A specialist in overseas finance (Dollar assets) with <strong>10 years of experience</strong>.</span>
+        <span data-lang="hk">擁有<strong>10年經驗</strong>的海外金融（美元資產）專業顧問。</span>
+        <span data-lang="cn">拥有<strong>10年经验</strong>的海外金融（美元资产）专业顾问。</span>
+      </p>
+    </div>
+    <div class="why-card">
+      <h3>
+        <span data-lang="kr" class="active">② 맞춤형 상속·증여 설계</span>
+        <span data-lang="en">② Tailored Estate Planning</span>
+        <span data-lang="hk">② 度身訂造傳承規劃</span>
+        <span data-lang="cn">② 定制传承与赠与规划</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">고객 상황에 맞춘 <strong>맞춤형 상속·증여 플랜</strong>을 설계합니다.</span>
+        <span data-lang="en">I design a <strong>customized inheritance & gift plan</strong> tailored to your situation.</span>
+        <span data-lang="hk">根據客戶情況設計<strong>度身訂造嘅繼承·贈與方案</strong>。</span>
+        <span data-lang="cn">根据客户情况设计<strong>定制化继承·赠与方案</strong>。</span>
+      </p>
+    </div>
+    <div class="why-card">
+      <h3>
+        <span data-lang="kr" class="active">③ 노후·자녀 자금 설계</span>
+        <span data-lang="en">③ Retirement & Family Planning</span>
+        <span data-lang="hk">③ 退休與子女資金規劃</span>
+        <span data-lang="cn">③ 养老与子女资金规划</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active"><strong>노후 자금</strong> 및 <strong>자녀 평생자금</strong>을 함께 설계합니다.</span>
+        <span data-lang="en">I design both your <strong>retirement fund</strong> and your <strong>children's lifetime fund</strong> together.</span>
+        <span data-lang="hk">同時規劃<strong>退休資金</strong>與<strong>子女終身資金</strong>。</span>
+        <span data-lang="cn">同时规划<strong>养老资金</strong>与<strong>子女终身资金</strong>。</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENCE : diff-card 2~3개 -->
+<section class="difference">
+  <div class="section-label">Difference</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">차별점</span>
+    <span data-lang="en">What Makes Us Different</span>
+    <span data-lang="hk">差異化優勢</span>
+    <span data-lang="cn">差异化优势</span>
+  </div>
+  <div class="diff-grid">
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">환율 리스크 헷지</span>
+        <span data-lang="en">FX Risk Hedging</span>
+        <span data-lang="hk">匯率風險對沖</span>
+        <span data-lang="cn">汇率风险对冲</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">환율 변동 리스크를 사전에 헷지하여 자산을 보호합니다.</span>
+        <span data-lang="en">I hedge currency fluctuation risk in advance to protect your assets.</span>
+        <span data-lang="hk">提前對沖匯率波動風險，保護您嘅資產。</span>
+        <span data-lang="cn">提前对冲汇率波动风险，保护您的资产。</span>
+      </p>
+    </div>
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">수치 기반 팩트체크</span>
+        <span data-lang="en">Data-Driven Fact-Check</span>
+        <span data-lang="hk">數據化事實查核</span>
+        <span data-lang="cn">数据化事实核查</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">감이 아닌 <strong>수치로 증명</strong>하는 팩트체크로 신뢰를 드립니다.</span>
+        <span data-lang="en">Trust built not on guesswork, but on <strong>fact-checking backed by numbers</strong>.</span>
+        <span data-lang="hk">唔靠感覺，用<strong>數字證明</strong>嘅事實查核建立信任。</span>
+        <span data-lang="cn">不靠感觉，用<strong>数字证明</strong>的事实核查建立信任。</span>
+      </p>
+    </div>
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">글로벌 금융 기반 안전성</span>
+        <span data-lang="en">Global Financial Stability</span>
+        <span data-lang="hk">全球金融體系保障</span>
+        <span data-lang="cn">全球金融体系保障</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">글로벌 선진 금융 시스템을 기반으로 안전성을 확보합니다.</span>
+        <span data-lang="en">Security backed by an advanced global financial system.</span>
+        <span data-lang="hk">以全球先進金融體系為基礎，確保安全性。</span>
+        <span data-lang="cn">以全球先进金融体系为基础，确保安全性。</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- REFERRAL : BNI 핵심 섹션. ref-item 2~3개 -->
+<section class="referral">
+  <div class="section-label">Referral</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">이런 분을 소개해 주세요</span>
+    <span data-lang="en">Please refer people like this</span>
+    <span data-lang="hk">請介紹這樣的客戶</span>
+    <span data-lang="cn">请介绍这样的客户</span>
+  </div>
+  <div class="ref-list">
+    <div class="ref-item">
+      <div class="ref-num">1</div>
+      <p>
+        <span data-lang="kr" class="active">안정적인 달러 자산을 만들고 싶은 자산가</span>
+        <span data-lang="en">Investors who want to build stable Dollar assets</span>
+        <span data-lang="hk">希望建立穩定美元資產嘅資產人士</span>
+        <span data-lang="cn">希望建立稳定美元资产的资产人士</span>
+      </p>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">2</div>
+      <p>
+        <span data-lang="kr" class="active">부동산 자산을 현금 유동성 자산으로 이전하고 싶은 분</span>
+        <span data-lang="en">Those who want to move real estate assets into liquid cash assets</span>
+        <span data-lang="hk">希望將不動產資產轉為現金流動資產嘅人士</span>
+        <span data-lang="cn">希望将不动产资产转为现金流动资产的人士</span>
+      </p>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">3</div>
+      <p>
+        <span data-lang="kr" class="active">납입완료된 국내 종신·연금 상품을 보유하신 분</span>
+        <span data-lang="en">Those who hold a fully paid-up domestic whole life or pension policy</span>
+        <span data-lang="hk">持有已繳清國內終身壽險或年金產品嘅人士</span>
+        <span data-lang="cn">持有已缴清国内终身寿险或年金产品的人士</span>
+      </p>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">4</div>
+      <p>
+        <span data-lang="kr" class="active">자녀 해외 유학 및 이민을 준비중이신 분</span>
+        <span data-lang="en">Those preparing for their children's overseas study or immigration</span>
+        <span data-lang="hk">正在準備子女海外留學或移民嘅人士</span>
+        <span data-lang="cn">正在准备子女海外留学或移民的人士</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER : career-item 2~3개. career-badge = 현재 / 경력 / 강점 / 자격 -->
+<section class="career">
+  <div class="section-label">Career</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">경력 및 전문 분야</span>
+    <span data-lang="en">Career &amp; Expertise</span>
+    <span data-lang="hk">經歷與專業領域</span>
+    <span data-lang="cn">经历与专业领域</span>
+  </div>
+  <div class="career-list">
+    <div class="career-item">
+      <div class="career-badge">현재</div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">10년 이상 경력</span>
+          <span data-lang="en">Over 10 Years of Experience</span>
+          <span data-lang="hk">10年以上從業經驗</span>
+          <span data-lang="cn">10年以上从业经验</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">VIP 전담 달러 자산 전문가로 활동 중입니다.</span>
+          <span data-lang="en">Currently active as a dedicated Dollar-asset specialist for VIP clients.</span>
+          <span data-lang="hk">現擔任VIP專屬美元資產專家。</span>
+          <span data-lang="cn">现担任VIP专属美元资产专家。</span>
+        </p>
+      </div>
+    </div>
+    <div class="career-item">
+      <div class="career-badge">성과</div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">글로벌 자산 포트폴리오 형성</span>
+          <span data-lang="en">Global Asset Portfolios</span>
+          <span data-lang="hk">構建全球資產組合</span>
+          <span data-lang="cn">构建全球资产组合</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">다양한 VIP 고객의 자산을 글로벌 포트폴리오로 구성했습니다.</span>
+          <span data-lang="en">Built global asset portfolios for a wide range of VIP clients.</span>
+          <span data-lang="hk">為多位VIP客戶構建咗全球化資產投資組合。</span>
+          <span data-lang="cn">为多位VIP客户构建了全球化资产投资组合。</span>
+        </p>
+      </div>
+    </div>
+    <div class="career-item">
+      <div class="career-badge">강점</div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">세무·법무 협업 체계</span>
+          <span data-lang="en">Tax & Legal Collaboration</span>
+          <span data-lang="hk">稅務·法務協作體系</span>
+          <span data-lang="cn">税务·法务协作体系</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">세무사·법무사와의 협업으로 신뢰성을 구축했습니다.</span>
+          <span data-lang="en">Built trust through close collaboration with tax accountants and legal advisors.</span>
+          <span data-lang="hk">透過與稅務師、法務師嘅緊密協作建立信任。</span>
+          <span data-lang="cn">通过与税务师、法务师的紧密协作建立信任。</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT : 2열 그리드. 없는 항목은 <a> 통째로 삭제 (빈칸 금지) -->
+<section class="contact">
+  <div class="section-label">Contact</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">연락하기</span>
+    <span data-lang="en">Contact</span>
+    <span data-lang="hk">聯絡方式</span>
+    <span data-lang="cn">联系方式</span>
+  </div>
+  <div class="contact-list">
+    <a class="contact-item" href="tel:(+82)10-2694-1705">
+      <div class="contact-icon">📞</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">전화</span>
+        <span data-lang="en">Phone</span>
+        <span data-lang="hk">電話</span>
+        <span data-lang="cn">电话</span>
+      </div>
+      <div class="contact-value">(+82)10-2694-1705</div>
+    </a>
+    <a class="contact-item" href="mailto:mc967jung@navaer.com">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-label">Email</div>
+      <div class="contact-value">mc967jung@navaer.com</div>
+    </a>
+    <!-- 선택 항목: 블로그 🌐 / 인스타 📷 / 페이스북 📘 / 홈페이지 💻 / 유튜브 ▶️ / 카카오채널 💛 -->
+    <a class="contact-item" href="https://jinjjabg-hub.github.io/MANDU/?u=jeong-sanghyeon" target="_blank">
+      <div class="contact-icon">💬</div>
+      <div class="contact-label">MANDU</div>
+      <div class="contact-value">
+        <span data-lang="kr" class="active">실시간 번역 메신저</span>
+        <span data-lang="en">Live translation chat</span>
+        <span data-lang="hk">即時翻譯聊天</span>
+        <span data-lang="cn">实时翻译聊天</span>
+      </div>
+    </a>
+    <a class="contact-item" style="grid-column: 1 / -1;" href="https://map.kakao.com/link/search/%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%A7%84%EA%B5%AC%20%EC%A4%91%EC%95%99%EB%8C%80%EB%A1%9C%20627" target="_blank">
+      <div class="contact-icon">📍</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">주소 (탭하면 지도 열림)</span>
+        <span data-lang="en">Address (tap to open map)</span>
+        <span data-lang="hk">地址（點擊打開地圖）</span>
+        <span data-lang="cn">地址（点击打开地图）</span>
+      </div>
+      <div class="contact-value">
+        <span data-lang="kr" class="active">부산광역시 진구 중앙대로 627</span>
+        <span data-lang="en">627 Jungang-daero, Jin-gu, Busan, South Korea</span>
+        <span data-lang="hk">부산광역시 진구 중앙대로 627</span>
+        <span data-lang="cn">부산광역시 진구 중앙대로 627</span>
+      </div>
+    </a>
+    <a class="contact-item" style="grid-column: 1 / -1;" href="https://www.google.com/maps/search/?api=1&query=3701+Wilshire+Blvd+%23401%2C+Los+Angeles%2C+CA+90010" target="_blank">
+      <div class="contact-icon">🇺🇸</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">US 오피스 (탭하면 지도 열림)</span>
+        <span data-lang="en">US Office (tap to open map)</span>
+        <span data-lang="hk">美國辦公室（點擊打開地圖）</span>
+        <span data-lang="cn">美国办公室（点击打开地图）</span>
+      </div>
+      <div class="contact-value">3701 Wilshire Blvd #401, Los Angeles, CA 90010</div>
+    </a>
+    <a class="contact-item" href="https://www.allmerits.com" target="_blank">
+      <div class="contact-icon">💻</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">홈페이지</span>
+        <span data-lang="en">Website</span>
+        <span data-lang="hk">網站</span>
+        <span data-lang="cn">网站</span>
+      </div>
+      <div class="contact-value">allmerits.com</div>
+    </a>
+    <a class="contact-item" href="https://blog.allmerits.com" target="_blank">
+      <div class="contact-icon">📝</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">블로그</span>
+        <span data-lang="en">Blog</span>
+        <span data-lang="hk">網誌</span>
+        <span data-lang="cn">博客</span>
+      </div>
+      <div class="contact-value">
+        <span data-lang="kr" class="active">최신 소식 보기</span>
+        <span data-lang="en">Latest updates</span>
+        <span data-lang="hk">最新資訊</span>
+        <span data-lang="cn">最新资讯</span>
+      </div>
+    </a>
+    <a class="contact-item" href="https://open.kakao.com/me/Allmerits" target="_blank">
+      <div class="contact-icon">💛</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">카카오 오픈채팅</span>
+        <span data-lang="en">KakaoTalk</span>
+        <span data-lang="hk">KakaoTalk</span>
+        <span data-lang="cn">KakaoTalk</span>
+      </div>
+      <div class="contact-value">
+        <span data-lang="kr" class="active">바로 문의하기</span>
+        <span data-lang="en">Chat now</span>
+        <span data-lang="hk">立即查詢</span>
+        <span data-lang="cn">立即咨询</span>
+      </div>
+    </a>
+    <a class="contact-item" href="https://wa.me/qr/ZY3VYIUSENJOD1" target="_blank">
+      <div class="contact-icon">📱</div>
+      <div class="contact-label">WhatsApp</div>
+      <div class="contact-value">
+        <span data-lang="kr" class="active">해외 고객 문의</span>
+        <span data-lang="en">For overseas clients</span>
+        <span data-lang="hk">海外客戶查詢</span>
+        <span data-lang="cn">海外客户咨询</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ACTION -->
+<div class="action">
+  <div class="btn-group">
+    <button class="btn btn-primary" onclick="saveContact()">
+      <span data-lang="kr" class="active">📞 연락처 저장</span>
+      <span data-lang="en">📞 Save contact</span>
+      <span data-lang="hk">📞 儲存聯絡人</span>
+      <span data-lang="cn">📞 保存联系人</span>
+    </button>
+    <button class="btn btn-secondary" onclick="saveToCardbook({id:'jeong-sanghyeon',name:'정상현',nameEn:'JEONG SANGHYEON',title:'아시아 마케팅 디렉터',company:'아메리츠 파이낸셜',phone:'(+82)10-2694-1705',email:'mc967jung@navaer.com',chapter:'파이오니어',bni:'해외금융컨설팅',url:window.location.href})">
+      <span data-lang="kr" class="active">🗂️ 명함 저장 (CardBook)</span>
+      <span data-lang="en">🗂️ Save to CardBook</span>
+      <span data-lang="hk">🗂️ 儲存名片</span>
+      <span data-lang="cn">🗂️ 保存名片</span>
+    </button>
+    <button class="btn btn-share" onclick="shareCard()">
+      <span data-lang="kr" class="active">📤 명함 전달하기</span>
+      <span data-lang="en">📤 Share this card</span>
+      <span data-lang="hk">📤 分享名片</span>
+      <span data-lang="cn">📤 分享名片</span>
+    </button>
+  </div>
+</div>
+
+<!-- 공유 바텀시트 (Web Share API 미지원 브라우저 폴백) -->
+<div class="share-sheet" id="shareSheet">
+  <div class="share-backdrop" onclick="closeShare()"></div>
+  <div class="share-panel">
+    <div class="share-handle"></div>
+    <div class="share-title">명함 전달하기</div>
+    <div class="share-btns">
+      <button class="share-btn" onclick="shareKakao()">
+        <div class="share-btn-icon" style="background:#FEE500;">💬</div><span>카카오톡</span>
+      </button>
+      <button class="share-btn" onclick="shareSMS()">
+        <div class="share-btn-icon" style="background:#34c759;">✉️</div><span>문자</span>
+      </button>
+      <button class="share-btn" onclick="copyLink()">
+        <div class="share-btn-icon" style="background:#e8e8e8;">🔗</div><span>링크 복사</span>
+      </button>
+      <button class="share-btn" onclick="shareQR()">
+        <div class="share-btn-icon" style="background:#0d1b3e;">📱</div><span>QR 보기</span>
+      </button>
+    </div>
+    <button class="share-cancel" onclick="closeShare()">취소</button>
+  </div>
+</div>
+
+<!-- 만두 연결 (카드 주인 전용, 방문자는 무시해도 되는 위치) -->
+<div class="mandu-activate-wrap" style="padding:14px 20px 4px;text-align:center;">
+  <button id="mandu-activate-btn" onclick="activateMandu()"
+    style="background:none;border:1px solid rgba(201,168,76,0.3);color:var(--muted-dark);font-size:10.5px;padding:7px 14px;border-radius:20px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;">
+    💬 본인 명함이신가요? 만두 연결하기 (1회)
+  </button>
+  <div id="mandu-activate-done" style="display:none;font-size:10.5px;color:var(--gold);padding:7px 0;">
+    ✅ 만두 연결 완료 — 이제 이 카드로 DM을 받을 수 있어요
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="company">
+    <span data-lang="kr" class="active">아메리츠 파이낸셜</span>
+    <span data-lang="en">Allmerits Financial</span>
+    <span data-lang="hk">Allmerits Financial</span>
+    <span data-lang="cn">Allmerits Financial</span>
+  </div>
+  <div class="slogan-footer">Stand out, by design. Setting your assets in Dollars — your trusted overseas finance expert.</div>
+</footer>
+
+<script src="https://jinjjabg-hub.github.io/cardbook/save-to-cardbook.js"></script>
+<script>
+function setLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    const m = btn.getAttribute('onclick').match(/'(\w+)'/);
+    btn.classList.toggle('active', m && m[1] === lang);
+  });
+}
+function saveContact() {
+  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:정상현\nORG:아메리츠 파이낸셜\nTITLE:아시아 마케팅 디렉터\nTEL:(+82)10-2694-1705\nEMAIL:mc967jung@navaer.com\nURL:https://jinjjabg-hub.github.io/BNI-PIONEER-cards/정상현/\nADR:;;부산광역시 진구 중앙대로 627;;;;\nEND:VCARD`;
+  const blob = new Blob([vcard], {type:'text/vcard'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'JeongSanghyeon.vcf';
+  a.click();
+}
+
+/* ── 명함 전달하기 ── */
+const CARD_URL = 'https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%A0%95%EC%83%81%ED%98%84/';
+const CARD_TITLE = '정상현 | 아메리츠 파이낸셜';
+const CARD_TEXT = '당신의 자산을 '달러'로 세팅하는 해외금융 전문가, 정상현입니다.';
+
+function shareCard() {
+  if (navigator.share) {
+    navigator.share({ title: CARD_TITLE, text: CARD_TEXT, url: CARD_URL }).catch(() => {});
+  } else {
+    document.getElementById('shareSheet').style.display = 'block';
+  }
+}
+function closeShare() { document.getElementById('shareSheet').style.display = 'none'; }
+function shareKakao() {
+  window.open('https://sharer.kakao.com/talk/friends/picker/link?app_key=&url=' + encodeURIComponent(CARD_URL), '_blank');
+  closeShare();
+}
+function shareSMS() {
+  location.href = 'sms:?body=' + encodeURIComponent(CARD_TITLE + '\n' + CARD_URL);
+  closeShare();
+}
+function copyLink() {
+  navigator.clipboard.writeText(CARD_URL).then(() => alert('링크가 복사되었습니다!')).catch(() => {
+    const t = document.createElement('textarea');
+    t.value = CARD_URL;
+    document.body.appendChild(t); t.select(); document.execCommand('copy');
+    document.body.removeChild(t);
+    alert('링크가 복사되었습니다!');
+  });
+  closeShare();
+}
+function shareQR() { window.open('qr.png', '_blank'); closeShare(); }
+
+/* ── PORTFOLIO 자동 슬라이드 (표준: 3초 간격, 터치 스와이프, 수동 조작 시 타이머 리셋) ──
+   portfolio 섹션이 없는 명함(HTML에서 <section class="portfolio"> 삭제한 경우)에는
+   아래 코드가 아무 일도 하지 않고 조용히 종료된다. */
+(function () {
+  const track = document.getElementById('portfolio-track');
+  if (!track) return;
+
+  const slides = track.querySelectorAll('.portfolio-slide');
+  const total = slides.length;
+  const dotsWrap = document.getElementById('portfolio-dots');
+  let idx = 0, timer = null;
+
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'portfolio-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => { go(i); reset(); };
+    dotsWrap.appendChild(dot);
+  }
+
+  function render() {
+    track.style.transform = `translateX(-${idx * 100}%)`;
+    dotsWrap.querySelectorAll('.portfolio-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
+  }
+  function go(i) { idx = (i + total) % total; render(); }
+  window.portfolioSlide = function (dir) { go(idx + dir); reset(); };
+  function auto() { timer = setTimeout(() => { go(idx + 1); auto(); }, 3000); }
+  function reset() { clearTimeout(timer); auto(); }
+
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; clearTimeout(timer); }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) go(idx + (dx < 0 ? 1 : -1));
+    auto();
+  }, { passive: true });
+
+  auto();
+})();
+
+/* ── 만두 원클릭 연결 (카드 주인 전용) ──────────────────────────
+   구글 로그인 1번 → manduid_index/jeong-sanghyeon 문서에 uid 자동 등록.
+   MANDU 링크(?u=jeong-sanghyeon)는 카드 제작 시점에 이미 고정돼 있으므로
+   *아무도(송승훈 포함) 링크를 중간에서 복사·전달·붙여넣기 할 필요가 없다.*
+   save-to-cardbook.js가 이미 firebase를 로드해두므로 그걸 재사용한다. */
+async function _manduWaitFirebase(maxTries) {
+  let tries = 0;
+  while ((typeof firebase === 'undefined' || !firebase.apps || !firebase.apps.length) && tries < (maxTries || 50)) {
+    await new Promise(r => setTimeout(r, 100));
+    tries++;
+  }
+  return typeof firebase !== 'undefined' && firebase.apps && firebase.apps.length > 0;
+}
+
+async function _manduFinishActivate(user) {
+  const slug = 'jeong-sanghyeon';
+  const db = firebase.firestore();
+
+  // 이미 다른 uid로 연결돼 있으면 덮어쓰지 않음 (실수·장난 클릭으로부터 카드 보호)
+  const existing = await db.collection('manduid_index').doc(slug).get();
+  if (existing.exists && existing.data().uid !== user.uid) {
+    const btn = document.getElementById('mandu-activate-btn');
+    if (btn) btn.style.display = 'none';
+    const done = document.getElementById('mandu-activate-done');
+    if (done) { done.textContent = 'ℹ️ 이미 연결된 명함이에요'; done.style.display = 'block'; }
+    return;
+  }
+
+  await db.collection('users').doc(user.uid).set({
+    uid: user.uid, displayName: user.displayName || '', photoURL: user.photoURL || '',
+    email: user.email || '', manduid: slug
+  }, { merge: true });
+  await db.collection('manduid_index').doc(slug).set({
+    uid: user.uid, createdAt: firebase.firestore.FieldValue.serverTimestamp()
+  }, { merge: true });
+  const btn = document.getElementById('mandu-activate-btn');
+  const done = document.getElementById('mandu-activate-done');
+  if (btn) btn.style.display = 'none';
+  if (done) done.style.display = 'block';
+}
+
+async function activateMandu() {
+  if (!confirm('본인 명함이 맞나요?\n구글 로그인하면 이 명함으로 만두 DM을 받을 수 있게 연결돼요.')) return;
+  const btn = document.getElementById('mandu-activate-btn');
+  if (btn) { btn.disabled = true; btn.textContent = '연결 중...'; }
+  const ready = await _manduWaitFirebase();
+  if (!ready) {
+    if (btn) { btn.disabled = false; btn.textContent = '💬 본인 명함이신가요? 만두 연결하기 (1회)'; }
+    alert('연결 실패. 잠시 후 다시 시도해주세요.');
+    return;
+  }
+  try {
+    const auth = firebase.auth();
+    await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+    const provider = new firebase.auth.GoogleAuthProvider();
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (isMobile) {
+      sessionStorage.setItem('_manduPendingSlug', 'jeong-sanghyeon');
+      await auth.signInWithRedirect(provider);
+      return; // 리다이렉트 후 아래 즉시실행 블록에서 이어짐
+    }
+    const result = await auth.signInWithPopup(provider);
+    await _manduFinishActivate(result.user);
+  } catch (e) {
+    console.error('만두 연결 실패:', e);
+    if (btn) { btn.disabled = false; btn.textContent = '💬 본인 명함이신가요? 만두 연결하기 (1회)'; }
+    alert('연결 중 오류가 발생했어요.');
+  }
+}
+
+// 모바일 리다이렉트 로그인 복귀 처리
+(async function () {
+  if (!sessionStorage.getItem('_manduPendingSlug')) return;
+  const ready = await _manduWaitFirebase();
+  sessionStorage.removeItem('_manduPendingSlug');
+  if (!ready) return;
+  try {
+    const res = await firebase.auth().getRedirectResult();
+    if (res && res.user) await _manduFinishActivate(res.user);
+  } catch (e) { console.error(e); }
+})();
+</script>
+</body>
+</html>
