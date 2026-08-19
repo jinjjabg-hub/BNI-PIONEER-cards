@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>박선영 | SHIELD Y</title>
+<meta property="og:title" content="박선영 | 대표 · SHIELD Y">
+<meta property="og:description" content="현장에 필요한 모든 것, 신뢰로 공급하는 믿을 수 있는 파트너입니다.">
+<meta property="og:image" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EB%B0%95%EC%84%A0%EC%98%81/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/박선영/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- 언어팩에 따라 폰트 추가: references/languages.md 참고 -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --navy: #0d1b3e;
+  --navy2: #152347;
+  --navy3: #1e2f5a;
+  --gold: #c9a84c;
+  --gold2: #e8c86a;
+  --light: #f4f1e8;
+  --text-dark: #f0ece0;
+  --text-light: #1a1a2e;
+  --muted-dark: #a89060;
+  --muted-light: #5a4a2a;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color: transparent; }
+html { font-size: 16px; }
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--navy);
+  color: var(--text-dark);
+  max-width: 480px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+[data-lang="si"] { font-family: 'Noto Sans Sinhala', sans-serif; }
+[data-lang="ur"] { font-family: 'Noto Nastaliq Urdu', serif; direction: rtl; }
+[data-lang] { display: none; }
+[data-lang].active { display: block; }
+span[data-lang].active { display: inline; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:100;
+  max-width: 480px; margin: 0 auto;
+  background: rgba(13,27,62,0.97);
+  backdrop-filter: blur(10px);
+  padding: 10px 16px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid rgba(201,168,76,0.25);
+}
+.nav-brand { font-size: 12px; font-weight: 700; color: var(--gold); white-space: nowrap; }
+.lang-btns { display:flex; gap:4px; }
+.lang-btn {
+  padding: 5px 8px;
+  border: 1px solid rgba(201,168,76,0.35);
+  background: transparent;
+  color: var(--muted-dark);
+  font-size: 10px; font-weight: 700;
+  cursor: pointer; border-radius: 5px;
+  transition: all 0.2s;
+  min-width: 40px; min-height: 32px;
+  display: flex; align-items:center; justify-content:center;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.lang-btn.active { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+
+/* ── HERO ── */
+.hero {
+  margin-top: 54px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 11/6;
+  overflow: hidden;
+}
+.hero img.hero-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.hero-overlay {
+  position: absolute; inset:0;
+  background: linear-gradient(
+    to bottom,
+    rgba(13,27,62,0.1) 0%,
+    rgba(13,27,62,0.15) 40%,
+    rgba(13,27,62,0.75) 75%,
+    rgba(13,27,62,0.95) 100%
+  );
+}
+.hero-content {
+  position: absolute; bottom:0; left:0; right:0; z-index:2;
+  padding: 24px 20px 22px;
+}
+.hero-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 10px; font-weight: 700;
+  padding: 4px 12px; border-radius: 20px;
+  margin-bottom: 10px; letter-spacing: 1.5px;
+}
+.hero-name {
+  font-size: 34px; font-weight: 700;
+  color: #fff; line-height: 1.15;
+  margin-bottom: 7px; letter-spacing: -0.5px;
+}
+.hero-name [data-lang="ur"] { font-size: 26px; }
+.hero-title { font-size: 13px; color: var(--gold); opacity: 0.95; line-height: 1.5; }
+
+/* ── PROFILE ROW ── */
+.profile-row {
+  background: var(--navy2);
+  padding: 16px 20px;
+  display: flex; align-items: center; gap:14px;
+  border-bottom: 1px solid rgba(201,168,76,0.12);
+}
+.profile-img {
+  width: 64px; height: 64px; min-width:64px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  overflow: hidden; flex-shrink: 0;
+}
+.profile-img img { width:100%; height:100%; object-fit:cover; object-position: center 15%; }
+.profile-info h2 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.profile-info p { font-size: 12px; color: var(--muted-dark); line-height: 1.5; }
+
+/* ── 공통 섹션 ── */
+section { padding: 40px 20px; }
+.section-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 6px;
+}
+.section-title { font-size: 22px; font-weight: 700; line-height: 1.35; margin-bottom: 22px; }
+
+/* ── ABOUT ── */
+.about { background: var(--navy); }
+.about .section-title { color: #fff; }
+.slogan {
+  font-size: 15px; font-weight: 700;
+  color: var(--gold); margin-bottom: 14px;
+  font-style: italic; line-height: 1.6;
+}
+.about-text { font-size: 14px; line-height: 1.9; color: var(--text-dark); opacity: 0.85; }
+.about-text [data-lang="ur"] { font-size: 15px; line-height: 2.2; }
+
+/* ── WHY ── */
+.why { background: var(--light); }
+.why .section-label { color: var(--muted-light); }
+.why .section-title { color: var(--text-light); }
+.why-cards { display: flex; flex-direction: column; gap:14px; }
+.why-card {
+  background: #fff;
+  border: 1px solid rgba(201,168,76,0.18);
+  border-left: 4px solid var(--gold);
+  border-radius: 10px; padding: 18px 16px;
+}
+.why-card h3 { font-size: 15px; font-weight: 700; color: var(--text-light); margin-bottom: 8px; line-height: 1.4; }
+.why-card p { font-size: 13px; line-height: 1.85; color: #444; }
+.why-card p [data-lang="ur"] { font-size: 14px; line-height: 2.2; }
+.why-card p strong { color: var(--navy); font-weight: 700; }
+
+/* ── DIFFERENCE ── */
+.difference { background: var(--navy2); }
+.difference .section-title { color: #fff; }
+.diff-grid { display: flex; flex-direction: column; gap:12px; }
+.diff-card {
+  background: var(--navy3);
+  border: 1px solid rgba(201,168,76,0.12);
+  border-radius: 10px; padding: 18px 16px;
+}
+.diff-card h3 { font-size: 14px; font-weight: 700; color: var(--gold); margin-bottom: 8px; line-height: 1.4; }
+.diff-card p { font-size: 13px; line-height: 1.8; color: var(--text-dark); opacity: 0.8; }
+.diff-card p [data-lang="ur"] { font-size: 14px; line-height: 2.2; }
+
+/* ── REFERRAL ── */
+.referral { background: var(--light); }
+.referral .section-label { color: var(--muted-light); }
+.referral .section-title { color: var(--text-light); }
+.ref-list { display: flex; flex-direction: column; gap:10px; }
+.ref-item {
+  display: flex; gap:12px; align-items:flex-start;
+  background: #fff; border-radius: 10px;
+  padding: 15px 14px; border: 1px solid rgba(0,0,0,0.05);
+}
+.ref-num {
+  width: 26px; height: 26px; min-width:26px;
+  border-radius: 50%; background: var(--gold);
+  color: var(--navy); font-weight: 700; font-size: 12px;
+  display: flex; align-items:center; justify-content:center;
+  flex-shrink: 0; margin-top: 1px;
+}
+.ref-item p { font-size: 13px; line-height: 1.8; color: #333; }
+.ref-item p [data-lang="ur"] { font-size: 14px; line-height: 2.2; }
+
+/* ── CAREER ── */
+.career {
+  position: relative;
+  background-color: #f0f4ff;
+  background-image: url('career-bg.png');
+  background-size: 150%;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+.career .section-label { position: relative; z-index:1; color: var(--muted-light); }
+.career .section-title { color: var(--text-light); position: relative; z-index:1; }
+.career-list { display: flex; flex-direction: column; gap:18px; position: relative; z-index:1; }
+.career-item {
+  display: flex; gap:12px; align-items:flex-start;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.career-item:last-child { border-bottom: none; padding-bottom: 0; }
+.career-badge {
+  background: var(--navy); color: #fff;
+  font-size: 10px; font-weight: 700;
+  padding: 4px 10px; border-radius: 4px;
+  white-space: nowrap; flex-shrink: 0; margin-top: 2px;
+}
+.career-content { background: rgba(255,255,255,0.82); border-radius: 8px; padding: 12px 14px; flex:1; }
+.career-item h3 { font-size: 14px; font-weight: 700; color: var(--text-light); margin-bottom: 7px; line-height: 1.4; }
+.career-item p { font-size: 12px; line-height: 1.85; color: #555; }
+
+/* ── PORTFOLIO (선택 섹션 — portfolio1.jpg 이상 있을 때만 사용) ── */
+.portfolio { background: var(--navy); }
+.portfolio .section-title { color: #fff; }
+.portfolio-track-wrap { overflow: hidden; border-radius: 12px; }
+.portfolio-track { display: flex; transition: transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94); }
+.portfolio-slide { min-width: 100%; aspect-ratio: 3/4; overflow: hidden; }
+.portfolio-slide img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+.portfolio-nav { display:flex; align-items:center; justify-content:center; gap:16px; margin-top:14px; }
+.portfolio-btn {
+  background: transparent; border: 1px solid rgba(201,168,76,0.35);
+  color: var(--gold); width: 30px; height: 30px; border-radius: 50%;
+  font-size: 15px; cursor: pointer; display:flex; align-items:center; justify-content:center;
+}
+.portfolio-dots { display:flex; gap:6px; }
+.portfolio-dot { width:6px; height:6px; border-radius:50%; background: rgba(201,168,76,0.3); transition: all 0.25s; }
+.portfolio-dot.active { background: var(--gold); width:18px; border-radius:3px; }
+
+/* ── CONTACT ── */
+.contact { background: var(--light); }
+.contact .section-label { color: var(--muted-light); }
+.contact .section-title { color: var(--text-light); }
+.contact-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.contact-item {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 8px; text-align: center;
+  background: #fff; border-radius: 12px;
+  padding: 16px 10px; border: 1px solid rgba(0,0,0,0.05);
+  text-decoration: none; min-height: 100px;
+}
+.contact-item:active { transform: scale(0.97); }
+.contact-icon {
+  width: 42px; height: 42px; min-width:42px;
+  border-radius: 50%; background: var(--navy);
+  display: flex; align-items:center; justify-content:center;
+  font-size: 18px; flex-shrink: 0;
+}
+.contact-label { font-size: 10px; color: #999; }
+.contact-value { font-size: 12px; font-weight: 600; color: var(--text-light); line-height: 1.4; word-break: break-all; }
+
+/* ── ACTION ── */
+.action { background: var(--navy2); padding: 32px 20px; }
+.btn-group { display: flex; flex-direction: column; gap:12px; }
+.btn {
+  display: block; width: 100%; padding: 17px 16px;
+  border: none; border-radius: 10px;
+  font-size: 15px; font-weight: 700;
+  cursor: pointer; text-align: center;
+  transition: all 0.15s; font-family: 'Noto Sans KR', sans-serif;
+  min-height: 54px; letter-spacing: 0.3px;
+}
+.btn-primary { background: var(--gold); color: var(--navy); }
+.btn-secondary { background: transparent; border: 2px solid var(--gold); color: var(--gold); }
+.btn-share { background: linear-gradient(135deg, #1a6b3a, #0d8a4a); color: #fff; border: none; }
+.btn:active { transform: scale(0.97); opacity: 0.9; }
+
+/* 공유 바텀시트 */
+.share-sheet { display:none; position:fixed; inset:0; z-index:200; }
+.share-backdrop { position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+.share-panel {
+  position:absolute; bottom:0; left:0; right:0;
+  max-width:480px; margin:0 auto;
+  background:#fff; border-radius:20px 20px 0 0;
+  padding:20px 20px 40px;
+}
+.share-handle { width:40px; height:4px; background:#ddd; border-radius:2px; margin:0 auto 18px; }
+.share-title { font-size:13px; color:#999; text-align:center; margin-bottom:20px; font-weight:600; }
+.share-btns { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:16px; }
+.share-btn { display:flex; flex-direction:column; align-items:center; gap:8px; background:none; border:none; cursor:pointer; padding:8px 4px; }
+.share-btn-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:26px; }
+.share-btn span { font-size:11px; color:#333; font-weight:600; font-family:'Noto Sans KR',sans-serif; }
+.share-cancel { width:100%; padding:14px; background:#f2f2f2; border:none; border-radius:10px; font-size:15px; font-weight:700; color:#444; cursor:pointer; font-family:'Noto Sans KR',sans-serif; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy); padding: 24px 20px;
+  text-align: center; border-top: 1px solid rgba(201,168,76,0.12);
+}
+footer .company { font-size: 13px; font-weight: 700; color: var(--gold); margin-bottom: 5px; }
+footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacing: 0.5px; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">SHIELD Y</div>
+  <div class="lang-btns">
+    <button class="lang-btn active" onclick="setLang('kr')">한국어</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('jp')">日本語</button>
+    <button class="lang-btn" onclick="setLang('cn')">中文</button>
+  </div>
+</nav>
+
+<!-- HERO : hero.png = 세로 3:4 인물 사진 -->
+<div class="hero">
+  <img class="hero-img" src="hero.png" alt="박선영">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span data-lang="kr" class="active">SHIELD Y · TOTAL SAFETY PARTNER</span>
+      <span data-lang="en">SHIELD Y · TOTAL SAFETY PARTNER</span>
+      <span data-lang="jp">SHIELD Y · TOTAL SAFETY PARTNER</span>
+      <span data-lang="cn">SHIELD Y · TOTAL SAFETY PARTNER</span>
+    </div>
+    <div class="hero-name">
+      <span data-lang="kr" class="active">박선영</span>
+      <span data-lang="en">Park Sun Young</span>
+      <span data-lang="jp">パク・ソニョン</span>
+      <span data-lang="cn">朴宣映</span>
+    </div>
+    <div class="hero-title">
+      <span data-lang="kr" class="active">대표 · SHIELD Y</span>
+      <span data-lang="en">CEO · SHIELD Y</span>
+      <span data-lang="jp">代表取締役 · SHIELD Y</span>
+      <span data-lang="cn">代表 · SHIELD Y</span>
+    </div>
+  </div>
+</div>
+
+<!-- PROFILE ROW : profil.png = 정사각 얼굴 사진 -->
+<div class="profile-row">
+  <div class="profile-img">
+    <img src="profil.png" alt="박선영">
+  </div>
+  <div class="profile-info">
+    <h2>박선영 · Park Sun Young</h2>
+    <p>
+      <span data-lang="kr" class="active">안전용품 · 건축자재 종합유통</span>
+      <span data-lang="en">Safety Equipment & Construction Materials</span>
+      <span data-lang="jp">安全用品・建築資材総合流通</span>
+      <span data-lang="cn">安全用品·建筑材料综合流通</span>
+    </p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="section-label">About</div>
+  <div class="slogan">
+    <span data-lang="kr" class="active">공급을 넘어, 신뢰를 만듭니다.</span>
+    <span data-lang="en">Beyond Supply, Building Trust.</span>
+    <span data-lang="jp">供給を超え、信頼を築く。</span>
+    <span data-lang="cn">超越供应，创造信任。</span>
+  </div>
+  <p class="about-text">
+    <span data-lang="kr" class="active">현장에 필요한 모든 것, 신뢰로 공급하는 믿을 수 있는 파트너입니다.</span>
+    <span data-lang="en">A reliable partner supplying everything the worksite needs, with trust at the core.</span>
+    <span data-lang="jp">現場に必要なものすべてを、信頼を軸にお届けする信頼できるパートナーです。</span>
+    <span data-lang="cn">提供现场所需一切，以信任为核心的可靠合作伙伴。</span>
+  </p>
+</section>
+
+<!-- WHY : why-card 3개 (①②③) -->
+<section class="why">
+  <div class="section-label">Why Us</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">왜 SHIELD Y인가</span>
+    <span data-lang="en">Why SHIELD Y?</span>
+    <span data-lang="jp">なぜSHIELD Yなのか</span>
+    <span data-lang="cn">为什么选择SHIELD Y</span>
+  </div>
+  <div class="why-cards">
+    <div class="why-card">
+      <h3>
+        <span data-lang="kr" class="active">산업·건설 자재 통합 공급 플랫폼</span>
+        <span data-lang="en">Integrated Supply Platform</span>
+        <span data-lang="jp">産業・建設資材の統合供給プラットフォーム</span>
+        <span data-lang="cn">工业·建筑材料一体化供应平台</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">필요한 모든 자재를 <strong>한 곳에서</strong> 해결합니다.</span>
+        <span data-lang="en">Everything you need, solved <strong>in one place</strong>.</span>
+        <span data-lang="jp">必要な資材をすべて<strong>一か所で</strong>解決します。</span>
+        <span data-lang="cn">所有所需材料，<strong>一站解决</strong>。</span>
+      </p>
+    </div>
+    <div class="why-card">
+      <h3>
+        <span data-lang="kr" class="active">제품이 아닌 가치를 공급합니다</span>
+        <span data-lang="en">Value Driven Supply</span>
+        <span data-lang="jp">製品ではなく価値を供給します</span>
+        <span data-lang="cn">供应价值而非产品</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">더 많은 제품이 아닌, <strong>더 큰 가치</strong>를 공급합니다.</span>
+        <span data-lang="en">Not more products — <strong>greater value</strong>.</span>
+        <span data-lang="jp">より多くの製品ではなく、<strong>より大きな価値</strong>を提供します。</span>
+        <span data-lang="cn">不是更多产品，而是<strong>更大价值</strong>的供应。</span>
+      </p>
+    </div>
+    <div class="why-card">
+      <h3>
+        <span data-lang="kr" class="active">시간과 비용을 줄이는 공급 시스템</span>
+        <span data-lang="en">A System That Saves Time & Cost</span>
+        <span data-lang="jp">時間とコストを削減する供給システム</span>
+        <span data-lang="cn">节省时间与成本的供应系统</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">다양한 경험을 바탕으로 <strong>시간과 비용을 줄이는</strong> 공급 시스템을 제공합니다.</span>
+        <span data-lang="en">A supply system that <strong>reduces time and cost</strong>, backed by diverse experience.</span>
+        <span data-lang="jp">豊富な経験をもとに、<strong>時間とコストを削減する</strong>供給システムを提供します。</span>
+        <span data-lang="cn">基于丰富经验，提供<strong>节省时间和成本</strong>的供应系统。</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENCE : diff-card 2~3개 -->
+<section class="difference">
+  <div class="section-label">Difference</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">차별점</span>
+    <span data-lang="en">What Makes Us Different</span>
+    <span data-lang="jp">差別化ポイント</span>
+    <span data-lang="cn">差异化优势</span>
+  </div>
+  <div class="diff-grid">
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">현장 효율까지</span>
+        <span data-lang="en">Site Efficiency, Too</span>
+        <span data-lang="jp">現場効率まで</span>
+        <span data-lang="cn">连现场效率也一并提供</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">단순 납품을 넘어, 현장의 효율과 경쟁력까지 공급합니다.</span>
+        <span data-lang="en">Beyond delivery — we supply efficiency and competitiveness to your site.</span>
+        <span data-lang="jp">単なる納品を超え、現場の効率と競争力もご提供します。</span>
+        <span data-lang="cn">超越简单供货，连现场效率和竞争力一并提供。</span>
+      </p>
+    </div>
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">진정한 파트너</span>
+        <span data-lang="en">A True Partner</span>
+        <span data-lang="jp">真のパートナー</span>
+        <span data-lang="cn">真正的合作伙伴</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">고객의 시간, 비용, 업무 효율까지 고려하는 진정한 파트너입니다.</span>
+        <span data-lang="en">A true partner that considers your time, cost, and operational efficiency.</span>
+        <span data-lang="jp">お客様の時間・コスト・業務効率まで考える本物のパートナーです。</span>
+        <span data-lang="cn">真正考虑客户时间、成本和工作效率的合作伙伴。</span>
+      </p>
+    </div>
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">즉시 대응</span>
+        <span data-lang="en">Instant Response</span>
+        <span data-lang="jp">即時対応</span>
+        <span data-lang="cn">即时响应</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">문제 발생 시 빠른 피드백과 즉각적인 해결책을 제공합니다.</span>
+        <span data-lang="en">Fast feedback and immediate solutions when issues arise.</span>
+        <span data-lang="jp">問題発生時、迅速なフィードバックと即時解決策を提供します。</span>
+        <span data-lang="cn">问题发生时，提供快速反馈和即时解决方案。</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- REFERRAL : BNI 핵심 섹션. ref-item 2~3개 -->
+<section class="referral">
+  <div class="section-label">Referral</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">이런 분을 소개해 주세요</span>
+    <span data-lang="en">Please refer people like this</span>
+    <span data-lang="jp">こんな方をご紹介ください</span>
+    <span data-lang="cn">请介绍这样的客户</span>
+  </div>
+  <div class="ref-list">
+    <div class="ref-item">
+      <div class="ref-num">1</div>
+      <p>
+        <span data-lang="kr" class="active">🏗️ <strong>건설·시공</strong> — 건설회사 · 건축사/설계사무소 · 종합/전문건설업체</span>
+        <span data-lang="en">🏗️ <strong>Construction</strong> — Construction firms · Architects/design offices · General & specialty contractors</span>
+        <span data-lang="jp">🏗️ <strong>建設・施工</strong> — 建設会社・建築士/設計事務所・総合/専門建設業者</span>
+        <span data-lang="cn">🏗️ <strong>建设·施工</strong> — 建设公司·建筑师/设计事务所·综合/专业建设企业</span>
+      </p>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">2</div>
+      <p>
+        <span data-lang="kr" class="active">🦺 <strong>안전·관리</strong> — 산업안전관리 컨설턴트 · 산업재해 노무사 · 소방시설 업체</span>
+        <span data-lang="en">🦺 <strong>Safety & Management</strong> — Safety consultants · Labor attorneys · Fire safety firms</span>
+        <span data-lang="jp">🦺 <strong>安全・管理</strong> — 産業安全管理コンサルタント・産業災害労務士・消防施設業者</span>
+        <span data-lang="cn">🦺 <strong>安全·管理</strong> — 工业安全管理顾问·工伤劳务师·消防设施企业</span>
+      </p>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">3</div>
+      <p>
+        <span data-lang="kr" class="active">⚡ <strong>시설·설비</strong> — 전기공사업체 · 제조공장 대표 · 시설관리(FM) 업체</span>
+        <span data-lang="en">⚡ <strong>Facility & Equipment</strong> — Electrical contractors · Factory owners · FM firms</span>
+        <span data-lang="jp">⚡ <strong>施設・設備</strong> — 電気工事業者・製造工場代表・施設管理(FM)業者</span>
+        <span data-lang="cn">⚡ <strong>设施·设备</strong> — 电气工程企业·制造工厂代表·设施管理(FM)企业</span>
+      </p>
+    </div>
+    <div class="ref-item">
+      <div class="ref-num">4</div>
+      <p>
+        <span data-lang="kr" class="active">🤝 <strong>지원·서비스</strong> — 인력파견/아웃소싱 · 기업 보험설계사 · 간판/광고/인쇄 업체</span>
+        <span data-lang="en">🤝 <strong>Support & Service</strong> — Staffing/outsourcing · Insurance planners · Signage/printing firms</span>
+        <span data-lang="jp">🤝 <strong>支援・サービス</strong> — 人材派遣/アウトソーシング・企業保険設計士・看板/広告/印刷業者</span>
+        <span data-lang="cn">🤝 <strong>支持·服务</strong> — 人力派遣/外包·企业保险规划师·招牌/广告/印刷企业</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER : career-item 2~3개. career-badge = 현재 / 경력 / 강점 / 자격 -->
+<section class="career">
+  <div class="section-label">Career</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">경력 및 전문 분야</span>
+    <span data-lang="en">Career &amp; Expertise</span>
+    <span data-lang="jp">経歴・専門分野</span>
+    <span data-lang="cn">经历与专业领域</span>
+  </div>
+  <div class="career-list">
+    <div class="career-item">
+      <div class="career-badge">BNI</div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">BNI 파이오니아 챕터 멤버</span>
+          <span data-lang="en">BNI Pioneer Chapter Member</span>
+          <span data-lang="jp">BNIパイオニアチャプターメンバー</span>
+          <span data-lang="cn">BNI先驱分会成员</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">Givers Gain 기반 비즈니스 네트워크</span>
+          <span data-lang="en">Givers Gain based business network</span>
+          <span data-lang="jp">ギバーズゲイン型ビジネスネットワーク</span>
+          <span data-lang="cn">基于Givers Gain的商业网络</span>
+        </p>
+      </div>
+    </div>
+    <div class="career-item">
+      <div class="career-badge">상공</div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">부산 상공회의소 회원</span>
+          <span data-lang="en">Busan Chamber of Commerce Member</span>
+          <span data-lang="jp">釜山商工会議所会員</span>
+          <span data-lang="cn">釜山商工会议所会员</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">지역 기업 네트워크를 통한 신뢰 기반 협업</span>
+          <span data-lang="en">Trust-based collaboration through the local business network</span>
+          <span data-lang="jp">地域企業ネットワークによる信頼ベースの協業</span>
+          <span data-lang="cn">通过地区企业网络进行信任协作</span>
+        </p>
+      </div>
+    </div>
+    <div class="career-item">
+      <div class="career-badge">협회</div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">여성기업인 협회 회원</span>
+          <span data-lang="en">Women Entrepreneurs Association Member</span>
+          <span data-lang="jp">女性起業家協会会員</span>
+          <span data-lang="cn">女性企业家协会会员</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">여성 리더십 기반의 비즈니스 네트워크 활동</span>
+          <span data-lang="en">Active in a business network built on women's leadership</span>
+          <span data-lang="jp">女性リーダーシップに基づくビジネスネットワーク活動</span>
+          <span data-lang="cn">基于女性领导力的商业网络活动</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT : 2열 그리드. 없는 항목은 <a> 통째로 삭제 (빈칸 금지) -->
+<section class="contact">
+  <div class="section-label">Contact</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">연락하기</span>
+    <span data-lang="en">Contact</span>
+    <span data-lang="jp">お問い合わせ</span>
+    <span data-lang="cn">联系方式</span>
+  </div>
+  <div class="contact-list">
+    <a class="contact-item" href="tel:010-6649-8882">
+      <div class="contact-icon">📞</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">전화</span>
+        <span data-lang="en">Phone</span>
+        <span data-lang="jp">電話</span>
+        <span data-lang="cn">电话</span>
+      </div>
+      <div class="contact-value">010-6649-8882</div>
+    </a>
+    <a class="contact-item" href="https://kdshieldy.com/" target="_blank">
+      <div class="contact-icon">🌐</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">홈페이지</span>
+        <span data-lang="en">Website</span>
+        <span data-lang="jp">ホームページ</span>
+        <span data-lang="cn">官网</span>
+      </div>
+      <div class="contact-value">kdshieldy.com</div>
+    </a>
+    <a class="contact-item" href="https://www.instagram.com/kyoungdong_/" target="_blank">
+      <div class="contact-icon">📷</div>
+      <div class="contact-label">Instagram</div>
+      <div class="contact-value">@kyoungdong_</div>
+    </a>
+    <a class="contact-item" href="https://jinjjabg-hub.github.io/MANDU/?u=park-sunyoung" target="_blank">
+      <div class="contact-icon">💬</div>
+      <div class="contact-label">MANDU</div>
+      <div class="contact-value">
+        <span data-lang="kr" class="active">실시간 번역 메신저</span>
+        <span data-lang="en">Live translation chat</span>
+        <span data-lang="jp">リアルタイム翻訳チャット</span>
+        <span data-lang="cn">实时翻译聊天</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ACTION -->
+<div class="action">
+  <div class="btn-group">
+    <button class="btn btn-primary" onclick="saveContact()">
+      <span data-lang="kr" class="active">📞 연락처 저장</span>
+      <span data-lang="en">📞 Save contact</span>
+      <span data-lang="jp">📞 連絡先を保存</span>
+      <span data-lang="cn">📞 保存联系人</span>
+    </button>
+    <button class="btn btn-secondary" onclick="saveToCardbook({id:'park-sunyoung',name:'박선영',nameEn:'Park Sun Young',title:'대표',company:'SHIELD Y',phone:'010-6649-8882',email:'',chapter:'파이오니어',bni:'안전용품·건축자재 유통',url:window.location.href})">
+      <span data-lang="kr" class="active">🗂️ 명함 저장 (CardBook)</span>
+      <span data-lang="en">🗂️ Save to CardBook</span>
+      <span data-lang="jp">🗂️ 名刺を保存</span>
+      <span data-lang="cn">🗂️ 保存名片</span>
+    </button>
+    <button class="btn btn-share" onclick="shareCard()">
+      <span data-lang="kr" class="active">📤 명함 전달하기</span>
+      <span data-lang="en">📤 Share this card</span>
+      <span data-lang="jp">📤 名刺を共有</span>
+      <span data-lang="cn">📤 分享名片</span>
+    </button>
+  </div>
+</div>
+
+<!-- 공유 바텀시트 (Web Share API 미지원 브라우저 폴백) -->
+<div class="share-sheet" id="shareSheet">
+  <div class="share-backdrop" onclick="closeShare()"></div>
+  <div class="share-panel">
+    <div class="share-handle"></div>
+    <div class="share-title">명함 전달하기</div>
+    <div class="share-btns">
+      <button class="share-btn" onclick="shareKakao()">
+        <div class="share-btn-icon" style="background:#FEE500;">💬</div><span>카카오톡</span>
+      </button>
+      <button class="share-btn" onclick="shareSMS()">
+        <div class="share-btn-icon" style="background:#34c759;">✉️</div><span>문자</span>
+      </button>
+      <button class="share-btn" onclick="copyLink()">
+        <div class="share-btn-icon" style="background:#e8e8e8;">🔗</div><span>링크 복사</span>
+      </button>
+      <button class="share-btn" onclick="shareQR()">
+        <div class="share-btn-icon" style="background:#0d1b3e;">📱</div><span>QR 보기</span>
+      </button>
+    </div>
+    <button class="share-cancel" onclick="closeShare()">취소</button>
+  </div>
+</div>
+
+<!-- 만두 연결 (카드 주인 전용, 방문자는 무시해도 되는 위치) -->
+<div class="mandu-activate-wrap" style="padding:14px 20px 4px;text-align:center;">
+  <button id="mandu-activate-btn" onclick="activateMandu()"
+    style="background:none;border:1px solid rgba(201,168,76,0.3);color:var(--muted-dark);font-size:10.5px;padding:7px 14px;border-radius:20px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;">
+    💬 본인 명함이신가요? 만두 연결하기 (1회)
+  </button>
+  <div id="mandu-activate-done" style="display:none;font-size:10.5px;color:var(--gold);padding:7px 0;">
+    ✅ 만두 연결 완료 — 이제 이 카드로 DM을 받을 수 있어요
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="company">
+    <span data-lang="kr" class="active">SHIELD Y</span>
+    <span data-lang="en">SHIELD Y</span>
+    <span data-lang="jp">SHIELD Y</span>
+    <span data-lang="cn">SHIELD Y</span>
+  </div>
+  <div class="slogan-footer">Beyond Supply, Building Trust.</div>
+</footer>
+
+<script src="https://jinjjabg-hub.github.io/cardbook/save-to-cardbook.js"></script>
+<script>
+function setLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    const m = btn.getAttribute('onclick').match(/'(\w+)'/);
+    btn.classList.toggle('active', m && m[1] === lang);
+  });
+}
+function saveContact() {
+  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:박선영\nORG:SHIELD Y\nTITLE:대표\nTEL:010-6649-8882\nURL:https://jinjjabg-hub.github.io/BNI-PIONEER-cards/박선영/\nEND:VCARD`;
+  const blob = new Blob([vcard], {type:'text/vcard'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'ParkSunYoung_SHIELDY.vcf';
+  a.click();
+}
+
+/* ── 명함 전달하기 ── */
+const CARD_URL = 'https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EB%B0%95%EC%84%A0%EC%98%81/';
+const CARD_TITLE = '박선영 | SHIELD Y';
+const CARD_TEXT = 'SHIELD Y · 박선영 대표의 디지털 명함입니다.';
+
+function shareCard() {
+  if (navigator.share) {
+    navigator.share({ title: CARD_TITLE, text: CARD_TEXT, url: CARD_URL }).catch(() => {});
+  } else {
+    document.getElementById('shareSheet').style.display = 'block';
+  }
+}
+function closeShare() { document.getElementById('shareSheet').style.display = 'none'; }
+function shareKakao() {
+  window.open('https://sharer.kakao.com/talk/friends/picker/link?app_key=&url=' + encodeURIComponent(CARD_URL), '_blank');
+  closeShare();
+}
+function shareSMS() {
+  location.href = 'sms:?body=' + encodeURIComponent(CARD_TITLE + '\n' + CARD_URL);
+  closeShare();
+}
+function copyLink() {
+  navigator.clipboard.writeText(CARD_URL).then(() => alert('링크가 복사되었습니다!')).catch(() => {
+    const t = document.createElement('textarea');
+    t.value = CARD_URL;
+    document.body.appendChild(t); t.select(); document.execCommand('copy');
+    document.body.removeChild(t);
+    alert('링크가 복사되었습니다!');
+  });
+  closeShare();
+}
+function shareQR() { window.open('qr.png', '_blank'); closeShare(); }
+
+/* ── PORTFOLIO 자동 슬라이드 (표준: 3초 간격, 터치 스와이프, 수동 조작 시 타이머 리셋) ──
+   portfolio 섹션이 없는 명함(HTML에서 <section class="portfolio"> 삭제한 경우)에는
+   아래 코드가 아무 일도 하지 않고 조용히 종료된다. */
+(function () {
+  const track = document.getElementById('portfolio-track');
+  if (!track) return;
+
+  const slides = track.querySelectorAll('.portfolio-slide');
+  const total = slides.length;
+  const dotsWrap = document.getElementById('portfolio-dots');
+  let idx = 0, timer = null;
+
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'portfolio-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => { go(i); reset(); };
+    dotsWrap.appendChild(dot);
+  }
+
+  function render() {
+    track.style.transform = `translateX(-${idx * 100}%)`;
+    dotsWrap.querySelectorAll('.portfolio-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
+  }
+  function go(i) { idx = (i + total) % total; render(); }
+  window.portfolioSlide = function (dir) { go(idx + dir); reset(); };
+  function auto() { timer = setTimeout(() => { go(idx + 1); auto(); }, 3000); }
+  function reset() { clearTimeout(timer); auto(); }
+
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; clearTimeout(timer); }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) go(idx + (dx < 0 ? 1 : -1));
+    auto();
+  }, { passive: true });
+
+  auto();
+})();
+
+/* ── 만두 원클릭 연결 (카드 주인 전용) ──────────────────────────
+   구글 로그인 1번 → manduid_index/park-sunyoung 문서에 uid 자동 등록.
+   MANDU 링크(?u=park-sunyoung)는 카드 제작 시점에 이미 고정돼 있으므로
+   *아무도(송승훈 포함) 링크를 중간에서 복사·전달·붙여넣기 할 필요가 없다.*
+   save-to-cardbook.js가 이미 firebase를 로드해두므로 그걸 재사용한다. */
+async function _manduWaitFirebase(maxTries) {
+  let tries = 0;
+  while ((typeof firebase === 'undefined' || !firebase.apps || !firebase.apps.length) && tries < (maxTries || 50)) {
+    await new Promise(r => setTimeout(r, 100));
+    tries++;
+  }
+  return typeof firebase !== 'undefined' && firebase.apps && firebase.apps.length > 0;
+}
+
+async function _manduFinishActivate(user) {
+  const slug = 'park-sunyoung';
+  const db = firebase.firestore();
+
+  // 이미 다른 uid로 연결돼 있으면 덮어쓰지 않음 (실수·장난 클릭으로부터 카드 보호)
+  const existing = await db.collection('manduid_index').doc(slug).get();
+  if (existing.exists && existing.data().uid !== user.uid) {
+    const btn = document.getElementById('mandu-activate-btn');
+    if (btn) btn.style.display = 'none';
+    const done = document.getElementById('mandu-activate-done');
+    if (done) { done.textContent = 'ℹ️ 이미 연결된 명함이에요'; done.style.display = 'block'; }
+    return;
+  }
+
+  await db.collection('users').doc(user.uid).set({
+    uid: user.uid, displayName: user.displayName || '', photoURL: user.photoURL || '',
+    email: user.email || '', manduid: slug
+  }, { merge: true });
+  await db.collection('manduid_index').doc(slug).set({
+    uid: user.uid, createdAt: firebase.firestore.FieldValue.serverTimestamp()
+  }, { merge: true });
+  const btn = document.getElementById('mandu-activate-btn');
+  const done = document.getElementById('mandu-activate-done');
+  if (btn) btn.style.display = 'none';
+  if (done) done.style.display = 'block';
+}
+
+async function activateMandu() {
+  if (!confirm('본인 명함이 맞나요?\n구글 로그인하면 이 명함으로 만두 DM을 받을 수 있게 연결돼요.')) return;
+  const btn = document.getElementById('mandu-activate-btn');
+  if (btn) { btn.disabled = true; btn.textContent = '연결 중...'; }
+  const ready = await _manduWaitFirebase();
+  if (!ready) {
+    if (btn) { btn.disabled = false; btn.textContent = '💬 본인 명함이신가요? 만두 연결하기 (1회)'; }
+    alert('연결 실패. 잠시 후 다시 시도해주세요.');
+    return;
+  }
+  try {
+    const auth = firebase.auth();
+    await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+    const provider = new firebase.auth.GoogleAuthProvider();
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (isMobile) {
+      sessionStorage.setItem('_manduPendingSlug', 'park-sunyoung');
+      await auth.signInWithRedirect(provider);
+      return; // 리다이렉트 후 아래 즉시실행 블록에서 이어짐
+    }
+    const result = await auth.signInWithPopup(provider);
+    await _manduFinishActivate(result.user);
+  } catch (e) {
+    console.error('만두 연결 실패:', e);
+    if (btn) { btn.disabled = false; btn.textContent = '💬 본인 명함이신가요? 만두 연결하기 (1회)'; }
+    alert('연결 중 오류가 발생했어요.');
+  }
+}
+
+// 모바일 리다이렉트 로그인 복귀 처리
+(async function () {
+  if (!sessionStorage.getItem('_manduPendingSlug')) return;
+  const ready = await _manduWaitFirebase();
+  sessionStorage.removeItem('_manduPendingSlug');
+  if (!ready) return;
+  try {
+    const res = await firebase.auth().getRedirectResult();
+    if (res && res.user) await _manduFinishActivate(res.user);
+  } catch (e) { console.error(e); }
+})();
+</script>
+</body>
+</html>
