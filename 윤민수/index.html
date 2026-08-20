@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>윤민수 | ㈜이엘그룹 ROYAL BRONZE</title>
+<meta property="og:title" content="윤민수 | 대표이사 · ㈜이엘그룹">
+<meta property="og:description" content="태닝샵의 진짜 고민은 성수기가 아니라 비수기 5개월입니다. 무인 태닝 브랜드 로얄브론즈는 자체 개발 앱과 IoT 전원 제어로 사람 없이도 문을 열어둡니다.">
+<meta property="og:image" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%9C%A4%EB%AF%BC%EC%88%98/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/윤민수/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- 본문 폰트: Pretendard (요청) -->
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<!-- 히어로 워드마크용 필기체 + JP/CN 폴백 -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+JP:wght@300;700&family=Noto+Sans+SC:wght@300;700&display=swap" rel="stylesheet">
+<style>
+
+/* ROYAL BRONZE 브랜드 팔레트
+   시그니처: #9C7F71 (브론즈) + 화이트
+   변수명은 DiCA 템플릿 표준 유지, 값만 브론즈로 교체 */
+:root {
+  --navy: #14100e;      /* 딥 웜블랙 */
+  --navy2: #1e1815;
+  --navy3: #2a2220;
+  --gold: #c6a491;      /* 다크배경용 밝은 브론즈 */
+  --gold2: #9c7f71;     /* 브랜드 시그니처 */
+  --light: #f7f4f2;     /* 웜 화이트 */
+  --text-dark: #efeae6;
+  --text-light: #1a1512;
+  --muted-dark: #a98b7c;
+  --muted-light: #7b6154;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color: transparent; }
+html { font-size: 16px; }
+body {
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-weight: 300;                       /* 기본은 얇게 */
+  background: var(--navy);
+  color: var(--text-dark);
+  max-width: 480px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+[data-lang="jp"] { font-family: 'Pretendard Variable', Pretendard, 'Noto Sans JP', sans-serif; }
+[data-lang="cn"] { font-family: 'Pretendard Variable', Pretendard, 'Noto Sans SC', sans-serif; }
+[data-lang] { display: none; }
+[data-lang].active { display: block; }
+span[data-lang].active { display: inline; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:100;
+  max-width: 480px; margin: 0 auto;
+  background: rgba(20,16,14,0.97);
+  backdrop-filter: blur(10px);
+  padding: 10px 16px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid rgba(198,164,145,0.25);
+}
+.nav-brand { font-size: 12px; font-weight: 700; color: var(--gold); white-space: nowrap; letter-spacing: 0.5px; }
+.lang-btns { display:flex; gap:4px; }
+.lang-btn {
+  padding: 5px 8px;
+  border: 1px solid rgba(198,164,145,0.35);
+  background: transparent;
+  color: var(--muted-dark);
+  font-size: 10px; font-weight: 700;
+  cursor: pointer; border-radius: 5px;
+  transition: all 0.2s;
+  min-width: 40px; min-height: 32px;
+  display: flex; align-items:center; justify-content:center;
+  font-family: 'Pretendard Variable', Pretendard, sans-serif;
+}
+.lang-btn.active { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+
+/* ── HERO ── */
+.hero {
+  margin-top: 54px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+.hero img.hero-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.hero-overlay {
+  position: absolute; inset:0;
+  background: linear-gradient(
+    to bottom,
+    rgba(20,16,14,0.35) 0%,
+    rgba(20,16,14,0.10) 30%,
+    rgba(20,16,14,0.15) 45%,
+    rgba(20,16,14,0.78) 76%,
+    rgba(20,16,14,0.96) 100%
+  );
+}
+/* ROYAL BRONZE 워드마크 (필기체) */
+.hero-wordmark {
+  position: absolute; top: 3.5%; left: 0; right: 0; z-index: 3;
+  text-align: center; pointer-events: none;
+}
+.hero-wordmark .script {
+  font-family: 'Great Vibes', cursive;
+  font-size: 42px; line-height: 1;
+  color: #fff;
+  text-shadow: 0 2px 18px rgba(0,0,0,0.65), 0 0 34px rgba(156,127,113,0.55);
+}
+.hero-wordmark .sub {
+  margin-top: 6px;
+  font-size: 9px; font-weight: 300;
+  letter-spacing: 6px; text-indent: 6px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.hero-content {
+  position: absolute; bottom:0; left:0; right:0; z-index:2;
+  padding: 24px 20px 22px;
+}
+.hero-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 10px; font-weight: 700;
+  padding: 4px 12px; border-radius: 20px;
+  margin-bottom: 10px; letter-spacing: 1.5px;
+}
+.hero-name {
+  font-size: 34px; font-weight: 800;
+  color: #fff; line-height: 1.15;
+  margin-bottom: 7px; letter-spacing: -0.5px;
+}
+.hero-title { font-size: 13px; font-weight: 300; color: var(--gold); opacity: 0.95; line-height: 1.5; }
+
+/* ── PROFILE ROW ── */
+.profile-row {
+  background: var(--navy2);
+  padding: 16px 20px;
+  display: flex; align-items: center; gap:14px;
+  border-bottom: 1px solid rgba(198,164,145,0.12);
+}
+.profile-img {
+  width: 64px; height: 64px; min-width:64px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  overflow: hidden; flex-shrink: 0;
+}
+.profile-img img { width:100%; height:100%; object-fit:cover; object-position: center top; }
+.profile-info h2 { font-size: 16px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+.profile-info p { font-size: 12px; font-weight: 300; color: var(--muted-dark); line-height: 1.5; }
+
+/* ── 공통 섹션 ── */
+section { padding: 40px 20px; }
+.section-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 6px;
+}
+.section-title { font-size: 22px; font-weight: 800; line-height: 1.35; margin-bottom: 22px; letter-spacing: -0.4px; }
+
+/* ── ABOUT ── */
+.about { background: var(--navy); }
+.about .section-title { color: #fff; }
+.slogan {
+  font-size: 15px; font-weight: 700;
+  color: var(--gold); margin-bottom: 14px;
+  font-style: italic; line-height: 1.6;
+}
+.about-text { font-size: 14px; font-weight: 300; line-height: 1.9; color: var(--text-dark); opacity: 0.88; }
+
+/* ── WHY ── */
+.why { background: var(--light); }
+.why .section-label { color: var(--muted-light); }
+.why .section-title { color: var(--text-light); }
+.why-cards { display: flex; flex-direction: column; gap:14px; }
+.why-card {
+  background: #fff;
+  border: 1px solid rgba(156,127,113,0.18);
+  border-left: 4px solid var(--gold2);
+  border-radius: 10px; padding: 18px 16px;
+}
+.why-card h3 { font-size: 15px; font-weight: 800; color: var(--text-light); margin-bottom: 8px; line-height: 1.4; }
+.why-card p { font-size: 13px; font-weight: 300; line-height: 1.85; color: #4a4340; }
+.why-card p strong { color: var(--text-light); font-weight: 800; }
+
+/* ── DIFFERENCE ── */
+.difference { background: var(--navy2); }
+.difference .section-title { color: #fff; }
+.diff-grid { display: flex; flex-direction: column; gap:12px; }
+.diff-card {
+  background: var(--navy3);
+  border: 1px solid rgba(198,164,145,0.12);
+  border-radius: 10px; padding: 18px 16px;
+}
+.diff-card h3 { font-size: 14px; font-weight: 800; color: var(--gold); margin-bottom: 8px; line-height: 1.4; }
+.diff-card p { font-size: 13px; font-weight: 300; line-height: 1.8; color: var(--text-dark); opacity: 0.85; }
+
+/* ── REFERRAL ── */
+.referral { background: var(--light); }
+.referral .section-label { color: var(--muted-light); }
+.referral .section-title { color: var(--text-light); }
+.ref-list { display: flex; flex-direction: column; gap:10px; }
+.ref-item {
+  display: flex; gap:12px; align-items:flex-start;
+  background: #fff; border-radius: 10px;
+  padding: 15px 14px; border: 1px solid rgba(0,0,0,0.05);
+}
+.ref-num {
+  width: 26px; height: 26px; min-width:26px;
+  border-radius: 50%; background: var(--gold2);
+  color: #fff; font-weight: 800; font-size: 12px;
+  display: flex; align-items:center; justify-content:center;
+  flex-shrink: 0; margin-top: 1px;
+}
+.ref-item p { font-size: 13px; font-weight: 300; line-height: 1.8; color: #3a3330; }
+.ref-item p strong { font-weight: 800; color: var(--text-light); }
+
+/* ── CAREER ── */
+.career {
+  position: relative;
+  background-color: #efe9e6;
+}
+.career .section-label { position: relative; z-index:1; color: var(--muted-light); }
+.career .section-title { color: var(--text-light); position: relative; z-index:1; }
+.career-list { display: flex; flex-direction: column; gap:18px; position: relative; z-index:1; }
+.career-item {
+  display: flex; gap:12px; align-items:flex-start;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.career-item:last-child { border-bottom: none; padding-bottom: 0; }
+.career-badge {
+  background: var(--navy); color: #fff;
+  font-size: 10px; font-weight: 700;
+  padding: 4px 10px; border-radius: 4px;
+  white-space: nowrap; flex-shrink: 0; margin-top: 2px;
+}
+.career-content { background: rgba(255,255,255,0.85); border-radius: 8px; padding: 12px 14px; flex:1; }
+.career-item h3 { font-size: 14px; font-weight: 800; color: var(--text-light); margin-bottom: 7px; line-height: 1.4; }
+.career-item p { font-size: 12px; font-weight: 300; line-height: 1.85; color: #55504d; }
+
+/* ── PORTFOLIO ── */
+.portfolio { background: var(--navy); }
+.portfolio .section-title { color: #fff; }
+.portfolio-track-wrap { overflow: hidden; border-radius: 12px; }
+.portfolio-track { display: flex; transition: transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94); }
+.portfolio-slide { min-width: 100%; aspect-ratio: 3/4; overflow: hidden; }
+.portfolio-slide img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+.portfolio-nav { display:flex; align-items:center; justify-content:center; gap:16px; margin-top:14px; }
+.portfolio-btn {
+  background: transparent; border: 1px solid rgba(198,164,145,0.35);
+  color: var(--gold); width: 30px; height: 30px; border-radius: 50%;
+  font-size: 15px; cursor: pointer; display:flex; align-items:center; justify-content:center;
+}
+.portfolio-dots { display:flex; gap:6px; }
+.portfolio-dot { width:6px; height:6px; border-radius:50%; background: rgba(198,164,145,0.3); transition: all 0.25s; }
+.portfolio-dot.active { background: var(--gold); width:18px; border-radius:3px; }
+
+/* ── CONTACT ── */
+.contact { background: var(--light); }
+.contact .section-label { color: var(--muted-light); }
+.contact .section-title { color: var(--text-light); }
+.contact-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.contact-item {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 8px; text-align: center;
+  background: #fff; border-radius: 12px;
+  padding: 16px 10px; border: 1px solid rgba(0,0,0,0.05);
+  text-decoration: none; min-height: 100px;
+}
+.contact-item:active { transform: scale(0.97); }
+.contact-icon {
+  width: 42px; height: 42px; min-width:42px;
+  border-radius: 50%; background: var(--navy);
+  display: flex; align-items:center; justify-content:center;
+  font-size: 18px; flex-shrink: 0;
+}
+.contact-label { font-size: 10px; font-weight: 300; color: #9a918c; }
+.contact-value { font-size: 12px; font-weight: 600; color: var(--text-light); line-height: 1.4; word-break: break-all; }
+
+/* ── ACTION ── */
+.action { background: var(--navy2); padding: 32px 20px; }
+.btn-group { display: flex; flex-direction: column; gap:12px; }
+.btn {
+  display: block; width: 100%; padding: 17px 16px;
+  border: none; border-radius: 10px;
+  font-size: 15px; font-weight: 700;
+  cursor: pointer; text-align: center;
+  transition: all 0.15s; font-family: 'Pretendard Variable', Pretendard, sans-serif;
+  min-height: 54px; letter-spacing: 0.3px;
+}
+.btn-primary { background: var(--gold); color: var(--navy); }
+.btn-secondary { background: transparent; border: 2px solid var(--gold); color: var(--gold); }
+.btn-share { background: linear-gradient(135deg, #7a5f52, #9c7f71); color: #fff; border: none; }
+.btn:active { transform: scale(0.97); opacity: 0.9; }
+
+/* 공유 바텀시트 */
+.share-sheet { display:none; position:fixed; inset:0; z-index:200; }
+.share-backdrop { position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+.share-panel {
+  position:absolute; bottom:0; left:0; right:0;
+  max-width:480px; margin:0 auto;
+  background:#fff; border-radius:20px 20px 0 0;
+  padding:20px 20px 40px;
+}
+.share-handle { width:40px; height:4px; background:#ddd; border-radius:2px; margin:0 auto 18px; }
+.share-title { font-size:13px; color:#999; text-align:center; margin-bottom:20px; font-weight:600; }
+.share-btns { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:16px; }
+.share-btn { display:flex; flex-direction:column; align-items:center; gap:8px; background:none; border:none; cursor:pointer; padding:8px 4px; }
+.share-btn-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:26px; }
+.share-btn span { font-size:11px; color:#333; font-weight:600; font-family:'Pretendard Variable',Pretendard,sans-serif; }
+.share-cancel { width:100%; padding:14px; background:#f2f2f2; border:none; border-radius:10px; font-size:15px; font-weight:700; color:#444; cursor:pointer; font-family:'Pretendard Variable',Pretendard,sans-serif; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy); padding: 24px 20px;
+  text-align: center; border-top: 1px solid rgba(198,164,145,0.12);
+}
+footer .company { font-size: 13px; font-weight: 700; color: var(--gold); margin-bottom: 5px; }
+footer .slogan-footer { font-family:'Great Vibes', cursive; font-size: 20px; color: var(--muted-dark); letter-spacing: 0.5px; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">㈜이엘그룹 · ROYAL BRONZE</div>
+  <div class="lang-btns">
+    <button class="lang-btn active" onclick="setLang('kr')">한국어</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('jp')">日本語</button>
+    <button class="lang-btn" onclick="setLang('cn')">中文</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <img class="hero-img" src="hero.jpg" alt="윤민수">
+  <div class="hero-overlay"></div>
+  <div class="hero-wordmark">
+    <div class="script">Royal Bronze</div>
+    <div class="sub">Tanning</div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span data-lang="kr" class="active">무인 태닝 프랜차이즈</span>
+      <span data-lang="en">UNMANNED TANNING FRANCHISE</span>
+      <span data-lang="jp">無人タンニング フランチャイズ</span>
+      <span data-lang="cn">无人日晒美黑连锁</span>
+    </div>
+    <div class="hero-name">
+      <span data-lang="kr" class="active">윤 민 수</span>
+      <span data-lang="en">MINSU YOON</span>
+      <span data-lang="jp">尹 旼秀</span>
+      <span data-lang="cn">尹 旼秀</span>
+    </div>
+    <div class="hero-title">
+      <span data-lang="kr" class="active">대표이사 · ㈜이엘그룹</span>
+      <span data-lang="en">CEO · EL Group Inc.</span>
+      <span data-lang="jp">代表取締役 · ELグループ</span>
+      <span data-lang="cn">董事长 · EL集团</span>
+    </div>
+  </div>
+</div>
+
+<!-- PROFILE ROW -->
+<div class="profile-row">
+  <div class="profile-img">
+    <img src="profil.png" alt="윤민수">
+  </div>
+  <div class="profile-info">
+    <h2>윤민수 尹旼秀 · MINSU YOON</h2>
+    <p>
+      <span data-lang="kr" class="active">무인 태닝 프랜차이즈 · 자체 앱 개발 · BNI 파이오니어 챕터</span>
+      <span data-lang="en">Unmanned tanning franchise · In-house app · BNI Pioneer Chapter</span>
+      <span data-lang="jp">無人タンニングFC · 自社アプリ開発 · BNIパイオニア</span>
+      <span data-lang="cn">无人美黑连锁 · 自研APP · BNI先锋分会</span>
+    </p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="section-label">About</div>
+  <div class="slogan">
+    <span data-lang="kr" class="active">"하면 된다. 안 되는 건 없다."</span>
+    <span data-lang="en">"If you do it, it works. Nothing is impossible."</span>
+    <span data-lang="jp">「やればできる。できないことはない。」</span>
+    <span data-lang="cn">"去做就能成，没有做不到的事。"</span>
+  </div>
+  <p class="about-text">
+    <span data-lang="kr" class="active">태닝샵의 진짜 고민은 성수기가 아니라 비수기입니다. 2~8월엔 손님이 몰리지만 9~1월 다섯 달은 텅 빕니다. 문을 닫자니 단골을 잃고, 열자니 인건비가 남지 않습니다. 저희는 그 답을 무인 운영에서 찾았고, 앱을 직접 만들어 실제로 돌아가게 했습니다. ㈜이엘그룹은 무인 태닝 브랜드 로얄브론즈를 운영하며 IoT 전원 제어 시스템, 자체 앱, 태닝 로션 제조까지 직접 하고 있습니다.</span>
+    <span data-lang="en">The real challenge in tanning isn't the busy season — it's the quiet one. February to August is packed; September to January is empty for five straight months. Close the shop and you lose your regulars; keep it open and labour costs eat the margin. We found the answer in unmanned operation, and we built the app ourselves so it actually works on site. EL Group runs the unmanned tanning brand ROYAL BRONZE, handling IoT power control, in-house app development and tanning lotion manufacturing directly.</span>
+    <span data-lang="jp">タンニングショップの本当の悩みは繁忙期ではなく閑散期です。2〜8月はお客様で賑わいますが、9〜1月の5か月間はほぼ空になります。閉めれば常連を失い、開ければ人件費が残りません。私たちはその答えを無人運営に見つけ、アプリを自社開発して現場で実際に動くようにしました。ELグループは無人タンニングブランド「ROYAL BRONZE」を運営し、IoT電源制御システム、自社アプリ、タンニングローションの製造まで自ら行っています。</span>
+    <span data-lang="cn">美黑店真正的难题不是旺季，而是淡季。2月到8月客流不断，9月到1月的五个月却几乎空无一人。关门会流失老客户，开门又付不起人工成本。我们在无人运营中找到了答案，并且自主开发APP，让它在现场真正跑起来。EL集团运营无人美黑品牌ROYAL BRONZE，自主负责IoT电源控制系统、自研APP以及美黑乳液的生产制造。</span>
+  </p>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="section-label">Why Us</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">왜 로얄브론즈인가</span>
+    <span data-lang="en">Why ROYAL BRONZE?</span>
+    <span data-lang="jp">なぜROYAL BRONZEなのか</span>
+    <span data-lang="cn">为什么选择ROYAL BRONZE</span>
+  </div>
+  <div class="why-cards">
+
+    <div class="why-card">
+      <h3>
+        <span data-lang="kr" class="active">① 비수기 5개월, 문을 닫지 않아도 됩니다</span>
+        <span data-lang="en">① Five quiet months — you don't have to close</span>
+        <span data-lang="jp">① 閑散期の5か月、閉めなくていい</span>
+        <span data-lang="cn">① 淡季五个月，不必关门</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">태닝 시장은 <strong>성수기 2~8월 / 비수기 9~1월</strong>로 극명하게 갈립니다. 무인 운영이면 <strong>인건비 없이</strong> 문을 열어둘 수 있어, 비수기에도 단골을 놓치지 않습니다.</span>
+        <span data-lang="en">The tanning market splits sharply: <strong>peak Feb–Aug, off-season Sep–Jan</strong>. Unmanned operation lets you stay open <strong>with no staffing cost</strong>, so you keep your regulars through the quiet months.</span>
+        <span data-lang="jp">タンニング市場は<strong>繁忙期2〜8月／閑散期9〜1月</strong>にはっきり分かれます。無人運営なら<strong>人件費ゼロ</strong>で営業を続けられ、閑散期も常連を逃しません。</span>
+        <span data-lang="cn">美黑市场泾渭分明：<strong>旺季2–8月，淡季9–1月</strong>。无人运营可以<strong>零人工成本</strong>持续营业，淡季也不会流失老客户。</span>
+      </p>
+    </div>
+
+    <div class="why-card">
+      <h3>
+        <span data-lang="kr" class="active">② 한국에 없던 '체계적인' 무인 시스템</span>
+        <span data-lang="en">② A systematic unmanned setup Korea didn't have</span>
+        <span data-lang="jp">② 韓国になかった「体系的な」無人システム</span>
+        <span data-lang="cn">② 韩国此前没有的"体系化"无人系统</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">예약·출입·결제·전원까지 <strong>앱 하나로</strong> 제어합니다. 외주가 아닌 <strong>자체 개발</strong>이라 현장에서 나온 문제를 바로 고칩니다. 실제 매장에 도입해 <strong>지금도 무인으로 운영 중</strong>입니다.</span>
+        <span data-lang="en">Booking, entry, payment and power — all controlled from <strong>one app</strong>. Because it's <strong>built in-house</strong>, issues found on site get fixed right away. It's already deployed and <strong>running unmanned today</strong>.</span>
+        <span data-lang="jp">予約・入退室・決済・電源まで<strong>アプリ一つ</strong>で制御。外注ではなく<strong>自社開発</strong>だから、現場の問題をすぐ修正できます。実店舗に導入し<strong>現在も無人で稼働中</strong>です。</span>
+        <span data-lang="cn">预约、进出、支付、电源，<strong>一个APP</strong>全部搞定。因为是<strong>自主研发</strong>，现场发现的问题可以立即修复。已在实体店落地，<strong>目前仍在无人运营中</strong>。</span>
+      </p>
+    </div>
+
+    <div class="why-card">
+      <h3>
+        <span data-lang="kr" class="active">③ 태닝 로션까지 직접 만듭니다</span>
+        <span data-lang="en">③ We manufacture the tanning lotion too</span>
+        <span data-lang="jp">③ タンニングローションまで自社製造</span>
+        <span data-lang="cn">③ 连美黑乳液也自己生产</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">장비 운영에서 끝나지 않습니다. <strong>태닝 로션 제조부터 가맹점 공급까지</strong> 직접 하기 때문에 유통 단계가 줄고, 그만큼 <strong>점주에게 마진이 남습니다.</strong></span>
+        <span data-lang="en">We don't stop at running the machines. We handle <strong>lotion manufacturing through to franchise supply</strong> ourselves, cutting out middlemen so <strong>more margin stays with the owner</strong>.</span>
+        <span data-lang="jp">機器の運営だけで終わりません。<strong>ローション製造から加盟店供給まで</strong>自社で行うため流通段階が減り、その分<strong>オーナーの利益が残ります</strong>。</span>
+        <span data-lang="cn">我们不止于运营设备。<strong>从乳液生产到加盟店供货</strong>全部自己完成，减少中间环节，<strong>把利润留给店主</strong>。</span>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- DIFFERENCE -->
+<section class="difference">
+  <div class="section-label">Difference</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">차별점</span>
+    <span data-lang="en">What Makes Us Different</span>
+    <span data-lang="jp">差別化ポイント</span>
+    <span data-lang="cn">差异化优势</span>
+  </div>
+  <div class="diff-grid">
+
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">자체 개발 무인 운영 앱</span>
+        <span data-lang="en">In-house unmanned operation app</span>
+        <span data-lang="jp">自社開発の無人運営アプリ</span>
+        <span data-lang="cn">自主研发的无人运营APP</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">예약부터 결제, 출입까지 앱에서 끝납니다. 개발사를 거치지 않으니 점주 요청이 다음 업데이트에 바로 반영됩니다.</span>
+        <span data-lang="en">Booking, payment and entry all finish inside the app. With no outside vendor in between, an owner's request lands in the next update.</span>
+        <span data-lang="jp">予約から決済、入退室までアプリで完結。開発会社を挟まないので、オーナーの要望が次のアップデートに直接反映されます。</span>
+        <span data-lang="cn">预约、支付、进出全部在APP内完成。不经过外包公司，店主的需求可以直接进入下一次更新。</span>
+      </p>
+    </div>
+
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">IoT 룸별 전원 제어</span>
+        <span data-lang="en">Room-by-room IoT power control</span>
+        <span data-lang="jp">IoTによる部屋別 電源制御</span>
+        <span data-lang="cn">IoT 分房间电源控制</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">각 방의 조명·기기 전원을 개별 on/off 합니다. 손님이 들어간 방만 켜지니 관리도, 전기료도 줄어듭니다.</span>
+        <span data-lang="en">Lights and machines switch on and off room by room. Only the occupied room draws power — less to manage, lower bills.</span>
+        <span data-lang="jp">各部屋の照明・機器の電源を個別にオン／オフ。お客様が入った部屋だけ稼働するので、管理も電気代も軽くなります。</span>
+        <span data-lang="cn">各房间的照明与设备可单独开关。只有有客人的房间通电，管理更轻松，电费也更省。</span>
+      </p>
+    </div>
+
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">독일 JK-GROUP 계약 체결</span>
+        <span data-lang="en">Contract signed with JK-GROUP (Germany)</span>
+        <span data-lang="jp">ドイツ JK-GROUPと契約締結</span>
+        <span data-lang="cn">与德国 JK-GROUP 签约</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">태닝 장비의 본고장 독일 JK-GROUP과 계약을 맺었습니다. 검증된 글로벌 라인업을 가맹점에 그대로 공급합니다.</span>
+        <span data-lang="en">We signed with JK-GROUP in Germany, the home of tanning equipment, bringing a proven global line-up straight to our franchisees.</span>
+        <span data-lang="jp">タンニング機器の本場ドイツのJK-GROUPと契約。実績あるグローバルラインナップをそのまま加盟店へ供給します。</span>
+        <span data-lang="cn">与美黑设备发源地德国的JK-GROUP签署合约，把经过验证的全球产品线直接提供给加盟店。</span>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- REFERRAL -->
+<section class="referral">
+  <div class="section-label">Referral</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">이런 분을 소개해 주세요</span>
+    <span data-lang="en">Please refer people like this</span>
+    <span data-lang="jp">こんな方をご紹介ください</span>
+    <span data-lang="cn">请介绍这样的客户</span>
+  </div>
+  <div class="ref-list">
+
+    <div class="ref-item">
+      <div class="ref-num">1</div>
+      <p>
+        <span data-lang="kr" class="active"><strong>소자본으로 부업을 찾는 직장인</strong> — 회사를 그만두지 않고 시작할 수 있는 아이템을 찾는 분. 무인이라 상주할 필요가 없습니다.</span>
+        <span data-lang="en"><strong>Employees looking for a low-capital side business</strong> — someone who wants to start without quitting their job. Unmanned means no need to be on site.</span>
+        <span data-lang="jp"><strong>少額資本で副業を探している会社員</strong> — 退職せずに始められる事業を探している方。無人なので常駐は不要です。</span>
+        <span data-lang="cn"><strong>寻找小额创业副业的上班族</strong> — 不用辞职就能开始的项目。无人运营，无需常驻店内。</span>
+      </p>
+    </div>
+
+    <div class="ref-item">
+      <div class="ref-num">2</div>
+      <p>
+        <span data-lang="kr" class="active"><strong>좋은 상권의 2층 이상 건물 임대인</strong> — 2층 이상 공실을 안정적인 임차인으로 채우고 싶은 건물주님.</span>
+        <span data-lang="en"><strong>Landlords with upper-floor space in a good district</strong> — owners who want to fill a vacant second floor or above with a stable tenant.</span>
+        <span data-lang="jp"><strong>好立地の2階以上の物件オーナー</strong> — 2階以上の空室を安定した借主で埋めたいオーナー様。</span>
+        <span data-lang="cn"><strong>优质商圈二楼以上的业主</strong> — 希望用稳定租户填补二层以上空置的房东。</span>
+      </p>
+    </div>
+
+    <div class="ref-item">
+      <div class="ref-num">3</div>
+      <p>
+        <span data-lang="kr" class="active"><strong>비수기·인건비로 고민 중인 기존 태닝샵 사장님</strong> — 지금 운영 중인 매장을 무인으로 전환하고 싶은 분.</span>
+        <span data-lang="en"><strong>Existing tanning shop owners struggling with the off-season and labour costs</strong> — anyone wanting to convert a running shop to unmanned.</span>
+        <span data-lang="jp"><strong>閑散期と人件費に悩む既存タンニングショップのオーナー</strong> — 現在の店舗を無人化したい方。</span>
+        <span data-lang="cn"><strong>为淡季与人工成本苦恼的现有美黑店主</strong> — 想把在营门店改为无人运营的经营者。</span>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CAREER -->
+<section class="career">
+  <div class="section-label">Career</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">경력 및 전문 분야</span>
+    <span data-lang="en">Career &amp; Expertise</span>
+    <span data-lang="jp">経歴・専門分野</span>
+    <span data-lang="cn">经历与专业领域</span>
+  </div>
+  <div class="career-list">
+
+    <div class="career-item">
+      <div class="career-badge">현재</div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">㈜이엘그룹 대표이사 · ROYAL BRONZE</span>
+          <span data-lang="en">CEO, EL Group Inc. · ROYAL BRONZE</span>
+          <span data-lang="jp">ELグループ 代表取締役 · ROYAL BRONZE</span>
+          <span data-lang="cn">EL集团 董事长 · ROYAL BRONZE</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">무인 태닝 프랜차이즈 운영. 앱 개발과 자동화 시스템 연구, 가맹점 유치, 태닝 로션 제조를 총괄합니다.</span>
+          <span data-lang="en">Running an unmanned tanning franchise — app development, automation research, franchise recruitment and lotion manufacturing.</span>
+          <span data-lang="jp">無人タンニングFCを運営。アプリ開発と自動化システムの研究、加盟店誘致、ローション製造を統括。</span>
+          <span data-lang="cn">运营无人美黑连锁。统筹APP开发、自动化系统研究、加盟招商与乳液生产。</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="career-item">
+      <div class="career-badge">경력</div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">인테리어 4년 → 태닝샵 운영 5년 → 사업 2년</span>
+          <span data-lang="en">4 yrs interiors → 5 yrs running a tanning shop → 2 yrs as founder</span>
+          <span data-lang="jp">インテリア4年 → タンニングショップ運営5年 → 起業2年</span>
+          <span data-lang="cn">室内装修4年 → 美黑店运营5年 → 创业2年</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">매장을 직접 짓고, 직접 운영해 본 사람이 만든 프랜차이즈입니다. 현장에서 겪은 문제를 시스템으로 풀었습니다.</span>
+          <span data-lang="en">A franchise built by someone who fitted out the shop and ran it himself — site problems solved as systems.</span>
+          <span data-lang="jp">店舗を自ら作り、自ら運営した人間が作ったフランチャイズ。現場で経験した問題をシステムで解決しました。</span>
+          <span data-lang="cn">由亲手装修、亲自运营过门店的人打造的连锁品牌。把现场遇到的问题用系统解决。</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="career-item">
+      <div class="career-badge">강점</div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">상상한 대로 움직이는 시스템</span>
+          <span data-lang="en">A system that behaves exactly as designed</span>
+          <span data-lang="jp">構想どおりに動くシステム</span>
+          <span data-lang="cn">按设想运转的系统</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">자체 앱을 완성해 실제 매장에 도입했고, 계획한 대로 고객과 시스템이 움직였습니다. 지금도 안정적으로 무인 운영 중입니다. BNI 파이오니어 챕터에서 활동하고 있습니다.</span>
+          <span data-lang="en">The in-house app went live in a real shop and customers and system moved exactly as planned. It still runs unmanned and stable today. Active member of the BNI Pioneer Chapter.</span>
+          <span data-lang="jp">自社アプリを完成させ実店舗に導入。計画どおりに顧客とシステムが動きました。現在も安定して無人運営中です。BNIパイオニアチャプターで活動しています。</span>
+          <span data-lang="cn">自研APP完成并在实体门店落地，客户与系统完全按计划运转，至今稳定无人运营。现为BNI先锋分会成员。</span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio">
+  <div class="section-label">Portfolio</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">브랜드 &amp; 매장</span>
+    <span data-lang="en">Brand &amp; Store</span>
+    <span data-lang="jp">ブランドと店舗</span>
+    <span data-lang="cn">品牌与门店</span>
+  </div>
+  <div class="portfolio-track-wrap">
+    <div class="portfolio-track" id="portfolio-track">
+      <div class="portfolio-slide"><img src="portfolio1.jpg" alt="ROYAL BRONZE 매장"></div>
+      <div class="portfolio-slide"><img src="portfolio2.jpg" alt="JK-GROUP 계약 체결"></div>
+      <div class="portfolio-slide"><img src="portfolio3.jpg" alt="ROYAL BRONZE 캠페인"></div>
+      <div class="portfolio-slide"><img src="portfolio4.jpg" alt="ROYAL BRONZE 캠페인"></div>
+      <div class="portfolio-slide"><img src="portfolio5.jpg" alt="ROYAL BRONZE 캠페인"></div>
+      <div class="portfolio-slide"><img src="portfolio6.jpg" alt="ROYAL BRONZE 캠페인"></div>
+    </div>
+  </div>
+  <div class="portfolio-nav">
+    <button class="portfolio-btn" onclick="portfolioSlide(-1)">‹</button>
+    <div class="portfolio-dots" id="portfolio-dots"></div>
+    <button class="portfolio-btn" onclick="portfolioSlide(1)">›</button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="section-label">Contact</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">연락하기</span>
+    <span data-lang="en">Contact</span>
+    <span data-lang="jp">お問い合わせ</span>
+    <span data-lang="cn">联系方式</span>
+  </div>
+  <div class="contact-list">
+    <a class="contact-item" href="tel:010-3166-7241">
+      <div class="contact-icon">📞</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">전화</span>
+        <span data-lang="en">Phone</span>
+        <span data-lang="jp">電話</span>
+        <span data-lang="cn">电话</span>
+      </div>
+      <div class="contact-value">010-3166-7241</div>
+    </a>
+    <a class="contact-item" href="mailto:elgroup@elgroupinc.com">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-label">Email</div>
+      <div class="contact-value">elgroup@elgroupinc.com</div>
+    </a>
+    <a class="contact-item" href="https://www.royalbronze.co.kr" target="_blank">
+      <div class="contact-icon">💎</div>
+      <div class="contact-label">ROYAL BRONZE</div>
+      <div class="contact-value">
+        <span data-lang="kr" class="active">브랜드 홈페이지</span>
+        <span data-lang="en">Brand website</span>
+        <span data-lang="jp">ブランドサイト</span>
+        <span data-lang="cn">品牌官网</span>
+      </div>
+    </a>
+    <a class="contact-item" href="https://www.elgroupinc.com" target="_blank">
+      <div class="contact-icon">💻</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">회사 홈페이지</span>
+        <span data-lang="en">Company site</span>
+        <span data-lang="jp">会社サイト</span>
+        <span data-lang="cn">公司官网</span>
+      </div>
+      <div class="contact-value">elgroupinc.com</div>
+    </a>
+    <a class="contact-item" href="https://www.instagram.com/royalbronze.offcial/" target="_blank">
+      <div class="contact-icon">📷</div>
+      <div class="contact-label">Instagram</div>
+      <div class="contact-value">@royalbronze.offcial</div>
+    </a>
+    <a class="contact-item" href="https://jinjjabg-hub.github.io/MANDU/?u=yoon-minsu" target="_blank">
+      <div class="contact-icon">💬</div>
+      <div class="contact-label">MANDU</div>
+      <div class="contact-value">
+        <span data-lang="kr" class="active">실시간 번역 메신저</span>
+        <span data-lang="en">Live translation chat</span>
+        <span data-lang="jp">リアルタイム翻訳チャット</span>
+        <span data-lang="cn">实时翻译聊天</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ACTION -->
+<div class="action">
+  <div class="btn-group">
+    <button class="btn btn-primary" onclick="saveContact()">
+      <span data-lang="kr" class="active">📞 연락처 저장</span>
+      <span data-lang="en">📞 Save contact</span>
+      <span data-lang="jp">📞 連絡先を保存</span>
+      <span data-lang="cn">📞 保存联系人</span>
+    </button>
+    <button class="btn btn-secondary" onclick="saveToCardbook({id:'yoon-minsu',name:'윤민수',nameEn:'MINSU YOON',title:'대표이사',company:'㈜이엘그룹',phone:'010-3166-7241',email:'elgroup@elgroupinc.com',chapter:'파이오니어',bni:'무인 태닝 프랜차이즈',url:window.location.href})">
+      <span data-lang="kr" class="active">🗂️ 명함 저장 (CardBook)</span>
+      <span data-lang="en">🗂️ Save to CardBook</span>
+      <span data-lang="jp">🗂️ 名刺を保存</span>
+      <span data-lang="cn">🗂️ 保存名片</span>
+    </button>
+    <button class="btn btn-share" onclick="shareCard()">
+      <span data-lang="kr" class="active">📤 명함 전달하기</span>
+      <span data-lang="en">📤 Share this card</span>
+      <span data-lang="jp">📤 名刺を共有</span>
+      <span data-lang="cn">📤 分享名片</span>
+    </button>
+  </div>
+</div>
+
+<!-- 공유 바텀시트 -->
+<div class="share-sheet" id="shareSheet">
+  <div class="share-backdrop" onclick="closeShare()"></div>
+  <div class="share-panel">
+    <div class="share-handle"></div>
+    <div class="share-title">명함 전달하기</div>
+    <div class="share-btns">
+      <button class="share-btn" onclick="shareKakao()">
+        <div class="share-btn-icon" style="background:#FEE500;">💬</div><span>카카오톡</span>
+      </button>
+      <button class="share-btn" onclick="shareSMS()">
+        <div class="share-btn-icon" style="background:#34c759;">✉️</div><span>문자</span>
+      </button>
+      <button class="share-btn" onclick="copyLink()">
+        <div class="share-btn-icon" style="background:#e8e8e8;">🔗</div><span>링크 복사</span>
+      </button>
+      <button class="share-btn" onclick="shareQR()">
+        <div class="share-btn-icon" style="background:#14100e;">📱</div><span>QR 보기</span>
+      </button>
+    </div>
+    <button class="share-cancel" onclick="closeShare()">취소</button>
+  </div>
+</div>
+
+<!-- 만두 연결 (카드 주인 전용) -->
+<div class="mandu-activate-wrap" style="padding:14px 20px 4px;text-align:center;">
+  <button id="mandu-activate-btn" onclick="activateMandu()"
+    style="background:none;border:1px solid rgba(198,164,145,0.3);color:var(--muted-dark);font-size:10.5px;padding:7px 14px;border-radius:20px;cursor:pointer;font-family:'Pretendard Variable',Pretendard,sans-serif;">
+    💬 본인 명함이신가요? 만두 연결하기 (1회)
+  </button>
+  <div id="mandu-activate-done" style="display:none;font-size:10.5px;color:var(--gold);padding:7px 0;">
+    ✅ 만두 연결 완료 — 이제 이 카드로 DM을 받을 수 있어요
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="company">
+    <span data-lang="kr" class="active">㈜이엘그룹</span>
+    <span data-lang="en">EL Group Inc.</span>
+    <span data-lang="jp">ELグループ</span>
+    <span data-lang="cn">EL集团</span>
+  </div>
+  <div class="slogan-footer">Royal Bronze</div>
+</footer>
+
+<script src="https://jinjjabg-hub.github.io/cardbook/save-to-cardbook.js"></script>
+<script>
+function setLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    const m = btn.getAttribute('onclick').match(/'(\w+)'/);
+    btn.classList.toggle('active', m && m[1] === lang);
+  });
+}
+function saveContact() {
+  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:윤민수\nORG:㈜이엘그룹\nTITLE:대표이사\nTEL:010-3166-7241\nEMAIL:elgroup@elgroupinc.com\nURL:https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%9C%A4%EB%AF%BC%EC%88%98/\nEND:VCARD`;
+  const blob = new Blob([vcard], {type:'text/vcard'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = '윤민수_이엘그룹.vcf';
+  a.click();
+}
+
+/* ── 명함 전달하기 ── */
+const CARD_URL = 'https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%9C%A4%EB%AF%BC%EC%88%98/';
+const CARD_TITLE = '윤민수 | ㈜이엘그룹 ROYAL BRONZE';
+const CARD_TEXT = '무인 태닝 프랜차이즈 로얄브론즈 · ㈜이엘그룹 윤민수 대표 디지털 명함입니다.';
+
+function shareCard() {
+  if (navigator.share) {
+    navigator.share({ title: CARD_TITLE, text: CARD_TEXT, url: CARD_URL }).catch(() => {});
+  } else {
+    document.getElementById('shareSheet').style.display = 'block';
+  }
+}
+function closeShare() { document.getElementById('shareSheet').style.display = 'none'; }
+function shareKakao() {
+  window.open('https://sharer.kakao.com/talk/friends/picker/link?app_key=&url=' + encodeURIComponent(CARD_URL), '_blank');
+  closeShare();
+}
+function shareSMS() {
+  location.href = 'sms:?body=' + encodeURIComponent(CARD_TITLE + '\n' + CARD_URL);
+  closeShare();
+}
+function copyLink() {
+  navigator.clipboard.writeText(CARD_URL).then(() => alert('링크가 복사되었습니다!')).catch(() => {
+    const t = document.createElement('textarea');
+    t.value = CARD_URL;
+    document.body.appendChild(t); t.select(); document.execCommand('copy');
+    document.body.removeChild(t);
+    alert('링크가 복사되었습니다!');
+  });
+  closeShare();
+}
+function shareQR() { window.open('qr.png', '_blank'); closeShare(); }
+
+/* ── PORTFOLIO 자동 슬라이드 (3초, 터치 스와이프) ── */
+(function () {
+  const track = document.getElementById('portfolio-track');
+  if (!track) return;
+
+  const slides = track.querySelectorAll('.portfolio-slide');
+  const total = slides.length;
+  const dotsWrap = document.getElementById('portfolio-dots');
+  let idx = 0, timer = null;
+
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'portfolio-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => { go(i); reset(); };
+    dotsWrap.appendChild(dot);
+  }
+
+  function render() {
+    track.style.transform = `translateX(-${idx * 100}%)`;
+    dotsWrap.querySelectorAll('.portfolio-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
+  }
+  function go(i) { idx = (i + total) % total; render(); }
+  window.portfolioSlide = function (dir) { go(idx + dir); reset(); };
+  function auto() { timer = setTimeout(() => { go(idx + 1); auto(); }, 3000); }
+  function reset() { clearTimeout(timer); auto(); }
+
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; clearTimeout(timer); }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) go(idx + (dx < 0 ? 1 : -1));
+    auto();
+  }, { passive: true });
+
+  auto();
+})();
+
+/* ── 만두 원클릭 연결 (카드 주인 전용) ── */
+async function _manduWaitFirebase(maxTries) {
+  let tries = 0;
+  while ((typeof firebase === 'undefined' || !firebase.apps || !firebase.apps.length) && tries < (maxTries || 50)) {
+    await new Promise(r => setTimeout(r, 100));
+    tries++;
+  }
+  return typeof firebase !== 'undefined' && firebase.apps && firebase.apps.length > 0;
+}
+
+async function _manduFinishActivate(user) {
+  const slug = 'yoon-minsu';
+  const db = firebase.firestore();
+
+  const existing = await db.collection('manduid_index').doc(slug).get();
+  if (existing.exists && existing.data().uid !== user.uid) {
+    const btn = document.getElementById('mandu-activate-btn');
+    if (btn) btn.style.display = 'none';
+    const done = document.getElementById('mandu-activate-done');
+    if (done) { done.textContent = 'ℹ️ 이미 연결된 명함이에요'; done.style.display = 'block'; }
+    return;
+  }
+
+  await db.collection('users').doc(user.uid).set({
+    uid: user.uid, displayName: user.displayName || '', photoURL: user.photoURL || '',
+    email: user.email || '', manduid: slug
+  }, { merge: true });
+  await db.collection('manduid_index').doc(slug).set({
+    uid: user.uid, createdAt: firebase.firestore.FieldValue.serverTimestamp()
+  }, { merge: true });
+  const btn = document.getElementById('mandu-activate-btn');
+  const done = document.getElementById('mandu-activate-done');
+  if (btn) btn.style.display = 'none';
+  if (done) done.style.display = 'block';
+}
+
+async function activateMandu() {
+  if (!confirm('본인 명함이 맞나요?\n구글 로그인하면 이 명함으로 만두 DM을 받을 수 있게 연결돼요.')) return;
+  const btn = document.getElementById('mandu-activate-btn');
+  if (btn) { btn.disabled = true; btn.textContent = '연결 중...'; }
+  const ready = await _manduWaitFirebase();
+  if (!ready) {
+    if (btn) { btn.disabled = false; btn.textContent = '💬 본인 명함이신가요? 만두 연결하기 (1회)'; }
+    alert('연결 실패. 잠시 후 다시 시도해주세요.');
+    return;
+  }
+  try {
+    const auth = firebase.auth();
+    await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+    const provider = new firebase.auth.GoogleAuthProvider();
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (isMobile) {
+      sessionStorage.setItem('_manduPendingSlug', 'yoon-minsu');
+      await auth.signInWithRedirect(provider);
+      return;
+    }
+    const result = await auth.signInWithPopup(provider);
+    await _manduFinishActivate(result.user);
+  } catch (e) {
+    console.error('만두 연결 실패:', e);
+    if (btn) { btn.disabled = false; btn.textContent = '💬 본인 명함이신가요? 만두 연결하기 (1회)'; }
+    alert('연결 중 오류가 발생했어요.');
+  }
+}
+
+// 모바일 리다이렉트 로그인 복귀 처리
+(async function () {
+  if (!sessionStorage.getItem('_manduPendingSlug')) return;
+  const ready = await _manduWaitFirebase();
+  sessionStorage.removeItem('_manduPendingSlug');
+  if (!ready) return;
+  try {
+    const res = await firebase.auth().getRedirectResult();
+    if (res && res.user) await _manduFinishActivate(res.user);
+  } catch (e) { console.error(e); }
+})();
+</script>
+</body>
+</html>
