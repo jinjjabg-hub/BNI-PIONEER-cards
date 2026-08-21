@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>조은영 | 에어월드시스템BS</title>
+<meta property="og:title" content="조은영 | 대표 · 에어월드시스템BS">
+<meta property="og:description" content="냉난방기·공조기·전열교환기를 유지보수하고 필터를 직접 생산·납품합니다. 병원 진단검사의학과 20년 경력의 시선으로 실내공기를 관리합니다.">
+<meta property="og:image" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%A1%B0%EC%9D%80%EC%98%81/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/조은영/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --navy: #0d1b3e;
+  --navy2: #152347;
+  --navy3: #1e2f5a;
+  --gold: #c9a84c;
+  --gold2: #e8c86a;
+  --light: #f4f1e8;
+  --text-dark: #f0ece0;
+  --text-light: #1a1a2e;
+  --muted-dark: #a89060;
+  --muted-light: #5a4a2a;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color: transparent; }
+html { font-size: 16px; }
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--navy);
+  color: var(--text-dark);
+  max-width: 480px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+[data-lang] { display: none; }
+[data-lang].active { display: block; }
+span[data-lang].active { display: inline; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:100;
+  max-width: 480px; margin: 0 auto;
+  background: rgba(13,27,62,0.97);
+  backdrop-filter: blur(10px);
+  padding: 10px 16px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid rgba(201,168,76,0.25);
+}
+.nav-brand { font-size: 12px; font-weight: 700; color: var(--gold); white-space: nowrap; }
+.lang-btns { display:flex; gap:4px; }
+.lang-btn {
+  padding: 5px 8px;
+  border: 1px solid rgba(201,168,76,0.35);
+  background: transparent;
+  color: var(--muted-dark);
+  font-size: 10px; font-weight: 700;
+  cursor: pointer; border-radius: 5px;
+  transition: all 0.2s;
+  min-width: 40px; min-height: 32px;
+  display: flex; align-items:center; justify-content:center;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.lang-btn.active { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+
+/* ── HERO ── */
+.hero {
+  margin-top: 54px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+.hero img.hero-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.hero-overlay {
+  position: absolute; inset:0;
+  background: linear-gradient(
+    to bottom,
+    rgba(13,27,62,0.1) 0%,
+    rgba(13,27,62,0.15) 40%,
+    rgba(13,27,62,0.75) 75%,
+    rgba(13,27,62,0.95) 100%
+  );
+}
+.hero-content {
+  position: absolute; bottom:0; left:0; right:0; z-index:2;
+  padding: 24px 20px 22px;
+}
+.hero-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 10px; font-weight: 700;
+  padding: 4px 12px; border-radius: 20px;
+  margin-bottom: 10px; letter-spacing: 1.5px;
+}
+.hero-name {
+  font-size: 34px; font-weight: 700;
+  color: #fff; line-height: 1.15;
+  margin-bottom: 7px; letter-spacing: -0.5px;
+}
+.hero-title { font-size: 13px; color: var(--gold); opacity: 0.95; line-height: 1.5; }
+
+/* ── PROFILE ROW ── */
+.profile-row {
+  background: var(--navy2);
+  padding: 16px 20px;
+  display: flex; align-items: center; gap:14px;
+  border-bottom: 1px solid rgba(201,168,76,0.12);
+}
+.profile-img {
+  width: 64px; height: 64px; min-width:64px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  overflow: hidden; flex-shrink: 0;
+}
+.profile-img img { width:100%; height:100%; object-fit:cover; object-position: center top; }
+.profile-info h2 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.profile-info p { font-size: 12px; color: var(--muted-dark); line-height: 1.5; }
+
+/* ── 공통 섹션 ── */
+section { padding: 40px 20px; }
+.section-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 6px;
+}
+.section-title { font-size: 22px; font-weight: 700; line-height: 1.35; margin-bottom: 22px; }
+
+/* ── ABOUT ── */
+.about { background: var(--navy); }
+.about .section-title { color: #fff; }
+.slogan {
+  font-size: 15px; font-weight: 700;
+  color: var(--gold); margin-bottom: 14px;
+  font-style: italic; line-height: 1.6;
+}
+.about-text { font-size: 14px; line-height: 1.9; color: var(--text-dark); opacity: 0.85; }
+
+/* ── WHY ── */
+.why { background: var(--light); }
+.why .section-label { color: var(--muted-light); }
+.why .section-title { color: var(--text-light); }
+.why-cards { display: flex; flex-direction: column; gap:14px; }
+.why-card {
+  background: #fff;
+  border: 1px solid rgba(201,168,76,0.18);
+  border-left: 4px solid var(--gold);
+  border-radius: 10px; padding: 18px 16px;
+}
+.why-card h3 { font-size: 15px; font-weight: 700; color: var(--text-light); margin-bottom: 8px; line-height: 1.4; }
+.why-card p { font-size: 13px; line-height: 1.85; color: #444; }
+.why-card p strong { color: var(--navy); font-weight: 700; }
+
+/* ── DIFFERENCE ── */
+.difference { background: var(--navy2); }
+.difference .section-title { color: #fff; }
+.diff-grid { display: flex; flex-direction: column; gap:12px; }
+.diff-card {
+  background: var(--navy3);
+  border: 1px solid rgba(201,168,76,0.12);
+  border-radius: 10px; padding: 18px 16px;
+}
+.diff-card h3 { font-size: 14px; font-weight: 700; color: var(--gold); margin-bottom: 8px; line-height: 1.4; }
+.diff-card p { font-size: 13px; line-height: 1.8; color: var(--text-dark); opacity: 0.8; }
+
+/* ── REFERRAL ── */
+.referral { background: var(--light); }
+.referral .section-label { color: var(--muted-light); }
+.referral .section-title { color: var(--text-light); }
+.ref-list { display: flex; flex-direction: column; gap:10px; }
+.ref-item {
+  display: flex; gap:12px; align-items:flex-start;
+  background: #fff; border-radius: 10px;
+  padding: 15px 14px; border: 1px solid rgba(0,0,0,0.05);
+}
+.ref-num {
+  width: 26px; height: 26px; min-width:26px;
+  border-radius: 50%; background: var(--gold);
+  color: var(--navy); font-weight: 700; font-size: 12px;
+  display: flex; align-items:center; justify-content:center;
+  flex-shrink: 0; margin-top: 1px;
+}
+.ref-item p { font-size: 13px; line-height: 1.8; color: #333; }
+
+/* ── CAREER ── */
+.career {
+  position: relative;
+  background-color: #f0f4ff;
+  background-image: url('career-bg.png');
+  background-size: 150%;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+.career .section-label { position: relative; z-index:1; color: var(--muted-light); }
+.career .section-title { color: var(--text-light); position: relative; z-index:1; }
+.career-list { display: flex; flex-direction: column; gap:18px; position: relative; z-index:1; }
+.career-item {
+  display: flex; gap:12px; align-items:flex-start;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.career-item:last-child { border-bottom: none; padding-bottom: 0; }
+.career-badge {
+  background: var(--navy); color: #fff;
+  font-size: 10px; font-weight: 700;
+  padding: 4px 10px; border-radius: 4px;
+  white-space: nowrap; flex-shrink: 0; margin-top: 2px;
+}
+.career-content { background: rgba(255,255,255,0.82); border-radius: 8px; padding: 12px 14px; flex:1; }
+.career-item h3 { font-size: 14px; font-weight: 700; color: var(--text-light); margin-bottom: 7px; line-height: 1.4; }
+.career-item p { font-size: 12px; line-height: 1.85; color: #555; }
+
+/* ── PORTFOLIO (스택형 : 1~3장은 전부 한 번에 노출, 원본 비율 유지 · 무크롭) ── */
+.portfolio { background: var(--navy); }
+.portfolio .section-title { color: #fff; }
+.portfolio-stack { display: flex; flex-direction: column; gap: 14px; }
+.portfolio-item {
+  display: block; border-radius: 12px; overflow: hidden;
+  border: 1px solid rgba(201,168,76,0.18);
+  background: #fff; line-height: 0;
+}
+.portfolio-item img { width: 100%; height: auto; display: block; }
+.portfolio-cap {
+  font-size: 11px; color: var(--muted-dark);
+  text-align: center; margin-top: -4px; line-height: 1.6;
+}
+.portfolio-hint { font-size: 11px; color: var(--muted-dark); text-align: center; margin-top: 14px; }
+
+/* ── CONTACT ── */
+.contact { background: var(--light); }
+.contact .section-label { color: var(--muted-light); }
+.contact .section-title { color: var(--text-light); }
+.contact-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.contact-item {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 8px; text-align: center;
+  background: #fff; border-radius: 12px;
+  padding: 16px 10px; border: 1px solid rgba(0,0,0,0.05);
+  text-decoration: none; min-height: 100px;
+}
+.contact-item:active { transform: scale(0.97); }
+.contact-icon {
+  width: 42px; height: 42px; min-width:42px;
+  border-radius: 50%; background: var(--navy);
+  display: flex; align-items:center; justify-content:center;
+  font-size: 18px; flex-shrink: 0;
+}
+.contact-label { font-size: 10px; color: #999; }
+.contact-value { font-size: 12px; font-weight: 600; color: var(--text-light); line-height: 1.4; word-break: break-all; }
+
+/* ── ACTION ── */
+.action { background: var(--navy2); padding: 32px 20px; }
+.btn-group { display: flex; flex-direction: column; gap:12px; }
+.btn {
+  display: block; width: 100%; padding: 17px 16px;
+  border: none; border-radius: 10px;
+  font-size: 15px; font-weight: 700;
+  cursor: pointer; text-align: center;
+  transition: all 0.15s; font-family: 'Noto Sans KR', sans-serif;
+  min-height: 54px; letter-spacing: 0.3px;
+}
+.btn-primary { background: var(--gold); color: var(--navy); }
+.btn-secondary { background: transparent; border: 2px solid var(--gold); color: var(--gold); }
+.btn-share { background: linear-gradient(135deg, #1a6b3a, #0d8a4a); color: #fff; border: none; }
+.btn:active { transform: scale(0.97); opacity: 0.9; }
+
+/* 공유 바텀시트 */
+.share-sheet { display:none; position:fixed; inset:0; z-index:200; }
+.share-backdrop { position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+.share-panel {
+  position:absolute; bottom:0; left:0; right:0;
+  max-width:480px; margin:0 auto;
+  background:#fff; border-radius:20px 20px 0 0;
+  padding:20px 20px 40px;
+}
+.share-handle { width:40px; height:4px; background:#ddd; border-radius:2px; margin:0 auto 18px; }
+.share-title { font-size:13px; color:#999; text-align:center; margin-bottom:20px; font-weight:600; }
+.share-btns { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:16px; }
+.share-btn { display:flex; flex-direction:column; align-items:center; gap:8px; background:none; border:none; cursor:pointer; padding:8px 4px; }
+.share-btn-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:26px; }
+.share-btn span { font-size:11px; color:#333; font-weight:600; font-family:'Noto Sans KR',sans-serif; }
+.share-cancel { width:100%; padding:14px; background:#f2f2f2; border:none; border-radius:10px; font-size:15px; font-weight:700; color:#444; cursor:pointer; font-family:'Noto Sans KR',sans-serif; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy); padding: 24px 20px;
+  text-align: center; border-top: 1px solid rgba(201,168,76,0.12);
+}
+footer .company { font-size: 13px; font-weight: 700; color: var(--gold); margin-bottom: 5px; }
+footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacing: 0.5px; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">에어월드시스템BS</div>
+  <div class="lang-btns">
+    <button class="lang-btn active" onclick="setLang('kr')">한국어</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('jp')">日本語</button>
+    <button class="lang-btn" onclick="setLang('cn')">中文</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <img class="hero-img" src="hero.png" alt="조은영">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span data-lang="kr" class="active">실내공기질 · 공조</span>
+      <span data-lang="en">INDOOR AIR QUALITY</span>
+      <span data-lang="jp">室内空気質・空調</span>
+      <span data-lang="cn">室内空气质量 · 空调</span>
+    </div>
+    <div class="hero-name">
+      <span data-lang="kr" class="active">조 은 영</span>
+      <span data-lang="en">Cho Eun-young</span>
+      <span data-lang="jp">チョ・ウニョン</span>
+      <span data-lang="cn">赵恩英</span>
+    </div>
+    <div class="hero-title">
+      <span data-lang="kr" class="active">대표 · 에어월드시스템BS</span>
+      <span data-lang="en">CEO · AirWorld Systems BS</span>
+      <span data-lang="jp">代表 · エアワールドシステムBS</span>
+      <span data-lang="cn">总经理 · AirWorld Systems BS</span>
+    </div>
+  </div>
+</div>
+
+<!-- PROFILE ROW -->
+<div class="profile-row">
+  <div class="profile-img">
+    <img src="profil.png" alt="조은영">
+  </div>
+  <div class="profile-info">
+    <h2>조은영 · Cho Eun-young</h2>
+    <p>
+      <span data-lang="kr" class="active">실내공기질 관리 · 공조 유지보수 · 필터 생산</span>
+      <span data-lang="en">Indoor air quality · HVAC maintenance · Filter manufacturing</span>
+      <span data-lang="jp">室内空気質管理・空調メンテナンス・フィルター製造</span>
+      <span data-lang="cn">室内空气质量管理 · 空调维护 · 滤网生产</span>
+    </p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="section-label">About</div>
+  <div class="slogan">
+    <span data-lang="kr" class="active">공기는 눈에 보이지 않습니다. 그래서 데이터로 관리합니다.</span>
+    <span data-lang="en">Air is invisible. That is why we manage it with data.</span>
+    <span data-lang="jp">空気は目に見えません。だからデータで管理します。</span>
+    <span data-lang="cn">空气看不见，所以我们用数据来管理。</span>
+  </div>
+  <p class="about-text">
+    <span data-lang="kr" class="active">냉난방기·공조기·전열교환기를 유지보수하고, 소모품인 필터를 직접 생산·납품합니다. 병원 진단검사의학과에서 20년간 감염관리를 해온 시선으로 실내공기를 봅니다. 학교·병원·관공서 같은 다중이용시설이 주 현장입니다.</span>
+    <span data-lang="en">We maintain air conditioners, air handling units and heat recovery ventilators, and manufacture and supply the filters they consume. We look at indoor air through the eyes of someone who spent 20 years in hospital laboratory medicine and infection control. Our main sites are multi-use facilities such as schools, hospitals and public offices.</span>
+    <span data-lang="jp">冷暖房機・空調機・全熱交換器のメンテナンスを行い、消耗品であるフィルターを自社で製造・納品しています。病院の臨床検査部門で20年間、感染管理に携わった視点で室内空気を見ます。学校・病院・官公庁など多数の人が利用する施設が主な現場です。</span>
+    <span data-lang="cn">我们负责冷暖设备、空调机组、全热交换器的维护保养，并自主生产和供应耗材滤网。以在医院检验医学科从事20年感染管理的视角来看待室内空气。学校、医院、政府机关等公共设施是我们的主要现场。</span>
+  </p>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="section-label">Why Us</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">왜 에어월드시스템BS인가</span>
+    <span data-lang="en">Why AirWorld Systems BS?</span>
+    <span data-lang="jp">なぜエアワールドシステムBSなのか</span>
+    <span data-lang="cn">为什么选择 AirWorld Systems BS</span>
+  </div>
+  <div class="why-cards">
+
+    <div class="why-card">
+      <h3>
+        <span data-lang="kr" class="active">① 감염을 20년 다룬 사람이 공기를 봅니다</span>
+        <span data-lang="en">① Air seen by someone who handled infection for 20 years</span>
+        <span data-lang="jp">① 感染を20年扱ってきた人間が空気を見ます</span>
+        <span data-lang="cn">① 由处理感染问题20年的人来看空气</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">병원 진단검사의학과 <strong>임상병리사 20년</strong>. 감염관리와 공기질의 상관관계를 임상 현장에서 직접 겪었습니다. 공조를 '설비'가 아니라 <strong>'건강'</strong>으로 봅니다.</span>
+        <span data-lang="en"><strong>20 years as a medical laboratory technologist</strong> in hospital laboratory medicine. The link between infection control and air quality was something experienced firsthand on clinical sites. HVAC is treated not as <strong>equipment, but as health</strong>.</span>
+        <span data-lang="jp">病院の臨床検査部門で<strong>臨床検査技師20年</strong>。感染管理と空気質の関係を臨床現場で直接体験しました。空調を「設備」ではなく<strong>「健康」</strong>として捉えます。</span>
+        <span data-lang="cn">在医院检验医学科担任<strong>临床检验师20年</strong>。在临床现场亲身体会到感染管理与空气质量的关联。我们把空调视为<strong>健康</strong>问题，而非单纯的设备。</span>
+      </p>
+    </div>
+
+    <div class="why-card">
+      <h3>
+        <span data-lang="kr" class="active">② 감이 아니라 데이터로 판단합니다</span>
+        <span data-lang="en">② Decisions from data, not instinct</span>
+        <span data-lang="jp">② 勘ではなくデータで判断します</span>
+        <span data-lang="cn">② 用数据判断，而不是凭经验</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">차압·오염도·운전시간·환경정보를 함께 보고 필터 상태를 판단합니다. <strong>교체 시점</strong>을 "이 정도 됐으니까"가 아니라 <strong>측정값</strong>으로 제시합니다.</span>
+        <span data-lang="en">Filter condition is judged from pressure difference, contamination level, operating hours and environmental data together. <strong>Replacement timing</strong> is presented as a <strong>measured value</strong>, not a rough guess.</span>
+        <span data-lang="jp">差圧・汚染度・運転時間・環境情報を合わせて見てフィルターの状態を判断します。<strong>交換時期</strong>を感覚ではなく<strong>測定値</strong>で提示します。</span>
+        <span data-lang="cn">综合压差、污染度、运行时间和环境信息来判断滤网状态。<strong>更换时机</strong>以<strong>实测数据</strong>提出，而非凭感觉。</span>
+      </p>
+    </div>
+
+    <div class="why-card">
+      <h3>
+        <span data-lang="kr" class="active">③ 필터를 직접 만들고, 연구합니다</span>
+        <span data-lang="en">③ We make our own filters, and research them</span>
+        <span data-lang="jp">③ フィルターを自社で作り、研究します</span>
+        <span data-lang="cn">③ 我们自己生产滤网，并持续研发</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">공조 전문가로부터 <strong>기술이전</strong>을 받아 필터·공조 기술을 확보했고, <strong>연구개발전담부서</strong>를 설립해 지속적으로 개발하고 있습니다. 유지보수와 소모품 공급을 한 곳에서 해결합니다.</span>
+        <span data-lang="en">Filter and HVAC technology was secured through <strong>technology transfer</strong> from an HVAC specialist, and a <strong>dedicated R&amp;D department</strong> was established for continuous development. Maintenance and consumable supply are handled in one place.</span>
+        <span data-lang="jp">空調の専門家から<strong>技術移転</strong>を受けてフィルター・空調技術を確保し、<strong>研究開発専門部署</strong>を設立して継続的に開発しています。メンテナンスと消耗品供給を一か所で解決します。</span>
+        <span data-lang="cn">通过空调专家的<strong>技术转让</strong>掌握了滤网与空调技术，并设立<strong>研发专责部门</strong>持续开发。维护保养与耗材供应一站式解决。</span>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- DIFFERENCE -->
+<section class="difference">
+  <div class="section-label">Difference</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">차별점</span>
+    <span data-lang="en">What Makes Us Different</span>
+    <span data-lang="jp">差別化ポイント</span>
+    <span data-lang="cn">差异化优势</span>
+  </div>
+  <div class="diff-grid">
+
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">기술보증기금 기술보증 · 특허</span>
+        <span data-lang="en">Technology guarantee &amp; patents</span>
+        <span data-lang="jp">技術保証基金の技術保証・特許</span>
+        <span data-lang="cn">技术保证基金认证 · 专利</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">기술보증기금으로부터 기술력을 인정받았고, '루미필터' 특허 등록에 이어 감염 제어용 공조 관리 시스템 'AirCulture'를 특허 출원 중입니다. (출원번호 10-2026-0059244)</span>
+        <span data-lang="en">Our technology has been recognised by the Korea Technology Finance Corporation. Following the registered 'Lumi Filter' patent, an infection-control HVAC management system, 'AirCulture', is currently under patent application (No. 10-2026-0059244).</span>
+        <span data-lang="jp">技術保証基金から技術力を認められ、「ルミフィルター」の特許登録に続き、感染制御用空調管理システム「AirCulture」を特許出願中です（出願番号10-2026-0059244）。</span>
+        <span data-lang="cn">技术实力获得韩国技术保证基金认可。继"Lumi Filter"专利注册之后，感染控制空调管理系统"AirCulture"正在申请专利（申请号10-2026-0059244）。</span>
+      </p>
+    </div>
+
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">100% 완전분해 세척</span>
+        <span data-lang="en">100% full-disassembly cleaning</span>
+        <span data-lang="jp">100%完全分解洗浄</span>
+        <span data-lang="cn">100%完全拆解清洗</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">겉만 닦지 않습니다. 완전분해 후 고압 세척, 친환경 케어까지 이어집니다. 학교·병원 같은 대규모 현장도 무리 없이 진행합니다.</span>
+        <span data-lang="en">We do not just wipe the surface. Units are fully disassembled, high-pressure cleaned, and finished with eco-friendly care. Large sites such as schools and hospitals are handled without difficulty.</span>
+        <span data-lang="jp">表面だけを拭くことはしません。完全に分解した上で高圧洗浄を行い、環境に配慮したケアまで行います。学校・病院のような大規模現場にも対応します。</span>
+        <span data-lang="cn">不只是擦拭表面。完全拆解后进行高压清洗，并完成环保护理。学校、医院等大型现场也能顺利施工。</span>
+      </p>
+    </div>
+
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">자격 보유 인력 · 안전 작업</span>
+        <span data-lang="en">Certified staff &amp; safe operations</span>
+        <span data-lang="jp">有資格スタッフ・安全作業</span>
+        <span data-lang="cn">持证人员 · 安全作业</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">관련 자격을 보유한 직원으로 팀을 구성합니다. 천장형·고소 작업이 많은 만큼 안전한 작업 현장을 원칙으로 합니다.</span>
+        <span data-lang="en">Teams are made up of staff holding the relevant certifications. Because ceiling-mounted and high-elevation work is frequent, a safe worksite is treated as a non-negotiable principle.</span>
+        <span data-lang="jp">関連資格を保有するスタッフでチームを構成します。天井型・高所作業が多いため、安全な作業現場を原則としています。</span>
+        <span data-lang="cn">团队由持有相关资格证的员工组成。由于吊顶式与高空作业较多，我们始终坚持安全施工的原则。</span>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- REFERRAL -->
+<section class="referral">
+  <div class="section-label">Referral</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">이런 분을 소개해 주세요</span>
+    <span data-lang="en">Please refer people like this</span>
+    <span data-lang="jp">こんな方をご紹介ください</span>
+    <span data-lang="cn">请介绍这样的客户</span>
+  </div>
+  <div class="ref-list">
+
+    <div class="ref-item">
+      <div class="ref-num">1</div>
+      <p>
+        <span data-lang="kr" class="active"><strong>관공서·기업의 구매담당 책임자</strong> — 청사·사옥 냉난방기 세척과 필터 정기 납품을 결정하시는 분</span>
+        <span data-lang="en"><strong>Procurement managers at public offices and companies</strong> — those who decide on air conditioner cleaning and regular filter supply for their buildings</span>
+        <span data-lang="jp"><strong>官公庁・企業の購買責任者</strong> — 庁舎・自社ビルの空調洗浄やフィルター定期納品を決定される方</span>
+        <span data-lang="cn"><strong>政府机关与企业的采购负责人</strong> — 负责决定办公楼空调清洗及滤网定期供应的人</span>
+      </p>
+    </div>
+
+    <div class="ref-item">
+      <div class="ref-num">2</div>
+      <p>
+        <span data-lang="kr" class="active"><strong>학교 행정실 주무관</strong> — 교실 냉난방기 청소·환기 설비 예산을 집행하시는 분 (부산고등학교 대규모 세척 시공 경험)</span>
+        <span data-lang="en"><strong>School administrative officers</strong> — those managing budgets for classroom air conditioner cleaning and ventilation (experience includes a large-scale project at Busan High School)</span>
+        <span data-lang="jp"><strong>学校事務室のご担当者</strong> — 教室の空調洗浄・換気設備の予算を執行される方（釜山高等学校の大規模洗浄実績あり）</span>
+        <span data-lang="cn"><strong>学校行政室主管</strong> — 负责教室空调清洗与通风设备预算的人（有釜山高中大规模清洗施工经验）</span>
+      </p>
+    </div>
+
+    <div class="ref-item">
+      <div class="ref-num">3</div>
+      <p>
+        <span data-lang="kr" class="active"><strong>병원 시설관리팀장·구매 결정권자</strong> — 수술실·중환자실·음압격리실 등 감염관리 기준에 맞는 공조 관리가 필요한 곳</span>
+        <span data-lang="en"><strong>Hospital facility managers and purchasing decision-makers</strong> — sites needing HVAC management that meets infection control standards for operating rooms, ICUs and negative-pressure isolation rooms</span>
+        <span data-lang="jp"><strong>病院の施設管理責任者・購買決定権者</strong> — 手術室・ICU・陰圧隔離室など感染管理基準に沿った空調管理が必要な施設</span>
+        <span data-lang="cn"><strong>医院设施管理负责人与采购决策者</strong> — 手术室、重症监护室、负压隔离病房等需要符合感染管理标准的空调管理场所</span>
+      </p>
+    </div>
+
+    <div class="ref-item">
+      <div class="ref-num">4</div>
+      <p>
+        <span data-lang="kr" class="active"><strong>어린이집·학원 원장님</strong> — 아이들이 하루 종일 머무는 실내, 에어컨 내부 상태가 걱정되는 곳</span>
+        <span data-lang="en"><strong>Directors of daycare centres and academies</strong> — indoor spaces where children spend all day and the inside of the air conditioner is a concern</span>
+        <span data-lang="jp"><strong>保育園・学習塾の園長・院長</strong> — 子どもが一日中過ごす室内で、エアコン内部の状態が気になる施設</span>
+        <span data-lang="cn"><strong>幼儿园与培训机构负责人</strong> — 孩子整天停留的室内空间，担心空调内部状况的场所</span>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CAREER -->
+<section class="career">
+  <div class="section-label">Career</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">경력 및 전문 분야</span>
+    <span data-lang="en">Career &amp; Expertise</span>
+    <span data-lang="jp">経歴・専門分野</span>
+    <span data-lang="cn">经历与专业领域</span>
+  </div>
+  <div class="career-list">
+
+    <div class="career-item">
+      <div class="career-badge">현재</div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">에어월드시스템BS 대표 (2023~)</span>
+          <span data-lang="en">CEO, AirWorld Systems BS (2023~)</span>
+          <span data-lang="jp">エアワールドシステムBS 代表（2023~）</span>
+          <span data-lang="cn">AirWorld Systems BS 总经理（2023~）</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">냉난방기·공조기·전열교환기 유지보수, 필터 생산·납품, 연구개발전담부서 운영</span>
+          <span data-lang="en">HVAC and heat recovery ventilator maintenance, filter production and supply, operation of a dedicated R&amp;D department</span>
+          <span data-lang="jp">冷暖房機・空調機・全熱交換器のメンテナンス、フィルター製造・納品、研究開発専門部署の運営</span>
+          <span data-lang="cn">冷暖设备、空调机组、全热交换器维护，滤网生产供应，运营研发专责部门</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="career-item">
+      <div class="career-badge">경력</div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">진단검사의학과 임상병리사 20년</span>
+          <span data-lang="en">20 years as a medical laboratory technologist</span>
+          <span data-lang="jp">臨床検査医学科 臨床検査技師20年</span>
+          <span data-lang="cn">检验医学科临床检验师20年</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">병원 현장에서 감염관리 업무 수행 → 2022년 공조 기술이전·자격 취득 → 2023년 창업</span>
+          <span data-lang="en">Infection control work in hospital settings → HVAC technology transfer and certification in 2022 → founded the company in 2023</span>
+          <span data-lang="jp">病院現場で感染管理業務に従事 → 2022年に空調技術移転・資格取得 → 2023年に創業</span>
+          <span data-lang="cn">在医院现场从事感染管理工作 → 2022年接受空调技术转让并取得资格 → 2023年创业</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="career-item">
+      <div class="career-badge">수상</div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">2026 여성발명EXPO 금상 · 지식재산처장상</span>
+          <span data-lang="en">2026 Women's Invention EXPO Gold Prize · Commissioner's Award</span>
+          <span data-lang="jp">2026 女性発明EXPO 金賞・知的財産庁長官賞</span>
+          <span data-lang="cn">2026女性发明EXPO金奖 · 知识产权厅长官奖</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">임상병리사 면허 보유 / 필터 관련 발명으로 수상</span>
+          <span data-lang="en">Licensed medical laboratory technologist / awarded for filter-related inventions</span>
+          <span data-lang="jp">臨床検査技師免許保有／フィルター関連の発明で受賞</span>
+          <span data-lang="cn">持有临床检验师执照／因滤网相关发明获奖</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="career-item">
+      <div class="career-badge">활동</div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">BNI 파이오니어 챕터 · 교육팀</span>
+          <span data-lang="en">BNI Pioneer Chapter · Education Team</span>
+          <span data-lang="jp">BNIパイオニアチャプター・教育チーム</span>
+          <span data-lang="cn">BNI先锋分会 · 教育团队</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">부산일보 CEO AMP / 마스터마인드 3기 / 한국여성경제인협회 부산지부</span>
+          <span data-lang="en">Busan Ilbo CEO AMP / Mastermind 3rd cohort / Korea Women Entrepreneurs Association, Busan branch</span>
+          <span data-lang="jp">釜山日報CEO AMP／マスターマインド3期／韓国女性経済人協会 釜山支部</span>
+          <span data-lang="cn">釜山日报CEO AMP／Mastermind第三期／韩国女性经济人协会釜山分会</span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PORTFOLIO : 스택형 (1~3장은 슬라이드 없이 전부 노출) -->
+<section class="portfolio">
+  <div class="section-label">Portfolio</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">작업 사례</span>
+    <span data-lang="en">Portfolio</span>
+    <span data-lang="jp">実績紹介</span>
+    <span data-lang="cn">作品案例</span>
+  </div>
+  <div class="portfolio-stack">
+    <a class="portfolio-item" href="portfolio1.jpg" target="_blank"><img src="portfolio1.jpg" alt="현장 작업 사례" loading="lazy"></a>
+    <a class="portfolio-item" href="portfolio2.jpg" target="_blank"><img src="portfolio2.jpg" alt="세척 시스템 및 시공 사례" loading="lazy"></a>
+    <a class="portfolio-item" href="portfolio3.jpg" target="_blank"><img src="portfolio3.jpg" alt="AirCulture 감염 제어 공조관리 솔루션" loading="lazy"></a>
+  </div>
+  <div class="portfolio-hint">
+    <span data-lang="kr" class="active">이미지를 누르면 크게 볼 수 있습니다</span>
+    <span data-lang="en">Tap an image to view it larger</span>
+    <span data-lang="jp">画像をタップすると拡大表示されます</span>
+    <span data-lang="cn">点击图片可放大查看</span>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="section-label">Contact</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">연락하기</span>
+    <span data-lang="en">Contact</span>
+    <span data-lang="jp">お問い合わせ</span>
+    <span data-lang="cn">联系方式</span>
+  </div>
+  <div class="contact-list">
+    <a class="contact-item" href="tel:010-3444-5823">
+      <div class="contact-icon">📞</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">전화</span>
+        <span data-lang="en">Phone</span>
+        <span data-lang="jp">電話</span>
+        <span data-lang="cn">电话</span>
+      </div>
+      <div class="contact-value">010-3444-5823</div>
+    </a>
+    <a class="contact-item" href="mailto:airworld9256@naver.com">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-label">Email</div>
+      <div class="contact-value">airworld9256@naver.com</div>
+    </a>
+    <a class="contact-item" href="http://airworld-bs.com" target="_blank">
+      <div class="contact-icon">💻</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">홈페이지</span>
+        <span data-lang="en">Website</span>
+        <span data-lang="jp">ホームページ</span>
+        <span data-lang="cn">官网</span>
+      </div>
+      <div class="contact-value">airworld-bs.com</div>
+    </a>
+    <a class="contact-item" href="https://www.instagram.com/airworld9256" target="_blank">
+      <div class="contact-icon">📷</div>
+      <div class="contact-label">Instagram</div>
+      <div class="contact-value">@airworld9256</div>
+    </a>
+    <a class="contact-item" href="https://www.youtube.com/@airworldsystem" target="_blank">
+      <div class="contact-icon">▶️</div>
+      <div class="contact-label">YouTube</div>
+      <div class="contact-value">@airworldsystem</div>
+    </a>
+    <a class="contact-item" href="https://jinjjabg-hub.github.io/MANDU/?u=cho-eunyoung" target="_blank">
+      <div class="contact-icon">💬</div>
+      <div class="contact-label">MANDU</div>
+      <div class="contact-value">
+        <span data-lang="kr" class="active">실시간 번역 메신저</span>
+        <span data-lang="en">Live translation chat</span>
+        <span data-lang="jp">リアルタイム翻訳チャット</span>
+        <span data-lang="cn">实时翻译聊天</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ACTION -->
+<div class="action">
+  <div class="btn-group">
+    <button class="btn btn-primary" onclick="saveContact()">
+      <span data-lang="kr" class="active">📞 연락처 저장</span>
+      <span data-lang="en">📞 Save contact</span>
+      <span data-lang="jp">📞 連絡先を保存</span>
+      <span data-lang="cn">📞 保存联系人</span>
+    </button>
+    <button class="btn btn-secondary" onclick="saveToCardbook({id:'cho-eunyoung',name:'조은영',nameEn:'Cho Eun-young',title:'대표',company:'에어월드시스템BS',phone:'010-3444-5823',email:'airworld9256@naver.com',chapter:'BNI 파이오니어',bni:'실내공기질·공조',url:window.location.href})">
+      <span data-lang="kr" class="active">🗂️ 명함 저장 (CardBook)</span>
+      <span data-lang="en">🗂️ Save to CardBook</span>
+      <span data-lang="jp">🗂️ 名刺を保存</span>
+      <span data-lang="cn">🗂️ 保存名片</span>
+    </button>
+    <button class="btn btn-share" onclick="shareCard()">
+      <span data-lang="kr" class="active">📤 명함 전달하기</span>
+      <span data-lang="en">📤 Share this card</span>
+      <span data-lang="jp">📤 名刺を共有</span>
+      <span data-lang="cn">📤 分享名片</span>
+    </button>
+  </div>
+</div>
+
+<!-- 공유 바텀시트 -->
+<div class="share-sheet" id="shareSheet">
+  <div class="share-backdrop" onclick="closeShare()"></div>
+  <div class="share-panel">
+    <div class="share-handle"></div>
+    <div class="share-title">명함 전달하기</div>
+    <div class="share-btns">
+      <button class="share-btn" onclick="shareKakao()">
+        <div class="share-btn-icon" style="background:#FEE500;">💬</div><span>카카오톡</span>
+      </button>
+      <button class="share-btn" onclick="shareSMS()">
+        <div class="share-btn-icon" style="background:#34c759;">✉️</div><span>문자</span>
+      </button>
+      <button class="share-btn" onclick="copyLink()">
+        <div class="share-btn-icon" style="background:#e8e8e8;">🔗</div><span>링크 복사</span>
+      </button>
+      <button class="share-btn" onclick="shareQR()">
+        <div class="share-btn-icon" style="background:#0d1b3e;">📱</div><span>QR 보기</span>
+      </button>
+    </div>
+    <button class="share-cancel" onclick="closeShare()">취소</button>
+  </div>
+</div>
+
+<!-- 만두 연결 (카드 주인 전용) -->
+<div class="mandu-activate-wrap" style="padding:14px 20px 4px;text-align:center;">
+  <button id="mandu-activate-btn" onclick="activateMandu()"
+    style="background:none;border:1px solid rgba(201,168,76,0.3);color:var(--muted-dark);font-size:10.5px;padding:7px 14px;border-radius:20px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;">
+    💬 본인 명함이신가요? 만두 연결하기 (1회)
+  </button>
+  <div id="mandu-activate-done" style="display:none;font-size:10.5px;color:var(--gold);padding:7px 0;">
+    ✅ 만두 연결 완료 — 이제 이 카드로 DM을 받을 수 있어요
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="company">
+    <span data-lang="kr" class="active">에어월드시스템BS</span>
+    <span data-lang="en">AirWorld Systems BS</span>
+    <span data-lang="jp">エアワールドシステムBS</span>
+    <span data-lang="cn">AirWorld Systems BS</span>
+  </div>
+  <div class="slogan-footer">Air is invisible. That is why we manage it with data.</div>
+</footer>
+
+<script src="https://jinjjabg-hub.github.io/cardbook/save-to-cardbook.js"></script>
+<script>
+function setLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    const m = btn.getAttribute('onclick').match(/'(\w+)'/);
+    btn.classList.toggle('active', m && m[1] === lang);
+  });
+}
+function saveContact() {
+  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:조은영\nORG:에어월드시스템BS\nTITLE:대표\nTEL:010-3444-5823\nEMAIL:airworld9256@naver.com\nURL:https://jinjjabg-hub.github.io/BNI-PIONEER-cards/조은영/\nEND:VCARD`;
+  const blob = new Blob([vcard], {type:'text/vcard'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'cho-eunyoung.vcf';
+  a.click();
+}
+
+/* ── 명함 전달하기 ── */
+const CARD_URL = 'https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EC%A1%B0%EC%9D%80%EC%98%81/';
+const CARD_TITLE = '조은영 | 에어월드시스템BS';
+const CARD_TEXT = '실내공기질 관리 · 공조 유지보수 · 필터 생산 — 조은영 대표 디지털 명함';
+
+function shareCard() {
+  if (navigator.share) {
+    navigator.share({ title: CARD_TITLE, text: CARD_TEXT, url: CARD_URL }).catch(() => {});
+  } else {
+    document.getElementById('shareSheet').style.display = 'block';
+  }
+}
+function closeShare() { document.getElementById('shareSheet').style.display = 'none'; }
+function shareKakao() {
+  window.open('https://sharer.kakao.com/talk/friends/picker/link?app_key=&url=' + encodeURIComponent(CARD_URL), '_blank');
+  closeShare();
+}
+function shareSMS() {
+  location.href = 'sms:?body=' + encodeURIComponent(CARD_TITLE + '\n' + CARD_URL);
+  closeShare();
+}
+function copyLink() {
+  navigator.clipboard.writeText(CARD_URL).then(() => alert('링크가 복사되었습니다!')).catch(() => {
+    const t = document.createElement('textarea');
+    t.value = CARD_URL;
+    document.body.appendChild(t); t.select(); document.execCommand('copy');
+    document.body.removeChild(t);
+    alert('링크가 복사되었습니다!');
+  });
+  closeShare();
+}
+function shareQR() { window.open('qr.png', '_blank'); closeShare(); }
+
+/* 포트폴리오는 스택형(전체 노출)이므로 슬라이드 JS 없음 */
+
+/* ── 만두 원클릭 연결 (카드 주인 전용) ── */
+async function _manduWaitFirebase(maxTries) {
+  let tries = 0;
+  while ((typeof firebase === 'undefined' || !firebase.apps || !firebase.apps.length) && tries < (maxTries || 50)) {
+    await new Promise(r => setTimeout(r, 100));
+    tries++;
+  }
+  return typeof firebase !== 'undefined' && firebase.apps && firebase.apps.length > 0;
+}
+
+async function _manduFinishActivate(user) {
+  const slug = 'cho-eunyoung';
+  const db = firebase.firestore();
+
+  const existing = await db.collection('manduid_index').doc(slug).get();
+  if (existing.exists && existing.data().uid !== user.uid) {
+    const btn = document.getElementById('mandu-activate-btn');
+    if (btn) btn.style.display = 'none';
+    const done = document.getElementById('mandu-activate-done');
+    if (done) { done.textContent = 'ℹ️ 이미 연결된 명함이에요'; done.style.display = 'block'; }
+    return;
+  }
+
+  await db.collection('users').doc(user.uid).set({
+    uid: user.uid, displayName: user.displayName || '', photoURL: user.photoURL || '',
+    email: user.email || '', manduid: slug
+  }, { merge: true });
+  await db.collection('manduid_index').doc(slug).set({
+    uid: user.uid, createdAt: firebase.firestore.FieldValue.serverTimestamp()
+  }, { merge: true });
+  const btn = document.getElementById('mandu-activate-btn');
+  const done = document.getElementById('mandu-activate-done');
+  if (btn) btn.style.display = 'none';
+  if (done) done.style.display = 'block';
+}
+
+async function activateMandu() {
+  if (!confirm('본인 명함이 맞나요?\n구글 로그인하면 이 명함으로 만두 DM을 받을 수 있게 연결돼요.')) return;
+  const btn = document.getElementById('mandu-activate-btn');
+  if (btn) { btn.disabled = true; btn.textContent = '연결 중...'; }
+  const ready = await _manduWaitFirebase();
+  if (!ready) {
+    if (btn) { btn.disabled = false; btn.textContent = '💬 본인 명함이신가요? 만두 연결하기 (1회)'; }
+    alert('연결 실패. 잠시 후 다시 시도해주세요.');
+    return;
+  }
+  try {
+    const auth = firebase.auth();
+    await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+    const provider = new firebase.auth.GoogleAuthProvider();
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (isMobile) {
+      sessionStorage.setItem('_manduPendingSlug', 'cho-eunyoung');
+      await auth.signInWithRedirect(provider);
+      return;
+    }
+    const result = await auth.signInWithPopup(provider);
+    await _manduFinishActivate(result.user);
+  } catch (e) {
+    console.error('만두 연결 실패:', e);
+    if (btn) { btn.disabled = false; btn.textContent = '💬 본인 명함이신가요? 만두 연결하기 (1회)'; }
+    alert('연결 중 오류가 발생했어요.');
+  }
+}
+
+// 모바일 리다이렉트 로그인 복귀 처리
+(async function () {
+  if (!sessionStorage.getItem('_manduPendingSlug')) return;
+  const ready = await _manduWaitFirebase();
+  sessionStorage.removeItem('_manduPendingSlug');
+  if (!ready) return;
+  try {
+    const res = await firebase.auth().getRedirectResult();
+    if (res && res.user) await _manduFinishActivate(res.user);
+  } catch (e) { console.error(e); }
+})();
+</script>
+</body>
+</html>
