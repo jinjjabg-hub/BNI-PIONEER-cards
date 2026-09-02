@@ -17,9 +17,9 @@
 <style>
 
 :root {
-  --navy: #1a3d2e;
-  --navy2: #12291f;
-  --navy3: #234d3a;
+  --y: #1a3d2e;
+  --y2: #12291f;
+  --y3: #234d3a;
   --gold: #c9a15a;
   --gold2: #ddbb7f;
   --light: #f7f4ed;
@@ -33,7 +33,7 @@
 html { font-size: 16px; }
 body {
   font-family: 'Noto Sans KR', sans-serif;
-  background: var(--navy);
+  background: var(--y);
   color: var(--text-dark);
   max-width: 480px;
   margin: 0 auto;
@@ -46,8 +46,8 @@ body {
 [data-lang].active { display: block; }
 span[data-lang].active { display: inline; }
 
-/* ── NAV ── */
-nav {
+/* ──  ── */
+ {
   position: fixed; top:0; left:0; right:0; z-index:100;
   max-width: 480px; margin: 0 auto;
   background: rgba(13,27,62,0.97);
@@ -56,7 +56,7 @@ nav {
   display: flex; justify-content: space-between; align-items: center;
   border-bottom: 1px solid rgba(201,168,76,0.25);
 }
-.nav-brand { font-size: 12px; font-weight: 700; color: var(--gold); white-space: nowrap; }
+.-brand { font-size: 12px; font-weight: 700; color: var(--gold); white-space: nowrap; }
 .lang-btns { display:flex; gap:4px; }
 .lang-btn {
   padding: 5px 8px;
@@ -70,7 +70,7 @@ nav {
   display: flex; align-items:center; justify-content:center;
   font-family: 'Noto Sans KR', sans-serif;
 }
-.lang-btn.active { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+.lang-btn.active { background: var(--gold); color: var(--y); border-color: var(--gold); }
 
 /* ── HERO ── */
 .hero {
@@ -103,7 +103,7 @@ nav {
 .hero-badge {
   display: inline-block;
   background: var(--gold);
-  color: var(--navy);
+  color: var(--y);
   font-size: 10px; font-weight: 700;
   padding: 4px 12px; border-radius: 20px;
   margin-bottom: 10px; letter-spacing: 1.5px;
@@ -118,7 +118,7 @@ nav {
 
 /* ── PROFILE ROW ── */
 .profile-row {
-  background: var(--navy2);
+  background: var(--y2);
   padding: 16px 20px;
   display: flex; align-items: center; gap:14px;
   border-bottom: 1px solid rgba(201,168,76,0.12);
@@ -143,7 +143,7 @@ section { padding: 40px 20px; }
 .section-title { font-size: 22px; font-weight: 700; line-height: 1.35; margin-bottom: 22px; }
 
 /* ── ABOUT ── */
-.about { background: var(--navy); }
+.about { background: var(--y); }
 .about .section-title { color: #fff; }
 .slogan {
   font-size: 15px; font-weight: 700;
@@ -167,14 +167,14 @@ section { padding: 40px 20px; }
 .why-card h3 { font-size: 15px; font-weight: 700; color: var(--text-light); margin-bottom: 8px; line-height: 1.4; }
 .why-card p { font-size: 13px; line-height: 1.85; color: #444; }
 .why-card p [data-lang="ur"] { font-size: 14px; line-height: 2.2; }
-.why-card p strong { color: var(--navy); font-weight: 700; }
+.why-card p strong { color: var(--y); font-weight: 700; }
 
 /* ── DIFFERENCE ── */
-.difference { background: var(--navy2); }
+.difference { background: var(--y2); }
 .difference .section-title { color: #fff; }
 .diff-grid { display: flex; flex-direction: column; gap:12px; }
 .diff-card {
-  background: var(--navy3);
+  background: var(--y3);
   border: 1px solid rgba(201,168,76,0.12);
   border-radius: 10px; padding: 18px 16px;
 }
@@ -195,7 +195,7 @@ section { padding: 40px 20px; }
 .ref-num {
   width: 26px; height: 26px; min-width:26px;
   border-radius: 50%; background: var(--gold);
-  color: var(--navy); font-weight: 700; font-size: 12px;
+  color: var(--y); font-weight: 700; font-size: 12px;
   display: flex; align-items:center; justify-content:center;
   flex-shrink: 0; margin-top: 1px;
 }
@@ -221,7 +221,7 @@ section { padding: 40px 20px; }
 }
 .career-item:last-child { border-bottom: none; padding-bottom: 0; }
 .career-badge {
-  background: var(--navy); color: #fff;
+  background: var(--y); color: #fff;
   font-size: 10px; font-weight: 700;
   padding: 4px 10px; border-radius: 4px;
   white-space: nowrap; flex-shrink: 0; margin-top: 2px;
@@ -231,13 +231,13 @@ section { padding: 40px 20px; }
 .career-item p { font-size: 12px; line-height: 1.85; color: #555; }
 
 /* ── PORTFOLIO (선택 섹션 — portfolio1.jpg 이상 있을 때만 사용) ── */
-.portfolio { background: var(--navy); }
+.portfolio { background: var(--y); }
 .portfolio .section-title { color: #fff; }
 .portfolio-track-wrap { overflow: hidden; border-radius: 12px; }
 .portfolio-track { display: flex; transition: transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94); }
 .portfolio-slide { min-width: 100%; aspect-ratio: 3/4; overflow: hidden; }
 .portfolio-slide img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
-.portfolio-nav { display:flex; align-items:center; justify-content:center; gap:16px; margin-top:14px; }
+.portfolio- { display:flex; align-items:center; justify-content:center; gap:16px; margin-top:14px; }
 .portfolio-btn {
   background: transparent; border: 1px solid rgba(201,168,76,0.35);
   color: var(--gold); width: 30px; height: 30px; border-radius: 50%;
@@ -267,7 +267,7 @@ section { padding: 40px 20px; }
 .contact-item:active { transform: scale(0.97); }
 .contact-icon {
   width: 42px; height: 42px; min-width:42px;
-  border-radius: 50%; background: var(--navy);
+  border-radius: 50%; background: var(--y);
   display: flex; align-items:center; justify-content:center;
   font-size: 18px; flex-shrink: 0;
 }
@@ -288,7 +288,7 @@ section { padding: 40px 20px; }
 .contact-item.wide .contact-text { display: flex; flex-direction: column; gap: 3px; text-align: left; }
 
 /* ── ACTION ── */
-.action { background: var(--navy2); padding: 32px 20px; }
+.action { background: var(--y2); padding: 32px 20px; }
 .btn-group { display: flex; flex-direction: column; gap:12px; }
 .btn {
   display: block; width: 100%; padding: 17px 16px;
@@ -298,7 +298,7 @@ section { padding: 40px 20px; }
   transition: all 0.15s; font-family: 'Noto Sans KR', sans-serif;
   min-height: 54px; letter-spacing: 0.3px;
 }
-.btn-primary { background: var(--gold); color: var(--navy); }
+.btn-primary { background: var(--gold); color: var(--y); }
 .btn-secondary { background: transparent; border: 2px solid var(--gold); color: var(--gold); }
 .btn-share { background: linear-gradient(135deg, #1a6b3a, #0d8a4a); color: #fff; border: none; }
 .btn:active { transform: scale(0.97); opacity: 0.9; }
@@ -322,7 +322,7 @@ section { padding: 40px 20px; }
 
 /* ── FOOTER ── */
 footer {
-  background: var(--navy); padding: 24px 20px;
+  background: var(--y); padding: 24px 20px;
   text-align: center; border-top: 1px solid rgba(201,168,76,0.12);
 }
 footer .company { font-size: 13px; font-weight: 700; color: var(--gold); margin-bottom: 5px; }
@@ -331,16 +331,16 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-brand">아메리츠 파이낸셜</div>
+<!--  -->
+<>
+  <div class="-brand">아메리츠 파이낸셜</div>
   <div class="lang-btns">
     <button class="lang-btn active" onclick="setLang('kr')">한국어</button>
     <button class="lang-btn" onclick="setLang('en')">EN</button>
     <button class="lang-btn" onclick="setLang('hk')">繁體中文</button>
     <button class="lang-btn" onclick="setLang('cn')">中文</button>
   </div>
-</nav>
+</>
 
 <!-- HERO : hero.png = 세로 3:4 인물 사진 -->
 <div class="hero">
@@ -644,10 +644,10 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
       </div>
       <div class="contact-value">(+82)10-2694-1705</div>
     </a>
-    <a class="contact-item" href="mailto:mc967jung@navaer.com">
+    <a class="contact-item" href="mailto:mc967jung@aer.com">
       <div class="contact-icon">✉️</div>
       <div class="contact-label">Email</div>
-      <div class="contact-value">mc967jung@navaer.com</div>
+      <div class="contact-value">mc967jung@aer.com</div>
     </a>
     <!-- 선택 항목: 블로그 🌐 / 인스타 📷 / 페이스북 📘 / 홈페이지 💻 / 유튜브 ▶️ / 카카오채널 💛 -->
     <a class="contact-item wide" style="grid-column: 1 / -1;" href="https://jinjjabg-hub.github.io/MANDU/?u=jeong-sanghyeon" target="_blank">
@@ -753,7 +753,7 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
       <span data-lang="hk">📞 儲存聯絡人</span>
       <span data-lang="cn">📞 保存联系人</span>
     </button>
-    <button class="btn btn-secondary" onclick="saveToCardbook({id:'jeong-sanghyeon',name:'정상현',nameEn:'JEONG SANGHYEON',title:'아시아 마케팅 디렉터',company:'아메리츠 파이낸셜',phone:'(+82)10-2694-1705',email:'mc967jung@navaer.com',chapter:'파이오니어',bni:'해외금융컨설팅',url:window.location.href})">
+    <button class="btn btn-secondary" onclick="saveToCardbook({id:'jeong-sanghyeon',name:'정상현',nameEn:'JEONG SANGHYEON',title:'아시아 마케팅 디렉터',company:'아메리츠 파이낸셜',phone:'(+82)10-2694-1705',email:'mc967jung@naver.com',chapter:'파이오니어',bni:'해외금융컨설팅',url:window.location.href})">
       <span data-lang="kr" class="active">🗂️ 명함 저장 (CardBook)</span>
       <span data-lang="en">🗂️ Save to CardBook</span>
       <span data-lang="hk">🗂️ 儲存名片</span>
@@ -826,7 +826,7 @@ function setLang(lang) {
   });
 }
 function saveContact() {
-  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:정상현\nORG:아메리츠 파이낸셜\nTITLE:아시아 마케팅 디렉터\nTEL:(+82)10-2694-1705\nEMAIL:mc967jung@navaer.com\nURL:https://jinjjabg-hub.github.io/BNI-PIONEER-cards/정상현/\nADR:;;부산광역시 진구 중앙대로 627;;;;\nEND:VCARD`;
+  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:정상현\nORG:아메리츠 파이낸셜\nTITLE:아시아 마케팅 디렉터\nTEL:(+82)10-2694-1705\nEMAIL:mc967jung@aer.com\nURL:https://jinjjabg-hub.github.io/BNI-PIONEER-cards/정상현/\nADR:;;부산광역시 진구 중앙대로 627;;;;\nEND:VCARD`;
   const blob = new Blob([vcard], {type:'text/vcard'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
@@ -840,8 +840,8 @@ const CARD_TITLE = '정상현 | 아메리츠 파이낸셜';
 const CARD_TEXT = "당신의 자산을 '달러'로 세팅하는 해외금융 전문가, 정상현입니다.";
 
 function shareCard() {
-  if (navigator.share) {
-    navigator.share({ title: CARD_TITLE, text: CARD_TEXT, url: CARD_URL }).catch(() => {});
+  if (igator.share) {
+    igator.share({ title: CARD_TITLE, text: CARD_TEXT, url: CARD_URL }).catch(() => {});
   } else {
     document.getElementById('shareSheet').style.display = 'block';
   }
@@ -856,7 +856,7 @@ function shareSMS() {
   closeShare();
 }
 function copyLink() {
-  navigator.clipboard.writeText(CARD_URL).then(() => alert('링크가 복사되었습니다!')).catch(() => {
+  igator.clipboard.writeText(CARD_URL).then(() => alert('링크가 복사되었습니다!')).catch(() => {
     const t = document.createElement('textarea');
     t.value = CARD_URL;
     document.body.appendChild(t); t.select(); document.execCommand('copy');
@@ -961,7 +961,7 @@ async function activateMandu() {
     const auth = firebase.auth();
     await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
     const provider = new firebase.auth.GoogleAuthProvider();
-    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(igator.userAgent);
     if (isMobile) {
       sessionStorage.setItem('_manduPendingSlug', 'jeong-sanghyeon');
       await auth.signInWithRedirect(provider);
