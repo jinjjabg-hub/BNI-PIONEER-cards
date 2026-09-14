@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<link rel="apple-touch-icon" href="icon-180.png">
-<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="theme-color" content="#0a0a0a">
@@ -379,8 +375,8 @@ footer { padding:16px; }
   <div class="sec-title" style="padding:0 4px;"><span data-lang="kr" class="active">연락하기</span><span data-lang="en">Get in Touch</span><span data-lang="jp">お問い合わせ</span><span data-lang="cn">联系我们</span></div>
   <div class="con-list">
     <a class="con-item" href="tel:010-5486-0273"><div class="con-icon">📞</div><div><div class="con-label">Phone</div><div class="con-value">010-5486-0273</div></div></a>
+    <a class="con-item" href="https://map.kakao.com/link/search/%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%97%B0%EC%A0%9C%EA%B5%AC%20%EC%9B%94%EB%93%9C%EC%BB%B5%EB%8C%80%EB%A1%9C145%EB%B2%88%EA%B8%B8%2048" target="_blank"><div class="con-icon">📍</div><div><div class="con-label">Address</div><div class="con-value">부산광역시 연제구 월드컵대로145번길 48, 2층</div></div></a>
     <a class="con-item" href="https://blog.naver.com/law_gumin" target="_blank"><div class="con-icon">📝</div><div><div class="con-label">Blog</div><div class="con-value">blog.naver.com/law_gumin</div></div></a>
-    <a class="con-item" href="https://jinjjabg-hub.github.io/MANDU/?u=leechaehong" target="_blank"><div class="con-icon">💬</div><div><div class="con-label">MANDU</div><div class="con-value"><span data-lang="kr" class="active">실시간 번역 메신저</span><span data-lang="en">Live Translation Chat</span><span data-lang="jp">翻訳チャット</span><span data-lang="cn">实时翻译聊天</span></div></div></a>
   </div>
 </div>
 
@@ -392,15 +388,6 @@ footer { padding:16px; }
     title:'대표 법무사', company:'법률통합서비스 검인 법무사사무소',
     phone:'010-5486-0273', email:'', chapter:'파이오니어', bni:'멤버', url:window.location.href
   })">🗂️ <span data-lang="kr" class="active">명함첩 저장</span><span data-lang="en">Save to CardBook</span><span data-lang="jp">名刺帳に保存</span><span data-lang="cn">保存到名片册</span></button>
-</div>
-
-<div style="padding:14px 20px 4px;text-align:center;">
-  <button id="mandu-activate-btn" onclick="activateMandu()" style="background:none;border:1px solid rgba(0,0,0,0.15);color:#888;font-size:10.5px;padding:7px 14px;border-radius:20px;cursor:pointer;">
-    💬 본인 명함이신가요? 만두 연결하기 (1회)
-  </button>
-  <div id="mandu-activate-done" style="display:none;font-size:10.5px;color:#888;padding:7px 0;">
-    ✅ 만두 연결 완료 — 이제 이 카드로 DM을 받을 수 있어요
-  </div>
 </div>
 
 <footer>
@@ -429,116 +416,12 @@ function shareCard() {
   }
 }
 function saveContact() {
-  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:이채홍\nN:이;채홍;;;\nORG:법률통합서비스 검인 법무사사무소\nTITLE:대표 법무사\nTEL;TYPE=CELL:010-5486-0273\nURL:https://blog.naver.com/law_gumin\nEND:VCARD`;
+  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:이채홍\nN:이;채홍;;;\nORG:법률통합서비스 검인 법무사사무소\nTITLE:대표 법무사\nTEL;TYPE=CELL:010-5486-0273\nADR;TYPE=WORK:;2층;월드컵대로145번길 48;연제구;부산광역시;;대한민국\nURL:https://blog.naver.com/law_gumin\nEND:VCARD`;
   const blob = new Blob([vcard], {type:'text/vcard'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob); a.download = 'LeeChaeHong_GuminLaw.vcf'; a.click();
 }
 setLang('kr');
-</script>
-
-<script>
-/* ── 만두 원클릭 연결 (카드 주인 전용) ────────────────────────── */
-async function _manduWaitFirebase(maxTries) {
-  let tries = 0;
-  while ((typeof firebase === 'undefined' || !firebase.apps || !firebase.apps.length) && tries < (maxTries || 50)) {
-    await new Promise(r => setTimeout(r, 100));
-    tries++;
-  }
-  return typeof firebase !== 'undefined' && firebase.apps && firebase.apps.length > 0;
-}
-async function _manduFinishActivate(user) {
-  const slug = 'leechaehong';
-  const db = firebase.firestore();
-  const existing = await db.collection('manduid_index').doc(slug).get();
-  if (existing.exists && existing.data().uid !== user.uid) {
-    const btn = document.getElementById('mandu-activate-btn');
-    if (btn) btn.style.display = 'none';
-    const done = document.getElementById('mandu-activate-done');
-    if (done) { done.textContent = 'ℹ️ 이미 연결된 명함이에요'; done.style.display = 'block'; }
-    return;
-  }
-  await db.collection('users').doc(user.uid).set({
-    uid: user.uid, displayName: user.displayName || '', photoURL: user.photoURL || '',
-    email: user.email || '', manduid: slug
-  }, { merge: true });
-  await db.collection('manduid_index').doc(slug).set({
-    uid: user.uid, createdAt: firebase.firestore.FieldValue.serverTimestamp()
-  }, { merge: true });
-  const btn = document.getElementById('mandu-activate-btn');
-  const done = document.getElementById('mandu-activate-done');
-  if (btn) btn.style.display = 'none';
-  if (done) done.style.display = 'block';
-}
-async function activateMandu() {
-  if (!confirm('본인 명함이 맞나요?\n구글 로그인하면 이 명함으로 만두 DM을 받을 수 있게 연결돼요.')) return;
-  const btn = document.getElementById('mandu-activate-btn');
-  if (btn) { btn.disabled = true; btn.textContent = '연결 중...'; }
-  const ready = await _manduWaitFirebase();
-  if (!ready) {
-    if (btn) { btn.disabled = false; btn.textContent = '💬 본인 명함이신가요? 만두 연결하기 (1회)'; }
-    alert('연결 실패. 잠시 후 다시 시도해주세요.');
-    return;
-  }
-  try {
-    const auth = firebase.auth();
-    await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
-    const provider = new firebase.auth.GoogleAuthProvider();
-    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    if (isMobile) {
-      sessionStorage.setItem('_manduPendingSlug', 'leechaehong');
-      await auth.signInWithRedirect(provider);
-      return;
-    }
-    const result = await auth.signInWithPopup(provider);
-    await _manduFinishActivate(result.user);
-  } catch (e) {
-    console.error('만두 연결 실패:', e);
-    if (btn) { btn.disabled = false; btn.textContent = '💬 본인 명함이신가요? 만두 연결하기 (1회)'; }
-    alert('연결 중 오류가 발생했어요.');
-  }
-}
-(async function () {
-  if (!sessionStorage.getItem('_manduPendingSlug')) return;
-  const ready = await _manduWaitFirebase();
-  sessionStorage.removeItem('_manduPendingSlug');
-  if (!ready) return;
-  try {
-    const res = await firebase.auth().getRedirectResult();
-    if (res && res.user) await _manduFinishActivate(res.user);
-  } catch (e) { console.error(e); }
-})();
-</script>
-<script>
-(function(){
-  var LOG_URL = "https://script.google.com/macros/s/AKfycbz5VDYuWaAQiE9jxZ9r4dew_DgOyMuB_lj1P0K9YCtY1APweG-iKg7T5IZHqylLojbE/exec";
-  var SLUG = document.title;
-  function dicaLog(type){
-    try { fetch(LOG_URL + "?slug=" + encodeURIComponent(SLUG) + "&event=" + type, {mode:"no-cors"}); } catch(e){}
-  }
-  dicaLog('view');
-
-  document.addEventListener('DOMContentLoaded', function(){
-    var saveBtn = document.querySelector('.btn-primary');
-    var cardBtn = document.querySelector('.btn-secondary');
-    if (saveBtn) saveBtn.addEventListener('click', function(){ dicaLog('save_vcard'); });
-    if (cardBtn) cardBtn.addEventListener('click', function(){ dicaLog('save_cardbook'); });
-
-    var statBtn = document.createElement('div');
-    statBtn.textContent = '📊 카드 현황 보기';
-    statBtn.style.cssText = 'position:fixed;bottom:16px;right:16px;background:rgba(0,0,0,0.65);color:#fff;padding:8px 14px;border-radius:20px;font-size:12px;cursor:pointer;z-index:9999;font-family:sans-serif;box-shadow:0 2px 10px rgba(0,0,0,0.3);';
-    statBtn.onclick = function(){
-      statBtn.style.cursor = 'default';
-      statBtn.textContent = '불러오는 중...';
-      fetch(LOG_URL + "?action=stats&slug=" + encodeURIComponent(SLUG))
-        .then(function(r){ return r.json(); })
-        .then(function(d){
-          statBtn.textContent = '조회 ' + d.view + '회 · 저장 ' + d.save + '회';
-        });
-    };
-    document.body.appendChild(statBtn);
-  });
-})();
 </script>
 </body>
 </html>
