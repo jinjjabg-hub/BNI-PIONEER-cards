@@ -744,7 +744,14 @@ footer{background:var(--light);text-align:center;padding:28px 24px 40px;}
     </div>
   </div>
 
+  <div style="padding:4px 20px 4px;text-align:center;">
+    <button id="dica-edit-btn" onclick="openDicaEdit()" style="background:none;border:1px solid rgba(0,0,0,0.15);color:#888;font-size:10.5px;padding:7px 14px;border-radius:20px;cursor:pointer;">
+      ✏️ 내 명함 수정
+    </button>
+  </div>
+
   <!-- 푸터 -->
+
   <footer>
     <div class="footer-logo">T.M — TRANSITION MAKERS</div>
     <div class="footer-sub">© 2026 T.M LINK. All rights reserved.</div>
@@ -942,6 +949,147 @@ async function activateMandu() {
     document.body.appendChild(statBtn);
   });
 })();
+</script>
+<style>
+#dica-edit-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;align-items:flex-end;justify-content:center;}
+#dica-edit-modal.open{display:flex;}
+#dica-edit-sheet{background:#fff;width:100%;max-width:480px;max-height:86vh;border-radius:16px 16px 0 0;display:flex;flex-direction:column;}
+#dica-edit-head{padding:16px 18px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;}
+#dica-edit-head b{font-size:14px;}
+#dica-edit-close{background:none;border:none;font-size:20px;cursor:pointer;color:#888;}
+#dica-edit-list{overflow-y:auto;padding:12px 18px;flex:1;}
+.dica-edit-item{margin-bottom:14px;}
+.dica-edit-item label{display:block;font-size:10px;color:#999;margin-bottom:4px;}
+.dica-edit-item textarea{width:100%;box-sizing:border-box;border:1px solid #ddd;border-radius:8px;padding:8px 10px;font-size:13px;font-family:inherit;resize:vertical;min-height:38px;}
+#dica-edit-foot{padding:12px 18px 18px;border-top:1px solid #eee;}
+#dica-edit-save{width:100%;padding:12px;border:none;border-radius:10px;background:#111;color:#fff;font-size:14px;cursor:pointer;}
+#dica-edit-save:disabled{opacity:.5;}
+#dica-edit-note{font-size:10.5px;color:#999;text-align:center;margin-top:8px;}
+</style>
+
+<div id="dica-edit-modal">
+  <div id="dica-edit-sheet">
+    <div id="dica-edit-head">
+      <b>명함 문구 수정</b>
+      <button id="dica-edit-close" onclick="closeDicaEdit()">✕</button>
+    </div>
+    <div id="dica-edit-list"></div>
+    <div id="dica-edit-foot">
+      <button id="dica-edit-save" onclick="saveDicaEdit()">저장하기</button>
+      <div id="dica-edit-note">한국어만 고치면 다른 언어는 자동으로 번역돼요. 저장 후 반영까지 1~2분 걸릴 수 있어요.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── 명함 셀프 수정 (카드 주인 전용) ───────────────────────────── */
+const DICA_EDIT = {
+  workerUrl: 'https://dica-editor.jinjjabg.workers.dev',
+  repo: 'BNI-PIONEER-cards',
+  slug: '송승훈',
+};
+let _dicaIdToken = null, _dicaGroups = [];
+
+// 서버(worker.js)의 그룹핑 규칙과 완전히 동일한 정규식 — 반드시 이 순서로 T001,T002... 번호가 매겨져야 저장이 정확히 반영됨
+const _DICA_SPAN = /<span data-lang="([a-z]{2})"( class="active")?>([\s\S]*?)<\/span>/g;
+const _DICA_GROUP = new RegExp(`(?:${_DICA_SPAN.source}\\s*)+`, 'g');
+function _dicaExtractGroups(html) {
+  const groups = [];
+  let n = 0;
+  html.replace(_DICA_GROUP, (block) => {
+    const spans = [...block.matchAll(_DICA_SPAN)];
+    if (spans.length < 2) return block;
+    n++;
+    const langs = {};
+    spans.forEach((s) => { langs[s[1]] = s[3]; });
+    groups.push({ key: 'T' + String(n).padStart(3, '0'), langs });
+    return block;
+  });
+  return groups;
+}
+
+async function openDicaEdit() {
+  const btn = document.getElementById('dica-edit-btn');
+  const orig = btn.textContent;
+  btn.disabled = true; btn.textContent = '로그인 중...';
+  try {
+    const ready = await _manduWaitFirebase();
+    if (!ready) throw new Error('로그인 준비 실패. 잠시 후 다시 시도해주세요.');
+    const auth = firebase.auth();
+    await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+    const provider = new firebase.auth.GoogleAuthProvider();
+    const result = await auth.signInWithPopup(provider);
+    _dicaIdToken = await result.user.getIdToken();
+
+    const check = await fetch(`${DICA_EDIT.workerUrl}/owner-check?repo=${encodeURIComponent(DICA_EDIT.repo)}&slug=${encodeURIComponent(DICA_EDIT.slug)}`, {
+      headers: { Authorization: 'Bearer ' + _dicaIdToken },
+    }).then((r) => r.json());
+    if (!check.ok) {
+      alert(check.reason === 'not-registered' ? '이 명함에 등록된 계정이 없습니다. 관리자(송승훈)에게 문의하세요.' : '이 명함의 주인 계정으로 로그인해주세요.');
+      return;
+    }
+
+    const html = await fetch(window.location.href, { cache: 'no-store' }).then((r) => r.text());
+    _dicaGroups = _dicaExtractGroups(html);
+    _dicaRenderList();
+    document.getElementById('dica-edit-modal').classList.add('open');
+  } catch (e) {
+    alert('로그인/불러오기 실패: ' + e.message);
+  } finally {
+    btn.disabled = false; btn.textContent = orig;
+  }
+}
+
+function _dicaRenderList() {
+  const list = document.getElementById('dica-edit-list');
+  list.innerHTML = '';
+  _dicaGroups.forEach((g) => {
+    const wrap = document.createElement('div');
+    wrap.className = 'dica-edit-item';
+    const label = document.createElement('label');
+    label.textContent = g.key;
+    const ta = document.createElement('textarea');
+    ta.value = g.langs.kr || '';
+    ta.dataset.key = g.key;
+    wrap.appendChild(label); wrap.appendChild(ta);
+    list.appendChild(wrap);
+  });
+}
+
+function closeDicaEdit() {
+  document.getElementById('dica-edit-modal').classList.remove('open');
+}
+
+async function saveDicaEdit() {
+  const btn = document.getElementById('dica-edit-save');
+  const changes = {};
+  document.querySelectorAll('#dica-edit-list textarea').forEach((ta) => {
+    const g = _dicaGroups.find((x) => x.key === ta.dataset.key);
+    if (!g) return;
+    const newVal = ta.value;
+    if (newVal === (g.langs.kr || '')) return; // 안 바뀐 항목은 건너뜀
+    const otherLangs = Object.keys(g.langs).filter((l) => l !== 'kr');
+    changes[g.key] = { kr: newVal, _langs: otherLangs };
+  });
+  if (!Object.keys(changes).length) { alert('바뀐 내용이 없습니다.'); return; }
+
+  btn.disabled = true; btn.textContent = '저장 중... (번역 포함, 몇 초 걸릴 수 있어요)';
+  try {
+    const res = await fetch(`${DICA_EDIT.workerUrl}/save`, {
+      method: 'POST',
+      headers: { Authorization: 'Bearer ' + _dicaIdToken, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ repo: DICA_EDIT.repo, slug: DICA_EDIT.slug, changes }),
+    });
+    const j = await res.json();
+    if (!j.ok) throw new Error(j.error || '저장 실패');
+    alert('저장됐습니다! GitHub Pages에 반영되기까지 1~2분 정도 걸릴 수 있어요.');
+    closeDicaEdit();
+  } catch (e) {
+    alert('저장 실패: ' + e.message);
+  } finally {
+    btn.disabled = false; btn.textContent = '저장하기';
+  }
+}
 </script>
 </body>
 </html>
