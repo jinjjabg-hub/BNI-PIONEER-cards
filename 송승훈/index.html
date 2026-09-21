@@ -34,7 +34,7 @@ body{font-family:'Paperlogy','Apple SD Gothic Neo','Noto Sans KR',sans-serif;col
 div[data-lang].active,p[data-lang].active{display:block;}
 
 /* ===== 언어 스위치 ===== */
-.lang-bar{position:absolute;top:14px;right:14px;z-index:20;display:flex;gap:4px;background:rgba(0,0,0,0.45);backdrop-filter:blur(6px);border-radius:20px;padding:4px;}
+.lang-bar{position:fixed;top:14px;right:max(14px, calc((100vw - 430px)/2 + 14px));z-index:30;display:flex;gap:4px;background:rgba(0,0,0,0.45);backdrop-filter:blur(6px);border-radius:20px;padding:4px;}
 .lang-btn{border:none;background:transparent;color:rgba(255,255,255,0.55);font-size:10.5px;font-weight:700;padding:5px 9px;border-radius:14px;cursor:pointer;font-family:inherit;}
 .lang-btn.on{background:var(--gold);color:#143c31;}
 
@@ -238,7 +238,7 @@ footer{background:var(--light);text-align:center;padding:28px 24px 40px;}
         <span data-lang="mn">Орчуулгын мессенжер MANDU</span></span>
       <span class="kw-tag"><span data-lang="kr" class="active">퍼스널 브랜딩</span><span data-lang="en">Personal Branding</span><span data-lang="jp">パーソナルブランディング</span><span data-lang="cn">个人品牌</span>
         <span data-lang="mn">Хувийн брэндинг</span></span>
-      <span class="kw-tag"><span data-lang="kr" class="active">4개국어 지원</span><span data-lang="en">5 Languages</span><span data-lang="jp">5か国語対応</span><span data-lang="cn">支持5国语言</span>
+      <span class="kw-tag"><span data-lang="kr" class="active">5개국어 지원</span><span data-lang="en">5 Languages</span><span data-lang="jp">5か国語対応</span><span data-lang="cn">支持5国语言</span>
         <span data-lang="mn">5 хэл дэмждэг</span></span>
     </div>
   </div>
@@ -392,14 +392,14 @@ footer{background:var(--light);text-align:center;padding:28px 24px 40px;}
       <div class="diff-num">04</div>
       <div>
         <div class="diff-t">
-          <span data-lang="kr" class="active">한 장에 4개국어, 수정은 실시간</span>
+          <span data-lang="kr" class="active">한 장에 5개국어, 수정은 실시간</span>
           <span data-lang="en">5 Languages in One Card, Real-Time Updates</span>
           <span data-lang="jp">1枚で5か国語、修正はリアルタイム</span>
           <span data-lang="cn">一张名片5国语言，修改实时生效</span>
         <span data-lang="mn">Нэг хуудсанд 5 хэл, засвар шууд шинэчлэгддэг</span>
         </div>
         <div class="diff-d">
-          <span data-lang="kr" class="active">한 장의 명함에 4개국어를 담고, 내용이 바뀌어도 다시 인쇄해서 나눠줄 필요가 없습니다. 링크는 그대로, 내용만 갱신됩니다.</span>
+          <span data-lang="kr" class="active">한 장의 명함에 5개국어를 담고, 내용이 바뀌어도 다시 인쇄해서 나눠줄 필요가 없습니다. 링크는 그대로, 내용만 갱신됩니다.</span>
           <span data-lang="en">One card holds five languages. When your info changes, there's no reprinting or re-handing. The link stays; only the content updates.</span>
           <span data-lang="jp">1枚の名刺に5か国語を収め、内容が変わっても再印刷して配り直す必要がありません。リンクはそのまま、内容だけが更新されます。</span>
           <span data-lang="cn">一张名片承载5国语言，内容变更也无需重新印刷派发。链接不变，内容随时更新。</span>
@@ -462,7 +462,7 @@ footer{background:var(--light);text-align:center;padding:28px 24px 40px;}
         <span data-lang="mn">Гадаад захиалгын төлөөлөгч · гадаад худалдан авагчтай уулзалт</span></div>
             <div class="ref-item"><span class="ref-check">✔</span><span data-lang="kr" class="active">외국인 고객을 대상으로 하는 사업</span><span data-lang="en">Businesses serving foreign customers</span><span data-lang="jp">外国人顧客を対象とする事業</span><span data-lang="cn">面向外国客户的业务</span>
         <span data-lang="mn">Гадаадын харилцагчид зориулсан бизнес</span></div>
-            <div class="ref-item"><span class="ref-check">✔</span><span data-lang="kr" class="active">4개국어 명함 + 번역 메신저 MANDU가 무기가 됩니다</span><span data-lang="en">A 5-language card + MANDU translator becomes your weapon</span><span data-lang="jp">5か国語名刺＋翻訳メッセンジャーMANDUが武器になります</span><span data-lang="cn">5国语言名片+翻译通讯MANDU将成为您的武器</span>
+            <div class="ref-item"><span class="ref-check">✔</span><span data-lang="kr" class="active">5개국어 명함 + 번역 메신저 MANDU가 무기가 됩니다</span><span data-lang="en">A 5-language card + MANDU translator becomes your weapon</span><span data-lang="jp">5か国語名刺＋翻訳メッセンジャーMANDUが武器になります</span><span data-lang="cn">5国语言名片+翻译通讯MANDU将成为您的武器</span>
         <span data-lang="mn">5 хэлтэй нэрийн хуудас + орчуулгын мессенжер MANDU нь таны зэвсэг болно</span></div>
           </div>
         </div></div>
