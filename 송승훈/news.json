@@ -3,40 +3,6 @@
   "maxVisible": 10,
   "items": [
     {
-      "id": "nmusaxt5e",
-      "type": "product",
-      "date": "2026-10-03",
-      "title": {
-        "kr": "오토명함",
-        "en": "AutoCard",
-        "jp": "オートビジネスカード",
-        "cn": "自动名片",
-        "hi": "ऑटो नाम पत्र"
-      },
-      "owner_post": true,
-      "desc": {
-        "kr": "간단한 디지탈명함 무료부터 시작가능",
-        "en": "Simple digital business card starting free",
-        "jp": "シンプルなデジタル名刺、無料から開始可能",
-        "cn": "从免费的简单数字名片开始",
-        "hi": "सरल डिजिटल नाम पत्र मुफ्त से शुरू संभव"
-      },
-      "price": {
-        "kr": "0원부터",
-        "en": "From 0 won",
-        "jp": "0円から",
-        "cn": "从0元起",
-        "hi": "0 रुपये से"
-      },
-      "until": "2026-10-31",
-      "links": [
-        {
-          "url": "https://jinjjabg-hub.github.io/autocard/",
-          "label": "jinjjabg-hub.github.io"
-        }
-      ]
-    },
-    {
       "id": "autocard-launch",
       "type": "product",
       "date": "2026-10-03",
