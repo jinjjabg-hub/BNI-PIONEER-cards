@@ -3,11 +3,47 @@
   "maxVisible": 10,
   "items": [
     {
+      "id": "nmusaxt5e",
+      "type": "product",
+      "date": "2026-10-03",
+      "title": {
+        "kr": "오토명함",
+        "en": "AutoCard",
+        "jp": "オートビジネスカード",
+        "cn": "自动名片",
+        "hi": "ऑटो नाम पत्र"
+      },
+      "owner_post": true,
+      "desc": {
+        "kr": "간단한 디지탈명함 무료부터 시작가능",
+        "en": "Simple digital business card starting free",
+        "jp": "シンプルなデジタル名刺、無料から開始可能",
+        "cn": "从免费的简单数字名片开始",
+        "hi": "सरल डिजिटल नाम पत्र मुफ्त से शुरू संभव"
+      },
+      "price": {
+        "kr": "0원부터",
+        "en": "From 0 won",
+        "jp": "0円から",
+        "cn": "从0元起",
+        "hi": "0 रुपये से"
+      },
+      "until": "2026-10-31",
+      "links": [
+        {
+          "url": "https://jinjjabg-hub.github.io/autocard/",
+          "label": "jinjjabg-hub.github.io"
+        }
+      ]
+    },
+    {
       "id": "autocard-launch",
       "type": "product",
       "date": "2026-10-03",
       "pinned": true,
-      "images": ["news/autocard.webp"],
+      "images": [
+        "news/autocard.webp"
+      ],
       "price": {
         "kr": "5,900원부터 · 월 요금 없음",
         "en": "From ₩5,900 · no monthly fee",
@@ -31,12 +67,24 @@
       },
       "button": {
         "url": "https://jinjjabg-hub.github.io/autocard/",
-        "label": { "kr": "오토명함 만들기", "en": "Make an AutoCard", "jp": "オート名刺を作る", "cn": "制作自动名片", "hi": "AutoCard बनाएं" }
+        "label": {
+          "kr": "오토명함 만들기",
+          "en": "Make an AutoCard",
+          "jp": "オート名刺を作る",
+          "cn": "制作自动名片",
+          "hi": "AutoCard बनाएं"
+        }
       },
       "links": [
         {
           "url": "https://jinjjabg-hub.github.io/T.M-LINK/#app-autocard",
-          "label": { "kr": "오토명함 자세히 보기 (TM LINK)", "en": "More about AutoCard (TM LINK)", "jp": "オート名刺の詳細（TM LINK）", "cn": "了解自动名片（TM LINK）", "hi": "AutoCard के बारे में (TM LINK)" }
+          "label": {
+            "kr": "오토명함 자세히 보기 (TM LINK)",
+            "en": "More about AutoCard (TM LINK)",
+            "jp": "オート名刺の詳細（TM LINK）",
+            "cn": "了解自动名片（TM LINK）",
+            "hi": "AutoCard के बारे में (TM LINK)"
+          }
         }
       ]
     },
@@ -44,7 +92,9 @@
       "id": "mandu-messenger",
       "type": "product",
       "date": "2026-10-02",
-      "images": ["news/mandu.webp"],
+      "images": [
+        "news/mandu.webp"
+      ],
       "price": {
         "kr": "무료로 시작",
         "en": "Free to start",
@@ -68,12 +118,24 @@
       },
       "button": {
         "url": "https://jinjjabg-hub.github.io/MANDU/",
-        "label": { "kr": "만두 시작하기", "en": "Start MANDU", "jp": "MANDU を始める", "cn": "开始使用 MANDU", "hi": "MANDU शुरू करें" }
+        "label": {
+          "kr": "만두 시작하기",
+          "en": "Start MANDU",
+          "jp": "MANDU を始める",
+          "cn": "开始使用 MANDU",
+          "hi": "MANDU शुरू करें"
+        }
       },
       "links": [
         {
           "url": "https://jinjjabg-hub.github.io/T.M-LINK/#app-mandu",
-          "label": { "kr": "만두 자세히 보기 (TM LINK)", "en": "More about MANDU (TM LINK)", "jp": "MANDU の詳細（TM LINK）", "cn": "了解 MANDU（TM LINK）", "hi": "MANDU के बारे में (TM LINK)" }
+          "label": {
+            "kr": "만두 자세히 보기 (TM LINK)",
+            "en": "More about MANDU (TM LINK)",
+            "jp": "MANDU の詳細（TM LINK）",
+            "cn": "了解 MANDU（TM LINK）",
+            "hi": "MANDU के बारे में (TM LINK)"
+          }
         }
       ]
     },
@@ -81,7 +143,9 @@
       "id": "cardbook-app",
       "type": "news",
       "date": "2026-10-01",
-      "images": ["news/cardbook.webp"],
+      "images": [
+        "news/cardbook.webp"
+      ],
       "price": {
         "kr": "무료",
         "en": "Free",
@@ -105,12 +169,24 @@
       },
       "button": {
         "url": "https://jinjjabg-hub.github.io/cardbook/",
-        "label": { "kr": "카드북 열기", "en": "Open CardBook", "jp": "カードブックを開く", "cn": "打开名片册", "hi": "CardBook खोलें" }
+        "label": {
+          "kr": "카드북 열기",
+          "en": "Open CardBook",
+          "jp": "カードブックを開く",
+          "cn": "打开名片册",
+          "hi": "CardBook खोलें"
+        }
       },
       "links": [
         {
           "url": "https://jinjjabg-hub.github.io/T.M-LINK/#app-cardbook",
-          "label": { "kr": "카드북 자세히 보기 (TM LINK)", "en": "More about CardBook (TM LINK)", "jp": "カードブックの詳細（TM LINK）", "cn": "了解名片册（TM LINK）", "hi": "CardBook के बारे में (TM LINK)" }
+          "label": {
+            "kr": "카드북 자세히 보기 (TM LINK)",
+            "en": "More about CardBook (TM LINK)",
+            "jp": "カードブックの詳細（TM LINK）",
+            "cn": "了解名片册（TM LINK）",
+            "hi": "CardBook के बारे में (TM LINK)"
+          }
         }
       ]
     }
