@@ -3,43 +3,6 @@
   "maxVisible": 10,
   "items": [
     {
-      "id": "nmusbb4b1",
-      "type": "product",
-      "date": "2026-10-03",
-      "title": {
-        "kr": "오토명함",
-        "en": "Auto Meishi",
-        "jp": "オートビジネスカード",
-        "cn": "Auto名片",
-        "hi": "ऑटो नामपत्र"
-      },
-      "owner_post": true,
-      "desc": {
-        "kr": "스마트폰으로 언제 어디서나 명함을 공유할 수 있어 종이 명함을 들고 다닐 필요가 없습니다. 무료로 시작할 수 있어 비용 부담 없이 디지털 명함의 편리함을 경험해볼 수 있으며, 연락처 정보를 쉽게 업데이트하고 관리할 수 있습니다.",
-        "en": "Share your business card anytime, anywhere via smartphone without needing to carry paper cards. Start for free and experience the convenience of digital cards at no cost, while easily updating and managing your contact information.",
-        "jp": "スマートフォンでいつどこからでも名刺を共有でき、紙の名刺を持ち歩く必要がありません。無料で始められるため、コストの負担なくデジタル名刺の便利さを体験でき、連絡先情報を簡単に更新・管理できます。",
-        "cn": "可随时随地通过智能手机分享名片，无需携带纸质名片。可免费开始使用，无费用负担地体验数字名片的便利，并可轻松更新和管理联系信息。",
-        "hi": "स्मार्टफोन से कहीं भी किसी भी समय नामपत्र साझा कर सकते हैं, इसलिए कागजी नामपत्र ले जाने की जरूरत नहीं है। बिना किसी खर्च के शुरुआत करें और डिजिटल नामपत्र की सुविधा का अनुभव करें, साथ ही संपर्क जानकारी को आसानी से अपडेट और प्रबंधित करें।"
-      },
-      "price": {
-        "kr": "무료부터",
-        "en": "From Free",
-        "jp": "無料から",
-        "cn": "免费开始",
-        "hi": "निःशुल्क से शुरुआत"
-      },
-      "until": "2026-10-31",
-      "links": [
-        {
-          "url": "https://jinjjabg-hub.github.io/autocard/",
-          "label": "jinjjabg-hub.github.io"
-        }
-      ],
-      "images": [
-        "news/nmusbb4b1.webp"
-      ]
-    },
-    {
       "id": "autocard-launch",
       "type": "product",
       "date": "2026-10-03",
