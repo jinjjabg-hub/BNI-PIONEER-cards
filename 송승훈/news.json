@@ -3,43 +3,6 @@
   "maxVisible": 10,
   "items": [
     {
-      "id": "nmusbva2y",
-      "type": "product",
-      "date": "2026-10-03",
-      "title": {
-        "kr": "오토명함",
-        "en": "AutoBiz Card",
-        "jp": "オートビジネスカード",
-        "cn": "Auto名片",
-        "hi": "ऑटो नेमकार्ड"
-      },
-      "owner_post": true,
-      "desc": {
-        "kr": "오토명함은 자동으로 생성되는 디지털 명함 서비스입니다. 번거로운 명함 제작 과정 없이 빠르게 명함을 만들고 관리할 수 있어 시간을 절약할 수 있습니다. 고객과의 접촉 순간에 즉시 명함 정보를 전달할 수 있는 편리한 솔루션입니다.0 원부터",
-        "en": "AutoBiz Card is an automatically generated digital business card service. You can quickly create and manage business cards without the hassle of traditional card production, saving time. It's a convenient solution that allows you to instantly share your card information at the moment of customer contact. From 0 won",
-        "jp": "オートビジネスカードは自動生成されるデジタルビジネスカードサービスです。面倒なビジネスカード作成プロセスなしに、素早くビジネスカードを作成・管理でき、時間を節約できます。顧客との接触の瞬間に即座にビジネスカード情報を伝えられる便利なソリューションです。0円から",
-        "cn": "Auto名片是自动生成的数字名片服务。无需繁琐的名片制作流程，可快速创建和管理名片，节省时间。这是在与客户接触时能即时传递名片信息的便捷解决方案。从0元起",
-        "hi": "ऑटो नेमकार्ड एक स्वचालित रूप से उत्पन्न डिजिटल नेमकार्ड सेवा है।번거로운 명함 제작 과정 없이 빠르게 명함을 만들고 관리할 수 있어 시간을 절약할 수 있습니다। 고객과의 접촉 순간에 즉시 명함 정보를 전달할 수 있는 편리한 솔루션입니다।0 रुपये से"
-      },
-      "price": {
-        "kr": "0원부터",
-        "en": "From 0 won",
-        "jp": "0円から",
-        "cn": "从0元起",
-        "hi": "0 रुपये से"
-      },
-      "until": "2026-10-31",
-      "links": [
-        {
-          "url": "https://jinjjabg-hub.github.io/autocard/",
-          "label": "jinjjabg-hub.github.io"
-        }
-      ],
-      "images": [
-        "news/nmusbva2y.webp"
-      ]
-    },
-    {
       "id": "nmusbb4b1",
       "type": "product",
       "date": "2026-10-03",
