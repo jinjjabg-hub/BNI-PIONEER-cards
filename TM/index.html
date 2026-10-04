@@ -290,7 +290,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:#111;color:#fff;overflow-x
     👤 연락처 저장
   </button>
   <button class="btn-save btn-holder" onclick="saveToCardHolder()">
-    📋 명함첩에 저장
+    📋 카드북에 저장
   </button>
   <a class="btn-save btn-kakao" href="https://jinjjabg-hub.github.io/MANDU/?u=jinjjabg" target="_blank">
     🌐 MANDU 번역 메신저로 연결
@@ -546,12 +546,12 @@ function saveToCardHolder() {
   };
   let cards = JSON.parse(localStorage.getItem('bni_cards') || '[]');
   if (cards.find(c => c.id === card.id)) {
-    alert('이미 명함첩에 저장되어 있습니다!');
+    alert('이미 카드북에 저장되어 있습니다!');
     return;
   }
   cards.push(card);
   localStorage.setItem('bni_cards', JSON.stringify(cards));
-  alert('✅ 명함첩에 저장되었습니다!');
+  alert('✅ 카드북에 저장되었습니다!');
 }
 const io = new IntersectionObserver(e => e.forEach(el => {
   if(el.isIntersecting){ el.target.classList.add('on'); io.unobserve(el.target); }
