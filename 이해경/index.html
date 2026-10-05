@@ -244,6 +244,33 @@ section { padding: 40px 20px; }
 .portfolio-dot { width:6px; height:6px; border-radius:50%; background: rgba(120,190,32,0.3); transition: all 0.25s; }
 .portfolio-dot.active { background: var(--gold); width:18px; border-radius:3px; }
 
+/* ── 2차 수정 추가 (2026-10-05): 부제·3단 리퍼럴·경력 도입/전문분야·포트폴리오 소개·연락 안내 ── */
+.section-title.has-sub { margin-bottom: 6px; }
+.career-badge { min-width: 52px; text-align: center; }
+.section-sub { font-size: 13px; color: var(--muted-light); margin-bottom: 20px; line-height: 1.6; }
+.diff-card h3, .why-card h3 { word-break: keep-all; }
+.ref-item-3 { display: block; padding: 16px 16px; border-left: 4px solid var(--gold); }
+.ref-item-3 .ref-head { font-size: 14px; font-weight: 700; color: var(--text-light); line-height: 1.5; margin-bottom: 6px; word-break: keep-all; }
+.ref-item-3 .ref-quote { word-break: keep-all; font-size: 13px; color: var(--navy); font-weight: 500; line-height: 1.7; margin-bottom: 6px; }
+.ref-item-3 .ref-desc { word-break: keep-all; font-size: 12.5px; color: #555; line-height: 1.8; }
+.section-closing { margin-top: 18px; font-size: 13px; line-height: 1.8; color: var(--navy); font-weight: 700; text-align: center; word-break: keep-all; }
+.career-intro { position: relative; z-index:1; background: #fff; border-radius: 10px; padding: 16px; margin-bottom: 24px; border-left: 4px solid var(--gold); }
+.career-intro h3 { font-size: 15px; font-weight: 700; color: var(--text-light); margin-bottom: 8px; line-height: 1.45; word-break: keep-all; }
+.career-intro p { font-size: 13px; line-height: 1.85; color: #444; }
+.career-subhead { position: relative; z-index:1; font-size: 13px; font-weight: 700; color: var(--navy); margin: 0 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--gold); display: inline-block; }
+.career-list + .career-subhead { margin-top: 28px; }
+.expertise-grid { position: relative; z-index:1; display: grid; grid-template-columns: 1fr; gap: 10px; }
+.expertise-item { background: rgba(255,255,255,0.82); border-radius: 8px; padding: 12px 14px; }
+.expertise-item h3 { font-size: 14px; font-weight: 700; color: var(--text-light); margin-bottom: 5px; line-height: 1.4; }
+.expertise-item p { font-size: 12px; line-height: 1.8; color: #555; }
+.portfolio-intro { margin: -8px 0 20px; }
+.portfolio-intro p { font-size: 13px; line-height: 1.8; color: var(--text-dark); opacity: 0.85; margin-bottom: 10px; word-break: keep-all; }
+.portfolio-intro .pf-strong { color: var(--gold2); opacity: 1; font-weight: 700; }
+.portfolio-intro .pf-tags { font-size: 11px; letter-spacing: 0.5px; color: var(--muted-dark); }
+.portfolio-intro .pf-sign { font-weight: 700; opacity: 1; margin-bottom: 0; }
+.contact-intro { word-break: keep-all; font-size: 13px; line-height: 1.85; color: #444; margin: -8px 0 18px; }
+.contact-head { font-size: 13px; font-weight: 700; color: var(--navy); background: #fff; border-left: 4px solid var(--gold); border-radius: 8px; padding: 10px 12px; margin-bottom: 12px; line-height: 1.5; word-break: keep-all; }
+
 /* ── CONTACT ── */
 .contact { background: var(--light); }
 .contact .section-label { color: var(--muted-light); }
@@ -388,128 +415,134 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 <!-- WHY : why-card 3개 (①②③) -->
 <section class="why">
   <div class="section-label">Why Us</div>
-  <div class="section-title">
-    <span data-lang="kr" class="active">왜 데일카네기 부산인가</span>
-    <span data-lang="en">Why Dale Carnegie Busan?</span>
-    <span data-lang="jp">なぜデールカーネギー釜山なのか</span>
-    <span data-lang="cn">为什么选择戴尔·卡耐基釜山</span>
+  <div class="section-title has-sub">
+    <span data-lang="kr" class="active">왜 데일카네기인가</span>
+    <span data-lang="en">Why Dale Carnegie?</span>
+    <span data-lang="jp">なぜデール・カーネギーなのか</span>
+    <span data-lang="cn">为什么选择戴尔·卡耐基</span>
+  </div>
+  <div class="section-sub">
+    <span data-lang="kr" class="active">이런 마음으로 함께합니다</span>
+    <span data-lang="en">This is the spirit in which I work with you</span>
+    <span data-lang="jp">こんな思いでご一緒します</span>
+    <span data-lang="cn">我怀着这样的心意与您同行</span>
   </div>
   <div class="why-cards">
     <div class="why-card">
       <h3>
-        <span data-lang="kr" class="active">① 사람과 팀을 가까이에서 만나온 현장 경험</span>
-        <span data-lang="en">① Hands-on experience working closely with people and teams</span>
-        <span data-lang="jp">① 人とチームに間近で向き合ってきた現場経験</span>
-        <span data-lang="cn">① 近距离接触人与团队的一线经验</span>
+        <span data-lang="kr" class="active">① 현장의 고민을 이해합니다</span>
+        <span data-lang="en">① I understand the challenges on the ground</span>
+        <span data-lang="jp">① 現場の悩みを理解しています</span>
+        <span data-lang="cn">① 我理解一线的烦恼</span>
       </h3>
       <p>
-        <span data-lang="kr" class="active"><strong>25년간</strong> 조직·마케팅 현장에서 사람을 만나고 팀을 돕고 이끌어왔습니다. 책상 위 이론이 아니라 현장에서 부딪히며 배운 경험으로 함께합니다.</span>
-        <span data-lang="en">For <strong>25 years</strong> I have met people, supported teams and led them in organizations and marketing. I work with you from lessons learned on the ground, not theory.</span>
-        <span data-lang="jp"><strong>25年間</strong>、組織・マーケティングの現場で人と出会い、チームを支え導いてきました。机上の理論ではなく、現場で学んだ経験で共に歩みます。</span>
-        <span data-lang="cn"><strong>25年</strong>来，我在组织与营销一线接触人、帮助并带领团队。我凭借一线摸索出的经验与您同行，而非纸上理论。</span>
+        <span data-lang="kr" class="active">팀을 이끌며 성과에 대한 책임과 사람 사이의 어려움을 함께 경험했습니다. 대표님과 리더가 마주하는 고민을 현장의 눈높이에서 듣겠습니다.</span>
+        <span data-lang="en">Leading teams, I have experienced both the responsibility for results and the difficulties between people. I will listen to the concerns that you and your leaders face from a front-line perspective.</span>
+        <span data-lang="jp">チームを率いる中で、成果への責任と人と人との間の難しさを共に経験してきました。経営者とリーダーが向き合う悩みを、現場の目線でお聴きします。</span>
+        <span data-lang="cn">在带领团队的过程中，我亲身经历过对业绩的责任和人与人之间的难处。我会站在一线的角度，倾听老板和领导者所面临的烦恼。</span>
       </p>
     </div>
     <div class="why-card">
       <h3>
-        <span data-lang="kr" class="active">② 대표님의 고민을 먼저 듣는 마음</span>
-        <span data-lang="en">② Listening to your concerns first</span>
-        <span data-lang="jp">② 経営者のお悩みをまず聴く姿勢</span>
-        <span data-lang="cn">② 先倾听您的烦恼</span>
+        <span data-lang="kr" class="active">② 필요한 배움을 함께 찾습니다</span>
+        <span data-lang="en">② Finding the learning you need, together</span>
+        <span data-lang="jp">② 必要な学びを一緒に探します</span>
+        <span data-lang="cn">② 一起找到所需的学习</span>
       </h3>
       <p>
-        <span data-lang="kr" class="active">답을 먼저 말하기보다 <strong>듣는 것부터</strong> 시작합니다. 지금 어떤 관계가 어렵고 무엇이 막혀 있는지, 대표님의 이야기를 끝까지 듣습니다.</span>
-        <span data-lang="en">I start by <strong>listening</strong>, not by giving answers. I hear you out on which relationships are hard and what is holding you back.</span>
-        <span data-lang="jp">答えを先に語るより、<strong>聴くことから</strong>始めます。どんな関係が難しく、何が滞っているのか、最後までお話を伺います。</span>
-        <span data-lang="cn">我不急于给出答案，而是<strong>从倾听开始</strong>。哪些关系让您为难、哪里遇到阻碍，我会听您说完。</span>
+        <span data-lang="kr" class="active">어떤 관계가 어렵고, 팀에 어떤 변화가 필요한지 먼저 이야기 나눕니다. 그 고민에 맞는 최고경영자 과정과 기업교육을 안내하겠습니다.</span>
+        <span data-lang="en">First, we talk about which relationships are difficult and what change your team needs. Then I will guide you to the Executive Course and corporate training that fit those concerns.</span>
+        <span data-lang="jp">どんな関係が難しく、チームにどんな変化が必要か、まずお話しします。そのお悩みに合った経営者向けコースと企業研修をご案内します。</span>
+        <span data-lang="cn">先聊一聊哪些关系让您为难、团队需要怎样的改变。再为您介绍适合这些烦恼的高管课程和企业培训。</span>
       </p>
     </div>
     <div class="why-card">
       <h3>
-        <span data-lang="kr" class="active">③ 함께 배우고 실천하는 자세</span>
-        <span data-lang="en">③ Learning and practicing together</span>
-        <span data-lang="jp">③ 共に学び、実践する姿勢</span>
-        <span data-lang="cn">③ 共同学习、共同实践</span>
+        <span data-lang="kr" class="active">③ 저도 배우고 실천하는 사람입니다</span>
+        <span data-lang="en">③ I, too, keep learning and practicing</span>
+        <span data-lang="jp">③ 私も学び、実践する一人です</span>
+        <span data-lang="cn">③ 我也是不断学习和实践的人</span>
       </h3>
       <p>
-        <span data-lang="kr" class="active">저 역시 사람을 이해하고 함께 일하는 법을 <strong>계속 배우고 있습니다</strong>. 가르치는 사람이 아니라 함께 실천하는 동료로 곁에 있겠습니다.</span>
-        <span data-lang="en">I am <strong>still learning</strong> how to understand people and work together. I stand beside you as a partner who practices with you, not as a lecturer.</span>
-        <span data-lang="jp">私自身も人を理解し共に働く方法を<strong>学び続けています</strong>。教える人ではなく、共に実践する仲間として寄り添います。</span>
-        <span data-lang="cn">我自己也在<strong>不断学习</strong>如何理解他人、与人共事。我不是说教者，而是与您一起实践的伙伴。</span>
+        <span data-lang="kr" class="active">사람을 이끄는 일에는 늘 새로운 배움이 필요합니다. 제 경험을 나누고 대표님의 경험에서도 배우며, 함께 성장하는 인연을 이어가겠습니다.</span>
+        <span data-lang="en">Leading people always calls for new learning. I will share my experience, learn from yours as well, and keep building a relationship in which we grow together.</span>
+        <span data-lang="jp">人を導く仕事には、常に新しい学びが必要です。私の経験をお伝えし、経営者の皆さまの経験からも学びながら、共に成長するご縁をつないでいきます。</span>
+        <span data-lang="cn">带领人的工作，总需要新的学习。我会分享自己的经验，也向您的经验学习，延续共同成长的缘分。</span>
       </p>
     </div>
   </div>
 </section>
 
-<!-- DIFFERENCE : diff-card 2~3개 -->
+<!-- DIFFERENCE : diff-card 4개 (①~④) -->
 <section class="difference">
   <div class="section-label">Difference</div>
   <div class="section-title">
-    <span data-lang="kr" class="active">차별점</span>
-    <span data-lang="en">What Makes Us Different</span>
-    <span data-lang="jp">差別化ポイント</span>
-    <span data-lang="cn">差异化优势</span>
+    <span data-lang="kr" class="active">배움이 일터의 작은 실천으로</span>
+    <span data-lang="en">Turning learning into small actions at work</span>
+    <span data-lang="jp">学びを職場での小さな実践へ</span>
+    <span data-lang="cn">让学习化为职场中的小实践</span>
   </div>
   <div class="diff-grid">
     <div class="diff-card">
       <h3>
-        <span data-lang="kr" class="active">고민을 듣는 것부터 시작합니다.</span>
-        <span data-lang="en">We start by listening to your concerns.</span>
-        <span data-lang="jp">お悩みを聴くことから始めます。</span>
-        <span data-lang="cn">从倾听烦恼开始。</span>
+        <span data-lang="kr" class="active">① 인간관계 — 상대를 이해하는 대화</span>
+        <span data-lang="en">① Human Relations — Conversations that understand the other person</span>
+        <span data-lang="jp">① 人間関係 — 相手を理解する対話</span>
+        <span data-lang="cn">① 人际关系 — 理解对方的对话</span>
       </h3>
       <p>
-        <span data-lang="kr" class="active">지금 어떤 관계가 어렵고, 어떤 변화가 필요한지 함께 이야기합니다.</span>
-        <span data-lang="en">Together we talk about which relationships are difficult and what change is needed.</span>
-        <span data-lang="jp">今どんな関係が難しく、どんな変化が必要か、一緒に話し合います。</span>
-        <span data-lang="cn">一起谈谈哪些关系让您为难、需要怎样的改变。</span>
+        <span data-lang="kr" class="active">직원의 이야기를 끝까지 듣고, 구체적인 수고를 인정하는 작은 행동부터 연습합니다.</span>
+        <span data-lang="en">We start by practicing small actions: hearing employees out and recognizing their specific efforts.</span>
+        <span data-lang="jp">社員の話を最後まで聴き、具体的な頑張りを認める小さな行動から練習します。</span>
+        <span data-lang="cn">从听员工把话说完、具体肯定他们的付出这样的小行动开始练习。</span>
       </p>
     </div>
     <div class="diff-card">
       <h3>
-        <span data-lang="kr" class="active">일터에서 해볼 작은 실천을 찾습니다.</span>
-        <span data-lang="en">We find small actions to try at work.</span>
-        <span data-lang="jp">職場で試せる小さな実践を見つけます。</span>
-        <span data-lang="cn">找到在工作中就能尝试的小行动。</span>
+        <span data-lang="kr" class="active">② 리더십 — 함께 생각하고 움직이는 팀</span>
+        <span data-lang="en">② Leadership — A team that thinks and moves together</span>
+        <span data-lang="jp">② リーダーシップ — 共に考え、動くチーム</span>
+        <span data-lang="cn">② 领导力 — 共同思考、共同行动的团队</span>
       </h3>
       <p>
-        <span data-lang="kr" class="active">말을 끝까지 듣고, 고마움을 전하는 것부터 시작합니다.</span>
-        <span data-lang="en">It begins with hearing people out and saying thank you.</span>
-        <span data-lang="jp">最後まで話を聴き、感謝を伝えることから始めます。</span>
-        <span data-lang="cn">从听对方把话说完、表达感谢开始。</span>
+        <span data-lang="kr" class="active">질문으로 구성원의 생각을 듣고, 서로의 기대와 역할을 나누는 소통을 배웁니다.</span>
+        <span data-lang="en">We learn to hear team members' thoughts through questions and to communicate about each other's expectations and roles.</span>
+        <span data-lang="jp">質問を通してメンバーの考えを聴き、互いの期待と役割を共有するコミュニケーションを学びます。</span>
+        <span data-lang="cn">通过提问倾听成员的想法，学习分享彼此期待与角色的沟通方式。</span>
       </p>
     </div>
     <div class="diff-card">
       <h3>
-        <span data-lang="kr" class="active">리더 자신도 함께 성장하길 바랍니다.</span>
-        <span data-lang="en">We want leaders to grow too.</span>
-        <span data-lang="jp">リーダー自身も共に成長することを願います。</span>
-        <span data-lang="cn">希望领导者自己也一同成长。</span>
+        <span data-lang="kr" class="active">③ 자신감 — 내 생각을 분명하게 전하는 힘</span>
+        <span data-lang="en">③ Confidence — The power to express your thoughts clearly</span>
+        <span data-lang="jp">③ 自信 — 自分の考えをはっきり伝える力</span>
+        <span data-lang="cn">③ 自信 — 清晰表达自己想法的力量</span>
       </h3>
       <p>
-        <span data-lang="kr" class="active">사업을 키우는 과정에서 나와 주변 사람을 돌아보는 시간을 갖습니다.</span>
-        <span data-lang="en">While growing the business, we take time to look at ourselves and the people around us.</span>
-        <span data-lang="jp">事業を育てる過程で、自分と周りの人を見つめ直す時間を持ちます。</span>
-        <span data-lang="cn">在发展事业的过程中，留出时间回顾自己与身边的人。</span>
+        <span data-lang="kr" class="active">회의와 발표, 중요한 대화에서 자신의 생각을 차분하게 표현하는 연습을 합니다.</span>
+        <span data-lang="en">We practice expressing our thoughts calmly in meetings, presentations and important conversations.</span>
+        <span data-lang="jp">会議や発表、大切な対話の場で、自分の考えを落ち着いて表現する練習をします。</span>
+        <span data-lang="cn">练习在会议、发言和重要对话中沉稳地表达自己的想法。</span>
       </p>
     </div>
     <div class="diff-card">
       <h3>
-        <span data-lang="kr" class="active">경험을 나누며 함께 배웁니다.</span>
-        <span data-lang="en">We share experience and learn together.</span>
-        <span data-lang="jp">経験を分かち合い、共に学びます。</span>
-        <span data-lang="cn">分享经验，共同学习。</span>
+        <span data-lang="kr" class="active">④ 함께하는 성장 — 경험을 나누고 돌아보는 시간</span>
+        <span data-lang="en">④ Growing Together — Time to share experiences and reflect</span>
+        <span data-lang="jp">④ 共に成長する — 経験を分かち合い、振り返る時間</span>
+        <span data-lang="cn">④ 共同成长 — 分享经验、回顾自我的时间</span>
       </h3>
       <p>
-        <span data-lang="kr" class="active">최고경영자 과정과 기업교육에서 서로의 고민과 실천을 나눕니다.</span>
-        <span data-lang="en">In the Executive Course and corporate training, we share each other's concerns and practice.</span>
-        <span data-lang="jp">経営者向けコースや企業研修で、互いの悩みと実践を分かち合います。</span>
-        <span data-lang="cn">在高管课程与企业培训中，彼此分享烦恼与实践。</span>
+        <span data-lang="kr" class="active">서로의 고민과 경험을 나누며 나의 모습을 돌아보고, 일터에서 실천할 변화를 찾아갑니다.</span>
+        <span data-lang="en">Sharing our concerns and experiences with one another, we look back on ourselves and find changes to put into practice at work.</span>
+        <span data-lang="jp">互いの悩みと経験を分かち合いながら自分自身を振り返り、職場で実践する変化を見つけていきます。</span>
+        <span data-lang="cn">在彼此分享烦恼与经验的过程中回顾自己，找到可以在职场中实践的改变。</span>
       </p>
     </div>
   </div>
 </section>
 
-<!-- REFERRAL : BNI 핵심 섹션. ref-item 2~3개 -->
+<!-- REFERRAL : BNI 핵심 섹션. ref-item 5개, 각 항목 제목 / “인용” / 설명 -->
 <section class="referral">
   <div class="section-label">Referral</div>
   <div class="section-title">
@@ -519,60 +552,152 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
     <span data-lang="cn">请介绍这样的客户</span>
   </div>
   <div class="ref-list">
-    <div class="ref-item">
-      <div class="ref-num">1</div>
-      <p>
-        <span data-lang="kr" class="active">“직원과 잘 지내고 싶은데 대화가 어렵네요.” 하는 대표님</span>
-        <span data-lang="en">An owner who says, “I want to get along with my staff, but talking is hard.”</span>
-        <span data-lang="jp">「社員と良い関係を築きたいのに、会話が難しい」という経営者</span>
-        <span data-lang="cn">说“想和员工好好相处，但沟通很难”的老板</span>
+    <div class="ref-item ref-item-3">
+      <h3 class="ref-head">
+        <span data-lang="kr" class="active">① 직원과의 소통이 고민인 대표님</span>
+        <span data-lang="en">① Business owners struggling to communicate with their staff</span>
+        <span data-lang="jp">① 社員とのコミュニケーションに悩む経営者</span>
+        <span data-lang="cn">① 为与员工沟通而苦恼的老板</span>
+      </h3>
+      <p class="ref-quote">
+        <span data-lang="kr" class="active">“좋은 뜻으로 이야기했는데, 직원에게는 다르게 전달되네요.”</span>
+        <span data-lang="en">“I meant well, but my staff took it differently.”</span>
+        <span data-lang="jp">「良かれと思って話したのに、社員には違う形で伝わってしまいます。」</span>
+        <span data-lang="cn">“我本是好意，可员工却理解成了别的意思。”</span>
+      </p>
+      <p class="ref-desc">
+        <span data-lang="kr" class="active">서로의 생각을 이해하고 신뢰를 쌓는 대화를 고민하는 분입니다.</span>
+        <span data-lang="en">Someone looking for conversations that build mutual understanding and trust.</span>
+        <span data-lang="jp">互いの考えを理解し、信頼を築く対話を模索している方です。</span>
+        <span data-lang="cn">希望通过对话彼此理解、建立信任的人。</span>
       </p>
     </div>
-    <div class="ref-item">
-      <div class="ref-num">2</div>
-      <p>
-        <span data-lang="kr" class="active">“혼자 챙기다 보니 지칩니다. 팀과 함께하고 싶어요.” 하는 대표님</span>
-        <span data-lang="en">An owner who says, “I'm worn out handling everything alone. I want to work with my team.”</span>
-        <span data-lang="jp">「一人で抱えて疲れました。チームと一緒に進みたい」という経営者</span>
-        <span data-lang="cn">说“一个人扛太累了，想和团队一起走”的老板</span>
+    <div class="ref-item ref-item-3">
+      <h3 class="ref-head">
+        <span data-lang="kr" class="active">② 혼자 모든 일을 챙기느라 지친 대표님</span>
+        <span data-lang="en">② Owners worn out from handling everything themselves</span>
+        <span data-lang="jp">② すべてを一人で抱えて疲れている経営者</span>
+        <span data-lang="cn">② 事事亲力亲为、身心疲惫的老板</span>
+      </h3>
+      <p class="ref-quote">
+        <span data-lang="kr" class="active">“제가 확인하지 않으면 일이 잘 안 돌아갑니다.”</span>
+        <span data-lang="en">“If I don't check on it myself, things don't run smoothly.”</span>
+        <span data-lang="jp">「私が確認しないと、仕事がうまく回りません。」</span>
+        <span data-lang="cn">“我不亲自确认，事情就推进不顺。”</span>
+      </p>
+      <p class="ref-desc">
+        <span data-lang="kr" class="active">구성원에게 일을 맡기고 함께 책임지는 팀을 만들고 싶은 분입니다.</span>
+        <span data-lang="en">Someone who wants to delegate and build a team that shares responsibility.</span>
+        <span data-lang="jp">メンバーに仕事を任せ、共に責任を持つチームをつくりたい方です。</span>
+        <span data-lang="cn">希望把工作交给成员、打造共同担责团队的人。</span>
       </p>
     </div>
-    <div class="ref-item">
-      <div class="ref-num">3</div>
-      <p>
-        <span data-lang="kr" class="active">“사업은 바쁜데, 정작 제 성장은 놓치고 있네요.” 하는 대표님</span>
-        <span data-lang="en">An owner who says, “Business is busy, but I'm neglecting my own growth.”</span>
-        <span data-lang="jp">「事業は忙しいが、自分の成長が置き去りになっている」という経営者</span>
-        <span data-lang="cn">说“生意忙得很，却顾不上自己的成长”的老板</span>
+    <div class="ref-item ref-item-3">
+      <h3 class="ref-head">
+        <span data-lang="kr" class="active">③ 팀장·관리자 교육이 필요한 기업</span>
+        <span data-lang="en">③ Companies that need training for team leaders and managers</span>
+        <span data-lang="jp">③ チームリーダー・管理職の研修が必要な企業</span>
+        <span data-lang="cn">③ 需要团队负责人·管理者培训的企业</span>
+      </h3>
+      <p class="ref-quote">
+        <span data-lang="kr" class="active">“일은 잘하는데, 사람을 이끄는 일은 어려워합니다.”</span>
+        <span data-lang="en">“They're good at their work, but leading people is hard for them.”</span>
+        <span data-lang="jp">「仕事はできるのに、人を導くことには苦労しています。」</span>
+        <span data-lang="cn">“业务做得很好，带人却很吃力。”</span>
+      </p>
+      <p class="ref-desc">
+        <span data-lang="kr" class="active">실무자의 역량에 리더십과 소통 능력을 더하고 싶은 기업입니다.</span>
+        <span data-lang="en">Companies that want to add leadership and communication skills to their staff's practical abilities.</span>
+        <span data-lang="jp">実務担当者の力量に、リーダーシップとコミュニケーション力を加えたい企業です。</span>
+        <span data-lang="cn">希望在员工业务能力之上，增添领导力与沟通能力的企业。</span>
       </p>
     </div>
-    <div class="ref-item">
-      <div class="ref-num">4</div>
-      <p>
-        <span data-lang="kr" class="active">팀장들이 사람을 이끄는 자신감을 갖도록 돕고 싶은 기업</span>
-        <span data-lang="en">A company that wants its team leaders to gain confidence in leading people</span>
-        <span data-lang="jp">チームリーダーが人を導く自信を持てるよう支援したい企業</span>
-        <span data-lang="cn">希望帮助团队负责人建立带人自信的企业</span>
+    <div class="ref-item ref-item-3">
+      <h3 class="ref-head">
+        <span data-lang="kr" class="active">④ 사업과 함께 자신도 성장하고 싶은 경영자</span>
+        <span data-lang="en">④ Executives who want to grow along with their business</span>
+        <span data-lang="jp">④ 事業と共に自分自身も成長したい経営者</span>
+        <span data-lang="cn">④ 希望与事业一同成长的经营者</span>
+      </h3>
+      <p class="ref-quote">
+        <span data-lang="kr" class="active">“사업 이야기는 많이 하지만, 제 자신을 돌아볼 시간은 부족하네요.”</span>
+        <span data-lang="en">“I talk about business a lot, but I rarely have time to reflect on myself.”</span>
+        <span data-lang="jp">「事業の話はよくしますが、自分を振り返る時間は足りませんね。」</span>
+        <span data-lang="cn">“谈生意的时候很多，回顾自己的时间却很少。”</span>
+      </p>
+      <p class="ref-desc">
+        <span data-lang="kr" class="active">다른 경영자들과 경험을 나누며 관계와 리더십을 돌아보고 싶은 분입니다.</span>
+        <span data-lang="en">Someone who wants to share experiences with fellow executives and reflect on relationships and leadership.</span>
+        <span data-lang="jp">他の経営者と経験を分かち合い、人間関係とリーダーシップを見つめ直したい方です。</span>
+        <span data-lang="cn">希望与其他经营者交流经验、反思人际关系与领导力的人。</span>
+      </p>
+    </div>
+    <div class="ref-item ref-item-3">
+      <h3 class="ref-head">
+        <span data-lang="kr" class="active">⑤ 구성원의 성장을 위한 교육을 찾는 담당자</span>
+        <span data-lang="en">⑤ HR and training managers looking for programs to help their people grow</span>
+        <span data-lang="jp">⑤ メンバーの成長のための研修を探している担当者</span>
+        <span data-lang="cn">⑤ 为成员成长寻找培训的负责人</span>
+      </h3>
+      <p class="ref-quote">
+        <span data-lang="kr" class="active">“우리 조직에 맞는 소통·리더십 교육을 찾고 있습니다.”</span>
+        <span data-lang="en">“We're looking for communication and leadership training that fits our organization.”</span>
+        <span data-lang="jp">「私たちの組織に合ったコミュニケーション・リーダーシップ研修を探しています。」</span>
+        <span data-lang="cn">“我们正在寻找适合本组织的沟通·领导力培训。”</span>
+      </p>
+      <p class="ref-desc">
+        <span data-lang="kr" class="active">기업 인사·교육 담당자, 협회·단체의 교육 담당자를 연결해 주세요.</span>
+        <span data-lang="en">Please connect us with corporate HR and training managers, and training coordinators at associations and organizations.</span>
+        <span data-lang="jp">企業の人事・教育担当者、協会・団体の教育担当者をご紹介ください。</span>
+        <span data-lang="cn">请为我们介绍企业人事·培训负责人，以及协会·团体的培训负责人。</span>
       </p>
     </div>
   </div>
+  <p class="section-closing">
+    <span data-lang="kr" class="active">이런 고민을 나누는 분이 계시면, 편하게 이야기 나눌 수 있도록 연결해 주세요.</span>
+    <span data-lang="en">If you know someone with concerns like these, please connect us so we can talk comfortably.</span>
+    <span data-lang="jp">このような悩みをお持ちの方がいらっしゃいましたら、気軽にお話しできるようおつなぎください。</span>
+    <span data-lang="cn">如果您身边有人正面临这样的烦恼，请为我们牵线，让我们轻松地聊一聊。</span>
+  </p>
 </section>
 
-<!-- CAREER : career-item 2~3개. career-badge = 현재 / 경력 / 강점 / 자격 -->
+<!-- CAREER & EXPERTISE : career-item 3개. career-badge = 현재 / 경력 / 강점 / 자격 -->
 <section class="career">
-  <div class="section-label">Career</div>
+  <div class="section-label">Career &amp; Expertise</div>
   <div class="section-title">
-    <span data-lang="kr" class="active">경력 및 전문 분야</span>
-    <span data-lang="en">Career &amp; Expertise</span>
-    <span data-lang="jp">経歴・専門分野</span>
-    <span data-lang="cn">经历与专业领域</span>
+    <span data-lang="kr" class="active">걸어온 길과 함께할 수 있는 일</span>
+    <span data-lang="en">The path I've walked and how I can help</span>
+    <span data-lang="jp">歩んできた道と、ご一緒できること</span>
+    <span data-lang="cn">走过的路与能为您做的事</span>
+  </div>
+  <div class="career-intro">
+    <h3>
+      <span data-lang="kr" class="active">사람을 만나고, 팀을 이끌며 쌓아온 25년</span>
+      <span data-lang="en">25 years of meeting people and leading teams</span>
+      <span data-lang="jp">人と出会い、チームを率いて積み重ねた25年</span>
+      <span data-lang="cn">与人相遇、带领团队积累的25年</span>
+    </h3>
+    <p>
+      <span data-lang="kr" class="active">마케팅·영업 현장에서 구성원의 성장과 팀의 성과를 함께 고민해 왔습니다. 그 경험을 바탕으로, 사람과 조직에 필요한 배움을 연결하고 있습니다.</span>
+      <span data-lang="en">In marketing and sales, I have thought alongside my teams about how people grow and how teams deliver results. Building on that experience, I now connect people and organizations with the learning they need.</span>
+      <span data-lang="jp">マーケティング・営業の現場で、メンバーの成長とチームの成果を共に考えてきました。その経験をもとに、人と組織に必要な学びをおつなぎしています。</span>
+      <span data-lang="cn">在营销与销售一线，我一直与大家共同思考成员的成长与团队的业绩。基于这些经验，我正在为个人和组织连接所需的学习。</span>
+    </p>
+  </div>
+  <div class="career-subhead">
+    <span data-lang="kr" class="active">주요 경력 및 활동</span>
+    <span data-lang="en">Key Career &amp; Activities</span>
+    <span data-lang="jp">主な経歴・活動</span>
+    <span data-lang="cn">主要经历与活动</span>
   </div>
   <div class="career-list">
     <div class="career-item">
-      <div class="career-badge"><span data-lang="kr" class="active">현재</span>
-<span data-lang="en">Now</span>
-<span data-lang="jp">現在</span>
-<span data-lang="cn">现任</span></div>
+      <div class="career-badge">
+        <span data-lang="kr" class="active">현재</span>
+        <span data-lang="en">Now</span>
+        <span data-lang="jp">現在</span>
+        <span data-lang="cn">现任</span>
+      </div>
       <div class="career-content">
         <h3>
           <span data-lang="kr" class="active">데일카네기 부산지사장</span>
@@ -581,33 +706,177 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
           <span data-lang="cn">戴尔·卡耐基釜山分公司总经理</span>
         </h3>
         <p>
-          <span data-lang="kr" class="active">리더십 · 소통 · 최고경영자 과정 · 기업교육</span>
-          <span data-lang="en">Leadership · Communication · Executive Course · Corporate Training</span>
-          <span data-lang="jp">リーダーシップ・コミュニケーション・経営者向けコース・企業研修</span>
-          <span data-lang="cn">领导力 · 沟通 · 高管课程 · 企业培训</span>
+          <span data-lang="kr" class="active">부산지역 최고경영자 과정 및 기업교육 상담·연계</span>
+          <span data-lang="en">Consulting on and connecting the Executive Course and corporate training in the Busan area</span>
+          <span data-lang="jp">釜山地域の経営者向けコースおよび企業研修のご相談・おつなぎ</span>
+          <span data-lang="cn">釜山地区高管课程及企业培训的咨询与对接</span>
         </p>
       </div>
     </div>
     <div class="career-item">
-      <div class="career-badge"><span data-lang="kr" class="active">경력</span>
-<span data-lang="en">Career</span>
-<span data-lang="jp">経歴</span>
-<span data-lang="cn">经历</span></div>
+      <div class="career-badge">
+        <span data-lang="kr" class="active">경력</span>
+        <span data-lang="en">Career</span>
+        <span data-lang="jp">経歴</span>
+        <span data-lang="cn">经历</span>
+      </div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">동화세상에듀코 비전마케팅 부서장</span>
+          <span data-lang="en">Head of Vision Marketing Dept., Donghwa Sesang Educo</span>
+          <span data-lang="jp">トンファセサン・エデュコ ビジョンマーケティング部 部長</span>
+          <span data-lang="cn">Donghwa Sesang Educo 愿景营销部 部门负责人</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">교육상품 마케팅·영업 조직 운영 및 구성원 육성</span>
+          <span data-lang="en">Ran marketing and sales teams for educational products and developed team members</span>
+          <span data-lang="jp">教育商品のマーケティング・営業組織の運営とメンバー育成</span>
+          <span data-lang="cn">负责教育产品营销与销售组织的运营及成员培养</span>
+        </p>
+      </div>
+    </div>
+    <div class="career-item">
+      <div class="career-badge">
+        <span data-lang="kr" class="active">경력</span>
+        <span data-lang="en">Career</span>
+        <span data-lang="jp">経歴</span>
+        <span data-lang="cn">经历</span>
+      </div>
       <div class="career-content">
         <h3>
           <span data-lang="kr" class="active">25년간 마케팅·영업 조직관리</span>
-          <span data-lang="en">25 years in marketing & sales organization management</span>
+          <span data-lang="en">25 years in marketing &amp; sales organization management</span>
           <span data-lang="jp">25年間のマーケティング・営業組織マネジメント</span>
           <span data-lang="cn">25年营销与销售组织管理</span>
         </h3>
         <p>
-          <span data-lang="kr" class="active">사람을 만나고, 팀을 돕고 이끌며 쌓아온 25년</span>
-          <span data-lang="en">25 years built by meeting people, supporting teams and leading them</span>
-          <span data-lang="jp">人と出会い、チームを支え導いて積み重ねた25年</span>
-          <span data-lang="cn">与人相遇、帮助并带领团队，积累而成的25年</span>
+          <span data-lang="kr" class="active">팀 운영, 리더 육성, 목표·성과 관리 경험</span>
+          <span data-lang="en">Experience in team operations, leader development, and goal &amp; performance management</span>
+          <span data-lang="jp">チーム運営、リーダー育成、目標・成果管理の経験</span>
+          <span data-lang="cn">团队运营、领导者培养、目标与绩效管理经验</span>
         </p>
       </div>
     </div>
+  </div>
+  <div class="career-subhead">
+    <span data-lang="kr" class="active">전문분야</span>
+    <span data-lang="en">Areas of Expertise</span>
+    <span data-lang="jp">専門分野</span>
+    <span data-lang="cn">专业领域</span>
+  </div>
+  <div class="expertise-grid">
+    <div class="expertise-item">
+      <h3>
+        <span data-lang="kr" class="active">최고경영자 과정 상담</span>
+        <span data-lang="en">Executive Course Consulting</span>
+        <span data-lang="jp">経営者向けコースのご相談</span>
+        <span data-lang="cn">高管课程咨询</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">대표님의 고민과 성장 방향에 맞는 교육과정 안내</span>
+        <span data-lang="en">Guiding you to programs that fit your concerns and the direction you want to grow</span>
+        <span data-lang="jp">経営者の悩みと成長の方向性に合った教育課程のご案内</span>
+        <span data-lang="cn">介绍符合老板烦恼与成长方向的课程</span>
+      </p>
+    </div>
+    <div class="expertise-item">
+      <h3>
+        <span data-lang="kr" class="active">기업 리더십·소통 교육 연계</span>
+        <span data-lang="en">Connecting Corporate Leadership &amp; Communication Training</span>
+        <span data-lang="jp">企業向けリーダーシップ・コミュニケーション研修のおつなぎ</span>
+        <span data-lang="cn">企业领导力·沟通培训对接</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">조직의 상황과 교육 목적을 듣고 필요한 프로그램 연결</span>
+        <span data-lang="en">Listening to your organization's situation and training goals, then connecting the right program</span>
+        <span data-lang="jp">組織の状況と研修の目的をお聴きし、必要なプログラムをおつなぎ</span>
+        <span data-lang="cn">了解组织情况与培训目的，对接所需课程</span>
+      </p>
+    </div>
+    <div class="expertise-item">
+      <h3>
+        <span data-lang="kr" class="active">마케팅·영업 조직 운영</span>
+        <span data-lang="en">Running Marketing &amp; Sales Teams</span>
+        <span data-lang="jp">マーケティング・営業組織の運営</span>
+        <span data-lang="cn">营销·销售组织运营</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">목표를 함께 세우고 실행과 성과를 돌아보는 팀 운영</span>
+        <span data-lang="en">Setting goals together, then reviewing execution and results as a team</span>
+        <span data-lang="jp">目標を共に立て、実行と成果を振り返るチーム運営</span>
+        <span data-lang="cn">共同制定目标、回顾执行与成果的团队运营</span>
+      </p>
+    </div>
+    <div class="expertise-item">
+      <h3>
+        <span data-lang="kr" class="active">리더 및 구성원 육성</span>
+        <span data-lang="en">Developing Leaders &amp; Team Members</span>
+        <span data-lang="jp">リーダーとメンバーの育成</span>
+        <span data-lang="cn">领导者与成员培养</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">구성원의 강점을 살피고 역할에 맞게 성장하도록 지원</span>
+        <span data-lang="en">Looking at each member's strengths and supporting growth suited to their role</span>
+        <span data-lang="jp">メンバーの強みを見極め、役割に合わせて成長できるよう支援</span>
+        <span data-lang="cn">发掘成员优势，支持其按角色成长</span>
+      </p>
+    </div>
+  </div>
+  <p class="section-closing">
+    <span data-lang="kr" class="active">현장에서 배운 경험을 나누고, 저도 함께 배우겠습니다.</span>
+    <span data-lang="en">I will share what I've learned in the field, and keep learning alongside you.</span>
+    <span data-lang="jp">現場で学んだ経験をお伝えし、私も共に学んでいきます。</span>
+    <span data-lang="cn">我会分享在一线学到的经验，也将与您一同学习。</span>
+  </p>
+</section>
+
+<!-- PORTFOLIO : portfolio1~4.jpg (3:4, 1080x1440). 자동 3초 슬라이드 -->
+<section class="portfolio">
+  <div class="section-label">Portfolio</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">조직에 이런 고민이 있으신가요?</span>
+    <span data-lang="en">Does your organization face challenges like these?</span>
+    <span data-lang="jp">組織にこんなお悩みはありませんか？</span>
+    <span data-lang="cn">您的组织是否也有这样的烦恼？</span>
+  </div>
+  <div class="portfolio-intro">
+    <p class="pf-line">
+      <span data-lang="kr" class="active">직원과의 소통이 어렵고,<br>리더가 모든 일을 직접 챙기고,<br>좋은 인재가 오래 머물지 않는다면—</span>
+      <span data-lang="en">If communicating with your staff is hard,<br>if leaders have to handle everything themselves,<br>if good people don't stay long—</span>
+      <span data-lang="jp">社員とのコミュニケーションが難しく、<br>リーダーがすべてを自ら抱え、<br>優秀な人材が長く定着しないなら——</span>
+      <span data-lang="cn">如果与员工沟通困难，<br>领导者事事亲力亲为，<br>优秀人才留不长久——</span>
+    </p>
+    <p class="pf-line pf-strong">
+      <span data-lang="kr" class="active">교육보다 먼저<br>사람과 관계의 변화를 시작해 보십시오.</span>
+      <span data-lang="en">Before training,<br>begin with a change in people and relationships.</span>
+      <span data-lang="jp">研修よりも先に、<br>人と関係の変化を始めてみてください。</span>
+      <span data-lang="cn">在培训之前，<br>请先从人与关系的改变开始。</span>
+    </p>
+    <p class="pf-tags">
+      <span data-lang="kr" class="active">CEO · 리더십 · 조직소통 · 기업교육</span>
+      <span data-lang="en">CEO · Leadership · Organizational Communication · Corporate Training</span>
+      <span data-lang="jp">CEO・リーダーシップ・組織コミュニケーション・企業研修</span>
+      <span data-lang="cn">CEO · 领导力 · 组织沟通 · 企业培训</span>
+    </p>
+    <p class="pf-sign">
+      <span data-lang="kr" class="active">사람의 변화를 돕는<br>데일카네기 이해경</span>
+      <span data-lang="en">Helping people change —<br>Lee Hae Kyung, Dale Carnegie</span>
+      <span data-lang="jp">人の変化を支える<br>デール・カーネギー イ・ヘギョン</span>
+      <span data-lang="cn">助力人的改变<br>戴尔·卡耐基 李海京</span>
+    </p>
+  </div>
+  <div class="portfolio-track-wrap">
+    <div class="portfolio-track" id="portfolio-track">
+      <div class="portfolio-slide"><img src="portfolio1.jpg" alt="데일카네기 교육 현장 — 사람이 변하면, 조직이 달라집니다. 리더십 · 소통 · 관계의 성장" data-alt-kr="데일카네기 교육 현장 — 사람이 변하면, 조직이 달라집니다. 리더십 · 소통 · 관계의 성장" data-alt-en="Dale Carnegie training session — When people change, the organization changes. Leadership · Communication · Growth in relationships" data-alt-jp="デール・カーネギーの研修風景 — 人が変われば、組織が変わる。リーダーシップ・コミュニケーション・関係の成長" data-alt-cn="戴尔·卡耐基培训现场 — 人改变了，组织就会改变。领导力 · 沟通 · 关系的成长"></div>
+      <div class="portfolio-slide"><img src="portfolio2.jpg" alt="소그룹 대화 실습 — 말하기보다 듣고, 지시보다 질문합니다. 변화는 리더의 작은 실천에서 시작됩니다." data-alt-kr="소그룹 대화 실습 — 말하기보다 듣고, 지시보다 질문합니다. 변화는 리더의 작은 실천에서 시작됩니다." data-alt-en="Small-group conversation practice — Listen more than you speak, ask more than you instruct. Change starts with a leader's small actions." data-alt-jp="少人数での対話実習 — 話すより聴き、指示より問いかける。変化はリーダーの小さな実践から始まります。" data-alt-cn="小组对话练习 — 多听少说，多问少令。改变始于领导者的小小实践。"></div>
+      <div class="portfolio-slide"><img src="portfolio3.jpg" alt="참가자 실습 현장 — 배움을 넘어, 실천으로 이어집니다. 직접 말하고, 듣고, 함께 성장하는 시간" data-alt-kr="참가자 실습 현장 — 배움을 넘어, 실천으로 이어집니다. 직접 말하고, 듣고, 함께 성장하는 시간" data-alt-en="Participants practicing together — Beyond learning, into practice. Time to speak, listen and grow together" data-alt-jp="参加者による実習 — 学びを超えて、実践へ。自ら話し、聴き、共に成長する時間" data-alt-cn="学员实践现场 — 超越学习，付诸实践。亲自表达、倾听、共同成长的时间"></div>
+      <div class="portfolio-slide"><img src="portfolio4.jpg" alt="이해경 프로필 — 사람의 변화를 돕는 데일카네기 이해경. CEO · 리더 · 조직의 성장을 함께 고민합니다." data-alt-kr="이해경 프로필 — 사람의 변화를 돕는 데일카네기 이해경. CEO · 리더 · 조직의 성장을 함께 고민합니다." data-alt-en="Profile of Lee Hae Kyung — Helping people change, Dale Carnegie. Thinking together about the growth of CEOs, leaders and organizations." data-alt-jp="イ・ヘギョンのプロフィール — 人の変化を支えるデール・カーネギー。CEO・リーダー・組織の成長を共に考えます。" data-alt-cn="李海京简介 — 助力人的改变，戴尔·卡耐基。与您共同思考CEO、领导者与组织的成长。"></div>
+    </div>
+  </div>
+  <div class="portfolio-nav">
+    <button class="portfolio-btn" onclick="portfolioSlide(-1)">‹</button>
+    <div class="portfolio-dots" id="portfolio-dots"></div>
+    <button class="portfolio-btn" onclick="portfolioSlide(1)">›</button>
   </div>
 </section>
 
@@ -615,10 +884,22 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 <section class="contact">
   <div class="section-label">Contact</div>
   <div class="section-title">
-    <span data-lang="kr" class="active">연락하기</span>
-    <span data-lang="en">Contact</span>
-    <span data-lang="jp">お問い合わせ</span>
-    <span data-lang="cn">联系方式</span>
+    <span data-lang="kr" class="active">고민부터 편하게 들려주세요</span>
+    <span data-lang="en">Feel free to start by telling me your concerns</span>
+    <span data-lang="jp">まずはお悩みからお気軽にお聞かせください</span>
+    <span data-lang="cn">先轻松地和我聊聊您的烦恼吧</span>
+  </div>
+  <p class="contact-intro">
+    <span data-lang="kr" class="active">어떤 교육이 필요한지 아직 정리되지 않으셔도 괜찮습니다.<br>지금 겪고 계신 고민을 듣고, 필요한 과정과 방향을 함께 살펴보겠습니다.</span>
+    <span data-lang="en">It's fine if you haven't yet worked out what training you need.<br>I'll listen to the challenges you're facing now and explore the right program and direction with you.</span>
+    <span data-lang="jp">どんな研修が必要か、まだ整理できていなくても大丈夫です。<br>今抱えていらっしゃるお悩みをお聴きし、必要なコースと方向性を一緒に考えます。</span>
+    <span data-lang="cn">即使还不清楚需要什么样的培训也没关系。<br>我会倾听您目前的烦恼，和您一起梳理所需的课程与方向。</span>
+  </p>
+  <div class="contact-head">
+    <span data-lang="kr" class="active">최고경영자 과정 · 기업 리더십·소통 교육 문의</span>
+    <span data-lang="en">Inquiries: Executive Course · Corporate Leadership &amp; Communication Training</span>
+    <span data-lang="jp">経営者向けコース・企業向けリーダーシップ／コミュニケーション研修のお問い合わせ</span>
+    <span data-lang="cn">高管课程 · 企业领导力·沟通培训咨询</span>
   </div>
   <div class="contact-list">
     <a class="contact-item" href="tel:010-9848-4862">
@@ -750,6 +1031,9 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 function setLang(lang) {
   document.querySelectorAll('[data-lang]').forEach(el => {
     el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+  });
+  document.querySelectorAll('[data-alt-' + lang + ']').forEach(img => {
+    img.alt = img.getAttribute('data-alt-' + lang);
   });
   document.querySelectorAll('.lang-btn').forEach(btn => {
     const m = btn.getAttribute('onclick').match(/'(\w+)'/);
