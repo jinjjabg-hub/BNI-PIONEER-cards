@@ -58,6 +58,15 @@ nav {
   border-bottom: 1px solid rgba(120,190,32,0.25);
 }
 .nav-brand { font-size: 12px; font-weight: 700; color: var(--gold2); white-space: nowrap; }
+.nav-brand { display:flex; align-items:center; gap:6px; }
+.nav-brand .brand-logo { height:17px; width:auto; display:block; }
+nav { gap: 8px; }
+nav .lang-btns { flex-shrink: 0; }
+@media (max-width: 374px) {
+  nav { padding: 10px 12px; }
+  .nav-brand { gap: 4px; font-size: 11px; }
+  .nav-brand .brand-logo { height: 14px; }
+}
 .lang-btns { display:flex; gap:4px; }
 .lang-btn {
   padding: 5px 8px;
@@ -337,6 +346,8 @@ footer {
   text-align: center; border-top: 1px solid rgba(120,190,32,0.12);
 }
 footer .company { font-size: 13px; font-weight: 700; color: var(--gold2); margin-bottom: 5px; }
+footer .company { display:flex; align-items:center; justify-content:center; gap:8px; }
+footer .company .brand-logo { height:24px; width:auto; display:block; }
 footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacing: 0.5px; }
 </style>
 </head>
@@ -344,7 +355,13 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 
 <!-- NAV -->
 <nav>
-  <div class="nav-brand">데일카네기 부산</div>
+  <div class="nav-brand">
+    <img class="brand-logo" src="logo-dc-white.png" alt="Dale Carnegie">
+    <span data-lang="kr" class="active">부산</span>
+    <span data-lang="en">Busan</span>
+    <span data-lang="jp">釜山</span>
+    <span data-lang="cn">釜山</span>
+  </div>
   <div class="lang-btns">
     <button class="lang-btn active" onclick="setLang('kr')">한국어</button>
     <button class="lang-btn" onclick="setLang('en')">EN</button>
@@ -1018,10 +1035,11 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 <!-- FOOTER -->
 <footer>
   <div class="company">
-    <span data-lang="kr" class="active">데일카네기 부산</span>
-    <span data-lang="en">Dale Carnegie Busan</span>
-    <span data-lang="jp">デールカーネギー釜山</span>
-    <span data-lang="cn">戴尔·卡耐基 釜山</span>
+    <img class="brand-logo" src="logo-dc-white.png" alt="Dale Carnegie">
+    <span data-lang="kr" class="active">부산</span>
+    <span data-lang="en">Busan</span>
+    <span data-lang="jp">釜山</span>
+    <span data-lang="cn">釜山</span>
   </div>
   <div class="slogan-footer">Dale Carnegie, helping people change</div>
 </footer>
