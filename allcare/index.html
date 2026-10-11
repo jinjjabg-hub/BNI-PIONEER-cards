@@ -419,7 +419,8 @@ body{
     var saveBtn = document.querySelector('.btn-primary');
     var cardBtn = document.querySelector('.btn-secondary');
     if (saveBtn) saveBtn.addEventListener('click', function(){ dicaLog('save_vcard'); });
-    if (cardBtn) cardBtn.addEventListener('click', function(){ dicaLog('save_cardbook'); });
+    // 카드북 저장은 누른 순간이 아니라 실제로 저장에 성공했을 때만 센다
+    window.addEventListener('cardbook:saved', function(){ dicaLog('save_cardbook'); });
 
     var statBtn = document.createElement('div');
     statBtn.textContent = '📊 카드 현황 보기';
