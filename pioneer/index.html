@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BNI 파이오니어 챕터 | 부산 비즈니스 네트워킹</title>
+<meta name="description" content="친목이 아닌 비즈니스로. 업종별 1명, 매주 수요일 아침 7시. 부산 BNI 파이오니어 챕터 참관 신청.">
+<meta property="og:title" content="BNI 파이오니어 챕터 | 부산 비즈니스 네트워킹">
+<meta property="og:description" content="친목이 아닌 비즈니스로. 업종별 1명, 매주 수요일 아침 7시. 참관 신청 받습니다.">
+<meta property="og:url" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/pioneer/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/pioneer/og.jpg">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --navy:#0d1b2e; --navy2:#16294a; --gold:#c9a24a; --gold2:#e6c87a;
+  --red:#c8102e; --ink:#1d2433; --gray:#5d6677; --line:#e6e1d6; --bg:#fbf8f2; --white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Pretendard',-apple-system,'Noto Sans KR',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;word-break:keep-all}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(13,27,46,.94);backdrop-filter:blur(8px)}
+nav .wrap{display:flex;align-items:center;gap:12px;height:56px}
+.brand{display:flex;align-items:center;gap:8px;color:#fff;font-weight:800;font-size:15px;white-space:nowrap}
+.brand img{height:22px;width:auto}
+.menu{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.menu::-webkit-scrollbar{display:none}
+.menu a{color:rgba(255,255,255,.75);font-size:13px;font-weight:600;padding:6px 10px;border-radius:6px;white-space:nowrap}
+.menu a:hover{color:#fff;background:rgba(255,255,255,.08)}
+.menu a.cta{background:var(--red);color:#fff}
+@media(max-width:720px){.menu a:not(.cta){display:none}}
+
+/* HERO */
+.hero{background:var(--navy);color:#fff;padding:0 0 44px}
+.hero-img{width:100%;aspect-ratio:1408/768;object-fit:cover;max-height:460px}
+.hero h1{font-size:clamp(26px,5.4vw,42px);line-height:1.3;font-weight:800;margin:28px 0 12px}
+.hero h1 em{font-style:normal;color:var(--gold2)}
+.hero p.lead{color:rgba(255,255,255,.78);font-size:16px;max-width:620px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:13px 22px;border-radius:10px;font-weight:800;font-size:15px;border:0;cursor:pointer;font-family:inherit}
+.btn-red{background:var(--red);color:#fff}
+.btn-ghost{border:1px solid rgba(255,255,255,.35);color:#fff}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:34px}
+.stat{border:1px solid rgba(201,162,74,.35);border-radius:12px;padding:14px 8px;text-align:center}
+.stat b{display:block;font-size:24px;color:var(--gold2);font-weight:800;line-height:1.2}
+.stat span{font-size:12px;color:rgba(255,255,255,.65)}
+@media(max-width:560px){.stats{grid-template-columns:repeat(2,1fr)}}
+.notice{margin-top:18px;font-size:13px;color:var(--gold2)}
+
+/* SECTIONS */
+section{padding:64px 0}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.18em;color:var(--red);margin-bottom:8px}
+h2{font-size:clamp(22px,4vw,30px);line-height:1.35;font-weight:800;color:var(--navy);margin-bottom:10px}
+.sub{color:var(--gray);margin-bottom:28px;max-width:640px}
+.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+/* WHY */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:760px){.why-grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+.alt .card{background:var(--bg)}
+.card .ic{font-size:26px;margin-bottom:8px}
+.card h3{font-size:17px;color:var(--navy);margin-bottom:6px}
+.card p{font-size:14px;color:var(--gray)}
+.facts{margin-top:22px;background:var(--navy);color:#fff;border-radius:14px;padding:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;text-align:center}
+.facts b{display:block;font-size:22px;color:var(--gold2)}
+.facts span{font-size:12px;color:rgba(255,255,255,.7)}
+.facts .src{grid-column:1/-1;font-size:11px;color:rgba(255,255,255,.45);text-align:right}
+@media(max-width:560px){.facts{grid-template-columns:repeat(2,1fr)}}
+
+/* COMPARE */
+.cmp{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:14px}
+.cmp th,.cmp td{padding:14px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.cmp tr:last-child td{border-bottom:0}
+.cmp thead th{background:var(--navy);color:#fff;font-size:13px}
+.cmp thead th.us{background:var(--red)}
+.cmp td:first-child{font-weight:800;color:var(--navy);white-space:nowrap;width:90px}
+.cmp td.them{color:var(--gray)}
+.cmp td.us{font-weight:600;background:#fff8f8}
+@media(max-width:560px){.cmp{font-size:13px}.cmp th,.cmp td{padding:11px 9px}.cmp td:first-child{width:auto;white-space:normal}}
+
+/* FIT */
+.fit{display:grid;grid-template-columns:1.4fr 1fr;gap:14px}
+@media(max-width:760px){.fit{grid-template-columns:1fr}}
+.fit ul{list-style:none}
+.fit li{padding:11px 0 11px 30px;position:relative;border-bottom:1px dashed var(--line);font-size:15px}
+.fit li:last-child{border-bottom:0}
+.fit .yes li::before{content:'✓';position:absolute;left:4px;color:var(--red);font-weight:900}
+.fit .no li::before{content:'—';position:absolute;left:4px;color:var(--gray)}
+.fit .no{background:var(--bg)}
+.fit .no li{font-size:14px;color:var(--gray)}
+.tag{display:inline-block;font-size:12px;font-weight:800;padding:3px 10px;border-radius:20px;margin-bottom:10px}
+.tag.y{background:#fde8eb;color:var(--red)}
+.tag.n{background:#ece9e2;color:var(--gray)}
+
+/* GALLERY */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media(max-width:560px){.gal{grid-template-columns:repeat(2,1fr)}}
+.gal button{border:0;padding:0;cursor:zoom-in;border-radius:10px;overflow:hidden;aspect-ratio:4/3;background:#ddd}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.gal button:hover img{transform:scale(1.04)}
+.gal .ph{aspect-ratio:4/3;border-radius:10px;border:2px dashed var(--line);display:flex;align-items:center;justify-content:center;color:#b3ab9b;font-size:13px;background:#fff}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;z-index:100;padding:16px}
+.lb.on{display:flex}
+.lb img{max-height:86vh;border-radius:8px}
+.lb p{position:absolute;bottom:20px;left:0;right:0;text-align:center;color:#fff;font-size:14px}
+
+/* MEMBERS */
+.mtools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.mtools input{flex:1;min-width:200px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px;font-family:inherit}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 12px;font-size:13px;cursor:pointer;font-family:inherit;color:var(--gray)}
+.chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.m{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:4px}
+.m .nm{font-weight:800;font-size:16px;color:var(--navy)}
+.m .co{font-size:14px;font-weight:600}
+.m .cat{font-size:12px;color:var(--gray)}
+.m .links{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.m .links a{font-size:12px;font-weight:700;padding:5px 10px;border-radius:16px}
+.l-home{background:var(--navy);color:#fff}
+.l-card{background:#f3ead4;color:#7a5a12}
+.l-none{font-size:12px;color:#b3ab9b;padding:5px 0}
+.mcount{font-size:13px;color:var(--gray);margin-bottom:10px}
+
+/* VISIT */
+.visit{display:grid;grid-template-columns:1fr 1.2fr;gap:18px}
+@media(max-width:820px){.visit{grid-template-columns:1fr}}
+.vinfo li{list-style:none;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
+.steps{margin:18px 0 0;counter-reset:s}
+.steps li{list-style:none;padding:8px 0 8px 34px;position:relative;font-size:14px;color:var(--gray)}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:8px;width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+form{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:520px){.row{grid-template-columns:1fr}}
+.fg{margin-bottom:12px}
+.fg label{display:block;font-size:13px;font-weight:700;margin-bottom:5px}
+.fg label i{color:var(--red);font-style:normal}
+.fg input,.fg select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:8px;font-size:15px;font-family:inherit;background:#fff}
+.fg input:focus,.fg select:focus{outline:2px solid var(--gold);border-color:transparent}
+.agree{font-size:12px;color:var(--gray);display:flex;gap:6px;align-items:flex-start;margin:4px 0 14px}
+form .btn{width:100%;justify-content:center}
+.msg{display:none;padding:12px;border-radius:8px;font-size:14px;font-weight:700;margin-bottom:12px;text-align:center}
+.msg.ok{display:block;background:#e3f4e8;color:#1d6b35}
+.msg.err{display:block;background:#fbe4e6;color:#8f1424}
+
+footer{background:var(--navy);color:rgba(255,255,255,.6);padding:36px 0 90px;font-size:13px;text-align:center}
+footer b{color:#fff}
+.float{position:fixed;right:16px;bottom:16px;z-index:60;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="logo.png" alt="BNI">파이오니어 챕터</a>
+    <div class="menu">
+      <a href="#why">왜 BNI</a>
+      <a href="#diff">다른 점</a>
+      <a href="#fit">이런 분께</a>
+      <a href="#gallery">갤러리</a>
+      <a href="#members">멤버</a>
+      <a class="cta" href="#visit">참관 신청</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <img class="hero-img" src="hero.jpg" alt="BNI Pioneer">
+  <div class="wrap">
+    <h1>감이 아닌 <em>시스템</em>으로,<br>친목이 아닌 <em>비즈니스</em>로.</h1>
+    <p class="lead">부산 BNI 파이오니어 챕터는 업종별 한 명씩 모인 사업자들이 매주 서로의 고객을 소개하며 함께 매출을 키우는 비즈니스 네트워크입니다.</p>
+    <div class="btns">
+      <a class="btn btn-red" href="#visit">참관 신청하기 →</a>
+      <a class="btn btn-ghost" href="#members">멤버 보기</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b id="statMembers">31</b><span>파이오니어 멤버</span></div>
+      <div class="stat"><b>1업종 1명</b><span>업종 독점 보호</span></div>
+      <div class="stat"><b>매주 수</b><span>오전 7시 정기 미팅</span></div>
+      <div class="stat"><b>2022</b><span>런칭 · 8기 운영 중</span></div>
+    </div>
+    <p class="notice">※ 업종별 1명만 가입할 수 있습니다. 내 업종 자리가 비어 있는지 먼저 참관으로 확인하세요.</p>
+  </div>
+</header>
+
+<!-- 3. 왜 BNI -->
+<section id="why">
+  <div class="wrap">
+    <div class="eyebrow">WHY BNI</div>
+    <h2>왜 BNI를 해야 할까요?</h2>
+    <p class="sub">지인 영업은 언젠가 바닥이 납니다. BNI는 "나를 대신해 영업해 주는 사람"을 체계적으로 늘리는 방법입니다.</p>
+    <div class="why-grid">
+      <div class="card"><div class="ic">🗣</div><h3>나 대신 영업하는 30명</h3><p>멤버들이 매주 내 사업을 듣고, 각자의 고객 중 나에게 맞는 사람을 구체적으로 설명해 소개합니다. 명함 한 장 건네는 소개와 계약률이 다릅니다.</p></div>
+      <div class="card"><div class="ic">🤝</div><h3>신뢰가 먼저 쌓인 소개</h3><p>1:1 미팅으로 서로의 일과 사람을 깊이 알고 나서 소개합니다. 소개받는 고객도 "검증된 사람"을 만나게 됩니다.</p></div>
+      <div class="card"><div class="ic">📊</div><h3>숫자로 확인하는 성과</h3><p>출석·1:1 미팅·리퍼럴·성사 금액을 PALMS로 기록합니다. 모임이 정말 도움이 되는지 감이 아니라 데이터로 봅니다.</p></div>
+    </div>
+    <div class="facts">
+      <div><b>1985년</b><span>창립 (아이번 마이즈너 박사)</span></div>
+      <div><b>76개국</b><span>활동 국가</span></div>
+      <div><b>11,300+</b><span>전 세계 챕터</span></div>
+      <div><b>34만+</b><span>전 세계 멤버</span></div>
+      <div><b>1,740만 건</b><span>최근 12개월 리퍼럴</span></div>
+      <div><b>37조 원+</b><span>최근 12개월 비즈니스</span></div>
+      <div class="src">출처: 파이오니어 챕터 홈페이지 BNI 소개 · 한국은 2008년 설립, 86개 챕터 3,000여 명</div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. 다른 점 -->
+<section id="diff" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">DIFFERENCE</div>
+    <h2>다른 사업자 모임과 무엇이 다른가요?</h2>
+    <p class="sub">모임은 많습니다. 차이는 "만나서 무엇을 하느냐"와 "그 결과를 어떻게 확인하느냐"에 있습니다.</p>
+    <table class="cmp">
+      <thead><tr><th>구분</th><th>일반 사업자 모임</th><th class="us">BNI 파이오니어</th></tr></thead>
+      <tbody>
+        <tr><td>목적</td><td class="them">친목·술자리 중심</td><td class="us">오직 비즈니스 · 리퍼럴(소개)</td></tr>
+        <tr><td>업종</td><td class="them">같은 업종 여럿 → 서로 경쟁</td><td class="us">업종별 1명 → 내 업종 소개는 나에게</td></tr>
+        <tr><td>모임</td><td class="them">비정기, 저녁 위주</td><td class="us">매주 수요일 오전 7시, 정해진 순서로 진행</td></tr>
+        <tr><td>소개 방식</td><td class="them">명함 교환·이름 전달</td><td class="us">위클리·피처 발표로 "언제 누구를 소개할지" 학습 후 구체적으로 소개</td></tr>
+        <tr><td>관계</td><td class="them">넓고 얕게</td><td class="us">1:1 미팅으로 깊게, 파워팀으로 협업</td></tr>
+        <tr><td>책임</td><td class="them">개인 의지에 맡김</td><td class="us">출석·지각·결석 규칙으로 책임 관리</td></tr>
+        <tr><td>성과</td><td class="them">"도움 된 것 같다"</td><td class="us">PALMS·리퍼럴 기록으로 숫자 확인</td></tr>
+      </tbody>
+    </table>
+    <div class="why-grid" style="margin-top:14px">
+      <div class="card"><div class="ic">🔗</div><h3>파워팀</h3><p>같은 고객을 만나는 업종끼리 팀을 이룹니다. 예: 중문 시공 → 에어컨 설치 → 에어컨 청소. 건물 하나에서 세 업종 매출이 함께 납니다.</p></div>
+      <div class="card"><div class="ic">🤲</div><h3>Givers Gain®</h3><p>받으려 하기 전에 먼저 줍니다. 먼저 소개하는 사람에게 소개가 돌아오는 문화가 40년 넘게 BNI를 움직여 왔습니다.</p></div>
+      <div class="card"><div class="ic">🏛</div><h3>6개월 기수제</h3><p>6개월마다 의장단·리더십팀이 새로 꾸려집니다. 멤버 모두가 운영에 참여하며 리더십을 배웁니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. 이런 분께 -->
+<section id="fit">
+  <div class="wrap">
+    <div class="eyebrow">WHO</div>
+    <h2>어떤 분께 맞을까요?</h2>
+    <p class="sub">솔직하게 적었습니다. 맞는 분께는 큰 힘이 되고, 맞지 않는 분께는 부담이 됩니다.</p>
+    <div class="fit">
+      <div class="card yes">
+        <span class="tag y">이런 분께 추천합니다</span>
+        <ul>
+          <li>지인 영업의 한계를 느끼는 사업자</li>
+          <li>소개로 일이 들어오는 업종 (B2B·전문 서비스·시공·컨설팅 등)</li>
+          <li>체계적인 영업 시스템이 필요한 분</li>
+          <li>부산 지역 전문가 네트워크를 원하는 분</li>
+          <li>신뢰 기반으로 다른 업종과 협업하고 싶은 분</li>
+        </ul>
+      </div>
+      <div class="card no">
+        <span class="tag n">이런 경우는 먼저 고민해 보세요</span>
+        <ul>
+          <li>매주 수요일 오전 7시 참석이 어려운 경우</li>
+          <li>소개를 주기보다 받기만 원하는 경우</li>
+          <li>당장 이번 달 매출만 급한 경우 (신뢰는 시간이 걸립니다)</li>
+          <li>내 업종 자리가 이미 차 있는 경우 → 참관 신청 시 확인해 드립니다</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. 갤러리 -->
+<section id="gallery" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">GALLERY</div>
+    <h2>파이오니어의 아침</h2>
+    <p class="sub">매주 수요일 아침, 실제 미팅과 행사 모습입니다.</p>
+    <div class="gal" id="gal"></div>
+  </div>
+</section>
+
+<!-- 6. 멤버 -->
+<section id="members">
+  <div class="wrap">
+    <div class="eyebrow">MEMBERS</div>
+    <h2>파이오니어 멤버</h2>
+    <p class="sub">멤버의 비즈홈·이미지명함에서 하는 일과 연락처를 바로 확인할 수 있습니다.</p>
+    <div class="mtools"><input id="q" type="search" placeholder="이름·회사·업종 검색 (예: 인테리어)"></div>
+    <div class="chips" id="chips"></div>
+    <div class="mcount" id="mcount"></div>
+    <div class="mgrid" id="mgrid"></div>
+  </div>
+</section>
+
+<!-- 1. 참관 신청 -->
+<section id="visit" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">JOIN US</div>
+    <h2>참관 신청</h2>
+    <p class="sub">직접 한 번 와 보시는 것이 가장 정확합니다. 신청서를 보내시면 담당자가 연락드립니다.</p>
+    <div class="visit">
+      <div>
+        <ul class="vinfo">
+          <li>📅 <b>매주 수요일 오전 7:00</b></li>
+          <li>📍 부산광역시 남구 전포대로 133, 아바니센트럴부산 3층</li>
+          <li>✅ 참관비 5만원</li>
+          <li>👔 비즈니스 복장 · 🪪 명함 30장 이상 지참</li>
+        </ul>
+        <ol class="steps">
+          <li>오픈 네트워킹 — 멤버들과 자유롭게 인사하고 명함 교환</li>
+          <li>정기 미팅 참관 — 실제 BNI 미팅 진행을 그대로 경험</li>
+          <li>내 사업 소개 — 20초 동안 나의 비즈니스를 소개할 기회</li>
+        </ol>
+      </div>
+      <form id="vform" novalidate>
+        <div class="row">
+          <div class="fg"><label>성명 <i>*</i></label><input name="name" required placeholder="홍길동"></div>
+          <div class="fg"><label>전화번호 <i>*</i></label><input name="phone" type="tel" required placeholder="010-0000-0000"></div>
+        </div>
+        <div class="row">
+          <div class="fg"><label>회사명</label><input name="company" placeholder="(선택)"></div>
+          <div class="fg"><label>전문분야 <i>*</i></label><input name="field" required placeholder="예: 세무회계"></div>
+        </div>
+        <div class="row">
+          <div class="fg"><label>이메일</label><input name="email" type="email" placeholder="(선택)"></div>
+          <div class="fg"><label>초대한 멤버</label><input name="guardian" placeholder="(선택)"></div>
+        </div>
+        <div class="row">
+          <div class="fg"><label>방문 희망일</label><input name="visitDate" type="date" id="visitDate"></div>
+          <div class="fg"><label>차량번호 (주차 등록)</label><input name="carNumber" placeholder="(선택)"></div>
+        </div>
+        <label class="agree"><input type="checkbox" id="agree"> 참관 안내 연락을 위해 위 정보를 챕터 담당자에게 보내는 데 동의합니다.</label>
+        <div class="msg" id="msg"></div>
+        <button class="btn btn-red" id="sbtn" type="submit">참관 신청 보내기</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <b>BNI 파이오니어 챕터</b> · 부산<br>
+  세상이 비즈니스 하는 방법을 바꿉니다 · Givers Gain®<br>
+  <span style="font-size:11px;opacity:.6">Biz Home by T.M LINK</span>
+</footer>
+
+<a class="btn btn-red float" href="#visit">📋 참관 신청</a>
+
+<div class="lb" id="lb" onclick="this.classList.remove('on')"><img id="lbImg" alt=""><p id="lbCap"></p></div>
+
+<script>
+/* ===== 설정: 여기만 고치면 됩니다 ===== */
+// 참관 신청서를 받을 담당자 이메일
+const MANAGER_EMAIL = '';
+// 기존 챕터 홈페이지와 같은 구글 시트에도 함께 기록 (비우면 시트 기록 안 함)
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyRFVCMc7VUxq8TKDH82vUzGe_kaYTUD84EL4-OLcM90hjsEzgvQhjyuAyOwRwsf5smDQ/exec';
+
+// 갤러리: gallery 폴더에 사진을 올리고 파일명을 적으세요
+const GALLERY = [
+  // { src: 'gallery/2026-10-meeting.jpg', cap: '10월 정기 미팅' },
+];
+
+// 멤버: home = 비즈홈 주소, card = 이미지명함 주소 (없으면 빈칸)
+const MEMBERS = [
+  { name:'권두현', co:'오직중문만', cat:'인테리어', job:'중문 제작·시공' },
+  { name:'김경태', co:'늘곁에 라이프서비스', cat:'생활서비스', job:'장례·여행·웨딩', home:'../김경태/' },
+  { name:'김근우', co:'종합광고기획 창운', cat:'광고', job:'인쇄물·홍보물 디자인' },
+  { name:'김윤호', co:'(주)거북축산', cat:'외식', job:'한우 육가공·수입육' },
+  { name:'김주찬', co:'이미지노마드', cat:'광고', job:'기업·행사 사진' },
+  { name:'김지현', co:'감성온도', cat:'인테리어', job:'숙박 컨설팅·공간 디렉팅', home:'../김지현/' },
+  { name:'김철홍', co:'법률사무소 새곁', cat:'법률·세무', job:'민사·형사·행정 소송' },
+  { name:'김효정', co:'PM INTERNATIONAL', cat:'건강', job:'세포영양·건강 관리', home:'../김효정/' },
+  { name:'남인성', co:'모두의카', cat:'생활서비스', job:'신차 구매·장기렌트' },
+  { name:'박미성', co:'울림 컴퍼니', cat:'경영지원', job:'사업계획서·IR·제안서', home:'../박미성/' },
+  { name:'박선영', co:'(주)경동코퍼레이션', cat:'설비·자재', job:'안전용품·건축자재', home:'../박선영/' },
+  { name:'박슬기', co:'KFDP', cat:'경영지원', job:'정책자금·지원금' },
+  { name:'박진성', co:'(주)진성부동산중개법인', cat:'부동산', job:'상가·건물 중개', home:'../박진성/' },
+  { name:'송승훈', co:'토마랩', cat:'외식', job:'고기집 창업·메뉴 전수', home:'../TM/' },
+  { name:'신명철', co:'앰비언트 광고', cat:'광고', job:'간판·건물 랩핑' },
+  { name:'심학봉', co:'(주)더베스트 금융서비스', cat:'보험·금융', job:'생명보험' },
+  { name:'엄채윤', co:'7곡제면소', cat:'외식', job:'막국수·칼국수 전문점' },
+  { name:'이도현', co:'AIA프리미어파트너스', cat:'보험·금융', job:'기업보험' },
+  { name:'이상민', co:'Creation by Jm', cat:'인테리어', job:'아파트·주택 인테리어' },
+  { name:'이상호', co:'(주)디자인시선', cat:'인테리어', job:'상가·숙박·병원 인테리어' },
+  { name:'이소연', co:'해피드로잉', cat:'교육', job:'창의미술·강사 양성' },
+  { name:'이채홍', co:'검인 법무사사무소', cat:'법률·세무', job:'형사·회생파산·등기', home:'../이채홍/' },
+  { name:'이해경', co:'데일카네기 부산', cat:'교육', job:'리더십·기업교육', home:'../이해경/' },
+  { name:'이화춘', co:'이화춘뷰티랩', cat:'뷰티', job:'반영구·속눈썹·아카데미', home:'../이화춘/' },
+  { name:'임춘식', co:'꽃가람', cat:'생활서비스', job:'꽃배달·경조화환', home:'../임춘식/' },
+  { name:'정명수', co:'(주)에어컨설팅', cat:'설비·자재', job:'냉난방기·에어컨' },
+  { name:'조은영', co:'에어월드시스템BS', cat:'설비·자재', job:'공조 필터·냉난방기 세척', home:'../조은영/' },
+  { name:'조현우', co:'디에이치원', cat:'경영지원', job:'정부지원금·고용지원금' },
+  { name:'최경수', co:'휴대폰 판매점', cat:'생활서비스', job:'휴대폰·인터넷·정수기' },
+  { name:'하시형', co:'세무회계 하연', cat:'법률·세무', job:'상속·법인 절세' },
+  { name:'홍정택', co:'스타인컴퍼니', cat:'생활서비스', job:'경호·경비·안전요원' },
+  { name:'황종원', co:'장수힐빙', cat:'건강', job:'건강식품' },
+];
+/* ===================================== */
+
+// 갤러리
+(function(){
+  const g = document.getElementById('gal');
+  if (!GALLERY.length) {
+    g.innerHTML = Array.from({length:6}, () => '<div class="ph">사진 준비 중</div>').join('');
+    return;
+  }
+  g.innerHTML = GALLERY.map((p,i) =>
+    `<button type="button" data-i="${i}"><img src="${p.src}" alt="${p.cap||''}" loading="lazy"></button>`).join('');
+  g.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    const p = GALLERY[b.dataset.i];
+    document.getElementById('lbImg').src = p.src;
+    document.getElementById('lbCap').textContent = p.cap || '';
+    document.getElementById('lb').classList.add('on');
+  });
+})();
+
+// 멤버
+(function(){
+  document.getElementById('statMembers').textContent = MEMBERS.length;
+  const cats = ['전체', ...new Set(MEMBERS.map(m => m.cat))];
+  let cur = '전체';
+  const chips = document.getElementById('chips');
+  chips.innerHTML = cats.map(c => `<button type="button" class="chip${c==='전체'?' on':''}">${c}</button>`).join('');
+  chips.addEventListener('click', e => {
+    if (!e.target.classList.contains('chip')) return;
+    chips.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
+    e.target.classList.add('on'); cur = e.target.textContent; render();
+  });
+  document.getElementById('q').addEventListener('input', render);
+
+  function render(){
+    const q = document.getElementById('q').value.trim().toLowerCase();
+    const list = MEMBERS
+      .filter(m => cur === '전체' || m.cat === cur)
+      .filter(m => !q || [m.name,m.co,m.cat,m.job].join(' ').toLowerCase().includes(q))
+      .sort((a,b) => (!!b.home + !!b.card) - (!!a.home + !!a.card));
+    document.getElementById('mcount').textContent = `${list.length}명`;
+    document.getElementById('mgrid').innerHTML = list.map(m => {
+      const links = [
+        m.home ? `<a class="l-home" href="${m.home}" target="_blank" rel="noopener">비즈홈 보기 →</a>` : '',
+        m.card ? `<a class="l-card" href="${m.card}" target="_blank" rel="noopener">이미지명함</a>` : '',
+      ].join('') || '<span class="l-none">비즈홈 준비 중</span>';
+      return `<div class="m"><div class="nm">${m.name} 대표</div><div class="co">${m.co}</div><div class="cat">${m.cat} · ${m.job}</div><div class="links">${links}</div></div>`;
+    }).join('');
+  }
+  render();
+})();
+
+// 참관 신청: 다음 수요일을 기본 방문일로
+(function(){
+  const d = new Date(); d.setDate(d.getDate() + ((3 - d.getDay() + 7) % 7 || 7));
+  document.getElementById('visitDate').value = d.toISOString().slice(0,10);
+})();
+
+document.getElementById('vform').addEventListener('submit', async e => {
+  e.preventDefault();
+  const f = e.target, msg = document.getElementById('msg'), btn = document.getElementById('sbtn');
+  const show = (t, ok) => { msg.textContent = t; msg.className = 'msg ' + (ok ? 'ok' : 'err'); };
+  const data = Object.fromEntries(new FormData(f).entries());
+  for (const k of ['name','phone','field']) data[k] = (data[k]||'').trim();
+  if (!data.name)  return show('성명을 입력해 주세요.');
+  if (!data.phone) return show('전화번호를 입력해 주세요.');
+  if (!data.field) return show('전문분야를 입력해 주세요.');
+  if (!document.getElementById('agree').checked) return show('정보 전달 동의에 체크해 주세요.');
+  if (!MANAGER_EMAIL && !SHEET_URL) return show('신청 접수 설정이 아직 안 되어 있습니다. 챕터 멤버에게 문의해 주세요.');
+
+  btn.disabled = true; btn.textContent = '보내는 중...';
+  const jobs = [];
+  if (MANAGER_EMAIL) {
+    jobs.push(fetch('https://formsubmit.co/ajax/' + MANAGER_EMAIL, {
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify({
+        _subject: `[파이오니어 참관 신청] ${data.name} · ${data.field}`,
+        _template: 'table', _captcha: 'false',
+        성명:data.name, 전화번호:data.phone, 회사명:data.company, 전문분야:data.field,
+        이메일:data.email, 초대한멤버:data.guardian, 방문희망일:data.visitDate, 차량번호:data.carNumber,
+      }),
+    }).then(r => { if (!r.ok) throw new Error('mail'); }));
+  }
+  if (SHEET_URL) {
+    jobs.push(fetch(SHEET_URL, { method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain'}, body: JSON.stringify(data) }));
+  }
+  const results = await Promise.allSettled(jobs);
+  if (results.some(r => r.status === 'fulfilled')) {
+    show('✅ 참관 신청이 접수되었습니다. 담당자가 곧 연락드리겠습니다.', true);
+    f.reset(); btn.textContent = '신청 완료 ✓';
+  } else {
+    show('전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
+    btn.disabled = false; btn.textContent = '참관 신청 보내기';
+  }
+});
+</script>
+</body>
+</html>
