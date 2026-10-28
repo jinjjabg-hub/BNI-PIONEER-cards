@@ -47,32 +47,37 @@
     padding: 32px 16px 60px;
   }
 
-  /* LANG BAR */
+  /* LANG BAR — 카드 색에 맞춘 알약형 */
   .lang-bar {
-    display: flex;
-    gap: 8px;
+    display: inline-flex;
+    gap: 2px;
     position: sticky;
-    top: 0;
+    top: 10px;
     z-index: 100;
-    padding: 10px 0 8px;
-    margin-bottom: 12px;
-    background: #f0e6ea;
-    backdrop-filter: blur(8px);
+    padding: 4px;
+    margin-bottom: 14px;
+    background: rgba(255,250,248,0.85);
+    border: 1px solid var(--pink-light);
+    border-radius: 999px;
+    box-shadow: 0 4px 16px rgba(139,58,82,0.10);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
   .lang-btn {
-    border: 1px solid var(--pink-main);
-    background: rgba(255,255,255,0.6);
-    color: var(--dark-rose);
-    padding: 5px 14px;
-    border-radius: 20px;
+    border: none;
+    background: transparent;
+    color: var(--warm-gray);
+    padding: 6px 14px;
+    border-radius: 999px;
     font-size: 12px;
+    font-weight: 500;
     font-family: 'Noto Sans KR', sans-serif;
     cursor: pointer;
     transition: all 0.25s;
-    backdrop-filter: blur(6px);
   }
-  .lang-btn:hover, .lang-btn.active {
-    background: var(--pink-main);
+  .lang-btn:hover { color: var(--dark-rose); }
+  .lang-btn.active {
+    background: var(--dark-rose);
     color: white;
   }
 
@@ -491,7 +496,7 @@
 
 <div class="lang-bar">
   <button class="lang-btn active" onclick="setLang('ko',this)">한국어</button>
-  <button class="lang-btn" onclick="setLang('en',this)">English</button>
+  <button class="lang-btn" onclick="setLang('en',this)">EN</button>
   <button class="lang-btn" onclick="setLang('ja',this)">日本語</button>
   <button class="lang-btn" onclick="setLang('zh',this)">中文</button>
 </div>
