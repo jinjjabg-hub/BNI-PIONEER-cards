@@ -11,10 +11,15 @@
 <meta property="og:image:height" content="630">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/pioneer/">
+<link rel="preload" href="../fonts/Paperlogy-4Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fonts/Paperlogy-7Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <!-- 언어팩에 따라 폰트 추가: references/languages.md 참고 -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
 <style>
+
+@font-face { font-family: 'Paperlogy'; src: url('../fonts/Paperlogy-4Regular.woff2') format('woff2'); font-weight: 100 500; font-display: swap; }
+@font-face { font-family: 'Paperlogy'; src: url('../fonts/Paperlogy-7Bold.woff2') format('woff2'); font-weight: 600 900; font-display: swap; }
 
 :root {
   --navy: #162311;
@@ -33,7 +38,7 @@
 * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color: transparent; }
 html { font-size: 16px; }
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Paperlogy', 'Noto Sans KR', sans-serif;
   background: var(--navy);
   color: var(--text-dark);
   max-width: 480px;
@@ -69,7 +74,7 @@ nav {
   transition: all 0.2s;
   min-width: 40px; min-height: 32px;
   display: flex; align-items:center; justify-content:center;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Paperlogy', 'Noto Sans KR', sans-serif;
 }
 .lang-btn.active { background: var(--gold); color: var(--navy); border-color: var(--gold); }
 
@@ -258,7 +263,7 @@ section { padding: 40px 20px; }
   border: none; border-radius: 10px;
   font-size: 15px; font-weight: 700;
   cursor: pointer; text-align: center;
-  transition: all 0.15s; font-family: 'Noto Sans KR', sans-serif;
+  transition: all 0.15s; font-family: 'Paperlogy', 'Noto Sans KR', sans-serif;
   min-height: 54px; letter-spacing: 0.3px;
 }
 .btn-primary { background: var(--gold); color: #fff; }
@@ -280,8 +285,8 @@ section { padding: 40px 20px; }
 .share-btns { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:16px; }
 .share-btn { display:flex; flex-direction:column; align-items:center; gap:8px; background:none; border:none; cursor:pointer; padding:8px 4px; }
 .share-btn-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:26px; }
-.share-btn span { font-size:11px; color:#333; font-weight:600; font-family:'Noto Sans KR',sans-serif; }
-.share-cancel { width:100%; padding:14px; background:#f2f2f2; border:none; border-radius:10px; font-size:15px; font-weight:700; color:#444; cursor:pointer; font-family:'Noto Sans KR',sans-serif; }
+.share-btn span { font-size:11px; color:#333; font-weight:600; font-family: 'Paperlogy', 'Noto Sans KR', sans-serif; }
+.share-cancel { width:100%; padding:14px; background:#f2f2f2; border:none; border-radius:10px; font-size:15px; font-weight:700; color:#444; cursor:pointer; font-family: 'Paperlogy', 'Noto Sans KR', sans-serif; }
 
 /* ── FOOTER ── */
 footer {
@@ -317,7 +322,7 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 .vform { background: var(--navy3); border: 1px solid rgba(232,236,209,0.2); border-radius: 12px; padding: 18px 16px; }
 .vfg { margin-bottom: 12px; }
 .vfg label { display:block; font-size: 12px; font-weight: 700; color: var(--sage); margin-bottom: 5px; }
-.vfg input { width:100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(232,236,209,0.25); background: var(--navy); color: #fff; font-size: 15px; font-family: 'Noto Sans KR', sans-serif; }
+.vfg input { width:100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(232,236,209,0.25); background: var(--navy); color: #fff; font-size: 15px; font-family: 'Paperlogy', 'Noto Sans KR', sans-serif; }
 .vfg input::placeholder { color: rgba(240,236,224,0.35); }
 .vrate { display:flex; flex-wrap:wrap; gap:6px 12px; font-size: 13px; color: var(--text-dark); padding-top: 2px; }
 .vrate label { display:flex; align-items:center; gap:4px; font-weight:400; color: var(--text-dark); margin:0; font-size:13px; }
@@ -576,7 +581,7 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 <!-- 만두 연결 (카드 주인 전용, 방문자는 무시해도 되는 위치) -->
 <div class="mandu-activate-wrap" style="padding:14px 20px 4px;text-align:center;">
   <button id="mandu-activate-btn" onclick="activateMandu()"
-    style="background:none;border:1px solid rgba(232,236,209,0.3);color:var(--muted-dark);font-size:10.5px;padding:7px 14px;border-radius:20px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;">
+    style="background:none;border:1px solid rgba(232,236,209,0.3);color:var(--muted-dark);font-size:10.5px;padding:7px 14px;border-radius:20px;cursor:pointer;font-family: 'Paperlogy', 'Noto Sans KR', sans-serif;">
     💬 본인 비즈홈이신가요? 만두 연결하기 (1회)
   </button>
   <div id="mandu-activate-done" style="display:none;font-size:10.5px;color:var(--sage);padding:7px 0;">
