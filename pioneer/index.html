@@ -17,16 +17,17 @@
 <style>
 
 :root {
-  --navy: #0d1b3e;
-  --navy2: #152347;
-  --navy3: #1e2f5a;
-  --gold: #c9a84c;
-  --gold2: #e8c86a;
-  --light: #f4f1e8;
-  --text-dark: #f0ece0;
-  --text-light: #1a1a2e;
-  --muted-dark: #a89060;
-  --muted-light: #5a4a2a;
+  --navy: #162311;
+  --navy2: #1d2d17;
+  --navy3: #26391f;
+  --gold: #BA0001;
+  --gold2: #d81a1b;
+  --sage: #E8ECD1;
+  --light: #E8ECD1;
+  --text-dark: #E8ECD1;
+  --text-light: #162311;
+  --muted-dark: #a7ae93;
+  --muted-light: #4d5a40;
 }
 
 * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color: transparent; }
@@ -50,17 +51,17 @@ span[data-lang].active { display: inline; }
 nav {
   position: fixed; top:0; left:0; right:0; z-index:100;
   max-width: 480px; margin: 0 auto;
-  background: rgba(13,27,62,0.97);
+  background: rgba(22,35,17,0.97);
   backdrop-filter: blur(10px);
   padding: 10px 16px;
   display: flex; justify-content: space-between; align-items: center;
-  border-bottom: 1px solid rgba(201,168,76,0.25);
+  border-bottom: 1px solid rgba(232,236,209,0.25);
 }
-.nav-brand { font-size: 12px; font-weight: 700; color: var(--gold); white-space: nowrap; }
+.nav-brand { font-size: 12px; font-weight: 700; color: var(--sage); white-space: nowrap; }
 .lang-btns { display:flex; gap:4px; }
 .lang-btn {
   padding: 5px 8px;
-  border: 1px solid rgba(201,168,76,0.35);
+  border: 1px solid rgba(232,236,209,0.35);
   background: transparent;
   color: var(--muted-dark);
   font-size: 10px; font-weight: 700;
@@ -73,37 +74,13 @@ nav {
 .lang-btn.active { background: var(--gold); color: var(--navy); border-color: var(--gold); }
 
 /* ── HERO ── */
-.hero {
-  margin-top: 54px;
-  position: relative;
-  width: 100%;
-  aspect-ratio: 3/4;
-  overflow: hidden;
-}
-.hero img.hero-img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
-.hero-overlay {
-  position: absolute; inset:0;
-  background: linear-gradient(
-    to bottom,
-    rgba(13,27,62,0.1) 0%,
-    rgba(13,27,62,0.15) 40%,
-    rgba(13,27,62,0.75) 75%,
-    rgba(13,27,62,0.95) 100%
-  );
-}
-.hero-content {
-  position: absolute; bottom:0; left:0; right:0; z-index:2;
-  padding: 24px 20px 22px;
-}
+.hero { margin-top: 54px; width: 100%; }
+.hero img.hero-img { width: 100%; height: auto; display: block; }
+.hero-content { background: var(--navy); padding: 22px 20px 24px; }
 .hero-badge {
   display: inline-block;
   background: var(--gold);
-  color: var(--navy);
+  color: #fff;
   font-size: 10px; font-weight: 700;
   padding: 4px 12px; border-radius: 20px;
   margin-bottom: 10px; letter-spacing: 1.5px;
@@ -113,20 +90,19 @@ nav {
   color: #fff; line-height: 1.15;
   margin-bottom: 7px; letter-spacing: -0.5px;
 }
-.hero-name [data-lang="ur"] { font-size: 26px; }
-.hero-title { font-size: 13px; color: var(--gold); opacity: 0.95; line-height: 1.5; }
+.hero-title { font-size: 13px; color: var(--sage); opacity: 0.95; line-height: 1.5; }
 
 /* ── PROFILE ROW ── */
 .profile-row {
   background: var(--navy2);
   padding: 16px 20px;
   display: flex; align-items: center; gap:14px;
-  border-bottom: 1px solid rgba(201,168,76,0.12);
+  border-bottom: 1px solid rgba(232,236,209,0.12);
 }
 .profile-img {
   width: 64px; height: 64px; min-width:64px;
   border-radius: 50%;
-  border: 2px solid var(--gold);
+  border: 2px solid var(--sage);
   overflow: hidden; flex-shrink: 0;
 }
 .profile-img img { width:100%; height:100%; object-fit:cover; object-position: center top; }
@@ -138,7 +114,7 @@ section { padding: 40px 20px; }
 .section-label {
   font-size: 10px; font-weight: 700;
   letter-spacing: 2.5px; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 6px;
+  color: var(--sage); margin-bottom: 6px;
 }
 .section-title { font-size: 22px; font-weight: 700; line-height: 1.35; margin-bottom: 22px; }
 
@@ -147,7 +123,7 @@ section { padding: 40px 20px; }
 .about .section-title { color: #fff; }
 .slogan {
   font-size: 15px; font-weight: 700;
-  color: var(--gold); margin-bottom: 14px;
+  color: var(--sage); margin-bottom: 14px;
   font-style: italic; line-height: 1.6;
 }
 .about-text { font-size: 14px; line-height: 1.9; color: var(--text-dark); opacity: 0.85; }
@@ -160,7 +136,7 @@ section { padding: 40px 20px; }
 .why-cards { display: flex; flex-direction: column; gap:14px; }
 .why-card {
   background: #fff;
-  border: 1px solid rgba(201,168,76,0.18);
+  border: 1px solid rgba(232,236,209,0.18);
   border-left: 4px solid var(--gold);
   border-radius: 10px; padding: 18px 16px;
 }
@@ -175,10 +151,10 @@ section { padding: 40px 20px; }
 .diff-grid { display: flex; flex-direction: column; gap:12px; }
 .diff-card {
   background: var(--navy3);
-  border: 1px solid rgba(201,168,76,0.12);
+  border: 1px solid rgba(232,236,209,0.12);
   border-radius: 10px; padding: 18px 16px;
 }
-.diff-card h3 { font-size: 14px; font-weight: 700; color: var(--gold); margin-bottom: 8px; line-height: 1.4; }
+.diff-card h3 { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 8px; line-height: 1.4; }
 .diff-card p { font-size: 13px; line-height: 1.8; color: var(--text-dark); opacity: 0.8; }
 .diff-card p [data-lang="ur"] { font-size: 14px; line-height: 2.2; }
 
@@ -195,7 +171,7 @@ section { padding: 40px 20px; }
 .ref-num {
   width: 26px; height: 26px; min-width:26px;
   border-radius: 50%; background: var(--gold);
-  color: var(--navy); font-weight: 700; font-size: 12px;
+  color: #fff; font-weight: 700; font-size: 12px;
   display: flex; align-items:center; justify-content:center;
   flex-shrink: 0; margin-top: 1px;
 }
@@ -205,7 +181,7 @@ section { padding: 40px 20px; }
 /* ── CAREER ── */
 .career {
   position: relative;
-  background-color: #f0f4ff;
+  background-color: var(--light);
   background-image: url('career-bg.png');
   background-size: 150%;
   background-position: left bottom;
@@ -235,17 +211,17 @@ section { padding: 40px 20px; }
 .portfolio .section-title { color: #fff; }
 .portfolio-track-wrap { overflow: hidden; border-radius: 12px; }
 .portfolio-track { display: flex; transition: transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94); }
-.portfolio-slide { min-width: 100%; aspect-ratio: 3/4; overflow: hidden; }
+.portfolio-slide { min-width: 100%; aspect-ratio: 4/3; overflow: hidden; }
 .portfolio-slide img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
 .portfolio-nav { display:flex; align-items:center; justify-content:center; gap:16px; margin-top:14px; }
 .portfolio-btn {
-  background: transparent; border: 1px solid rgba(201,168,76,0.35);
-  color: var(--gold); width: 30px; height: 30px; border-radius: 50%;
+  background: transparent; border: 1px solid rgba(232,236,209,0.35);
+  color: var(--sage); width: 30px; height: 30px; border-radius: 50%;
   font-size: 15px; cursor: pointer; display:flex; align-items:center; justify-content:center;
 }
 .portfolio-dots { display:flex; gap:6px; }
-.portfolio-dot { width:6px; height:6px; border-radius:50%; background: rgba(201,168,76,0.3); transition: all 0.25s; }
-.portfolio-dot.active { background: var(--gold); width:18px; border-radius:3px; }
+.portfolio-dot { width:6px; height:6px; border-radius:50%; background: rgba(232,236,209,0.3); transition: all 0.25s; }
+.portfolio-dot.active { background: var(--sage); width:18px; border-radius:3px; }
 
 /* ── CONTACT ── */
 .contact { background: var(--light); }
@@ -285,8 +261,8 @@ section { padding: 40px 20px; }
   transition: all 0.15s; font-family: 'Noto Sans KR', sans-serif;
   min-height: 54px; letter-spacing: 0.3px;
 }
-.btn-primary { background: var(--gold); color: var(--navy); }
-.btn-secondary { background: transparent; border: 2px solid var(--gold); color: var(--gold); }
+.btn-primary { background: var(--gold); color: #fff; }
+.btn-secondary { background: transparent; border: 2px solid var(--sage); color: var(--sage); }
 .btn-share { background: linear-gradient(135deg, #1a6b3a, #0d8a4a); color: #fff; border: none; }
 .btn:active { transform: scale(0.97); opacity: 0.9; }
 
@@ -310,13 +286,13 @@ section { padding: 40px 20px; }
 /* ── FOOTER ── */
 footer {
   background: var(--navy); padding: 24px 20px;
-  text-align: center; border-top: 1px solid rgba(201,168,76,0.12);
+  text-align: center; border-top: 1px solid rgba(232,236,209,0.12);
 }
-footer .company { font-size: 13px; font-weight: 700; color: var(--gold); margin-bottom: 5px; }
+footer .company { font-size: 13px; font-weight: 700; color: var(--sage); margin-bottom: 5px; }
 footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacing: 0.5px; }
 
 /* ── 챕터 비즈홈 추가 섹션 (갤러리 빈칸 · 멤버 · 참관 신청) ── */
-.portfolio-empty { aspect-ratio: 4/3; border: 1px dashed rgba(201,168,76,0.4); border-radius: 12px; display:flex; align-items:center; justify-content:center; color: var(--muted-dark); font-size: 13px; text-align:center; line-height:1.7; }
+.portfolio-empty { aspect-ratio: 4/3; border: 1px dashed rgba(232,236,209,0.4); border-radius: 12px; display:flex; align-items:center; justify-content:center; color: var(--muted-dark); font-size: 13px; text-align:center; line-height:1.7; }
 .difference .vs { font-size: 12px; color: var(--muted-dark); margin-bottom: 6px; text-decoration: line-through; opacity: .8; }
 .members { background: var(--light); }
 .members .section-label { color: var(--muted-light); }
@@ -328,20 +304,20 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 .member-name { font-size: 14px; font-weight: 700; color: var(--text-light); }
 .member-co { font-size: 11px; color: #777; line-height: 1.4; }
 .member-links { display:flex; gap:4px; flex-wrap:wrap; margin-top:6px; }
-.member-links a { font-size: 10.5px; font-weight: 700; padding: 4px 8px; border-radius: 12px; text-decoration:none; }
+.member-links span { font-size: 10.5px; font-weight: 700; padding: 4px 8px; border-radius: 12px; text-decoration:none; }
 .ml-home { background: var(--navy); color: #fff; }
-.ml-card { background: #f3ead4; color: #7a5a12; }
+.ml-card { background: var(--gold); color: #fff; }
 .member-more { margin-top: 14px; font-size: 12px; color: #666; line-height: 1.9; background:#fff; border-radius:12px; padding:14px; }
 .member-more b { display:block; font-size: 11px; color: var(--muted-light); margin-bottom: 4px; letter-spacing: 1px; }
 .visit { background: var(--navy2); }
 .visit .section-title { color: #fff; margin-bottom: 14px; }
 .visit-info { list-style:none; margin-bottom: 18px; }
-.visit-info li { font-size: 13px; line-height: 1.7; padding: 8px 0; border-bottom: 1px solid rgba(201,168,76,0.12); color: var(--text-dark); }
-.visit-info li b { color: var(--gold); }
-.vform { background: var(--navy3); border: 1px solid rgba(201,168,76,0.2); border-radius: 12px; padding: 18px 16px; }
+.visit-info li { font-size: 13px; line-height: 1.7; padding: 8px 0; border-bottom: 1px solid rgba(232,236,209,0.12); color: var(--text-dark); }
+.visit-info li b { color: #fff; }
+.vform { background: var(--navy3); border: 1px solid rgba(232,236,209,0.2); border-radius: 12px; padding: 18px 16px; }
 .vfg { margin-bottom: 12px; }
-.vfg label { display:block; font-size: 12px; font-weight: 700; color: var(--gold); margin-bottom: 5px; }
-.vfg input { width:100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(201,168,76,0.25); background: var(--navy); color: #fff; font-size: 15px; font-family: 'Noto Sans KR', sans-serif; }
+.vfg label { display:block; font-size: 12px; font-weight: 700; color: var(--sage); margin-bottom: 5px; }
+.vfg input { width:100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(232,236,209,0.25); background: var(--navy); color: #fff; font-size: 15px; font-family: 'Noto Sans KR', sans-serif; }
 .vfg input::placeholder { color: rgba(240,236,224,0.35); }
 .vagree { display:flex; gap:8px; align-items:flex-start; font-size: 11.5px; color: var(--muted-dark); line-height: 1.6; margin: 4px 0 14px; }
 .vmsg { display:none; padding: 12px; border-radius: 8px; font-size: 13px; font-weight: 700; margin-bottom: 12px; text-align:center; }
@@ -354,18 +330,17 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 <!-- NAV : 4개 국어는 KR 원고 확정 후 추가 -->
 <nav>
   <div class="nav-brand">BNI 파이오니어 챕터</div>
-  <a href="#visit" style="font-size:11px;font-weight:700;color:var(--navy);background:var(--gold);padding:7px 12px;border-radius:6px;text-decoration:none;">참관 신청</a>
+  <a href="#visit" style="font-size:11px;font-weight:700;color:#fff;background:var(--gold);padding:7px 12px;border-radius:6px;text-decoration:none;">참관 신청</a>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-  <img class="hero-img" src="hero.png" alt="BNI 파이오니어 챕터">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge"><span data-lang="kr" class="active">BNI KOREA · 부산</span></div>
-    <div class="hero-name"><span data-lang="kr" class="active">파이오니어 챕터</span></div>
-    <div class="hero-title"><span data-lang="kr" class="active">매주 수요일 오전 7시 · 업종별 1명 · 2022년 런칭</span></div>
-  </div>
+  <img class="hero-img" src="hero.jpg" alt="BNI 비즈니스 네트워크 초대 · 파이오니어 챕터">
+</div>
+<div class="hero-content">
+  <div class="hero-badge"><span data-lang="kr" class="active">BUSAN 1호 PIONEER</span></div>
+  <div class="hero-name"><span data-lang="kr" class="active">파이오니어 챕터</span></div>
+  <div class="hero-title"><span data-lang="kr" class="active">업종별 1명 · 2022년 런칭</span></div>
 </div>
 
 <!-- PROFILE ROW -->
@@ -480,31 +455,28 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
   </div>
 </section>
 
-<!-- PORTFOLIO = 갤러리 : 사진을 portfolio1.jpg, portfolio2.jpg ... 로 올리고 아래 빈칸 블록을 slide로 바꾼다 -->
+<!-- PORTFOLIO = 갤러리 : portfolio1.jpg ~ portfolio10.jpg 를 이 폴더에 올리면 있는 사진만 3초 자동 슬라이드 -->
 <section class="portfolio">
   <div class="section-label">Gallery</div>
   <div class="section-title"><span data-lang="kr" class="active">파이오니어의 아침</span></div>
-  <div class="portfolio-empty">미팅·행사 사진 준비 중입니다<br>(portfolio1.jpg ~ 를 올리면 자동 슬라이드)</div>
-  <!--
-  <div class="portfolio-track-wrap">
-    <div class="portfolio-track" id="portfolio-track">
-      <div class="portfolio-slide"><img src="portfolio1.jpg" alt="gallery 1"></div>
-      <div class="portfolio-slide"><img src="portfolio2.jpg" alt="gallery 2"></div>
+  <div class="portfolio-empty" id="portfolio-empty">미팅·행사 사진 준비 중입니다</div>
+  <div id="portfolio-box" style="display:none">
+    <div class="portfolio-track-wrap">
+      <div class="portfolio-track" id="portfolio-track"></div>
+    </div>
+    <div class="portfolio-nav">
+      <button class="portfolio-btn" onclick="portfolioSlide(-1)">‹</button>
+      <div class="portfolio-dots" id="portfolio-dots"></div>
+      <button class="portfolio-btn" onclick="portfolioSlide(1)">›</button>
     </div>
   </div>
-  <div class="portfolio-nav">
-    <button class="portfolio-btn" onclick="portfolioSlide(-1)">‹</button>
-    <div class="portfolio-dots" id="portfolio-dots"></div>
-    <button class="portfolio-btn" onclick="portfolioSlide(1)">›</button>
-  </div>
-  -->
 </section>
 
 <!-- MEMBERS : 멤버 비즈홈 · 이미지명함 링크 (목록은 아래 스크립트 MEMBERS 에서 관리) -->
 <section class="members">
   <div class="section-label">Members</div>
   <div class="section-title"><span data-lang="kr" class="active">파이오니어 멤버</span></div>
-  <p class="sub"><span data-lang="kr" class="active">누르면 멤버의 비즈홈·이미지명함으로 이동합니다.</span></p>
+  <p class="sub"><span data-lang="kr" class="active">업종별로 한 명씩. 누르면 그 멤버의 비즈홈·이미지명함으로 이동합니다.</span></p>
   <div class="member-list" id="memberList"></div>
   <div class="member-more" id="memberMore"></div>
 </section>
@@ -589,10 +561,10 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 <!-- 만두 연결 (카드 주인 전용, 방문자는 무시해도 되는 위치) -->
 <div class="mandu-activate-wrap" style="padding:14px 20px 4px;text-align:center;">
   <button id="mandu-activate-btn" onclick="activateMandu()"
-    style="background:none;border:1px solid rgba(201,168,76,0.3);color:var(--muted-dark);font-size:10.5px;padding:7px 14px;border-radius:20px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;">
+    style="background:none;border:1px solid rgba(232,236,209,0.3);color:var(--muted-dark);font-size:10.5px;padding:7px 14px;border-radius:20px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;">
     💬 본인 명함이신가요? 만두 연결하기 (1회)
   </button>
-  <div id="mandu-activate-done" style="display:none;font-size:10.5px;color:var(--gold);padding:7px 0;">
+  <div id="mandu-activate-done" style="display:none;font-size:10.5px;color:var(--sage);padding:7px 0;">
     ✅ 만두 연결 완료 — 이제 이 카드로 DM을 받을 수 있어요
   </div>
 </div>
@@ -610,40 +582,42 @@ const MANAGER_EMAIL = '';
 // 기존 챕터 홈페이지와 같은 구글 시트에도 함께 기록 (비우면 시트 기록 안 함)
 const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyRFVCMc7VUxq8TKDH82vUzGe_kaYTUD84EL4-OLcM90hjsEzgvQhjyuAyOwRwsf5smDQ/exec';
 
-// 멤버: home = 비즈홈 주소, card = 이미지명함 주소 (없으면 비워 둠)
+// 멤버: 이름 대신 업종으로 보여준다. job = 업종, home = 비즈홈 주소, card = 이미지명함 주소 (없으면 비워 둠)
 const MEMBERS = [
-  { name:'권두현', co:'오직중문만 · 중문' },
-  { name:'김경태', co:'늘곁에 라이프서비스 · 상조', home:'../김경태/' },
-  { name:'김근우', co:'종합광고기획 창운 · 인쇄' },
-  { name:'김윤호', co:'(주)거북축산 · 축산' },
-  { name:'김주찬', co:'이미지노마드 · 사진' },
-  { name:'김지현', co:'감성온도 · 숙박 컨설팅', home:'../김지현/' },
-  { name:'김철홍', co:'법률사무소 새곁 · 법률' },
-  { name:'김효정', co:'PM INTERNATIONAL · 건강', home:'../김효정/' },
-  { name:'남인성', co:'모두의카 · 자동차' },
-  { name:'박미성', co:'울림 컴퍼니 · 경영컨설팅', home:'../박미성/' },
-  { name:'박선영', co:'(주)경동코퍼레이션 · 안전용품', home:'../박선영/' },
-  { name:'박슬기', co:'KFDP · 정부지원금' },
-  { name:'박진성', co:'(주)진성부동산중개법인 · 부동산', home:'../박진성/' },
-  { name:'송승훈', co:'토마랩 · 외식 창업', home:'../TM/' },
-  { name:'신명철', co:'앰비언트 광고 · 간판' },
-  { name:'심학봉', co:'(주)더베스트 금융서비스 · 보험' },
-  { name:'엄채윤', co:'7곡제면소 · 외식' },
-  { name:'이도현', co:'AIA프리미어파트너스 · 기업보험' },
-  { name:'이상민', co:'Creation by Jm · 인테리어' },
-  { name:'이상호', co:'(주)디자인시선 · 상업 인테리어' },
-  { name:'이소연', co:'해피드로잉 · 미술교육' },
-  { name:'이채홍', co:'검인 법무사사무소 · 법무', home:'../이채홍/' },
-  { name:'이해경', co:'데일카네기 부산 · 기업교육', home:'../이해경/' },
-  { name:'이화춘', co:'이화춘뷰티랩 · 뷰티', home:'../이화춘/' },
-  { name:'임춘식', co:'꽃가람 · 꽃', home:'../임춘식/' },
-  { name:'정명수', co:'(주)에어컨설팅 · 냉난방' },
-  { name:'조은영', co:'에어월드시스템BS · 공조', home:'../조은영/' },
-  { name:'조현우', co:'디에이치원 · 정부지원금' },
-  { name:'최경수', co:'휴대폰 판매점 · 통신' },
-  { name:'하시형', co:'세무회계 하연 · 세무' },
-  { name:'홍정택', co:'스타인컴퍼니 · 경호·경비' },
-  { name:'황종원', co:'장수힐빙 · 건강식품' },
+  { job:'상조서비스', home:'../김경태/' },
+  { job:'숙박 공간 컨설팅', home:'../김지현/' },
+  { job:'세포영양·건강관리', home:'../김효정/' },
+  { job:'사업계획서·경영컨설팅', home:'../박미성/' },
+  { job:'안전용품·건축자재', home:'../박선영/' },
+  { job:'부동산 중개', home:'../박진성/' },
+  { job:'고깃집 창업·메뉴 전수', home:'../TM/' },
+  { job:'법무사', home:'../이채홍/' },
+  { job:'리더십·기업교육', home:'../이해경/' },
+  { job:'반영구·뷰티', home:'../이화춘/' },
+  { job:'꽃·경조화환', home:'../임춘식/' },
+  { job:'공조·에어컨 세척', home:'../조은영/' },
+  { job:'해외금융 컨설팅', home:'../정상현/' },
+  { job:'무인 태닝샵', home:'../윤민수/' },
+  { job:'중문 제작·시공' },
+  { job:'인쇄·홍보물' },
+  { job:'축산·육가공' },
+  { job:'기업·행사 사진' },
+  { job:'법률(변호사)' },
+  { job:'자동차 구매·렌트' },
+  { job:'정책자금' },
+  { job:'간판·랩핑 광고' },
+  { job:'생명보험' },
+  { job:'막국수 전문점' },
+  { job:'기업보험' },
+  { job:'주거 인테리어' },
+  { job:'상업 인테리어' },
+  { job:'미술교육' },
+  { job:'에어컨·냉난방기' },
+  { job:'고용지원금 컨설팅' },
+  { job:'휴대폰·통신' },
+  { job:'세무회계' },
+  { job:'경호·경비' },
+  { job:'건강식품' },
 ];
 /* ========================================== */
 
@@ -651,13 +625,14 @@ const MEMBERS = [
   document.getElementById('memberCount').textContent = MEMBERS.length;
   const linked = MEMBERS.filter(m => m.home || m.card);
   const rest = MEMBERS.filter(m => !m.home && !m.card);
-  document.getElementById('memberList').innerHTML = linked.map(m => {
-    const links = (m.home ? `<a class="ml-home" href="${m.home}">비즈홈 →</a>` : '') +
-                  (m.card ? `<a class="ml-card" href="${m.card}" target="_blank" rel="noopener">이미지명함</a>` : '');
-    return `<div class="member-item"><div class="member-name">${m.name} 대표</div><div class="member-co">${m.co}</div><div class="member-links">${links}</div></div>`;
-  }).join('');
+  const items = [];
+  linked.forEach(m => {
+    if (m.home) items.push(`<a class="member-item" href="${m.home}"><div class="member-name">${m.job}</div><div class="member-links"><span class="ml-home">비즈홈 →</span></div></a>`);
+    if (m.card) items.push(`<a class="member-item" href="${m.card}" target="_blank" rel="noopener"><div class="member-name">${m.job}</div><div class="member-links"><span class="ml-card">이미지명함 →</span></div></a>`);
+  });
+  document.getElementById('memberList').innerHTML = items.join('');
   document.getElementById('memberMore').innerHTML = rest.length
-    ? `<b>비즈홈 준비 중</b>${rest.map(m => `${m.name} (${m.co.split(' · ')[0]})`).join(' · ')}`
+    ? `<b>함께하는 업종 (비즈홈 준비 중)</b>${rest.map(m => m.job).join(' · ')}`
     : '';
 })();
 
@@ -761,8 +736,9 @@ function shareQR() { window.open('qr.png', '_blank'); closeShare(); }
 
 /* ── PORTFOLIO 자동 슬라이드 (표준: 3초 간격, 터치 스와이프, 수동 조작 시 타이머 리셋) ──
    portfolio 섹션이 없는 명함(HTML에서 <section class="portfolio"> 삭제한 경우)에는
-   아래 코드가 아무 일도 하지 않고 조용히 종료된다. */
-(function () {
+   아래 코드가 아무 일도 하지 않고 조용히 종료된다.
+   챕터 카드: 사진을 미리 확인한 뒤 initPortfolio()로 시작한다 (아래 갤러리 불러오기). */
+function initPortfolio() {
   const track = document.getElementById('portfolio-track');
   if (!track) return;
 
@@ -796,6 +772,26 @@ function shareQR() { window.open('qr.png', '_blank'); closeShare(); }
   }, { passive: true });
 
   auto();
+}
+
+/* ── 갤러리 불러오기: portfolio1~10.jpg 중 실제로 있는 사진만 순서대로 ── */
+(function () {
+  const MAX = 10;
+  const probes = Array.from({ length: MAX }, (_, i) => new Promise(res => {
+    const img = new Image();
+    img.onload = () => res(`portfolio${i + 1}.jpg`);
+    img.onerror = () => res(null);
+    img.src = `portfolio${i + 1}.jpg`;
+  }));
+  Promise.all(probes).then(list => {
+    const found = list.filter(Boolean);
+    if (!found.length) return;
+    document.getElementById('portfolio-track').innerHTML =
+      found.map((src, i) => `<div class="portfolio-slide"><img src="${src}" alt="gallery ${i + 1}"></div>`).join('');
+    document.getElementById('portfolio-empty').style.display = 'none';
+    document.getElementById('portfolio-box').style.display = 'block';
+    initPortfolio();
+  });
 })();
 
 /* ── 만두 원클릭 연결 (카드 주인 전용) ──────────────────────────
