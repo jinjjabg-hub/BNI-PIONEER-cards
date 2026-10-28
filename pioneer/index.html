@@ -340,6 +340,10 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 .vmsg { display:none; padding: 12px; border-radius: 8px; font-size: 13px; font-weight: 700; margin-bottom: 12px; text-align:center; }
 .vmsg.ok { display:block; background:#e3f4e8; color:#1d6b35; }
 .vmsg.err { display:block; background:#fbe4e6; color:#8f1424; }
+.vpay { margin-top: 14px; padding-top: 14px; border-top: 1px dashed rgba(232,236,209,0.25); display:flex; flex-direction:column; gap:10px; }
+.vpay-info { font-size: 12px; color: var(--muted-dark); line-height: 1.7; }
+.vpay-info b { display:block; font-size: 17px; color: #fff; letter-spacing: 0.5px; margin-top: 2px; }
+.vpay-info small { font-size: 12px; }
 </style>
 </head>
 <body>
@@ -760,6 +764,22 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
     </label>
     <div class="vmsg" id="vmsg"></div>
     <button class="btn btn-primary" id="vbtn" type="submit"></button>
+    <div class="vpay">
+      <div class="vpay-info">
+        <span data-lang="kr" class="active">💳 참관비 5만원 입금 계좌</span>
+        <span data-lang="en">💳 Visitor fee KRW 50,000 — bank account</span>
+        <span data-lang="jp">💳 見学費5万ウォン 振込口座</span>
+        <span data-lang="cn">💳 参观费5万韩元 汇款账户</span>
+        <b>카카오뱅크 79423640105</b>
+        <small>
+          <span data-lang="kr" class="active">예금주 정상현</span>
+          <span data-lang="en">Account holder: Jeong Sang-Hyun</span>
+          <span data-lang="jp">口座名義：チョン・サンヒョン</span>
+          <span data-lang="cn">户名：郑尚贤</span>
+        </small>
+      </div>
+      <button class="btn btn-secondary" type="button" id="copyAcct" onclick="copyAccount()"></button>
+    </div>
   </form>
 </section>
 
@@ -924,6 +944,8 @@ const MANAGER_EMAIL = 'bellauomo@naver.com';
 // 같은 신청서를 함께 받을 참조 메일 (쉼표로 여러 개, 비우면 참조 없음)
 const CC_EMAILS = 'jinjjabg@gmail.com';
 // 기존 챕터 홈페이지와 같은 구글 시트에도 함께 기록 (비우면 시트 기록 안 함)
+// 참관비 입금 계좌 (복사 버튼이 복사하는 글자)
+const ACCOUNT_TEXT = '카카오뱅크 79423640105';
 const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyRFVCMc7VUxq8TKDH82vUzGe_kaYTUD84EL4-OLcM90hjsEzgvQhjyuAyOwRwsf5smDQ/exec';
 
 // 멤버: 화면에는 이름 대신 업종으로 보여준다(name은 관리용, 순서 = 화면 순서). job = 업종(4개 국어), home = 비즈홈 주소,
@@ -988,6 +1010,8 @@ const TX = {
   copied:  {kr:'링크가 복사되었습니다!', en:'Link copied!', jp:'リンクをコピーしました！', cn:'链接已复制！'},
   call:    {kr:'📞 전화하기', en:'📞 Call', jp:'📞 電話する', cn:'📞 拨打电话'},
   close:   {kr:'닫기', en:'Close', jp:'閉じる', cn:'关闭'},
+  acct:    {kr:'📋 계좌번호 복사', en:'📋 Copy account number', jp:'📋 口座番号をコピー', cn:'📋 复制账号'},
+  acctOk:  {kr:'✓ 복사됐어요 · 은행 앱에 붙여넣기', en:'✓ Copied — paste it in your bank app', jp:'✓ コピーしました · 銀行アプリに貼り付け', cn:'✓ 已复制 · 请粘贴到银行APP'},
 };
 const REQ = {
   name:      {kr:'성명을 입력해 주세요.', en:'Please enter your name.', jp:'氏名を入力してください。', cn:'请输入姓名。'},
@@ -1047,9 +1071,28 @@ function applyLangExtras() {
   }
   const btn = document.getElementById('vbtn');
   if (!btn.disabled) btn.textContent = TX.send[CUR_LANG];
+  document.getElementById('copyAcct').textContent = TX.acct[CUR_LANG];
   document.documentElement.lang = {kr:'ko', en:'en', jp:'ja', cn:'zh'}[CUR_LANG];
 }
 applyLangExtras();
+
+/* ── 참관비 계좌번호 복사 ── */
+function copyAccount() {
+  const btn = document.getElementById('copyAcct');
+  const done = () => {
+    btn.textContent = TX.acctOk[CUR_LANG];
+    setTimeout(() => { btn.textContent = TX.acct[CUR_LANG]; }, 2500);
+  };
+  const fallback = () => {
+    const t = document.createElement('textarea');
+    t.value = ACCOUNT_TEXT;
+    document.body.appendChild(t); t.select(); document.execCommand('copy');
+    document.body.removeChild(t);
+    done();
+  };
+  if (navigator.clipboard) navigator.clipboard.writeText(ACCOUNT_TEXT).then(done).catch(fallback);
+  else fallback();
+}
 
 /* ── 참관 신청 ── */
 (function () {
