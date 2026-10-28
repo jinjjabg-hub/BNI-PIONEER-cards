@@ -78,7 +78,7 @@ nav {
   display: flex; align-items:center; justify-content:center;
   font-family: 'Paperlogy', 'Noto Sans KR', sans-serif;
 }
-.lang-btn.active { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+.lang-btn.active { background: var(--gold); color: #fff; border-color: var(--gold); }
 
 /* ── HERO ── */
 .hero { margin-top: 54px; width: 100%; }
@@ -306,13 +306,13 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 .members .section-label { color: var(--muted-light); }
 .members .section-title { color: var(--text-light); margin-bottom: 8px; }
 .members .sub { font-size: 12px; color: #777; margin-bottom: 16px; line-height: 1.6; }
-.member-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.member-item { display:flex; flex-direction:column; gap:3px; background:#fff; border-radius:12px; padding:14px 12px; border:1px solid rgba(0,0,0,0.05); text-decoration:none; }
+.member-list { display: flex; flex-direction: column; gap: 8px; }
+.member-item { display:flex; align-items:center; justify-content:space-between; gap:10px; background:#fff; border-radius:12px; padding:13px 14px; border:1px solid rgba(0,0,0,0.05); text-decoration:none; }
 .member-item:active { transform: scale(0.97); }
 .member-name { font-size: 14px; font-weight: 700; color: var(--text-light); }
 .member-co { font-size: 11px; color: #777; line-height: 1.4; }
-.member-links { display:flex; gap:4px; flex-wrap:wrap; margin-top:6px; }
-.member-links span { font-size: 10.5px; font-weight: 700; padding: 4px 8px; border-radius: 12px; text-decoration:none; }
+.member-links { display:flex; gap:4px; flex-shrink:0; }
+.member-links span { font-size: 11px; font-weight: 700; padding: 5px 10px; white-space: nowrap; border-radius: 12px; text-decoration:none; }
 .ml-home { background: var(--navy); color: #fff; }
 .ml-card { background: var(--gold); color: #fff; }
 .member-more { margin-top: 14px; font-size: 12px; color: #666; line-height: 1.9; background:#fff; border-radius:12px; padding:14px; }
@@ -899,38 +899,39 @@ const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyRFVCMc7VUxq8TKDH82v
 
 // 멤버: 이름 대신 업종으로 보여준다. job = 업종(4개 국어), home = 비즈홈 주소, card = 이미지명함 주소 (없으면 비워 둠)
 const MEMBERS = [
+  { job:{kr:'앱 개발·웹 제작(비즈홈)', en:'App development & web design (Biz Home)', jp:'アプリ開発・Web制作（ビズホーム）', cn:'应用开发·网站制作（商务主页）'}, home:'../송승훈/' },
+  { job:{kr:'법무사(형사사건 전문)', en:'Judicial scrivener (criminal cases)', jp:'司法書士（刑事事件専門）', cn:'法务师（专攻刑事案件）'}, home:'../이채홍/' },
   { job:{kr:'상조서비스', en:'Funeral services', jp:'葬儀サービス', cn:'殡葬服务'}, home:'../김경태/' },
-  { job:{kr:'숙박 공간 컨설팅', en:'Lodging space consulting', jp:'宿泊施設の空間コンサルティング', cn:'民宿空间咨询'}, home:'../김지현/' },
-  { job:{kr:'사업계획서·경영컨설팅', en:'Business plans & management consulting', jp:'事業計画書・経営コンサルティング', cn:'商业计划书·经营咨询'}, home:'../박미성/' },
-  { job:{kr:'안전용품·건축자재', en:'Safety gear & building materials', jp:'安全用品・建築資材', cn:'安全用品·建材'}, home:'../박선영/' },
-  { job:{kr:'부동산 중개', en:'Real estate brokerage', jp:'不動産仲介', cn:'房地产中介'}, home:'../박진성/' },
-  { job:{kr:'웹·앱 개발', en:'Web & app development', jp:'Web・アプリ開発', cn:'网站·应用开发'}, home:'../송승훈/' },
-  { job:{kr:'법무사', en:'Judicial scrivener', jp:'司法書士', cn:'法务师'}, home:'../이채홍/' },
-  { job:{kr:'리더십·기업교육', en:'Leadership & corporate training', jp:'リーダーシップ・企業研修', cn:'领导力·企业培训'}, home:'../이해경/' },
-  { job:{kr:'반영구·뷰티', en:'Semi-permanent makeup & beauty', jp:'アートメイク・美容', cn:'半永久化妆·美容'}, home:'../이화춘/' },
-  { job:{kr:'꽃·경조화환', en:'Flowers & ceremonial wreaths', jp:'花・慶弔花輪', cn:'鲜花·庆吊花环'}, home:'../임춘식/' },
-  { job:{kr:'공조·에어컨 세척', en:'HVAC & A/C cleaning', jp:'空調・エアコン洗浄', cn:'空调系统·空调清洗'}, home:'../조은영/' },
-  { job:{kr:'해외금융 컨설팅', en:'Overseas financial consulting', jp:'海外金融コンサルティング', cn:'海外金融咨询'}, home:'../정상현/' },
-  { job:{kr:'무인 태닝샵', en:'Self-service tanning salon', jp:'無人日焼けサロン', cn:'无人美黑店'}, home:'../윤민수/' },
-  { job:{kr:'중문 제작·시공', en:'Interior doors', jp:'室内ドア製作・施工', cn:'玄关门制作·安装'} },
-  { job:{kr:'인쇄·홍보물', en:'Printing & promo materials', jp:'印刷・販促物', cn:'印刷·宣传品'} },
-  { job:{kr:'축산·육가공', en:'Livestock & meat processing', jp:'畜産・食肉加工', cn:'畜牧·肉类加工'} },
-  { job:{kr:'기업·행사 사진', en:'Corporate & event photography', jp:'企業・イベント写真', cn:'企业·活动摄影'} },
-  { job:{kr:'법률(변호사)', en:'Law (attorney)', jp:'法律（弁護士）', cn:'法律（律师）'} },
-  { job:{kr:'자동차 구매·렌트', en:'Car purchase & leasing', jp:'自動車購入・リース', cn:'汽车购买·租赁'} },
-  { job:{kr:'정책자금', en:'Government business funding', jp:'政策資金', cn:'政策资金'} },
-  { job:{kr:'간판·랩핑 광고', en:'Signage & wrap advertising', jp:'看板・ラッピング広告', cn:'招牌·车体广告'} },
-  { job:{kr:'생명보험', en:'Life insurance', jp:'生命保険', cn:'人寿保险'} },
-  { job:{kr:'막국수 전문점', en:'Buckwheat noodle restaurant', jp:'マッグクス専門店', cn:'荞麦冷面专门店'} },
-  { job:{kr:'기업보험', en:'Corporate insurance', jp:'法人保険', cn:'企业保险'} },
-  { job:{kr:'주거 인테리어', en:'Residential interiors', jp:'住宅インテリア', cn:'住宅装修'} },
-  { job:{kr:'상업 인테리어', en:'Commercial interiors', jp:'商業インテリア', cn:'商业空间装修'} },
+  { job:{kr:'숙박업 컨설팅', en:'Lodging business consulting', jp:'宿泊業コンサルティング', cn:'住宿业咨询'}, home:'../김지현/' },
+  { job:{kr:'안전용품(작업화·작업복·실리콘)', en:'Safety gear (work shoes, workwear, silicone)', jp:'安全用品（作業靴・作業服・シリコン）', cn:'安全用品（工作鞋·工作服·硅胶）'}, home:'../박선영/' },
+  { job:{kr:'부동산 중개·컨설팅', en:'Real estate brokerage & consulting', jp:'不動産仲介・コンサルティング', cn:'房地产中介·咨询'}, home:'../박진성/' },
+  { job:{kr:'반영구 뷰티', en:'Semi-permanent makeup', jp:'アートメイク', cn:'半永久化妆'}, home:'../이화춘/' },
+  { job:{kr:'경영컨설팅', en:'Management consulting', jp:'経営コンサルティング', cn:'经营咨询'}, home:'../박미성/' },
+  { job:{kr:'냉동공조·실내공기정화 솔루션', en:'Refrigeration, HVAC & indoor air purification', jp:'冷凍空調・室内空気清浄ソリューション', cn:'冷冻空调·室内空气净化方案'}, home:'../조은영/' },
+  { job:{kr:'꽃·화환 유통', en:'Flowers & wreath distribution', jp:'花・花輪の流通', cn:'鲜花·花环流通'}, home:'../임춘식/' },
+  { job:{kr:'해외보험금융', en:'Overseas insurance & finance', jp:'海外保険金融', cn:'海外保险金融'}, home:'../정상현/' },
+  { job:{kr:'태닝', en:'Tanning salon', jp:'日焼けサロン', cn:'美黑'}, home:'../윤민수/' },
+  { job:{kr:'기업교육', en:'Corporate training', jp:'企業研修', cn:'企业培训'}, home:'../이해경/' },
+  { job:{kr:'손해보험', en:'Property & casualty insurance', jp:'損害保険', cn:'财产保险'} },
   { job:{kr:'미술교육', en:'Art education', jp:'美術教育', cn:'美术教育'} },
-  { job:{kr:'에어컨·냉난방기', en:'Air conditioning & HVAC units', jp:'エアコン・冷暖房機', cn:'空调·冷暖设备'} },
-  { job:{kr:'고용지원금 컨설팅', en:'Employment subsidy consulting', jp:'雇用助成金コンサルティング', cn:'雇佣补贴咨询'} },
+  { job:{kr:'에어컨 설치·관리', en:'A/C installation & maintenance', jp:'エアコン設置・管理', cn:'空调安装·维护'} },
   { job:{kr:'휴대폰·통신', en:'Mobile phones & telecom', jp:'携帯電話・通信', cn:'手机·通信'} },
-  { job:{kr:'세무회계', en:'Tax & accounting', jp:'税務会計', cn:'税务会计'} },
-  { job:{kr:'경호·경비', en:'Security & bodyguard services', jp:'警護・警備', cn:'安保·保镖'} },
+  { job:{kr:'인쇄·디자인', en:'Printing & design', jp:'印刷・デザイン', cn:'印刷·设计'} },
+  { job:{kr:'인테리어(숙박·병원·상가)', en:'Interiors (lodging, clinics, retail)', jp:'インテリア（宿泊・病院・商業施設）', cn:'室内装修（住宿·医院·商铺）'} },
+  { job:{kr:'고용지원금', en:'Employment subsidies', jp:'雇用助成金', cn:'雇佣补贴'} },
+  { job:{kr:'생명보험', en:'Life insurance', jp:'生命保険', cn:'人寿保险'} },
+  { job:{kr:'경호', en:'Bodyguard & security services', jp:'警護', cn:'安保护卫'} },
+  { job:{kr:'맞춤 수제 양복', en:'Custom tailored suits', jp:'オーダーメイドスーツ', cn:'定制手工西装'} },
+  { job:{kr:'기름·곡물 가공품', en:'Oil & grain products', jp:'油・穀物加工品', cn:'油品·谷物加工品'} },
+  { job:{kr:'커튼·블라인드', en:'Curtains & blinds', jp:'カーテン・ブラインド', cn:'窗帘·百叶窗'} },
+  { job:{kr:'청소', en:'Cleaning', jp:'清掃', cn:'保洁'} },
+  { job:{kr:'요식업(고기구이)', en:'Restaurant (grilled meat)', jp:'飲食業（焼肉）', cn:'餐饮（烤肉）'} },
+  { job:{kr:'소파·가구 제작', en:'Sofa & furniture making', jp:'ソファ・家具製作', cn:'沙发·家具制作'} },
+  { job:{kr:'세무', en:'Tax services', jp:'税務', cn:'税务'} },
+  { job:{kr:'병원컨설팅', en:'Hospital consulting', jp:'病院コンサルティング', cn:'医院咨询'} },
+  { job:{kr:'기업행사 MC·세일즈 강사', en:'Corporate event MC & sales trainer', jp:'企業イベントMC・セールス講師', cn:'企业活动主持·销售讲师'} },
+  { job:{kr:'변호사', en:'Attorney', jp:'弁護士', cn:'律师'} },
+  { job:{kr:'농산물(마늘·생강) 도소매', en:'Produce wholesale & retail (garlic, ginger)', jp:'農産物（にんにく・生姜）卸売・小売', cn:'农产品（大蒜·生姜）批发零售'} },
 ];
 /* ========================================== */
 
