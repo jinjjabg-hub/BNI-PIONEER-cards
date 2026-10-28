@@ -331,7 +331,7 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 .vform { background: var(--navy3); border: 1px solid rgba(232,236,209,0.2); border-radius: 12px; padding: 18px 16px; }
 .vfg { margin-bottom: 12px; }
 .vfg label { display:block; font-size: 12px; font-weight: 700; color: var(--sage); margin-bottom: 5px; }
-.vfg input { width:100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(232,236,209,0.25); background: var(--navy); color: #fff; font-size: 15px; font-family: 'Paperlogy', 'Noto Sans KR', sans-serif; }
+.vfg input, .vfg select { width:100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(232,236,209,0.25); background: var(--navy); color: #fff; font-size: 15px; font-family: 'Paperlogy', 'Noto Sans KR', sans-serif; }
 .vfg input::placeholder { color: rgba(240,236,224,0.35); }
 .vrate { display:flex; flex-wrap:wrap; gap:6px 12px; font-size: 13px; color: var(--text-dark); padding-top: 2px; }
 .vrate label { display:flex; align-items:center; gap:4px; font-weight:400; color: var(--text-dark); margin:0; font-size:13px; }
@@ -743,7 +743,7 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
     <div class="vfg"><label><span data-lang="kr" class="active">전화번호</span><span data-lang="en">Phone</span><span data-lang="jp">電話番号</span><span data-lang="cn">电话</span> *</label><input name="phone" type="tel" placeholder="010-0000-0000"></div>
     <div class="vfg"><label><span data-lang="kr" class="active">이메일</span><span data-lang="en">Email</span><span data-lang="jp">メール</span><span data-lang="cn">电子邮箱</span> *</label><input name="email" type="email" placeholder="example@email.com"></div>
     <div class="vfg"><label><span data-lang="kr" class="active">초대자(가디언)</span><span data-lang="en">Invited by (member)</span><span data-lang="jp">招待者（メンバー）</span><span data-lang="cn">邀请人（成员）</span></label><input name="guardian"></div>
-    <div class="vfg"><label><span data-lang="kr" class="active">방문일자</span><span data-lang="en">Visit date</span><span data-lang="jp">訪問日</span><span data-lang="cn">参观日期</span> *</label><input name="visitDate" type="date" id="visitDate"></div>
+    <div class="vfg"><label><span data-lang="kr" class="active">방문일자</span><span data-lang="en">Visit date</span><span data-lang="jp">訪問日</span><span data-lang="cn">参观日期</span> *</label><select name="visitDate" id="visitDate"></select></div>
     <div class="vfg"><label><span data-lang="kr" class="active">업력</span><span data-lang="en">Years in business</span><span data-lang="jp">事業歴</span><span data-lang="cn">从业年限</span></label><input name="career"></div>
     <div class="vfg"><label><span data-lang="kr" class="active">BNI 관심도</span><span data-lang="en">Interest in BNI</span><span data-lang="jp">BNIへの関心度</span><span data-lang="cn">对BNI的兴趣</span> *</label>
       <div class="vrate">
@@ -946,6 +946,14 @@ const CC_EMAILS = 'jinjjabg@gmail.com';
 // 기존 챕터 홈페이지와 같은 구글 시트에도 함께 기록 (비우면 시트 기록 안 함)
 // 참관비 입금 계좌 (복사 버튼이 복사하는 글자)
 const ACCOUNT_TEXT = '카카오뱅크 79423640105';
+// 방문일: 매주 수요일만 선택. 아래 날짜(공휴일·챕터 휴회일)는 목록에서 빠진다. 해마다 다음 해 날짜를 추가할 것.
+const NO_MEETING_DAYS = [
+  '2026-02-18', // 설날 연휴
+  '2026-06-03', // 전국동시지방선거
+  '2027-05-05', // 어린이날
+  '2027-09-15', // 추석
+];
+const VISIT_WEEKS = 8; // 앞으로 몇 번의 수요일을 보여줄지
 const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyRFVCMc7VUxq8TKDH82vUzGe_kaYTUD84EL4-OLcM90hjsEzgvQhjyuAyOwRwsf5smDQ/exec';
 
 // 멤버: 화면에는 이름 대신 업종으로 보여준다(name은 관리용, 순서 = 화면 순서). job = 업종(4개 국어), home = 비즈홈 주소,
@@ -1072,6 +1080,7 @@ function applyLangExtras() {
   const btn = document.getElementById('vbtn');
   if (!btn.disabled) btn.textContent = TX.send[CUR_LANG];
   document.getElementById('copyAcct').textContent = TX.acct[CUR_LANG];
+  if (typeof renderVisitDates === 'function') renderVisitDates();
   document.documentElement.lang = {kr:'ko', en:'en', jp:'ja', cn:'zh'}[CUR_LANG];
 }
 applyLangExtras();
@@ -1095,10 +1104,34 @@ function copyAccount() {
 }
 
 /* ── 참관 신청 ── */
-(function () {
-  const d = new Date(); d.setDate(d.getDate() + ((3 - d.getDay() + 7) % 7 || 7));
-  document.getElementById('visitDate').value = d.toISOString().slice(0, 10);
-})();
+// 다음 수요일부터 공휴일·휴회일을 빼고 VISIT_WEEKS개를 고를 수 있게 한다 (다른 요일은 선택 불가)
+const DOW = {kr:'수', en:'Wed', jp:'水', cn:'周三'};
+function ymd(d) {
+  return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+}
+function visitLabel(d) {
+  const m = d.getMonth() + 1, day = d.getDate();
+  return {
+    kr: `${m}월 ${day}일 (수) 오전 6:30`,
+    en: `Wed, ${d.toLocaleString('en-US', { month: 'short' })} ${day} · 6:30 AM`,
+    jp: `${m}月${day}日（水）朝6:30`,
+    cn: `${m}月${day}日（周三）早上6:30`,
+  }[CUR_LANG];
+}
+function renderVisitDates() {
+  const sel = document.getElementById('visitDate');
+  const keep = sel.value;
+  const d = new Date(); d.setHours(0, 0, 0, 0);
+  d.setDate(d.getDate() + ((3 - d.getDay() + 7) % 7 || 7));
+  const opts = [];
+  while (opts.length < VISIT_WEEKS) {
+    if (!NO_MEETING_DAYS.includes(ymd(d))) opts.push(`<option value="${ymd(d)}">${visitLabel(d)}</option>`);
+    d.setDate(d.getDate() + 7);
+  }
+  sel.innerHTML = opts.join('');
+  if (keep && [...sel.options].some(o => o.value === keep)) sel.value = keep;
+}
+renderVisitDates();
 document.getElementById('vform').addEventListener('submit', async e => {
   e.preventDefault();
   const f = e.target, msg = document.getElementById('vmsg'), btn = document.getElementById('vbtn');
