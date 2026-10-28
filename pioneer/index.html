@@ -46,6 +46,8 @@ body {
   overflow-x: hidden;
 }
 
+[data-lang="jp"] { font-family: 'Noto Sans JP', sans-serif; }
+[data-lang="cn"] { font-family: 'Noto Sans SC', sans-serif; }
 [data-lang="si"] { font-family: 'Noto Sans Sinhala', sans-serif; }
 [data-lang="ur"] { font-family: 'Noto Nastaliq Urdu', serif; direction: rtl; }
 [data-lang] { display: none; }
@@ -96,6 +98,7 @@ nav {
   margin-bottom: 7px; letter-spacing: -0.5px;
 }
 .hero-title { font-size: 13px; color: var(--sage); opacity: 0.95; line-height: 1.5; }
+.hero-name [data-lang="jp"] { font-size: 27px; }
 
 /* ── PROFILE ROW ── */
 .profile-row {
@@ -335,10 +338,15 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 </head>
 <body>
 
-<!-- NAV : 4개 국어는 KR 원고 확정 후 추가 -->
+<!-- NAV -->
 <nav>
-  <div class="nav-brand">BNI 파이오니어 챕터</div>
-  <a href="#visit" style="font-size:11px;font-weight:700;color:#fff;background:var(--gold);padding:7px 12px;border-radius:6px;text-decoration:none;">참관 신청</a>
+  <div class="nav-brand">BNI PIONEER</div>
+  <div class="lang-btns">
+    <button class="lang-btn active" onclick="setLang('kr')">한국어</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('jp')">日本語</button>
+    <button class="lang-btn" onclick="setLang('cn')">中文</button>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -346,9 +354,19 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
   <img class="hero-img" src="hero.jpg" alt="BNI 비즈니스 네트워크 초대 · 파이오니어 챕터">
 </div>
 <div class="hero-content">
-  <div class="hero-badge"><span data-lang="kr" class="active">BUSAN 1호 PIONEER</span></div>
-  <div class="hero-name"><span data-lang="kr" class="active">파이오니어 챕터</span></div>
-  <div class="hero-title"><span data-lang="kr" class="active">업종별 1명 · 2022년 런칭</span></div>
+  <div class="hero-badge">BUSAN 1호 PIONEER</div>
+  <div class="hero-name">
+    <span data-lang="kr" class="active">파이오니어 챕터</span>
+    <span data-lang="en">Pioneer Chapter</span>
+    <span data-lang="jp">パイオニア・チャプター</span>
+    <span data-lang="cn">先锋分会</span>
+  </div>
+  <div class="hero-title">
+    <span data-lang="kr" class="active">업종별 1명 · 2022년 런칭</span>
+    <span data-lang="en">One member per profession · Launched 2022</span>
+    <span data-lang="jp">1業種1名 · 2022年発足</span>
+    <span data-lang="cn">每个行业仅限1人 · 2022年成立</span>
+  </div>
 </div>
 
 <!-- PROFILE ROW -->
@@ -356,33 +374,83 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
   <div class="profile-img"><img src="profil.png" alt="BNI Pioneer"></div>
   <div class="profile-info">
     <h2>BNI Pioneer Chapter</h2>
-    <p><span data-lang="kr" class="active">리퍼럴 · 1:1 미팅 · 파워팀 · Givers Gain®</span></p>
+    <p>
+      <span data-lang="kr" class="active">리퍼럴 · 1:1 미팅 · 파워팀 · Givers Gain®</span>
+      <span data-lang="en">Referrals · 1-to-1s · Power Teams · Givers Gain®</span>
+      <span data-lang="jp">リファーラル · 1対1ミーティング · パワーチーム · Givers Gain®</span>
+      <span data-lang="cn">推荐 · 一对一会谈 · 强力团队 · Givers Gain®</span>
+    </p>
   </div>
 </div>
 
 <!-- ABOUT -->
 <section class="about">
   <div class="section-label">About</div>
-  <div class="slogan"><span data-lang="kr" class="active">"감이 아닌 시스템으로, 친목이 아닌 비즈니스로."</span></div>
-  <p class="about-text"><span data-lang="kr" class="active">BNI 파이오니어 챕터는 부산의 사업자들이 업종별로 한 명씩 모여, 매주 서로의 고객을 소개하며 함께 매출을 키우는 비즈니스 네트워킹 모임입니다. 2022년 11월 런칭해 지금 9기를 운영하고 있습니다.</span></p>
+  <div class="slogan">
+    <span data-lang="kr" class="active">"감이 아닌 시스템으로, 친목이 아닌 비즈니스로."</span>
+    <span data-lang="en">"Systems, not guesswork. Business, not just socializing."</span>
+    <span data-lang="jp">「勘ではなくシステムで。親睦ではなくビジネスで。」</span>
+    <span data-lang="cn">"靠系统，不靠感觉；为生意，不为应酬。"</span>
+  </div>
+  <p class="about-text">
+    <span data-lang="kr" class="active">BNI 파이오니어 챕터는 부산의 사업자들이 업종별로 한 명씩 모여, 매주 서로의 고객을 소개하며 함께 매출을 키우는 비즈니스 네트워킹 모임입니다. 2022년 11월 런칭해 지금 9기를 운영하고 있습니다.</span>
+    <span data-lang="en">BNI Pioneer Chapter is a business networking group in Busan where one business owner per profession meets every week to refer customers to each other and grow sales together. Launched in November 2022, the chapter is now in its 9th term.</span>
+    <span data-lang="jp">BNIパイオニア・チャプターは、釜山の事業者が1業種につき1名ずつ集まり、毎週お互いのお客様を紹介し合いながら共に売上を伸ばすビジネス・ネットワーキングの会です。2022年11月に発足し、現在は第9期を運営しています。</span>
+    <span data-lang="cn">BNI先锋分会是釜山的商业社交团体，每个行业只吸纳一位企业主，成员每周聚会、互相推荐客户，共同提升业绩。分会于2022年11月成立，目前正处于第9期。</span>
+  </p>
 </section>
 
 <!-- WHY : 왜 BNI를 해야 하는가 -->
 <section class="why">
   <div class="section-label">Why BNI</div>
-  <div class="section-title"><span data-lang="kr" class="active">왜 BNI를 해야 할까요?</span></div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">왜 BNI를 해야 할까요?</span>
+    <span data-lang="en">Why BNI?</span>
+    <span data-lang="jp">なぜBNIなのか？</span>
+    <span data-lang="cn">为什么选择BNI？</span>
+  </div>
   <div class="why-cards">
     <div class="why-card">
-      <h3><span data-lang="kr" class="active">① 나 대신 영업하는 멤버들</span></h3>
-      <p><span data-lang="kr" class="active">지인 영업은 언젠가 바닥이 납니다. 멤버들이 <strong>매주</strong> 내 사업 소개를 듣고, 자기 고객 중 나에게 맞는 사람을 <strong>구체적으로 설명해</strong> 소개합니다. 명함 한 장 건네는 소개와 계약률이 다릅니다.</span></p>
+      <h3>
+        <span data-lang="kr" class="active">① 나 대신 영업하는 멤버들</span>
+        <span data-lang="en">① Members who sell for you</span>
+        <span data-lang="jp">① あなたの代わりに営業してくれる仲間</span>
+        <span data-lang="cn">① 替你推销的伙伴们</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">지인 영업은 언젠가 바닥이 납니다. 멤버들이 <strong>매주</strong> 내 사업 소개를 듣고, 자기 고객 중 나에게 맞는 사람을 <strong>구체적으로 설명해</strong> 소개합니다. 명함 한 장 건네는 소개와 계약률이 다릅니다.</span>
+        <span data-lang="en">Selling through friends and acquaintances eventually runs dry. Members hear about your business <strong>every week</strong>, then refer the right people from their own customers <strong>with a clear explanation</strong> of what you do. That closes far better than simply passing on a business card.</span>
+        <span data-lang="jp">知人頼みの営業はいずれ限界が来ます。メンバーが<strong>毎週</strong>あなたの事業紹介を聞き、自分のお客様の中からあなたに合う人を<strong>具体的に説明して</strong>紹介します。名刺を1枚渡すだけの紹介とは成約率が違います。</span>
+        <span data-lang="cn">靠熟人做生意，迟早会走到尽头。成员们<strong>每周</strong>听你介绍业务，再从自己的客户中挑出适合你的人，<strong>具体说明</strong>后推荐给你。这和只递一张名片的介绍相比，成交率完全不同。</span>
+      </p>
     </div>
     <div class="why-card">
-      <h3><span data-lang="kr" class="active">② 신뢰가 먼저 쌓인 소개</span></h3>
-      <p><span data-lang="kr" class="active"><strong>1:1 미팅</strong>으로 서로의 일과 사람을 깊이 알고 난 뒤에 소개합니다. 소개받는 고객도 "검증된 사람"을 만나게 됩니다.</span></p>
+      <h3>
+        <span data-lang="kr" class="active">② 신뢰가 먼저 쌓인 소개</span>
+        <span data-lang="en">② Referrals built on trust</span>
+        <span data-lang="jp">② 信頼が先にある紹介</span>
+        <span data-lang="cn">② 建立在信任之上的推荐</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active"><strong>1:1 미팅</strong>으로 서로의 일과 사람을 깊이 알고 난 뒤에 소개합니다. 소개받는 고객도 "검증된 사람"을 만나게 됩니다.</span>
+        <span data-lang="en">Members get to know each other's work and character through <strong>1-to-1 meetings</strong> before making referrals. The customers being referred meet someone who has already been vetted.</span>
+        <span data-lang="jp"><strong>1対1ミーティング</strong>でお互いの仕事と人柄を深く知ってから紹介します。紹介されるお客様も「確かな人」に出会えます。</span>
+        <span data-lang="cn">成员先通过<strong>一对一会谈</strong>深入了解彼此的业务和为人，再进行推荐。被推荐的客户见到的也是"经过验证的人"。</span>
+      </p>
     </div>
     <div class="why-card">
-      <h3><span data-lang="kr" class="active">③ 40년 검증된 세계 최대 리퍼럴 조직</span></h3>
-      <p><span data-lang="kr" class="active"><strong>1985년</strong> 시작해 <strong>76개국 34만 명 이상</strong>이 활동합니다. 최근 12개월 동안 멤버들이 <strong>1,740만 건</strong>의 소개를 주고받아 <strong>37조 원 이상</strong>의 거래가 이루어졌습니다. 한국에서는 2008년 BNI 코리아가 설립되어 2012년부터 본격적으로 시작했고, <strong>2026년 10월 현재 98개 챕터</strong>에서 400여 개 전문 분야를 대표하는 <strong>3,375명</strong>이 활동하고 있습니다.</span></p>
+      <h3>
+        <span data-lang="kr" class="active">③ 40년 검증된 세계 최대 리퍼럴 조직</span>
+        <span data-lang="en">③ The world's largest referral organization, proven over 40 years</span>
+        <span data-lang="jp">③ 40年の実績、世界最大のリファーラル組織</span>
+        <span data-lang="cn">③ 经过40年验证的全球最大推荐组织</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active"><strong>1985년</strong> 시작해 <strong>76개국 34만 명 이상</strong>이 활동합니다. 최근 12개월 동안 멤버들이 <strong>1,740만 건</strong>의 소개를 주고받아 <strong>37조 원 이상</strong>의 거래가 이루어졌습니다. 한국에서는 2008년 BNI 코리아가 설립되어 2012년부터 본격적으로 시작했고, <strong>2026년 10월 현재 98개 챕터</strong>에서 400여 개 전문 분야를 대표하는 <strong>3,375명</strong>이 활동하고 있습니다.</span>
+        <span data-lang="en">Founded in <strong>1985</strong>, BNI has <strong>over 340,000 members in 76 countries</strong>. In the last 12 months, members exchanged <strong>17.4 million referrals</strong>, generating <strong>over KRW 37 trillion</strong> in business. In Korea, BNI Korea was established in 2008 and began in earnest in 2012. <strong>As of October 2026, 3,375 members</strong> representing some 400 professions are active in <strong>98 chapters</strong>.</span>
+        <span data-lang="jp"><strong>1985年</strong>に始まり、<strong>76か国で34万人以上</strong>が活動しています。直近12か月でメンバー同士が<strong>1,740万件</strong>の紹介をやり取りし、<strong>37兆ウォン以上</strong>の取引が生まれました。韓国では2008年にBNIコリアが設立され、2012年から本格的に始動。<strong>2026年10月現在、98チャプター</strong>で約400の専門分野を代表する<strong>3,375名</strong>が活動しています。</span>
+        <span data-lang="cn">BNI始于<strong>1985年</strong>，在<strong>76个国家拥有34万多名成员</strong>。过去12个月，成员之间互相推荐<strong>1,740万次</strong>，促成<strong>超过37万亿韩元</strong>的交易。在韩国，BNI Korea于2008年成立，2012年起正式发展；<strong>截至2026年10月，98个分会</strong>中有代表约400个专业领域的<strong>3,375名成员</strong>活跃其中。</span>
+      </p>
     </div>
   </div>
 </section>
@@ -390,22 +458,72 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 <!-- DIFFERENCE : 다른 사업자 모임과 무엇이 다른가 -->
 <section class="difference">
   <div class="section-label">Difference</div>
-  <div class="section-title"><span data-lang="kr" class="active">다른 사업자 모임과 무엇이 다른가요?</span></div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">다른 사업자 모임과 무엇이 다른가요?</span>
+    <span data-lang="en">How is it different from other business groups?</span>
+    <span data-lang="jp">他の経営者の会と何が違うのか？</span>
+    <span data-lang="cn">与其他商会有何不同？</span>
+  </div>
   <div class="diff-grid">
     <div class="diff-card">
-      <div class="vs"><span data-lang="kr" class="active">같은 업종 여럿이 서로 경쟁</span></div>
-      <h3><span data-lang="kr" class="active">업종별 1명 — 내 업종 소개는 나에게</span></h3>
-      <p><span data-lang="kr" class="active">한 업종에 한 명만 가입할 수 있습니다. 챕터 안에서 내 업종 고객이 생기면 그 소개는 경쟁 없이 나에게 옵니다.</span></p>
+      <div class="vs">
+        <span data-lang="kr" class="active">같은 업종 여럿이 서로 경쟁</span>
+        <span data-lang="en">Several people in the same trade competing</span>
+        <span data-lang="jp">同業者が何人もいて競合</span>
+        <span data-lang="cn">同行多人，互相竞争</span>
+      </div>
+      <h3>
+        <span data-lang="kr" class="active">업종별 1명 — 내 업종 소개는 나에게</span>
+        <span data-lang="en">One per profession — referrals in your field come to you</span>
+        <span data-lang="jp">1業種1名 — 自分の業種の紹介は自分に</span>
+        <span data-lang="cn">每行一人 — 本行业的推荐都归你</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">한 업종에 한 명만 가입할 수 있습니다. 챕터 안에서 내 업종 고객이 생기면 그 소개는 경쟁 없이 나에게 옵니다.</span>
+        <span data-lang="en">Only one person per profession can join. When a customer in your field comes up within the chapter, that referral comes to you with no competition.</span>
+        <span data-lang="jp">1つの業種に入会できるのは1名だけ。チャプター内で自分の業種のお客様が生まれたら、その紹介は競合なしで自分に届きます。</span>
+        <span data-lang="cn">每个行业只能有一人加入。分会内一旦出现你所在行业的客户，推荐就会直接给你，没有竞争。</span>
+      </p>
     </div>
     <div class="diff-card">
-      <div class="vs"><span data-lang="kr" class="active">비정기 · 친목 · 술자리</span></div>
-      <h3><span data-lang="kr" class="active">매주 수요일 아침 6시 30분, 오직 비즈니스</span></h3>
-      <p><span data-lang="kr" class="active">위클리 프레젠테이션과 피처 발표로 "언제 누구를 소개해야 하는지"를 매주 배웁니다. 그래서 막연한 소개가 아니라 맞는 소개가 나옵니다.</span></p>
+      <div class="vs">
+        <span data-lang="kr" class="active">비정기 · 친목 · 술자리</span>
+        <span data-lang="en">Irregular · social · drinking</span>
+        <span data-lang="jp">不定期 · 親睦 · 飲み会</span>
+        <span data-lang="cn">不定期 · 联谊 · 酒局</span>
+      </div>
+      <h3>
+        <span data-lang="kr" class="active">매주 수요일 아침 6시 30분, 오직 비즈니스</span>
+        <span data-lang="en">Every Wednesday at 6:30 AM, business only</span>
+        <span data-lang="jp">毎週水曜の朝6時30分、ビジネスだけ</span>
+        <span data-lang="cn">每周三早上6点30分，只谈生意</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">위클리 프레젠테이션과 피처 발표로 "언제 누구를 소개해야 하는지"를 매주 배웁니다. 그래서 막연한 소개가 아니라 맞는 소개가 나옵니다.</span>
+        <span data-lang="en">Through weekly presentations and feature presentations, members learn every week "who to refer, and when." That's why referrals are on target, not vague.</span>
+        <span data-lang="jp">ウィークリー・プレゼンテーションとフィーチャー発表で「いつ、誰を紹介すべきか」を毎週学びます。だから漠然とした紹介ではなく、的確な紹介が生まれます。</span>
+        <span data-lang="cn">通过每周简报和专题演讲，成员每周都在学习"什么时候该推荐谁"。所以推荐不再笼统，而是精准到位。</span>
+      </p>
     </div>
     <div class="diff-card">
-      <div class="vs"><span data-lang="kr" class="active">"도움이 된 것 같다"</span></div>
-      <h3><span data-lang="kr" class="active">성과를 숫자로 확인</span></h3>
-      <p><span data-lang="kr" class="active">출석·1:1 미팅·리퍼럴·성사 금액을 PALMS로 기록합니다. 같은 고객을 만나는 업종끼리는 파워팀을 이뤄 함께 매출을 냅니다. 예: 이사 → 청소 → 에어컨 설치 → 에어컨 청소.</span></p>
+      <div class="vs">
+        <span data-lang="kr" class="active">"도움이 된 것 같다"</span>
+        <span data-lang="en">"I think it helped"</span>
+        <span data-lang="jp">「役に立った気がする」</span>
+        <span data-lang="cn">"好像有点帮助"</span>
+      </div>
+      <h3>
+        <span data-lang="kr" class="active">성과를 숫자로 확인</span>
+        <span data-lang="en">Results you can measure</span>
+        <span data-lang="jp">成果を数字で確認</span>
+        <span data-lang="cn">用数字确认成果</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">출석·1:1 미팅·리퍼럴·성사 금액을 PALMS로 기록합니다. 같은 고객을 만나는 업종끼리는 파워팀을 이뤄 함께 매출을 냅니다. 예: 이사 → 청소 → 에어컨 설치 → 에어컨 청소.</span>
+        <span data-lang="en">Attendance, 1-to-1s, referrals and closed business are tracked in PALMS. Professions that serve the same customers form Power Teams and win business together. Example: moving → cleaning → A/C installation → A/C cleaning.</span>
+        <span data-lang="jp">出席・1対1ミーティング・リファーラル・成約額をPALMSで記録します。同じお客様に出会う業種同士はパワーチームを組み、共に売上を生みます。例：引っ越し → 清掃 → エアコン設置 → エアコン清掃。</span>
+        <span data-lang="cn">出勤、一对一会谈、推荐和成交金额都记录在PALMS中。服务同一类客户的行业组成强力团队，共同创造业绩。例如：搬家 → 保洁 → 空调安装 → 空调清洗。</span>
+      </p>
     </div>
   </div>
 </section>
@@ -413,23 +531,48 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 <!-- REFERRAL : 어떤 분이 하면 좋은가 -->
 <section class="referral">
   <div class="section-label">Who</div>
-  <div class="section-title"><span data-lang="kr" class="active">이런 분께 추천합니다</span></div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">이런 분께 추천합니다</span>
+    <span data-lang="en">Who it's for</span>
+    <span data-lang="jp">こんな方におすすめです</span>
+    <span data-lang="cn">推荐给这样的人</span>
+  </div>
   <div class="ref-list">
     <div class="ref-item">
       <div class="ref-num">1</div>
-      <p><span data-lang="kr" class="active">지인 영업이 한계에 닿아 새 고객 줄기가 필요한 사업자</span></p>
+      <p>
+        <span data-lang="kr" class="active">지인 영업이 한계에 닿아 새 고객 줄기가 필요한 사업자</span>
+        <span data-lang="en">Business owners who have outgrown selling to friends and need a new source of customers</span>
+        <span data-lang="jp">知人営業が限界に達し、新しい顧客の流れが必要な事業者</span>
+        <span data-lang="cn">熟人生意已到瓶颈、需要新客源的企业主</span>
+      </p>
     </div>
     <div class="ref-item">
       <div class="ref-num">2</div>
-      <p><span data-lang="kr" class="active">소개로 일이 들어오는 업종 — 인테리어·시공, 세무·법무, 보험, 컨설팅, 기업 대상 서비스 등</span></p>
+      <p>
+        <span data-lang="kr" class="active">소개로 일이 들어오는 업종 — 인테리어·시공, 세무·법무, 보험, 컨설팅, 기업 대상 서비스 등</span>
+        <span data-lang="en">Professions that win work through referrals — interiors and construction, tax and legal, insurance, consulting, B2B services and more</span>
+        <span data-lang="jp">紹介で仕事が入る業種 — インテリア・施工、税務・法務、保険、コンサルティング、法人向けサービスなど</span>
+        <span data-lang="cn">靠推荐接单的行业 — 室内装修与施工、税务与法务、保险、咨询、企业服务等</span>
+      </p>
     </div>
     <div class="ref-item">
       <div class="ref-num">3</div>
-      <p><span data-lang="kr" class="active">부산에서 다른 업종 전문가들과 신뢰를 쌓고 협업하고 싶은 대표님</span></p>
+      <p>
+        <span data-lang="kr" class="active">부산에서 다른 업종 전문가들과 신뢰를 쌓고 협업하고 싶은 대표님</span>
+        <span data-lang="en">Business owners in Busan who want to build trust and collaborate with experts in other fields</span>
+        <span data-lang="jp">釜山で他業種の専門家と信頼を築き、協業したい経営者</span>
+        <span data-lang="cn">希望在釜山与其他行业专家建立信任、开展合作的企业主</span>
+      </p>
     </div>
     <div class="ref-item">
       <div class="ref-num">!</div>
-      <p><span data-lang="kr" class="active">이런 경우는 먼저 고민해 보세요: 매주 수요일 오전 6시 30분 참석이 어렵거나, 소개를 주기보다 받기만 원하는 경우. BNI는 먼저 주는 사람이 얻는 곳입니다(Givers Gain®).</span></p>
+      <p>
+        <span data-lang="kr" class="active">이런 경우는 먼저 고민해 보세요: 매주 수요일 오전 6시 30분 참석이 어렵거나, 소개를 주기보다 받기만 원하는 경우. BNI는 먼저 주는 사람이 얻는 곳입니다(Givers Gain®).</span>
+        <span data-lang="en">Think it over first if attending every Wednesday at 6:30 AM is difficult, or if you only want to receive referrals rather than give them. At BNI, those who give first are the ones who gain (Givers Gain®).</span>
+        <span data-lang="jp">次の場合はまずよく検討してください：毎週水曜の朝6時30分の参加が難しい場合、紹介を出すより受けることだけを望む場合。BNIは先に与える人が得る場所です（Givers Gain®）。</span>
+        <span data-lang="cn">以下情况请先慎重考虑：每周三早上6点30分难以出席，或只想接受推荐而不愿给予推荐。在BNI，先付出的人才会有收获（Givers Gain®）。</span>
+      </p>
     </div>
   </div>
 </section>
@@ -437,27 +580,77 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 <!-- CAREER : 챕터 운영 -->
 <section class="career">
   <div class="section-label">Chapter</div>
-  <div class="section-title"><span data-lang="kr" class="active">챕터 운영</span></div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">챕터 운영</span>
+    <span data-lang="en">How the chapter runs</span>
+    <span data-lang="jp">チャプター運営</span>
+    <span data-lang="cn">分会运营</span>
+  </div>
   <div class="career-list">
     <div class="career-item">
-      <div class="career-badge">현재</div>
+      <div class="career-badge">
+        <span data-lang="kr" class="active">현재</span>
+        <span data-lang="en">Now</span>
+        <span data-lang="jp">現在</span>
+        <span data-lang="cn">现在</span>
+      </div>
       <div class="career-content">
-        <h3><span data-lang="kr" class="active">9기 운영 중 · <span id="memberCount">32</span>명</span></h3>
-        <p><span data-lang="kr" class="active">2022년 11월 9일 런칭. 6개월 단위 기수제로 의장단·리더십팀이 매 기수 새로 꾸려집니다.</span></p>
+        <h3>
+          <span data-lang="kr" class="active">9기 운영 중 · <span class="memberCount">32</span>명</span>
+          <span data-lang="en">9th term · <span class="memberCount">32</span> members</span>
+          <span data-lang="jp">第9期運営中 · <span class="memberCount">32</span>名</span>
+          <span data-lang="cn">第9期运营中 · <span class="memberCount">32</span>名成员</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">2022년 11월 9일 런칭. 6개월 단위 기수제로 의장단·리더십팀이 매 기수 새로 꾸려집니다.</span>
+          <span data-lang="en">Launched November 9, 2022. Terms run six months, and a new leadership team is formed each term.</span>
+          <span data-lang="jp">2022年11月9日発足。6か月ごとの期制で、役員・リーダーシップチームが期ごとに新しく組まれます。</span>
+          <span data-lang="cn">2022年11月9日成立。每6个月为一期，每期重新组建主席团和领导团队。</span>
+        </p>
       </div>
     </div>
     <div class="career-item">
-      <div class="career-badge">규칙</div>
+      <div class="career-badge">
+        <span data-lang="kr" class="active">규칙</span>
+        <span data-lang="en">Rules</span>
+        <span data-lang="jp">ルール</span>
+        <span data-lang="cn">规则</span>
+      </div>
       <div class="career-content">
-        <h3><span data-lang="kr" class="active">업종 독점 · 출결 관리</span></h3>
-        <p><span data-lang="kr" class="active">업종별 1명만 가입, 매주 정기 미팅 참석, 출석·지각·결석을 규칙으로 관리합니다.</span></p>
+        <h3>
+          <span data-lang="kr" class="active">업종 독점 · 출결 관리</span>
+          <span data-lang="en">Profession exclusivity · attendance</span>
+          <span data-lang="jp">業種の独占 · 出欠管理</span>
+          <span data-lang="cn">行业独享 · 出勤管理</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">업종별 1명만 가입, 매주 정기 미팅 참석, 출석·지각·결석을 규칙으로 관리합니다.</span>
+          <span data-lang="en">One member per profession, weekly meeting attendance, and clear rules for attendance, lateness and absences.</span>
+          <span data-lang="jp">1業種1名のみ入会、毎週の定例ミーティングに参加し、出席・遅刻・欠席をルールで管理します。</span>
+          <span data-lang="cn">每个行业仅限一人加入，每周参加例会，出勤、迟到、缺席均按规则管理。</span>
+        </p>
       </div>
     </div>
     <div class="career-item">
-      <div class="career-badge">강점</div>
+      <div class="career-badge">
+        <span data-lang="kr" class="active">강점</span>
+        <span data-lang="en">Strength</span>
+        <span data-lang="jp">強み</span>
+        <span data-lang="cn">优势</span>
+      </div>
       <div class="career-content">
-        <h3><span data-lang="kr" class="active">파워팀 협업</span></h3>
-        <p><span data-lang="kr" class="active">냉난방/설비 파워팀(이사·청소·에어컨 설치·에어컨 청소)처럼 같은 고객을 만나는 업종끼리 팀을 이뤄 소개를 주고받습니다.</span></p>
+        <h3>
+          <span data-lang="kr" class="active">파워팀 협업</span>
+          <span data-lang="en">Power Team collaboration</span>
+          <span data-lang="jp">パワーチームでの協業</span>
+          <span data-lang="cn">强力团队协作</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">냉난방/설비 파워팀(이사·청소·에어컨 설치·에어컨 청소)처럼 같은 고객을 만나는 업종끼리 팀을 이뤄 소개를 주고받습니다.</span>
+          <span data-lang="en">Professions that serve the same customers team up and exchange referrals, like our heating, cooling and facilities Power Team (moving, cleaning, A/C installation, A/C cleaning).</span>
+          <span data-lang="jp">冷暖房・設備パワーチーム（引っ越し・清掃・エアコン設置・エアコン清掃）のように、同じお客様に出会う業種同士がチームを組んで紹介し合います。</span>
+          <span data-lang="cn">服务同一类客户的行业组成团队互相推荐，例如冷暖与设备强力团队（搬家、保洁、空调安装、空调清洗）。</span>
+        </p>
       </div>
     </div>
   </div>
@@ -466,8 +659,18 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 <!-- PORTFOLIO = 갤러리 : portfolio1.jpg ~ portfolio10.jpg 를 이 폴더에 올리면 있는 사진만 3초 자동 슬라이드 -->
 <section class="portfolio">
   <div class="section-label">Gallery</div>
-  <div class="section-title"><span data-lang="kr" class="active">파이오니어의 아침</span></div>
-  <div class="portfolio-empty" id="portfolio-empty">미팅·행사 사진 준비 중입니다</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">파이오니어의 아침</span>
+    <span data-lang="en">Mornings at Pioneer</span>
+    <span data-lang="jp">パイオニアの朝</span>
+    <span data-lang="cn">先锋分会的早晨</span>
+  </div>
+  <div class="portfolio-empty" id="portfolio-empty">
+    <span data-lang="kr" class="active">미팅·행사 사진 준비 중입니다</span>
+    <span data-lang="en">Meeting and event photos coming soon</span>
+    <span data-lang="jp">ミーティング・イベント写真を準備中です</span>
+    <span data-lang="cn">会议与活动照片准备中</span>
+  </div>
   <div id="portfolio-box" style="display:none">
     <div class="portfolio-track-wrap">
       <div class="portfolio-track" id="portfolio-track"></div>
@@ -483,8 +686,18 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 <!-- MEMBERS : 멤버 비즈홈 · 이미지명함 링크 (목록은 아래 스크립트 MEMBERS 에서 관리) -->
 <section class="members">
   <div class="section-label">Members</div>
-  <div class="section-title"><span data-lang="kr" class="active">파이오니어 멤버</span></div>
-  <p class="sub"><span data-lang="kr" class="active">업종별로 한 명씩. 누르면 그 멤버의 비즈홈·이미지명함으로 이동합니다.</span></p>
+  <div class="section-title">
+    <span data-lang="kr" class="active">파이오니어 멤버</span>
+    <span data-lang="en">Pioneer Members</span>
+    <span data-lang="jp">パイオニアのメンバー</span>
+    <span data-lang="cn">先锋分会成员</span>
+  </div>
+  <p class="sub">
+    <span data-lang="kr" class="active">업종별로 한 명씩. 누르면 그 멤버의 비즈홈·이미지명함으로 이동합니다.</span>
+    <span data-lang="en">One member per profession. Tap to open that member's Biz Home or image card.</span>
+    <span data-lang="jp">1業種1名ずつ。タップするとそのメンバーのビズホーム・画像名刺が開きます。</span>
+    <span data-lang="cn">每个行业一位成员。点击即可查看该成员的商务主页或图片名片。</span>
+  </p>
   <div class="member-list" id="memberList"></div>
   <div class="member-more" id="memberMore"></div>
 </section>
@@ -492,55 +705,107 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 <!-- VISIT : 참관 신청 → 담당자 이메일 -->
 <section class="visit" id="visit">
   <div class="section-label">Join Us</div>
-  <div class="section-title"><span data-lang="kr" class="active">참관 신청</span></div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">참관 신청</span>
+    <span data-lang="en">Visit a meeting</span>
+    <span data-lang="jp">見学申し込み</span>
+    <span data-lang="cn">申请参观</span>
+  </div>
   <ul class="visit-info">
-    <li>📅 <b>매주 수요일 오전 6:30</b> 오픈 네트워킹 · <b>7:00</b> 본회의 참관 (20초 내 사업 소개)</li>
-    <li>✅ 참관비 5만원 · 👔 비즈니스 복장 · 🪪 명함 30장 이상</li>
+    <li>
+      <span data-lang="kr" class="active">📅 <b>매주 수요일 오전 6:30</b> 오픈 네트워킹 · <b>7:00</b> 본회의 참관 (20초 내 사업 소개)</span>
+      <span data-lang="en">📅 <b>Every Wednesday, 6:30 AM</b> open networking · <b>7:00</b> main meeting (introduce your business in 20 seconds)</span>
+      <span data-lang="jp">📅 <b>毎週水曜 朝6:30</b> オープン・ネットワーキング · <b>7:00</b> 本会議を見学（20秒で事業紹介）</span>
+      <span data-lang="cn">📅 <b>每周三早上6:30</b> 自由交流 · <b>7:00</b> 参观正式会议（20秒介绍你的业务）</span>
+    </li>
+    <li>
+      <span data-lang="kr" class="active">✅ 참관비 5만원 · 👔 비즈니스 복장 · 🪪 명함 30장 이상</span>
+      <span data-lang="en">✅ Visitor fee KRW 50,000 · 👔 business attire · 🪪 30+ business cards</span>
+      <span data-lang="jp">✅ 見学費5万ウォン · 👔 ビジネス服装 · 🪪 名刺30枚以上</span>
+      <span data-lang="cn">✅ 参观费5万韩元 · 👔 商务着装 · 🪪 名片30张以上</span>
+    </li>
   </ul>
   <form class="vform" id="vform" novalidate>
-    <div class="vfg"><label>성명(비지터) *</label><input name="name" placeholder="홍길동"></div>
-    <div class="vfg"><label>회사명 *</label><input name="company"></div>
-    <div class="vfg"><label>직위 *</label><input name="position" placeholder="예: 대표"></div>
-    <div class="vfg"><label>전문분야 *</label><input name="field" placeholder="예: 세무회계"></div>
-    <div class="vfg"><label>전화번호 *</label><input name="phone" type="tel" placeholder="010-0000-0000"></div>
-    <div class="vfg"><label>이메일 *</label><input name="email" type="email" placeholder="example@email.com"></div>
-    <div class="vfg"><label>초대자(가디언)</label><input name="guardian"></div>
-    <div class="vfg"><label>방문일자 *</label><input name="visitDate" type="date" id="visitDate"></div>
-    <div class="vfg"><label>업력</label><input name="career" placeholder="예: 10년"></div>
-    <div class="vfg"><label>BNI 관심도 *</label>
+    <div class="vfg"><label><span data-lang="kr" class="active">성명(비지터)</span><span data-lang="en">Name (visitor)</span><span data-lang="jp">氏名（ビジター）</span><span data-lang="cn">姓名（访客）</span> *</label><input name="name"></div>
+    <div class="vfg"><label><span data-lang="kr" class="active">회사명</span><span data-lang="en">Company</span><span data-lang="jp">会社名</span><span data-lang="cn">公司名称</span> *</label><input name="company"></div>
+    <div class="vfg"><label><span data-lang="kr" class="active">직위</span><span data-lang="en">Position</span><span data-lang="jp">役職</span><span data-lang="cn">职位</span> *</label><input name="position"></div>
+    <div class="vfg"><label><span data-lang="kr" class="active">전문분야</span><span data-lang="en">Profession</span><span data-lang="jp">専門分野</span><span data-lang="cn">专业领域</span> *</label><input name="field"></div>
+    <div class="vfg"><label><span data-lang="kr" class="active">전화번호</span><span data-lang="en">Phone</span><span data-lang="jp">電話番号</span><span data-lang="cn">电话</span> *</label><input name="phone" type="tel" placeholder="010-0000-0000"></div>
+    <div class="vfg"><label><span data-lang="kr" class="active">이메일</span><span data-lang="en">Email</span><span data-lang="jp">メール</span><span data-lang="cn">电子邮箱</span> *</label><input name="email" type="email" placeholder="example@email.com"></div>
+    <div class="vfg"><label><span data-lang="kr" class="active">초대자(가디언)</span><span data-lang="en">Invited by (member)</span><span data-lang="jp">招待者（メンバー）</span><span data-lang="cn">邀请人（成员）</span></label><input name="guardian"></div>
+    <div class="vfg"><label><span data-lang="kr" class="active">방문일자</span><span data-lang="en">Visit date</span><span data-lang="jp">訪問日</span><span data-lang="cn">参观日期</span> *</label><input name="visitDate" type="date" id="visitDate"></div>
+    <div class="vfg"><label><span data-lang="kr" class="active">업력</span><span data-lang="en">Years in business</span><span data-lang="jp">事業歴</span><span data-lang="cn">从业年限</span></label><input name="career"></div>
+    <div class="vfg"><label><span data-lang="kr" class="active">BNI 관심도</span><span data-lang="en">Interest in BNI</span><span data-lang="jp">BNIへの関心度</span><span data-lang="cn">对BNI的兴趣</span> *</label>
       <div class="vrate">
-        <label><input type="radio" name="interest" value="5"> 5 (높음)</label>
+        <label><input type="radio" name="interest" value="5"> 5 (<span data-lang="kr" class="active">높음</span><span data-lang="en">high</span><span data-lang="jp">高い</span><span data-lang="cn">高</span>)</label>
         <label><input type="radio" name="interest" value="4"> 4</label>
         <label><input type="radio" name="interest" value="3"> 3</label>
         <label><input type="radio" name="interest" value="2"> 2</label>
-        <label><input type="radio" name="interest" value="1"> 1 (낮음)</label>
+        <label><input type="radio" name="interest" value="1"> 1 (<span data-lang="kr" class="active">낮음</span><span data-lang="en">low</span><span data-lang="jp">低い</span><span data-lang="cn">低</span>)</label>
       </div>
     </div>
-    <label class="vagree"><input type="checkbox" id="vagree"> 참관 안내 연락을 위해 위 정보를 챕터 담당자에게 보내는 데 동의합니다.</label>
+    <label class="vagree"><input type="checkbox" id="vagree">
+      <span>
+        <span data-lang="kr" class="active">참관 안내 연락을 위해 위 정보를 챕터 담당자에게 보내는 데 동의합니다.</span>
+        <span data-lang="en">I agree to send the information above to the chapter's contact person so they can get in touch about my visit.</span>
+        <span data-lang="jp">見学のご案内の連絡のため、上記の情報をチャプター担当者に送ることに同意します。</span>
+        <span data-lang="cn">我同意将以上信息发送给分会负责人，以便联系参观事宜。</span>
+      </span>
+    </label>
     <div class="vmsg" id="vmsg"></div>
-    <button class="btn btn-primary" id="vbtn" type="submit">📋 참관 신청 보내기</button>
+    <button class="btn btn-primary" id="vbtn" type="submit"></button>
   </form>
 </section>
 
 <!-- CONTACT -->
 <section class="contact">
   <div class="section-label">Contact</div>
-  <div class="section-title"><span data-lang="kr" class="active">찾아오시는 길</span></div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">찾아오시는 길</span>
+    <span data-lang="en">Getting here</span>
+    <span data-lang="jp">アクセス</span>
+    <span data-lang="cn">交通指南</span>
+  </div>
   <div class="contact-list">
     <a class="contact-item" href="#visit">
       <div class="contact-icon">📋</div>
-      <div class="contact-label"><span data-lang="kr" class="active">참관 신청</span></div>
-      <div class="contact-value"><span data-lang="kr" class="active">신청서 작성</span></div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">참관 신청</span>
+        <span data-lang="en">Visit</span>
+        <span data-lang="jp">見学申し込み</span>
+        <span data-lang="cn">申请参观</span>
+      </div>
+      <div class="contact-value">
+        <span data-lang="kr" class="active">신청서 작성</span>
+        <span data-lang="en">Fill out the form</span>
+        <span data-lang="jp">申込書を記入</span>
+        <span data-lang="cn">填写申请表</span>
+      </div>
     </a>
     <a class="contact-item" href="https://jinjjabg-hub.github.io/MANDU/?u=bni-pioneer" target="_blank">
       <div class="contact-icon">💬</div>
       <div class="contact-label">MANDU</div>
-      <div class="contact-value"><span data-lang="kr" class="active">실시간 번역 메신저</span></div>
+      <div class="contact-value">
+        <span data-lang="kr" class="active">실시간 번역 메신저</span>
+        <span data-lang="en">Live translation chat</span>
+        <span data-lang="jp">リアルタイム翻訳チャット</span>
+        <span data-lang="cn">实时翻译聊天</span>
+      </div>
     </a>
     <a class="contact-item" style="grid-column: 1 / -1;" href="https://map.kakao.com/link/search/%EC%95%84%EB%B0%94%EB%8B%88%EC%84%BC%ED%8A%B8%EB%9F%B4%EB%B6%80%EC%82%B0" target="_blank">
       <div class="contact-icon">📍</div>
-      <div class="contact-label"><span data-lang="kr" class="active">미팅 장소 (탭하면 지도 열림)</span></div>
-      <div class="contact-value"><span data-lang="kr" class="active">부산광역시 남구 전포대로 133 아바니센트럴부산 3층</span></div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">미팅 장소 (탭하면 지도 열림)</span>
+        <span data-lang="en">Meeting venue (tap to open map)</span>
+        <span data-lang="jp">会場（タップで地図）</span>
+        <span data-lang="cn">会议地点（点击打开地图）</span>
+      </div>
+      <div class="contact-value">
+        <span data-lang="kr" class="active">부산광역시 남구 전포대로 133 아바니센트럴부산 3층</span>
+        <span data-lang="en">3F, Avani Central Busan, 133 Jeonpo-daero, Nam-gu, Busan</span>
+        <span data-lang="jp">釜山広域市 南区 田浦大路133 アヴァニ・セントラル釜山 3階</span>
+        <span data-lang="cn">釜山广域市南区田浦大路133号 Avani Central Busan 3楼</span>
+      </div>
     </a>
   </div>
 </section>
@@ -548,9 +813,24 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 <!-- ACTION -->
 <div class="action">
   <div class="btn-group">
-    <button class="btn btn-primary" onclick="saveContact()"><span data-lang="kr" class="active">📞 연락처 저장</span></button>
-    <button class="btn btn-secondary" onclick="saveToCardbook({id:'bni-pioneer',name:'BNI 파이오니어 챕터',nameEn:'BNI Pioneer Chapter',title:'부산 비즈니스 리퍼럴 모임',company:'BNI 파이오니어 챕터',phone:'',email:'',chapter:'파이오니어',bni:'챕터',url:window.location.href})"><span data-lang="kr" class="active">🗂️ 비즈홈 저장 (CardBook)</span></button>
-    <button class="btn btn-share" onclick="shareCard()"><span data-lang="kr" class="active">📤 비즈홈 전달하기</span></button>
+    <button class="btn btn-primary" onclick="saveContact()">
+      <span data-lang="kr" class="active">📞 연락처 저장</span>
+      <span data-lang="en">📞 Save contact</span>
+      <span data-lang="jp">📞 連絡先を保存</span>
+      <span data-lang="cn">📞 保存联系人</span>
+    </button>
+    <button class="btn btn-secondary" onclick="saveToCardbook({id:'bni-pioneer',name:'BNI 파이오니어 챕터',nameEn:'BNI Pioneer Chapter',title:'부산 비즈니스 리퍼럴 모임',company:'BNI 파이오니어 챕터',phone:'',email:'',chapter:'BNI 파이오니어',bni:'챕터',url:window.location.href})">
+      <span data-lang="kr" class="active">🗂️ 비즈홈 저장 (CardBook)</span>
+      <span data-lang="en">🗂️ Save to CardBook</span>
+      <span data-lang="jp">🗂️ ビズホームを保存（CardBook）</span>
+      <span data-lang="cn">🗂️ 保存商务主页（CardBook）</span>
+    </button>
+    <button class="btn btn-share" onclick="shareCard()">
+      <span data-lang="kr" class="active">📤 비즈홈 전달하기</span>
+      <span data-lang="en">📤 Share this Biz Home</span>
+      <span data-lang="jp">📤 ビズホームを共有</span>
+      <span data-lang="cn">📤 分享商务主页</span>
+    </button>
   </div>
 </div>
 
@@ -559,22 +839,32 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
   <div class="share-backdrop" onclick="closeShare()"></div>
   <div class="share-panel">
     <div class="share-handle"></div>
-    <div class="share-title">비즈홈 전달하기</div>
+    <div class="share-title">
+      <span data-lang="kr" class="active">비즈홈 전달하기</span>
+      <span data-lang="en">Share this Biz Home</span>
+      <span data-lang="jp">ビズホームを共有</span>
+      <span data-lang="cn">分享商务主页</span>
+    </div>
     <div class="share-btns">
       <button class="share-btn" onclick="shareKakao()">
-        <div class="share-btn-icon" style="background:#FEE500;">💬</div><span>카카오톡</span>
+        <div class="share-btn-icon" style="background:#FEE500;">💬</div><span>KakaoTalk</span>
       </button>
       <button class="share-btn" onclick="shareSMS()">
-        <div class="share-btn-icon" style="background:#34c759;">✉️</div><span>문자</span>
+        <div class="share-btn-icon" style="background:#34c759;">✉️</div><span>SMS</span>
       </button>
       <button class="share-btn" onclick="copyLink()">
-        <div class="share-btn-icon" style="background:#e8e8e8;">🔗</div><span>링크 복사</span>
+        <div class="share-btn-icon" style="background:#e8e8e8;">🔗</div><span>Link</span>
       </button>
       <button class="share-btn" onclick="shareQR()">
-        <div class="share-btn-icon" style="background:#0d1b3e;">📱</div><span>QR 보기</span>
+        <div class="share-btn-icon" style="background:#162311;">📱</div><span>QR</span>
       </button>
     </div>
-    <button class="share-cancel" onclick="closeShare()">취소</button>
+    <button class="share-cancel" onclick="closeShare()">
+      <span data-lang="kr" class="active">취소</span>
+      <span data-lang="en">Cancel</span>
+      <span data-lang="jp">キャンセル</span>
+      <span data-lang="cn">取消</span>
+    </button>
   </div>
 </div>
 
@@ -591,7 +881,12 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 
 <!-- FOOTER -->
 <footer>
-  <div class="company"><span data-lang="kr" class="active">BNI 파이오니어 챕터</span></div>
+  <div class="company">
+    <span data-lang="kr" class="active">BNI 파이오니어 챕터</span>
+    <span data-lang="en">BNI Pioneer Chapter</span>
+    <span data-lang="jp">BNI パイオニア・チャプター</span>
+    <span data-lang="cn">BNI 先锋分会</span>
+  </div>
   <div class="slogan-footer">Givers Gain® · Biz Home by T.M LINK</div>
 </footer>
 
@@ -602,57 +897,108 @@ const MANAGER_EMAIL = 'bellauomo@naver.com';
 // 기존 챕터 홈페이지와 같은 구글 시트에도 함께 기록 (비우면 시트 기록 안 함)
 const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyRFVCMc7VUxq8TKDH82vUzGe_kaYTUD84EL4-OLcM90hjsEzgvQhjyuAyOwRwsf5smDQ/exec';
 
-// 멤버: 이름 대신 업종으로 보여준다. job = 업종, home = 비즈홈 주소, card = 이미지명함 주소 (없으면 비워 둠)
+// 멤버: 이름 대신 업종으로 보여준다. job = 업종(4개 국어), home = 비즈홈 주소, card = 이미지명함 주소 (없으면 비워 둠)
 const MEMBERS = [
-  { job:'상조서비스', home:'../김경태/' },
-  { job:'숙박 공간 컨설팅', home:'../김지현/' },
-  { job:'사업계획서·경영컨설팅', home:'../박미성/' },
-  { job:'안전용품·건축자재', home:'../박선영/' },
-  { job:'부동산 중개', home:'../박진성/' },
-  { job:'웹·앱 개발', home:'../송승훈/' },
-  { job:'법무사', home:'../이채홍/' },
-  { job:'리더십·기업교육', home:'../이해경/' },
-  { job:'반영구·뷰티', home:'../이화춘/' },
-  { job:'꽃·경조화환', home:'../임춘식/' },
-  { job:'공조·에어컨 세척', home:'../조은영/' },
-  { job:'해외금융 컨설팅', home:'../정상현/' },
-  { job:'무인 태닝샵', home:'../윤민수/' },
-  { job:'중문 제작·시공' },
-  { job:'인쇄·홍보물' },
-  { job:'축산·육가공' },
-  { job:'기업·행사 사진' },
-  { job:'법률(변호사)' },
-  { job:'자동차 구매·렌트' },
-  { job:'정책자금' },
-  { job:'간판·랩핑 광고' },
-  { job:'생명보험' },
-  { job:'막국수 전문점' },
-  { job:'기업보험' },
-  { job:'주거 인테리어' },
-  { job:'상업 인테리어' },
-  { job:'미술교육' },
-  { job:'에어컨·냉난방기' },
-  { job:'고용지원금 컨설팅' },
-  { job:'휴대폰·통신' },
-  { job:'세무회계' },
-  { job:'경호·경비' },
+  { job:{kr:'상조서비스', en:'Funeral services', jp:'葬儀サービス', cn:'殡葬服务'}, home:'../김경태/' },
+  { job:{kr:'숙박 공간 컨설팅', en:'Lodging space consulting', jp:'宿泊施設の空間コンサルティング', cn:'民宿空间咨询'}, home:'../김지현/' },
+  { job:{kr:'사업계획서·경영컨설팅', en:'Business plans & management consulting', jp:'事業計画書・経営コンサルティング', cn:'商业计划书·经营咨询'}, home:'../박미성/' },
+  { job:{kr:'안전용품·건축자재', en:'Safety gear & building materials', jp:'安全用品・建築資材', cn:'安全用品·建材'}, home:'../박선영/' },
+  { job:{kr:'부동산 중개', en:'Real estate brokerage', jp:'不動産仲介', cn:'房地产中介'}, home:'../박진성/' },
+  { job:{kr:'웹·앱 개발', en:'Web & app development', jp:'Web・アプリ開発', cn:'网站·应用开发'}, home:'../송승훈/' },
+  { job:{kr:'법무사', en:'Judicial scrivener', jp:'司法書士', cn:'法务师'}, home:'../이채홍/' },
+  { job:{kr:'리더십·기업교육', en:'Leadership & corporate training', jp:'リーダーシップ・企業研修', cn:'领导力·企业培训'}, home:'../이해경/' },
+  { job:{kr:'반영구·뷰티', en:'Semi-permanent makeup & beauty', jp:'アートメイク・美容', cn:'半永久化妆·美容'}, home:'../이화춘/' },
+  { job:{kr:'꽃·경조화환', en:'Flowers & ceremonial wreaths', jp:'花・慶弔花輪', cn:'鲜花·庆吊花环'}, home:'../임춘식/' },
+  { job:{kr:'공조·에어컨 세척', en:'HVAC & A/C cleaning', jp:'空調・エアコン洗浄', cn:'空调系统·空调清洗'}, home:'../조은영/' },
+  { job:{kr:'해외금융 컨설팅', en:'Overseas financial consulting', jp:'海外金融コンサルティング', cn:'海外金融咨询'}, home:'../정상현/' },
+  { job:{kr:'무인 태닝샵', en:'Self-service tanning salon', jp:'無人日焼けサロン', cn:'无人美黑店'}, home:'../윤민수/' },
+  { job:{kr:'중문 제작·시공', en:'Interior doors', jp:'室内ドア製作・施工', cn:'玄关门制作·安装'} },
+  { job:{kr:'인쇄·홍보물', en:'Printing & promo materials', jp:'印刷・販促物', cn:'印刷·宣传品'} },
+  { job:{kr:'축산·육가공', en:'Livestock & meat processing', jp:'畜産・食肉加工', cn:'畜牧·肉类加工'} },
+  { job:{kr:'기업·행사 사진', en:'Corporate & event photography', jp:'企業・イベント写真', cn:'企业·活动摄影'} },
+  { job:{kr:'법률(변호사)', en:'Law (attorney)', jp:'法律（弁護士）', cn:'法律（律师）'} },
+  { job:{kr:'자동차 구매·렌트', en:'Car purchase & leasing', jp:'自動車購入・リース', cn:'汽车购买·租赁'} },
+  { job:{kr:'정책자금', en:'Government business funding', jp:'政策資金', cn:'政策资金'} },
+  { job:{kr:'간판·랩핑 광고', en:'Signage & wrap advertising', jp:'看板・ラッピング広告', cn:'招牌·车体广告'} },
+  { job:{kr:'생명보험', en:'Life insurance', jp:'生命保険', cn:'人寿保险'} },
+  { job:{kr:'막국수 전문점', en:'Buckwheat noodle restaurant', jp:'マッグクス専門店', cn:'荞麦冷面专门店'} },
+  { job:{kr:'기업보험', en:'Corporate insurance', jp:'法人保険', cn:'企业保险'} },
+  { job:{kr:'주거 인테리어', en:'Residential interiors', jp:'住宅インテリア', cn:'住宅装修'} },
+  { job:{kr:'상업 인테리어', en:'Commercial interiors', jp:'商業インテリア', cn:'商业空间装修'} },
+  { job:{kr:'미술교육', en:'Art education', jp:'美術教育', cn:'美术教育'} },
+  { job:{kr:'에어컨·냉난방기', en:'Air conditioning & HVAC units', jp:'エアコン・冷暖房機', cn:'空调·冷暖设备'} },
+  { job:{kr:'고용지원금 컨설팅', en:'Employment subsidy consulting', jp:'雇用助成金コンサルティング', cn:'雇佣补贴咨询'} },
+  { job:{kr:'휴대폰·통신', en:'Mobile phones & telecom', jp:'携帯電話・通信', cn:'手机·通信'} },
+  { job:{kr:'세무회계', en:'Tax & accounting', jp:'税務会計', cn:'税务会计'} },
+  { job:{kr:'경호·경비', en:'Security & bodyguard services', jp:'警護・警備', cn:'安保·保镖'} },
 ];
 /* ========================================== */
 
-(function () {
-  document.getElementById('memberCount').textContent = MEMBERS.length;
+const LANGS = ['kr', 'en', 'jp', 'cn'];
+let CUR_LANG = 'kr';
+// {kr,en,jp,cn} → 언어별 span (지금 언어만 active)
+function L(t) {
+  return LANGS.map(l => `<span data-lang="${l}"${l === CUR_LANG ? ' class="active"' : ''}>${t[l]}</span>`).join('');
+}
+// 스크립트가 쓰는 문구 (현재 언어로 바로 꺼내 씀)
+const TX = {
+  home:    {kr:'비즈홈 →', en:'Biz Home →', jp:'ビズホーム →', cn:'商务主页 →'},
+  card:    {kr:'이미지명함 →', en:'Image card →', jp:'画像名刺 →', cn:'图片名片 →'},
+  more:    {kr:'함께하는 업종 (비즈홈 준비 중)', en:'Also in the chapter (Biz Home coming soon)', jp:'その他の業種（ビズホーム準備中）', cn:'其他行业（商务主页准备中）'},
+  send:    {kr:'📋 참관 신청 보내기', en:'📋 Send visit request', jp:'📋 見学を申し込む', cn:'📋 提交参观申请'},
+  sending: {kr:'보내는 중...', en:'Sending...', jp:'送信中...', cn:'提交中...'},
+  done:    {kr:'신청 완료 ✓', en:'Sent ✓', jp:'申し込み完了 ✓', cn:'申请完成 ✓'},
+  ok:      {kr:'✅ 참관 신청이 접수되었습니다. 담당자가 곧 연락드리겠습니다.', en:'✅ Your visit request has been received. Our contact person will be in touch soon.', jp:'✅ 見学のお申し込みを受け付けました。担当者よりまもなくご連絡します。', cn:'✅ 参观申请已提交，负责人会尽快与您联系。'},
+  fail:    {kr:'전송에 실패했습니다. 잠시 후 다시 시도해 주세요.', en:'Sending failed. Please try again in a moment.', jp:'送信に失敗しました。しばらくしてからもう一度お試しください。', cn:'提交失败，请稍后再试。'},
+  email:   {kr:'이메일 형식을 확인해 주세요.', en:'Please check your email address.', jp:'メールアドレスの形式をご確認ください。', cn:'请检查电子邮箱格式。'},
+  rate:    {kr:'BNI 관심도를 선택해 주세요.', en:'Please choose your interest in BNI.', jp:'BNIへの関心度を選択してください。', cn:'请选择您对BNI的兴趣程度。'},
+  agree:   {kr:'정보 전달 동의에 체크해 주세요.', en:'Please check the consent box.', jp:'情報送信への同意にチェックしてください。', cn:'请勾选信息发送同意。'},
+  noset:   {kr:'신청 접수 설정이 아직 안 되어 있습니다. 챕터 멤버에게 문의해 주세요.', en:'Requests are not set up yet. Please contact a chapter member.', jp:'受付設定がまだ完了していません。チャプターのメンバーにお問い合わせください。', cn:'申请功能尚未设置，请联系分会成员。'},
+  copied:  {kr:'링크가 복사되었습니다!', en:'Link copied!', jp:'リンクをコピーしました！', cn:'链接已复制！'},
+};
+const REQ = {
+  name:      {kr:'성명을 입력해 주세요.', en:'Please enter your name.', jp:'氏名を入力してください。', cn:'请输入姓名。'},
+  company:   {kr:'회사명을 입력해 주세요.', en:'Please enter your company.', jp:'会社名を入力してください。', cn:'请输入公司名称。'},
+  position:  {kr:'직위를 입력해 주세요.', en:'Please enter your position.', jp:'役職を入力してください。', cn:'请输入职位。'},
+  field:     {kr:'전문분야를 입력해 주세요.', en:'Please enter your profession.', jp:'専門分野を入力してください。', cn:'请输入专业领域。'},
+  phone:     {kr:'전화번호를 입력해 주세요.', en:'Please enter your phone number.', jp:'電話番号を入力してください。', cn:'请输入电话号码。'},
+  email:     {kr:'이메일을 입력해 주세요.', en:'Please enter your email.', jp:'メールアドレスを入力してください。', cn:'请输入电子邮箱。'},
+  visitDate: {kr:'방문일자를 입력해 주세요.', en:'Please choose a visit date.', jp:'訪問日を入力してください。', cn:'请选择参观日期。'},
+};
+const PH = {
+  name:     {kr:'홍길동', en:'Your name', jp:'お名前', cn:'您的姓名'},
+  position: {kr:'예: 대표', en:'e.g. CEO', jp:'例：代表', cn:'例：总经理'},
+  field:    {kr:'예: 세무회계', en:'e.g. Tax & accounting', jp:'例：税務会計', cn:'例：税务会计'},
+  career:   {kr:'예: 10년', en:'e.g. 10 years', jp:'例：10年', cn:'例：10年'},
+};
+
+function renderMembers() {
+  document.querySelectorAll('.memberCount').forEach(el => el.textContent = MEMBERS.length);
   const linked = MEMBERS.filter(m => m.home || m.card);
   const rest = MEMBERS.filter(m => !m.home && !m.card);
   const items = [];
   linked.forEach(m => {
-    if (m.home) items.push(`<a class="member-item" href="${m.home}"><div class="member-name">${m.job}</div><div class="member-links"><span class="ml-home">비즈홈 →</span></div></a>`);
-    if (m.card) items.push(`<a class="member-item" href="${m.card}" target="_blank" rel="noopener"><div class="member-name">${m.job}</div><div class="member-links"><span class="ml-card">이미지명함 →</span></div></a>`);
+    if (m.home) items.push(`<a class="member-item" href="${m.home}"><div class="member-name">${L(m.job)}</div><div class="member-links"><span class="ml-home">${L(TX.home)}</span></div></a>`);
+    if (m.card) items.push(`<a class="member-item" href="${m.card}" target="_blank" rel="noopener"><div class="member-name">${L(m.job)}</div><div class="member-links"><span class="ml-card">${L(TX.card)}</span></div></a>`);
   });
   document.getElementById('memberList').innerHTML = items.join('');
   document.getElementById('memberMore').innerHTML = rest.length
-    ? `<b>함께하는 업종 (비즈홈 준비 중)</b>${rest.map(m => m.job).join(' · ')}`
+    ? `<b>${L(TX.more)}</b>${LANGS.map(l => `<span data-lang="${l}"${l === CUR_LANG ? ' class="active"' : ''}>${rest.map(m => m.job[l]).join(' · ')}</span>`).join('')}`
     : '';
-})();
+}
+renderMembers();
+
+// 언어가 바뀔 때 입력칸 예시 문구와 신청 버튼도 함께 바꾼다 (setLang에서 호출)
+function applyLangExtras() {
+  for (const k in PH) {
+    const el = document.querySelector(`#vform [name="${k}"]`);
+    if (el) el.placeholder = PH[k][CUR_LANG];
+  }
+  const btn = document.getElementById('vbtn');
+  if (!btn.disabled) btn.textContent = TX.send[CUR_LANG];
+  document.documentElement.lang = {kr:'ko', en:'en', jp:'ja', cn:'zh'}[CUR_LANG];
+}
+applyLangExtras();
 
 /* ── 참관 신청 ── */
 (function () {
@@ -662,17 +1008,17 @@ const MEMBERS = [
 document.getElementById('vform').addEventListener('submit', async e => {
   e.preventDefault();
   const f = e.target, msg = document.getElementById('vmsg'), btn = document.getElementById('vbtn');
-  const show = (t, ok) => { msg.textContent = t; msg.className = 'vmsg ' + (ok ? 'ok' : 'err'); };
+  const show = (t, ok) => { msg.textContent = t[CUR_LANG]; msg.className = 'vmsg ' + (ok ? 'ok' : 'err'); };
   const data = Object.fromEntries(new FormData(f).entries());
   for (const k in data) data[k] = (data[k] || '').trim();
-  const required = [['name','성명을'],['company','회사명을'],['position','직위를'],['field','전문분야를'],['phone','전화번호를'],['email','이메일을'],['visitDate','방문일자를']];
-  for (const [k, label] of required) if (!data[k]) return show(`${label} 입력해 주세요.`);
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) return show('이메일 형식을 확인해 주세요.');
-  if (!data.interest) return show('BNI 관심도를 선택해 주세요.');
-  if (!document.getElementById('vagree').checked) return show('정보 전달 동의에 체크해 주세요.');
-  if (!MANAGER_EMAIL && !SHEET_URL) return show('신청 접수 설정이 아직 안 되어 있습니다. 챕터 멤버에게 문의해 주세요.');
+  for (const k in REQ) if (!data[k]) return show(REQ[k]);
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) return show(TX.email);
+  if (!data.interest) return show(TX.rate);
+  if (!document.getElementById('vagree').checked) return show(TX.agree);
+  if (!MANAGER_EMAIL && !SHEET_URL) return show(TX.noset);
 
-  btn.disabled = true; btn.textContent = '보내는 중...';
+  btn.disabled = true; btn.textContent = TX.sending[CUR_LANG];
+  data.lang = CUR_LANG;
   const jobs = [];
   if (MANAGER_EMAIL) {
     jobs.push(fetch('https://formsubmit.co/ajax/' + MANAGER_EMAIL, {
@@ -683,7 +1029,7 @@ document.getElementById('vform').addEventListener('submit', async e => {
         _template: 'table', _captcha: 'false',
         성명: data.name, 회사명: data.company, 직위: data.position, 전문분야: data.field,
         전화번호: data.phone, 이메일: data.email, 초대자: data.guardian, 방문일자: data.visitDate,
-        업력: data.career, BNI관심도: data.interest,
+        업력: data.career, BNI관심도: data.interest, 신청언어: data.lang,
       }),
     }).then(r => { if (!r.ok) throw new Error('mail'); }));
   }
@@ -692,18 +1038,19 @@ document.getElementById('vform').addEventListener('submit', async e => {
   }
   const results = await Promise.allSettled(jobs);
   if (results.some(r => r.status === 'fulfilled')) {
-    show('✅ 참관 신청이 접수되었습니다. 담당자가 곧 연락드리겠습니다.', true);
-    f.reset(); btn.textContent = '신청 완료 ✓';
+    show(TX.ok, true);
+    f.reset(); btn.textContent = TX.done[CUR_LANG];
   } else {
-    show('전송에 실패했습니다. 잠시 후 다시 시도해 주세요.');
-    btn.disabled = false; btn.textContent = '📋 참관 신청 보내기';
+    show(TX.fail);
+    btn.disabled = false; btn.textContent = TX.send[CUR_LANG];
   }
 });
 </script>
 
-<script src="https://jinjjabg-hub.github.io/cardbook/save-to-cardbook.js"></script>
+<script src="https://cardbook.bizmy.net/save-to-cardbook.js?v=20261011b"></script>
 <script>
 function setLang(lang) {
+  CUR_LANG = lang;
   document.querySelectorAll('[data-lang]').forEach(el => {
     el.classList.toggle('active', el.getAttribute('data-lang') === lang);
   });
@@ -711,9 +1058,11 @@ function setLang(lang) {
     const m = btn.getAttribute('onclick').match(/'(\w+)'/);
     btn.classList.toggle('active', m && m[1] === lang);
   });
+  applyLangExtras();
 }
 function saveContact() {
   const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:BNI 파이오니어 챕터\nORG:BNI 파이오니어 챕터\nTITLE:부산 비즈니스 리퍼럴 모임\nURL:https://jinjjabg-hub.github.io/BNI-PIONEER-cards/pioneer/\nADR:;;부산광역시 남구 전포대로 133 아바니센트럴부산 3층;;;;\nEND:VCARD`;
+  if (window.cbSaveContact) return cbSaveContact(vcard);
   const blob = new Blob([vcard], {type:'text/vcard'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
@@ -723,7 +1072,7 @@ function saveContact() {
 
 /* ── 명함 전달하기 ── */
 const CARD_URL = 'https://jinjjabg-hub.github.io/BNI-PIONEER-cards/pioneer/';
-const CARD_TITLE = 'BNI 파이오니어 챕터 | BNI 파이오니어 챕터';
+const CARD_TITLE = 'BNI 파이오니어 챕터 | 부산 비즈니스 리퍼럴 모임';
 const CARD_TEXT = '부산 BNI 파이오니어 챕터 — 매주 수요일 오전 6시 30분, 참관 신청 받습니다.';
 
 function shareCard() {
@@ -743,12 +1092,12 @@ function shareSMS() {
   closeShare();
 }
 function copyLink() {
-  navigator.clipboard.writeText(CARD_URL).then(() => alert('링크가 복사되었습니다!')).catch(() => {
+  navigator.clipboard.writeText(CARD_URL).then(() => alert(TX.copied[CUR_LANG])).catch(() => {
     const t = document.createElement('textarea');
     t.value = CARD_URL;
     document.body.appendChild(t); t.select(); document.execCommand('copy');
     document.body.removeChild(t);
-    alert('링크가 복사되었습니다!');
+    alert(TX.copied[CUR_LANG]);
   });
   closeShare();
 }
