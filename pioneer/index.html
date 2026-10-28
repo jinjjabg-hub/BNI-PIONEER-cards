@@ -306,15 +306,21 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 .members .section-label { color: var(--muted-light); }
 .members .section-title { color: var(--text-light); margin-bottom: 8px; }
 .members .sub { font-size: 12px; color: #777; margin-bottom: 16px; line-height: 1.6; }
-.member-list { display: flex; flex-direction: column; gap: 8px; }
-.member-item { display:flex; align-items:center; justify-content:space-between; gap:10px; background:#fff; border-radius:12px; padding:13px 14px; border:1px solid rgba(0,0,0,0.05); text-decoration:none; }
+.member-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.member-item { display:flex; flex-direction:column; align-items:flex-start; justify-content:space-between; gap:8px; min-height:84px; background:#fff; border-radius:12px; padding:12px; border:1px solid rgba(0,0,0,0.05); text-decoration:none; }
 .member-item:active { transform: scale(0.97); }
-.member-name { font-size: 14px; font-weight: 700; color: var(--text-light); }
+.member-name { font-size: 13px; line-height: 1.4; font-weight: 700; color: var(--text-light); }
 .member-co { font-size: 11px; color: #777; line-height: 1.4; }
 .member-links { display:flex; gap:4px; flex-shrink:0; }
 .member-links span { font-size: 11px; font-weight: 700; padding: 5px 10px; white-space: nowrap; border-radius: 12px; text-decoration:none; }
 .ml-home { background: var(--navy); color: #fff; }
 .ml-card { background: var(--gold); color: #fff; }
+.card-pop { display:none; position:fixed; inset:0; z-index:300; background:rgba(10,16,8,0.88); align-items:center; justify-content:center; padding:16px; }
+.card-pop.on { display:flex; }
+.card-pop-box { width:100%; max-width:440px; display:flex; flex-direction:column; gap:12px; }
+.card-pop-box img { width:100%; max-height:72vh; object-fit:contain; border-radius:10px; background:#fff; }
+.card-pop-btns { display:flex; gap:10px; }
+.card-pop-btns .btn { flex:1; min-height:48px; padding:13px; text-decoration:none; display:flex; align-items:center; justify-content:center; }
 .member-more { margin-top: 14px; font-size: 12px; color: #666; line-height: 1.9; background:#fff; border-radius:12px; padding:14px; }
 .member-more b { display:block; font-size: 11px; color: var(--muted-light); margin-bottom: 4px; letter-spacing: 1px; }
 .visit { background: var(--navy2); }
@@ -879,6 +885,17 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
   </div>
 </div>
 
+<!-- 이미지명함 팝업 -->
+<div class="card-pop" id="cardPop" onclick="if (event.target === this) closeCard()">
+  <div class="card-pop-box">
+    <img id="cardPopImg" alt="">
+    <div class="card-pop-btns">
+      <a class="btn btn-primary" id="cardPopCall" href="#"></a>
+      <button class="btn btn-secondary" id="cardPopClose" onclick="closeCard()"></button>
+    </div>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="company">
@@ -897,7 +914,8 @@ const MANAGER_EMAIL = 'bellauomo@naver.com';
 // 기존 챕터 홈페이지와 같은 구글 시트에도 함께 기록 (비우면 시트 기록 안 함)
 const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyRFVCMc7VUxq8TKDH82vUzGe_kaYTUD84EL4-OLcM90hjsEzgvQhjyuAyOwRwsf5smDQ/exec';
 
-// 멤버: 이름 대신 업종으로 보여준다. job = 업종(4개 국어), home = 비즈홈 주소, card = 이미지명함 주소 (없으면 비워 둠)
+// 멤버: 이름 대신 업종으로 보여준다. job = 업종(4개 국어), home = 비즈홈 주소,
+// card = 이미지명함 파일(cards 폴더, 누르면 팝업), tel = 팝업의 전화 버튼 번호 (없으면 비워 둠)
 const MEMBERS = [
   { job:{kr:'앱 개발·웹 제작(비즈홈)', en:'App development & web design (Biz Home)', jp:'アプリ開発・Web制作（ビズホーム）', cn:'应用开发·网站制作（商务主页）'}, home:'../송승훈/' },
   { job:{kr:'법무사(형사사건 전문)', en:'Judicial scrivener (criminal cases)', jp:'司法書士（刑事事件専門）', cn:'法务师（专攻刑事案件）'}, home:'../이채홍/' },
@@ -914,17 +932,17 @@ const MEMBERS = [
   { job:{kr:'기업교육', en:'Corporate training', jp:'企業研修', cn:'企业培训'}, home:'../이해경/' },
   { job:{kr:'손해보험', en:'Property & casualty insurance', jp:'損害保険', cn:'财产保险'} },
   { job:{kr:'미술교육', en:'Art education', jp:'美術教育', cn:'美术教育'} },
-  { job:{kr:'에어컨 설치·관리', en:'A/C installation & maintenance', jp:'エアコン設置・管理', cn:'空调安装·维护'} },
-  { job:{kr:'휴대폰·통신', en:'Mobile phones & telecom', jp:'携帯電話・通信', cn:'手机·通信'} },
+  { job:{kr:'에어컨 설치·관리', en:'A/C installation & maintenance', jp:'エアコン設置・管理', cn:'空调安装·维护'}, card:'cards/aircon.jpg', tel:'010-7287-8707' },
+  { job:{kr:'휴대폰·통신', en:'Mobile phones & telecom', jp:'携帯電話・通信', cn:'手机·通信'}, card:'cards/mobile.jpg', tel:'010-4194-6666' },
   { job:{kr:'인쇄·디자인', en:'Printing & design', jp:'印刷・デザイン', cn:'印刷·设计'} },
   { job:{kr:'인테리어(숙박·병원·상가)', en:'Interiors (lodging, clinics, retail)', jp:'インテリア（宿泊・病院・商業施設）', cn:'室内装修（住宿·医院·商铺）'} },
-  { job:{kr:'고용지원금', en:'Employment subsidies', jp:'雇用助成金', cn:'雇佣补贴'} },
+  { job:{kr:'고용지원금', en:'Employment subsidies', jp:'雇用助成金', cn:'雇佣补贴'}, card:'cards/subsidy.jpg', tel:'010-6590-0731' },
   { job:{kr:'생명보험', en:'Life insurance', jp:'生命保険', cn:'人寿保险'} },
-  { job:{kr:'경호', en:'Bodyguard & security services', jp:'警護', cn:'安保护卫'} },
+  { job:{kr:'경호', en:'Bodyguard & security services', jp:'警護', cn:'安保护卫'}, card:'cards/security.jpg', tel:'010-5551-8096' },
   { job:{kr:'맞춤 수제 양복', en:'Custom tailored suits', jp:'オーダーメイドスーツ', cn:'定制手工西装'} },
   { job:{kr:'기름·곡물 가공품', en:'Oil & grain products', jp:'油・穀物加工品', cn:'油品·谷物加工品'} },
   { job:{kr:'커튼·블라인드', en:'Curtains & blinds', jp:'カーテン・ブラインド', cn:'窗帘·百叶窗'} },
-  { job:{kr:'청소', en:'Cleaning', jp:'清掃', cn:'保洁'} },
+  { job:{kr:'청소', en:'Cleaning', jp:'清掃', cn:'保洁'}, card:'cards/cleaning.jpg', tel:'010-7566-7596' },
   { job:{kr:'요식업(고기구이)', en:'Restaurant (grilled meat)', jp:'飲食業（焼肉）', cn:'餐饮（烤肉）'} },
   { job:{kr:'소파·가구 제작', en:'Sofa & furniture making', jp:'ソファ・家具製作', cn:'沙发·家具制作'} },
   { job:{kr:'세무', en:'Tax services', jp:'税務', cn:'税务'} },
@@ -956,6 +974,8 @@ const TX = {
   agree:   {kr:'정보 전달 동의에 체크해 주세요.', en:'Please check the consent box.', jp:'情報送信への同意にチェックしてください。', cn:'请勾选信息发送同意。'},
   noset:   {kr:'신청 접수 설정이 아직 안 되어 있습니다. 챕터 멤버에게 문의해 주세요.', en:'Requests are not set up yet. Please contact a chapter member.', jp:'受付設定がまだ完了していません。チャプターのメンバーにお問い合わせください。', cn:'申请功能尚未设置，请联系分会成员。'},
   copied:  {kr:'링크가 복사되었습니다!', en:'Link copied!', jp:'リンクをコピーしました！', cn:'链接已复制！'},
+  call:    {kr:'📞 전화하기', en:'📞 Call', jp:'📞 電話する', cn:'📞 拨打电话'},
+  close:   {kr:'닫기', en:'Close', jp:'閉じる', cn:'关闭'},
 };
 const REQ = {
   name:      {kr:'성명을 입력해 주세요.', en:'Please enter your name.', jp:'氏名を入力してください。', cn:'请输入姓名。'},
@@ -980,7 +1000,7 @@ function renderMembers() {
   const items = [];
   linked.forEach(m => {
     if (m.home) items.push(`<a class="member-item" href="${m.home}"><div class="member-name">${L(m.job)}</div><div class="member-links"><span class="ml-home">${L(TX.home)}</span></div></a>`);
-    if (m.card) items.push(`<a class="member-item" href="${m.card}" target="_blank" rel="noopener"><div class="member-name">${L(m.job)}</div><div class="member-links"><span class="ml-card">${L(TX.card)}</span></div></a>`);
+    if (m.card) items.push(`<a class="member-item" href="${m.card}" onclick="openCard(${MEMBERS.indexOf(m)}); return false;"><div class="member-name">${L(m.job)}</div><div class="member-links"><span class="ml-card">${L(TX.card)}</span></div></a>`);
   });
   document.getElementById('memberList').innerHTML = items.join('');
   document.getElementById('memberMore').innerHTML = rest.length
@@ -988,6 +1008,24 @@ function renderMembers() {
     : '';
 }
 renderMembers();
+
+/* ── 이미지명함 팝업 ── */
+function openCard(i) {
+  const m = MEMBERS[i];
+  document.getElementById('cardPopImg').src = m.card;
+  document.getElementById('cardPopImg').alt = m.job[CUR_LANG];
+  const call = document.getElementById('cardPopCall');
+  call.style.display = m.tel ? '' : 'none';
+  if (m.tel) { call.href = 'tel:' + m.tel.replace(/[^0-9]/g, ''); call.textContent = TX.call[CUR_LANG]; }
+  document.getElementById('cardPopClose').textContent = TX.close[CUR_LANG];
+  document.getElementById('cardPop').classList.add('on');
+  document.body.style.overflow = 'hidden';
+}
+function closeCard() {
+  document.getElementById('cardPop').classList.remove('on');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCard(); });
 
 // 언어가 바뀔 때 입력칸 예시 문구와 신청 버튼도 함께 바꾼다 (setLang에서 호출)
 function applyLangExtras() {
