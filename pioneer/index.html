@@ -921,6 +921,8 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 /* ===== 챕터 설정: 여기만 고치면 됩니다 ===== */
 // 참관 신청서를 받을 담당자 이메일 (첫 신청 때 오는 FormSubmit 확인 메일에서 Activate 1회)
 const MANAGER_EMAIL = 'bellauomo@naver.com';
+// 같은 신청서를 함께 받을 참조 메일 (쉼표로 여러 개, 비우면 참조 없음)
+const CC_EMAILS = 'jinjjabg@gmail.com';
 // 기존 챕터 홈페이지와 같은 구글 시트에도 함께 기록 (비우면 시트 기록 안 함)
 const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyRFVCMc7VUxq8TKDH82vUzGe_kaYTUD84EL4-OLcM90hjsEzgvQhjyuAyOwRwsf5smDQ/exec';
 
@@ -1076,6 +1078,7 @@ document.getElementById('vform').addEventListener('submit', async e => {
       body: JSON.stringify({
         _subject: `[파이오니어 참관 신청] ${data.name} · ${data.field}`,
         _template: 'table', _captcha: 'false',
+        ...(CC_EMAILS ? { _cc: CC_EMAILS } : {}),
         성명: data.name, 회사명: data.company, 직위: data.position, 전문분야: data.field,
         전화번호: data.phone, 이메일: data.email, 초대자: data.guardian, 방문일자: data.visitDate,
         업력: data.career, BNI관심도: data.interest, 신청언어: data.lang,
