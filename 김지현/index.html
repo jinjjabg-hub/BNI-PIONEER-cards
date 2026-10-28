@@ -7,8 +7,8 @@
 
 <!-- Open Graph (카카오톡/SNS 링크 미리보기) -->
 <meta property="og:title" content="감성온도 | 김지현 대표">
-<meta property="og:description" content="공간마다 감성과 온도를 디렉팅하는 공간디렉터. 숙박 공간 컨설팅 / 공간디렉터 | BNI Pioneer 8기 부의장">
-<meta property="og:image" content="https://i.imgur.com/S6POM8H.jpeg">
+<meta property="og:description" content="공간마다 감성과 온도를 디렉팅하는 공간디렉터. 숙박 공간 컨설팅 / 공간디렉터">
+<meta property="og:image" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EA%B9%80%EC%A7%80%ED%98%84/og-home.jpg">
 <meta property="og:url" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/김지현">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="감성온도">
@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="감성온도 | 김지현 대표">
 <meta name="twitter:description" content="공간마다 감성과 온도를 디렉팅하는 공간디렉터. 숙박 공간 컨설팅 / 공간디렉터">
-<meta name="twitter:image" content="https://i.imgur.com/S6POM8H.jpeg">
+<meta name="twitter:image" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EA%B9%80%EC%A7%80%ED%98%84/og-home.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -169,18 +169,6 @@
     color: var(--warm-gray);
     line-height: 1.6;
   }
-  .bni-badge {
-    margin-left: auto;
-    background: var(--pink-pale);
-    border: 1px solid var(--pink-soft);
-    color: var(--dark-rose);
-    font-size: 11px;
-    font-weight: 700;
-    padding: 5px 12px;
-    border-radius: 20px;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
 
   /* BLOCKS */
   .block {
@@ -245,38 +233,6 @@
     padding: 7px 14px; border-radius: 20px; line-height: 1.4;
   }
 
-  /* BNI TIMELINE */
-  .bni-row {
-    display: flex; margin-top: 4px; position: relative;
-  }
-  .bni-row::before {
-    content: '';
-    position: absolute;
-    top: 10px; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--pink-main), var(--pink-soft));
-  }
-  .bni-step {
-    flex: 1; text-align: center;
-    padding-top: 28px; position: relative;
-  }
-  .bni-dot {
-    position: absolute;
-    top: 4px; left: 50%;
-    transform: translateX(-50%);
-    width: 13px; height: 13px;
-    background: var(--pink-main);
-    border-radius: 50%;
-    border: 2px solid white;
-    box-shadow: 0 0 0 2px var(--pink-main);
-  }
-  .bni-dot.active {
-    background: var(--dark-rose);
-    box-shadow: 0 0 0 3px rgba(139,58,82,0.3);
-    width: 15px; height: 15px; top: 3px;
-  }
-  .bni-period { font-size: 11px; font-weight: 700; color: var(--pink-deep); margin-bottom: 3px; }
-  .bni-role { font-size: 10.5px; color: var(--warm-gray); line-height: 1.5; }
 
   /* QR BLOCK */
   .qr-block {
@@ -332,6 +288,40 @@
   .btn-youtube { background: #FF0000; color: white; }
   .contact-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(242,167,184,0.4); }
   .btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  /* ACTION (저장·공유) */
+  .action-block {
+    padding: 24px;
+    display: flex; flex-direction: column; gap: 10px;
+    border-top: 1px solid var(--pink-light);
+  }
+  .action-btn {
+    display: flex; align-items: center; justify-content: center;
+    gap: 8px; padding: 14px; border-radius: 14px; width: 100%;
+    font-size: 14px; font-weight: 700; cursor: pointer;
+    font-family: 'Noto Sans KR', sans-serif; transition: all 0.25s;
+  }
+  .btn-save { background: var(--dark-rose); color: white; border: none; box-shadow: 0 6px 20px rgba(139,58,82,0.3); }
+  .btn-cardbook { background: white; color: var(--dark-rose); border: 2px solid var(--pink-main); }
+  .btn-share { background: var(--pink-pale); color: var(--dark-rose); border: 1px solid var(--pink-soft); }
+  .action-btn:active { transform: scale(0.97); }
+
+  /* 공유 바텀시트 */
+  .share-sheet { display:none; position:fixed; inset:0; z-index:200; }
+  .share-backdrop { position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+  .share-panel {
+    position:absolute; bottom:0; left:0; right:0;
+    max-width:480px; margin:0 auto;
+    background:#fff; border-radius:20px 20px 0 0;
+    padding:20px 20px 40px;
+  }
+  .share-handle { width:40px; height:4px; background:#ddd; border-radius:2px; margin:0 auto 18px; }
+  .share-title { font-size:13px; color:#999; text-align:center; margin-bottom:20px; font-weight:600; }
+  .share-btns { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:16px; }
+  .share-btn { display:flex; flex-direction:column; align-items:center; gap:8px; background:none; border:none; cursor:pointer; padding:8px 4px; }
+  .share-btn-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:26px; }
+  .share-btn span { font-size:11px; color:#333; font-weight:600; font-family:'Noto Sans KR',sans-serif; }
+  .share-cancel { width:100%; padding:14px; background:#f2f2f2; border:none; border-radius:10px; font-size:15px; font-weight:700; color:#444; cursor:pointer; font-family:'Noto Sans KR',sans-serif; }
 
   /* FOOTER */
   .card-footer {
@@ -542,7 +532,6 @@
         <span data-lang="zh">感性温度 | 住宿/室内设计</span>
       </p>
     </div>
-    <div class="bni-badge">BNI 8기 부의장</div>
   </div>
 
   <!-- ABOUT -->
@@ -606,13 +595,13 @@
     </div>
   </div>
 
-  <!-- REFERRAL -->
+  <!-- FOR WHOM -->
   <div class="block">
     <div class="block-label">
-      <span data-lang="ko active">이런 분을 소개해주세요</span>
-      <span data-lang="en">Ideal Referrals</span>
-      <span data-lang="ja">ご紹介いただきたい方</span>
-      <span data-lang="zh">期望转介绍对象</span>
+      <span data-lang="ko active">이런 분께 추천합니다</span>
+      <span data-lang="en">Who We Help</span>
+      <span data-lang="ja">こんな方におすすめ</span>
+      <span data-lang="zh">推荐给这样的您</span>
     </div>
     <div class="ref-tags">
       <div class="ref-tag"><span data-lang="ko active">🏨 숙박업 운영 희망자</span><span data-lang="en">🏨 Wants to run accommodation</span><span data-lang="ja">🏨 宿泊業を始めたい方</span><span data-lang="zh">🏨 想经营住宿业</span></div>
@@ -623,40 +612,13 @@
     </div>
   </div>
 
-  <!-- BNI -->
-  <div class="block">
-    <div class="block-label">BNI Pioneer Chapter 활동</div>
-    <div class="bni-row">
-      <div class="bni-step">
-        <div class="bni-dot"></div>
-        <div class="bni-period">5기</div>
-        <div class="bni-role"><span data-lang="ko active">비지터<br>호스트 리더</span><span data-lang="en">Visitor<br>Host</span><span data-lang="ja">ビジター<br>ホスト</span><span data-lang="zh">访客<br>主持</span></div>
-      </div>
-      <div class="bni-step">
-        <div class="bni-dot"></div>
-        <div class="bni-period">6기</div>
-        <div class="bni-role"><span data-lang="ko active">도어퍼슨<br>장</span><span data-lang="en">Doorperson<br>Coord.</span><span data-lang="ja">ドアパーソン</span><span data-lang="zh">门接待</span></div>
-      </div>
-      <div class="bni-step">
-        <div class="bni-dot"></div>
-        <div class="bni-period">7기</div>
-        <div class="bni-role"><span data-lang="ko active">교육<br>코디</span><span data-lang="en">Education<br>Coord.</span><span data-lang="ja">教育<br>コーディ</span><span data-lang="zh">教育<br>协调</span></div>
-      </div>
-      <div class="bni-step">
-        <div class="bni-dot active"></div>
-        <div class="bni-period" style="color:var(--dark-rose);">8기 ⭐</div>
-        <div class="bni-role" style="font-weight:700;color:var(--charcoal);"><span data-lang="ko active">부의장</span><span data-lang="en">Vice President</span><span data-lang="ja">副議長</span><span data-lang="zh">副主席</span></div>
-      </div>
-    </div>
-  </div>
-
-  
+   
 
   <!-- STAY BEYOND BUSINESS CAROUSEL -->
   <div class="stay-block">
     <button class="stay-btn" id="stayBtn" onclick="toggleStay()">
       <div class="stay-btn-left">
-        <div class="stay-btn-tag">BNI HOMES · GAMSUNG ONDO</div>
+        <div class="stay-btn-tag">GAMSUNG ONDO · PORTFOLIO</div>
         <div class="stay-btn-title">Stay Beyond Business</div>
       </div>
       <div class="stay-chevron">›</div>
@@ -735,15 +697,61 @@
     </div>
   </div>
 
+  <!-- ACTION: 연락처 저장 · 카드북 저장 · 비즈홈 공유 -->
+  <div class="action-block">
+    <button class="action-btn btn-save" onclick="saveContact()">
+      <span data-lang="ko active">📇 연락처 저장</span>
+      <span data-lang="en">📇 Save Contact</span>
+      <span data-lang="ja">📇 連絡先を保存</span>
+      <span data-lang="zh">📇 保存联系人</span>
+    </button>
+    <button class="action-btn btn-cardbook" onclick="saveToCardbook({id:'kim-jihyun',name:'김지현',nameEn:'Kim Ji-Hyun',title:'대표 · 공간디렉터 / 숙박 공간 컨설팅',company:'감성온도',phone:'010-7319-1279',email:'',chapter:'',bni:'',url:window.location.href})">
+      <span data-lang="ko active">🗂️ 카드북에 저장</span>
+      <span data-lang="en">🗂️ Save to CardBook</span>
+      <span data-lang="ja">🗂️ CardBookに保存</span>
+      <span data-lang="zh">🗂️ 保存到CardBook</span>
+    </button>
+    <button class="action-btn btn-share" onclick="shareCard()">
+      <span data-lang="ko active">📤 비즈홈 공유</span>
+      <span data-lang="en">📤 Share this page</span>
+      <span data-lang="ja">📤 このページを共有</span>
+      <span data-lang="zh">📤 分享此页面</span>
+    </button>
+  </div>
+
   <!-- FOOTER -->
   <div class="card-footer">
     <span>감성온도 · Gamsung Ondo</span><br>
-    김지현 대표 | 숙박 공간 컨설팅 / 공간디렉터<br>
-    BNI Pioneer Chapter 8기 부의장
+    김지현 대표 | 숙박 공간 컨설팅 / 공간디렉터
   </div>
 
 </div>
 
+<!-- 공유 바텀시트 (Web Share 미지원 기기용) -->
+<div class="share-sheet" id="shareSheet">
+  <div class="share-backdrop" onclick="closeShare()"></div>
+  <div class="share-panel">
+    <div class="share-handle"></div>
+    <div class="share-title">비즈홈 공유</div>
+    <div class="share-btns">
+      <button class="share-btn" onclick="shareKakao()">
+        <div class="share-btn-icon" style="background:#FEE500;">💬</div><span>카카오톡</span>
+      </button>
+      <button class="share-btn" onclick="shareSMS()">
+        <div class="share-btn-icon" style="background:#34c759;">✉️</div><span>문자</span>
+      </button>
+      <button class="share-btn" onclick="copyLink()">
+        <div class="share-btn-icon" style="background:#e8e8e8;">🔗</div><span>링크 복사</span>
+      </button>
+      <button class="share-btn" onclick="shareQR()">
+        <div class="share-btn-icon" style="background:#3D2B30;">📱</div><span>QR 보기</span>
+      </button>
+    </div>
+    <button class="share-cancel" onclick="closeShare()">취소</button>
+  </div>
+</div>
+
+<script src="https://cardbook.bizmy.net/save-to-cardbook.js?v=20261011b"></script>
 <script>
 function setLang(lang, btn) {
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
@@ -760,6 +768,50 @@ document.querySelectorAll('[data-lang="ko active"]').forEach(el => {
 
 
 
+
+  // ── 연락처 저장 (동작은 카드북 공통 스크립트 cbSaveContact가 맡음) ──
+  function saveContact() {
+    const vcard = `BEGIN:VCARD\nVERSION:3.0\nN:김;지현;;;\nFN:김지현\nORG:감성온도\nTITLE:대표 · 공간디렉터\nTEL;TYPE=CELL:010-7319-1279\nURL:https://jinjjabg-hub.github.io/BNI-PIONEER-cards/김지현/\nEND:VCARD`;
+    if (window.cbSaveContact) return cbSaveContact(vcard);
+    const blob = new Blob([vcard], {type:'text/vcard'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'kim-jihyun.vcf';
+    a.click();
+  }
+
+  // ── 비즈홈 공유 ──
+  const CARD_URL = 'https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EA%B9%80%EC%A7%80%ED%98%84/';
+  const CARD_TITLE = '감성온도 | 김지현 대표';
+  const CARD_TEXT = '공간마다 감성과 온도를 디렉팅하는 공간디렉터 — 숙박 공간 컨설팅';
+
+  function shareCard() {
+    if (navigator.share) {
+      navigator.share({ title: CARD_TITLE, text: CARD_TEXT, url: CARD_URL }).catch(() => {});
+    } else {
+      document.getElementById('shareSheet').style.display = 'block';
+    }
+  }
+  function closeShare() { document.getElementById('shareSheet').style.display = 'none'; }
+  function shareKakao() {
+    window.open('https://sharer.kakao.com/talk/friends/picker/link?app_key=&url=' + encodeURIComponent(CARD_URL), '_blank');
+    closeShare();
+  }
+  function shareSMS() {
+    location.href = 'sms:?body=' + encodeURIComponent(CARD_TITLE + '\n' + CARD_URL);
+    closeShare();
+  }
+  function copyLink() {
+    navigator.clipboard.writeText(CARD_URL).then(() => alert('링크가 복사되었습니다!')).catch(() => {
+      const t = document.createElement('textarea');
+      t.value = CARD_URL;
+      document.body.appendChild(t); t.select(); document.execCommand('copy');
+      document.body.removeChild(t);
+      alert('링크가 복사되었습니다!');
+    });
+    closeShare();
+  }
+  function shareQR() { window.open('qr.png', '_blank'); closeShare(); }
 
   // ── CAROUSEL ──
   let carIdx = 0;
