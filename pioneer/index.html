@@ -319,6 +319,9 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 .vfg label { display:block; font-size: 12px; font-weight: 700; color: var(--sage); margin-bottom: 5px; }
 .vfg input { width:100%; padding: 12px; border-radius: 8px; border: 1px solid rgba(232,236,209,0.25); background: var(--navy); color: #fff; font-size: 15px; font-family: 'Noto Sans KR', sans-serif; }
 .vfg input::placeholder { color: rgba(240,236,224,0.35); }
+.vrate { display:flex; flex-wrap:wrap; gap:6px 12px; font-size: 13px; color: var(--text-dark); padding-top: 2px; }
+.vrate label { display:flex; align-items:center; gap:4px; font-weight:400; color: var(--text-dark); margin:0; font-size:13px; }
+.vrate input { width:auto; accent-color: var(--gold); }
 .vagree { display:flex; gap:8px; align-items:flex-start; font-size: 11.5px; color: var(--muted-dark); line-height: 1.6; margin: 4px 0 14px; }
 .vmsg { display:none; padding: 12px; border-radius: 8px; font-size: 13px; font-weight: 700; margin-bottom: 12px; text-align:center; }
 .vmsg.ok { display:block; background:#e3f4e8; color:#1d6b35; }
@@ -434,7 +437,7 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
     <div class="career-item">
       <div class="career-badge">현재</div>
       <div class="career-content">
-        <h3><span data-lang="kr" class="active">9기 운영 중 · <span id="memberCount">33</span>명</span></h3>
+        <h3><span data-lang="kr" class="active">9기 운영 중 · <span id="memberCount">32</span>명</span></h3>
         <p><span data-lang="kr" class="active">2022년 11월 9일 런칭. 6개월 단위 기수제로 의장단·리더십팀이 매 기수 새로 꾸려집니다.</span></p>
       </div>
     </div>
@@ -490,12 +493,24 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
     <li>✅ 참관비 5만원 · 👔 비즈니스 복장 · 🪪 명함 30장 이상</li>
   </ul>
   <form class="vform" id="vform" novalidate>
-    <div class="vfg"><label>성명 *</label><input name="name" placeholder="홍길동"></div>
-    <div class="vfg"><label>전화번호 *</label><input name="phone" type="tel" placeholder="010-0000-0000"></div>
+    <div class="vfg"><label>성명(비지터) *</label><input name="name" placeholder="홍길동"></div>
+    <div class="vfg"><label>회사명 *</label><input name="company"></div>
+    <div class="vfg"><label>직위 *</label><input name="position" placeholder="예: 대표"></div>
     <div class="vfg"><label>전문분야 *</label><input name="field" placeholder="예: 세무회계"></div>
-    <div class="vfg"><label>회사명</label><input name="company" placeholder="(선택)"></div>
-    <div class="vfg"><label>초대한 멤버</label><input name="guardian" placeholder="(선택)"></div>
-    <div class="vfg"><label>방문 희망일</label><input name="visitDate" type="date" id="visitDate"></div>
+    <div class="vfg"><label>전화번호 *</label><input name="phone" type="tel" placeholder="010-0000-0000"></div>
+    <div class="vfg"><label>이메일 *</label><input name="email" type="email" placeholder="example@email.com"></div>
+    <div class="vfg"><label>초대자(가디언)</label><input name="guardian"></div>
+    <div class="vfg"><label>방문일자 *</label><input name="visitDate" type="date" id="visitDate"></div>
+    <div class="vfg"><label>업력</label><input name="career" placeholder="예: 10년"></div>
+    <div class="vfg"><label>BNI 관심도 *</label>
+      <div class="vrate">
+        <label><input type="radio" name="interest" value="5"> 5 (높음)</label>
+        <label><input type="radio" name="interest" value="4"> 4</label>
+        <label><input type="radio" name="interest" value="3"> 3</label>
+        <label><input type="radio" name="interest" value="2"> 2</label>
+        <label><input type="radio" name="interest" value="1"> 1 (낮음)</label>
+      </div>
+    </div>
     <label class="vagree"><input type="checkbox" id="vagree"> 참관 안내 연락을 위해 위 정보를 챕터 담당자에게 보내는 데 동의합니다.</label>
     <div class="vmsg" id="vmsg"></div>
     <button class="btn btn-primary" id="vbtn" type="submit">📋 참관 신청 보내기</button>
@@ -616,7 +631,6 @@ const MEMBERS = [
   { job:'휴대폰·통신' },
   { job:'세무회계' },
   { job:'경호·경비' },
-  { job:'건강식품' },
 ];
 /* ========================================== */
 
@@ -646,9 +660,10 @@ document.getElementById('vform').addEventListener('submit', async e => {
   const show = (t, ok) => { msg.textContent = t; msg.className = 'vmsg ' + (ok ? 'ok' : 'err'); };
   const data = Object.fromEntries(new FormData(f).entries());
   for (const k in data) data[k] = (data[k] || '').trim();
-  if (!data.name)  return show('성명을 입력해 주세요.');
-  if (!data.phone) return show('전화번호를 입력해 주세요.');
-  if (!data.field) return show('전문분야를 입력해 주세요.');
+  const required = [['name','성명을'],['company','회사명을'],['position','직위를'],['field','전문분야를'],['phone','전화번호를'],['email','이메일을'],['visitDate','방문일자를']];
+  for (const [k, label] of required) if (!data[k]) return show(`${label} 입력해 주세요.`);
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) return show('이메일 형식을 확인해 주세요.');
+  if (!data.interest) return show('BNI 관심도를 선택해 주세요.');
   if (!document.getElementById('vagree').checked) return show('정보 전달 동의에 체크해 주세요.');
   if (!MANAGER_EMAIL && !SHEET_URL) return show('신청 접수 설정이 아직 안 되어 있습니다. 챕터 멤버에게 문의해 주세요.');
 
@@ -661,8 +676,9 @@ document.getElementById('vform').addEventListener('submit', async e => {
       body: JSON.stringify({
         _subject: `[파이오니어 참관 신청] ${data.name} · ${data.field}`,
         _template: 'table', _captcha: 'false',
-        성명: data.name, 전화번호: data.phone, 전문분야: data.field, 회사명: data.company,
-        초대한멤버: data.guardian, 방문희망일: data.visitDate,
+        성명: data.name, 회사명: data.company, 직위: data.position, 전문분야: data.field,
+        전화번호: data.phone, 이메일: data.email, 초대자: data.guardian, 방문일자: data.visitDate,
+        업력: data.career, BNI관심도: data.interest,
       }),
     }).then(r => { if (!r.ok) throw new Error('mail'); }));
   }
