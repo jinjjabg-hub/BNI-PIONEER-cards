@@ -854,13 +854,7 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 <!-- ACTION -->
 <div class="action">
   <div class="btn-group">
-    <button class="btn btn-primary" onclick="saveContact()">
-      <span data-lang="kr" class="active">📞 연락처 저장</span>
-      <span data-lang="en">📞 Save contact</span>
-      <span data-lang="jp">📞 連絡先を保存</span>
-      <span data-lang="cn">📞 保存联系人</span>
-    </button>
-    <button class="btn btn-secondary" onclick="saveToCardbook({id:'bni-pioneer',name:'BNI 파이오니어 챕터',nameEn:'BNI Pioneer Chapter',title:'부산 비즈니스 모임',company:'BNI 파이오니어 챕터',phone:'',email:'',chapter:'BNI 파이오니어',bni:'챕터',url:window.location.href})">
+    <button class="btn btn-primary" onclick="saveToCardbook({id:'bni-pioneer',name:'BNI 파이오니어 챕터',nameEn:'BNI Pioneer Chapter',title:'부산 비즈니스 모임',company:'BNI 파이오니어 챕터',phone:'',email:'',chapter:'BNI 파이오니어',bni:'챕터',url:window.location.href})">
       <span data-lang="kr" class="active">🗂️ 비즈홈 저장 (CardBook)</span>
       <span data-lang="en">🗂️ Save to CardBook</span>
       <span data-lang="jp">🗂️ ビズホームを保存（CardBook）</span>
@@ -1192,15 +1186,6 @@ function setLang(lang) {
     btn.classList.toggle('active', m && m[1] === lang);
   });
   applyLangExtras();
-}
-function saveContact() {
-  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:BNI 파이오니어 챕터\nORG:BNI 파이오니어 챕터\nTITLE:부산 비즈니스 모임\nURL:https://jinjjabg-hub.github.io/BNI-PIONEER-cards/pioneer/\nADR:;;부산광역시 남구 전포대로 133 아바니센트럴부산 3층;;;;\nEND:VCARD`;
-  if (window.cbSaveContact) return cbSaveContact(vcard);
-  const blob = new Blob([vcard], {type:'text/vcard'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'BNI_파이오니어챕터.vcf';
-  a.click();
 }
 
 /* ── 명함 전달하기 ── */
