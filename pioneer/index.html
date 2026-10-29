@@ -9,8 +9,8 @@
 <link rel="manifest" href="manifest.json">
 <meta name="apple-mobile-web-app-title" content="BNI 파이오니어">
 <meta name="theme-color" content="#162311">
-<title>BNI 파이오니어 챕터 | 부산 비즈니스 리퍼럴 모임</title>
-<meta property="og:title" content="BNI 파이오니어 챕터 | 부산 비즈니스 리퍼럴 모임">
+<title>BNI 파이오니어 챕터 | 부산 비즈니스 모임</title>
+<meta property="og:title" content="BNI 파이오니어 챕터 | 부산 비즈니스 모임">
 <meta property="og:description" content="친목이 아닌 비즈니스로. 업종별 1명, 매주 수요일 오전 6시 30분. 참관 신청 받습니다.">
 <meta property="og:image" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/pioneer/og-logo.png">
 <meta property="og:image:width" content="1200">
@@ -860,7 +860,7 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
       <span data-lang="jp">📞 連絡先を保存</span>
       <span data-lang="cn">📞 保存联系人</span>
     </button>
-    <button class="btn btn-secondary" onclick="saveToCardbook({id:'bni-pioneer',name:'BNI 파이오니어 챕터',nameEn:'BNI Pioneer Chapter',title:'부산 비즈니스 리퍼럴 모임',company:'BNI 파이오니어 챕터',phone:'',email:'',chapter:'BNI 파이오니어',bni:'챕터',url:window.location.href})">
+    <button class="btn btn-secondary" onclick="saveToCardbook({id:'bni-pioneer',name:'BNI 파이오니어 챕터',nameEn:'BNI Pioneer Chapter',title:'부산 비즈니스 모임',company:'BNI 파이오니어 챕터',phone:'',email:'',chapter:'BNI 파이오니어',bni:'챕터',url:window.location.href})">
       <span data-lang="kr" class="active">🗂️ 비즈홈 저장 (CardBook)</span>
       <span data-lang="en">🗂️ Save to CardBook</span>
       <span data-lang="jp">🗂️ ビズホームを保存（CardBook）</span>
@@ -1194,7 +1194,7 @@ function setLang(lang) {
   applyLangExtras();
 }
 function saveContact() {
-  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:BNI 파이오니어 챕터\nORG:BNI 파이오니어 챕터\nTITLE:부산 비즈니스 리퍼럴 모임\nURL:https://jinjjabg-hub.github.io/BNI-PIONEER-cards/pioneer/\nADR:;;부산광역시 남구 전포대로 133 아바니센트럴부산 3층;;;;\nEND:VCARD`;
+  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:BNI 파이오니어 챕터\nORG:BNI 파이오니어 챕터\nTITLE:부산 비즈니스 모임\nURL:https://jinjjabg-hub.github.io/BNI-PIONEER-cards/pioneer/\nADR:;;부산광역시 남구 전포대로 133 아바니센트럴부산 3층;;;;\nEND:VCARD`;
   if (window.cbSaveContact) return cbSaveContact(vcard);
   const blob = new Blob([vcard], {type:'text/vcard'});
   const a = document.createElement('a');
@@ -1205,7 +1205,7 @@ function saveContact() {
 
 /* ── 명함 전달하기 ── */
 const CARD_URL = 'https://jinjjabg-hub.github.io/BNI-PIONEER-cards/pioneer/';
-const CARD_TITLE = 'BNI 파이오니어 챕터 | 부산 비즈니스 리퍼럴 모임';
+const CARD_TITLE = 'BNI 파이오니어 챕터 | 부산 비즈니스 모임';
 const CARD_TEXT = '부산 BNI 파이오니어 챕터 — 매주 수요일 오전 6시 30분, 참관 신청 받습니다.';
 
 function shareCard() {
