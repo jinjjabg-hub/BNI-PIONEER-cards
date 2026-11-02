@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>김근우 | 종합광고기획 창운</title>
+<meta property="og:title" content="김근우 | 대표 · 종합광고기획 창운">
+<meta property="og:description" content="필요한 홍보물, 품목에 맞는 곳으로 연결해 드려요.">
+<meta property="og:image" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EA%B9%80%EA%B7%BC%EC%9A%B0/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jinjjabg-hub.github.io/BNI-PIONEER-cards/김근우/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- 언어팩에 따라 폰트 추가: references/languages.md 참고 -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --navy: #0a2a5c;
+  --navy2: #103672;
+  --navy3: #1a437f;
+  --gold: #c9a84c;
+  --gold2: #e8c86a;
+  --light: #f1f5fb;
+  --text-dark: #f0ece0;
+  --text-light: #1a1a2e;
+  --muted-dark: #a9b9d8;
+  --muted-light: #3d5478;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color: transparent; }
+html { font-size: 16px; }
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--navy);
+  color: var(--text-dark);
+  max-width: 480px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+[data-lang="si"] { font-family: 'Noto Sans Sinhala', sans-serif; }
+[data-lang="ur"] { font-family: 'Noto Nastaliq Urdu', serif; direction: rtl; }
+[data-lang] { display: none; }
+[data-lang].active { display: block; }
+span[data-lang].active { display: inline; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:100;
+  max-width: 480px; margin: 0 auto;
+  background: rgba(10,42,92,0.97);
+  backdrop-filter: blur(10px);
+  padding: 10px 16px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-bottom: 1px solid rgba(201,168,76,0.25);
+}
+.nav-brand { font-size: 12px; font-weight: 700; color: var(--gold); white-space: nowrap; }
+.lang-btns { display:flex; gap:4px; }
+.lang-btn {
+  padding: 5px 8px;
+  border: 1px solid rgba(201,168,76,0.35);
+  background: transparent;
+  color: var(--muted-dark);
+  font-size: 10px; font-weight: 700;
+  cursor: pointer; border-radius: 5px;
+  transition: all 0.2s;
+  min-width: 40px; min-height: 32px;
+  display: flex; align-items:center; justify-content:center;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.lang-btn.active { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+
+/* ── HERO ── */
+.hero {
+  margin-top: 54px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+.hero img.hero-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.hero-overlay {
+  position: absolute; inset:0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10,42,92,0.1) 0%,
+    rgba(10,42,92,0.15) 40%,
+    rgba(10,42,92,0.75) 75%,
+    rgba(10,42,92,0.95) 100%
+  );
+}
+.hero-content {
+  position: absolute; bottom:0; left:0; right:0; z-index:2;
+  padding: 24px 20px 22px;
+}
+.hero-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 10px; font-weight: 700;
+  padding: 4px 12px; border-radius: 20px;
+  margin-bottom: 10px; letter-spacing: 1.5px;
+}
+.hero-name {
+  font-size: 34px; font-weight: 700;
+  color: #fff; line-height: 1.15;
+  margin-bottom: 7px; letter-spacing: -0.5px;
+}
+.hero-name [data-lang="ur"] { font-size: 26px; }
+.hero-title { font-size: 13px; color: var(--gold); opacity: 0.95; line-height: 1.5; }
+
+/* ── PROFILE ROW ── */
+.profile-row {
+  background: var(--navy2);
+  padding: 16px 20px;
+  display: flex; align-items: center; gap:14px;
+  border-bottom: 1px solid rgba(201,168,76,0.12);
+}
+.profile-img {
+  width: 64px; height: 64px; min-width:64px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  overflow: hidden; flex-shrink: 0;
+}
+.profile-img img { width:100%; height:100%; object-fit:cover; object-position: center top; }
+.profile-info h2 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.profile-info p { font-size: 12px; color: var(--muted-dark); line-height: 1.5; }
+
+/* ── 공통 섹션 ── */
+section { padding: 40px 20px; }
+.section-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 6px;
+}
+.section-title { font-size: 22px; font-weight: 700; line-height: 1.35; margin-bottom: 22px; }
+
+/* ── ABOUT ── */
+.about { background: var(--navy); }
+.about .section-title { color: #fff; }
+.slogan {
+  font-size: 15px; font-weight: 700;
+  color: var(--gold); margin-bottom: 14px;
+  font-style: italic; line-height: 1.6;
+}
+.about-text { font-size: 14px; line-height: 1.9; color: var(--text-dark); opacity: 0.85; }
+.about-text [data-lang="ur"] { font-size: 15px; line-height: 2.2; }
+
+/* ── WHY ── */
+.why { background: var(--light); }
+.why .section-label { color: var(--muted-light); }
+.why .section-title { color: var(--text-light); }
+.why-cards { display: flex; flex-direction: column; gap:14px; }
+.why-card {
+  background: #fff;
+  border: 1px solid rgba(201,168,76,0.18);
+  border-left: 4px solid var(--gold);
+  border-radius: 10px; padding: 18px 16px;
+}
+.why-card h3 { font-size: 15px; font-weight: 700; color: var(--text-light); margin-bottom: 8px; line-height: 1.4; }
+.why-card p { font-size: 13px; line-height: 1.85; color: #444; }
+.why-card p [data-lang="ur"] { font-size: 14px; line-height: 2.2; }
+.why-card p strong { color: var(--navy); font-weight: 700; }
+
+/* ── DIFFERENCE ── */
+.difference { background: var(--navy2); }
+.difference .section-title { color: #fff; }
+.diff-grid { display: flex; flex-direction: column; gap:12px; }
+.diff-card {
+  background: var(--navy3);
+  border: 1px solid rgba(201,168,76,0.12);
+  border-radius: 10px; padding: 18px 16px;
+}
+.diff-card h3 { font-size: 14px; font-weight: 700; color: var(--gold); margin-bottom: 8px; line-height: 1.4; }
+.diff-card p { font-size: 13px; line-height: 1.8; color: var(--text-dark); opacity: 0.8; }
+.diff-card p [data-lang="ur"] { font-size: 14px; line-height: 2.2; }
+
+/* ── REFERRAL ── */
+.referral { background: var(--light); }
+.referral .section-label { color: var(--muted-light); }
+.referral .section-title { color: var(--text-light); }
+.ref-list { display: flex; flex-direction: column; gap:10px; }
+.ref-item {
+  display: flex; gap:12px; align-items:flex-start;
+  background: #fff; border-radius: 10px;
+  padding: 15px 14px; border: 1px solid rgba(0,0,0,0.05);
+}
+.ref-num {
+  width: 26px; height: 26px; min-width:26px;
+  border-radius: 50%; background: var(--gold);
+  color: var(--navy); font-weight: 700; font-size: 12px;
+  display: flex; align-items:center; justify-content:center;
+  flex-shrink: 0; margin-top: 1px;
+}
+.ref-item p { font-size: 13px; line-height: 1.8; color: #333; }
+.ref-item p [data-lang="ur"] { font-size: 14px; line-height: 2.2; }
+
+/* ── CAREER ── */
+.career {
+  position: relative;
+  background-color: #f0f4ff;
+  background-image: url('career-bg.png');
+  background-size: 150%;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+.career .section-label { position: relative; z-index:1; color: var(--muted-light); }
+.career .section-title { color: var(--text-light); position: relative; z-index:1; }
+.career-list { display: flex; flex-direction: column; gap:18px; position: relative; z-index:1; }
+.career-item {
+  display: flex; gap:12px; align-items:flex-start;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.career-item:last-child { border-bottom: none; padding-bottom: 0; }
+.career-badge {
+  background: var(--navy); color: #fff;
+  font-size: 10px; font-weight: 700;
+  padding: 4px 10px; border-radius: 4px;
+  white-space: nowrap; flex-shrink: 0; margin-top: 2px;
+}
+.career-content { background: rgba(255,255,255,0.82); border-radius: 8px; padding: 12px 14px; flex:1; }
+.career-item h3 { font-size: 14px; font-weight: 700; color: var(--text-light); margin-bottom: 7px; line-height: 1.4; }
+.career-item p { font-size: 12px; line-height: 1.85; color: #555; }
+
+/* ── PORTFOLIO (선택 섹션 — portfolio1.jpg 이상 있을 때만 사용) ── */
+.portfolio { background: var(--navy); }
+.portfolio .section-title { color: #fff; }
+.portfolio-track-wrap { overflow: hidden; border-radius: 12px; }
+.portfolio-track { display: flex; transition: transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94); }
+.portfolio-slide { min-width: 100%; aspect-ratio: 3/4; overflow: hidden; }
+.portfolio-slide img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+.portfolio-nav { display:flex; align-items:center; justify-content:center; gap:16px; margin-top:14px; }
+.portfolio-btn {
+  background: transparent; border: 1px solid rgba(201,168,76,0.35);
+  color: var(--gold); width: 30px; height: 30px; border-radius: 50%;
+  font-size: 15px; cursor: pointer; display:flex; align-items:center; justify-content:center;
+}
+.portfolio-dots { display:flex; gap:6px; }
+.portfolio-dot { width:6px; height:6px; border-radius:50%; background: rgba(201,168,76,0.3); transition: all 0.25s; }
+.portfolio-dot.active { background: var(--gold); width:18px; border-radius:3px; }
+
+/* ── CONTACT ── */
+.contact { background: var(--light); }
+.contact .section-label { color: var(--muted-light); }
+.contact .section-title { color: var(--text-light); }
+.contact-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.contact-item {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 8px; text-align: center;
+  background: #fff; border-radius: 12px;
+  padding: 16px 10px; border: 1px solid rgba(0,0,0,0.05);
+  text-decoration: none; min-height: 100px;
+}
+.contact-item:active { transform: scale(0.97); }
+.contact-icon {
+  width: 42px; height: 42px; min-width:42px;
+  border-radius: 50%; background: var(--navy);
+  display: flex; align-items:center; justify-content:center;
+  font-size: 18px; flex-shrink: 0;
+}
+.contact-label { font-size: 10px; color: #999; }
+.contact-value { font-size: 12px; font-weight: 600; color: var(--text-light); line-height: 1.4; word-break: break-all; }
+
+/* ── ACTION ── */
+.action { background: var(--navy2); padding: 32px 20px; }
+.btn-group { display: flex; flex-direction: column; gap:12px; }
+.btn {
+  display: block; width: 100%; padding: 17px 16px;
+  border: none; border-radius: 10px;
+  font-size: 15px; font-weight: 700;
+  cursor: pointer; text-align: center;
+  transition: all 0.15s; font-family: 'Noto Sans KR', sans-serif;
+  min-height: 54px; letter-spacing: 0.3px;
+}
+.btn-primary { background: var(--gold); color: var(--navy); }
+.btn-secondary { background: transparent; border: 2px solid var(--gold); color: var(--gold); }
+.btn-share { background: linear-gradient(135deg, #1a6b3a, #0d8a4a); color: #fff; border: none; }
+.btn:active { transform: scale(0.97); opacity: 0.9; }
+
+/* 공유 바텀시트 */
+.share-sheet { display:none; position:fixed; inset:0; z-index:200; }
+.share-backdrop { position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+.share-panel {
+  position:absolute; bottom:0; left:0; right:0;
+  max-width:480px; margin:0 auto;
+  background:#fff; border-radius:20px 20px 0 0;
+  padding:20px 20px 40px;
+}
+.share-handle { width:40px; height:4px; background:#ddd; border-radius:2px; margin:0 auto 18px; }
+.share-title { font-size:13px; color:#999; text-align:center; margin-bottom:20px; font-weight:600; }
+.share-btns { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:16px; }
+.share-btn { display:flex; flex-direction:column; align-items:center; gap:8px; background:none; border:none; cursor:pointer; padding:8px 4px; }
+.share-btn-icon { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:26px; }
+.share-btn span { font-size:11px; color:#333; font-weight:600; font-family:'Noto Sans KR',sans-serif; }
+.share-cancel { width:100%; padding:14px; background:#f2f2f2; border:none; border-radius:10px; font-size:15px; font-weight:700; color:#444; cursor:pointer; font-family:'Noto Sans KR',sans-serif; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy); padding: 24px 20px;
+  text-align: center; border-top: 1px solid rgba(201,168,76,0.12);
+}
+footer .company { font-size: 13px; font-weight: 700; color: var(--gold); margin-bottom: 5px; }
+footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacing: 0.5px; }
+
+/* ── 김근우 카드 전용 보정 ── */
+.portfolio-slide { aspect-ratio: 1.4/1; background:#fff; }
+.portfolio-slide img { object-fit: contain; }
+.ref-item-3 { display:block; padding:16px 16px; border-left:4px solid var(--gold); }
+.ref-item-3 .ref-head { font-size:14px; font-weight:700; color:var(--text-light); line-height:1.5; margin-bottom:6px; word-break:keep-all; }
+.ref-item-3 .ref-desc { word-break:keep-all; font-size:12.5px; color:#555; line-height:1.8; margin-bottom:6px; }
+.ref-item-3 .ref-cta { word-break:keep-all; font-size:13px; color:var(--navy); font-weight:700; line-height:1.7; }
+.ref-item-3 [data-lang="jp"], .ref-item-3 [data-lang="cn"], .diff-card [data-lang="jp"], .diff-card [data-lang="cn"], .why-card [data-lang="jp"], .why-card [data-lang="cn"] { word-break: normal; }
+.diff-card h3, .why-card h3, .career-content h3 { word-break: keep-all; }
+.contact-value { overflow-wrap: anywhere; }
+.btn-share { background: linear-gradient(135deg,#1b5fc4,#2f7fe0) !important; color:#fff !important; border-color:transparent !important; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">종합광고기획 창운</div>
+  <div class="lang-btns">
+    <button class="lang-btn active" onclick="setLang('kr')">한국어</button>
+    <button class="lang-btn" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" onclick="setLang('jp')">日本語</button>
+    <button class="lang-btn" onclick="setLang('cn')">中文</button>
+  </div>
+</nav>
+
+<!-- HERO : hero.png = 세로 3:4 인물 사진 -->
+<div class="hero">
+  <img class="hero-img" src="hero.png" alt="김근우">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span data-lang="kr" class="active">종합광고기획</span>
+      <span data-lang="en">Total Advertising Planning</span>
+      <span data-lang="jp">総合広告企画</span>
+      <span data-lang="cn">综合广告策划</span>
+    </div>
+    <div class="hero-name">
+      <span data-lang="kr" class="active">김 근 우</span>
+      <span data-lang="en">Kim Geun Woo</span>
+      <span data-lang="jp">金 根 佑</span>
+      <span data-lang="cn">金 根 佑</span>
+    </div>
+    <div class="hero-title">
+      <span data-lang="kr" class="active">대표 · 종합광고기획 창운</span>
+      <span data-lang="en">CEO · ChangzUn.co</span>
+      <span data-lang="jp">代表 · ChangzUn.co</span>
+      <span data-lang="cn">代表 · ChangzUn.co</span>
+    </div>
+  </div>
+</div>
+
+<!-- PROFILE ROW : profil.png = 정사각 얼굴 사진 -->
+<div class="profile-row">
+  <div class="profile-img">
+    <img src="profil.png" alt="김근우">
+  </div>
+  <div class="profile-info">
+    <h2>김근우 · Kim Geun Woo</h2>
+    <p>
+      <span data-lang="kr" class="active">종합광고기획 · 명함·스티커·현수막 등 홍보물 제작</span>
+      <span data-lang="en">Total advertising planning · Business cards, stickers, banners &amp; other promotional items</span>
+      <span data-lang="jp">総合広告企画 · 名刺・ステッカー・横断幕などの販促物制作</span>
+      <span data-lang="cn">综合广告策划 · 名片、贴纸、横幅等宣传品制作</span>
+    </p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="section-label">About</div>
+  <div class="slogan">
+    <span data-lang="kr" class="active">필요한 홍보물, 품목에 맞는 곳으로 연결해 드려요.</span>
+    <span data-lang="en">Need promotional items? I connect you to the right maker for each product.</span>
+    <span data-lang="jp">必要な販促物を、品目に合った工場へおつなぎします。</span>
+    <span data-lang="cn">您需要的宣传品，我为您对接最适合该品类的工厂。</span>
+  </div>
+  <p class="about-text">
+    <span data-lang="kr" class="active">사업을 알리는 데 필요한 오프라인 홍보물을 한 곳에서 맡아요. 명함·스티커·리플렛부터 제품 박스, 현수막·배너까지 품목마다 전문인 협력 공장 가운데 단가와 품질이 맞는 곳을 골라 연결하고, 디자인도 함께 해요. 소상공인·소규모 사업장·개인부터 중소기업까지, 상담은 직접 하고 대응은 빠르게 해요.</span>
+    <span data-lang="en">I handle the offline promotional materials your business needs, all in one place. From business cards, stickers and leaflets to product boxes, hanging banners and roll-up banners, I pick the specialist partner factory for each item that fits your budget and quality needs, connect you to it, and design together with you. From small shops, small workplaces and individuals to small and mid-sized companies, I handle consultation myself and respond quickly.</span>
+    <span data-lang="jp">事業を知らせるために必要なオフラインの販促物を、一か所でお任せいただけます。名刺・ステッカー・リーフレットから製品ボックス、横断幕・バナーまで、品目ごとに専門の協力工場の中から単価と品質が合うところを選んでおつなぎし、デザインもご一緒します。小規模事業者・小規模事業所・個人から中小企業まで、ご相談は私が直接お受けし、対応は迅速に行います。</span>
+    <span data-lang="cn">您推广业务所需的线下宣传品，可以在这里一站式交给我。从名片、贴纸、宣传单到产品包装盒、横幅、易拉宝，按品类在各专业合作工厂中选出单价和质量合适的一家为您对接，并一同完成设计。无论是小商户、小型经营场所、个人，还是中小企业，咨询由我亲自负责，响应迅速。</span>
+  </p>
+</section>
+
+<!-- WHY : 확인 전 항목(협력 업체 수·업력)은 뺌 → 카드 1개 -->
+<section class="why">
+  <div class="section-label">Why Us</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">왜 창운인가</span>
+    <span data-lang="en">Why choose us?</span>
+    <span data-lang="jp">選ばれる理由</span>
+    <span data-lang="cn">为什么选择我们</span>
+  </div>
+  <div class="why-cards">
+    <div class="why-card">
+      <h3>
+        <span data-lang="kr" class="active">① 다음 날 쓸 배너, 당일 오후 납품</span>
+        <span data-lang="en">① Banner needed next day, delivered that afternoon</span>
+        <span data-lang="jp">① 翌日使うバナーを、当日午後に納品</span>
+        <span data-lang="cn">① 次日要用的易拉宝，当天下午交付</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">지인 소개로, 서울에서 박람회에 온 분이 다음 날 쓸 배너를 요청해 <strong>당일 오후에 납품</strong>했어요.</span>
+        <span data-lang="en">Through a personal referral, a visitor from Seoul attending an expo asked for a banner to use the next day, and I <strong>delivered it that same afternoon</strong>.</span>
+        <span data-lang="jp">知人の紹介で、ソウルから博覧会に来られた方が翌日に使うバナーを依頼され、<strong>当日の午後に納品</strong>しました。</span>
+        <span data-lang="cn">经熟人介绍，一位从首尔来参加博览会的客人需要次日使用的易拉宝，我<strong>当天下午就交付</strong>了。</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENCE : diff-card 3개 -->
+<section class="difference">
+  <div class="section-label">Difference</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">차별점</span>
+    <span data-lang="en">What Makes Us Different</span>
+    <span data-lang="jp">差別化ポイント</span>
+    <span data-lang="cn">差异化优势</span>
+  </div>
+  <div class="diff-grid">
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">품목마다 전문 공장으로 연결</span>
+        <span data-lang="en">Each item matched to a specialist factory</span>
+        <span data-lang="jp">品目ごとに専門工場へおつなぎ</span>
+        <span data-lang="cn">每个品类对接专业工厂</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">명함·스티커·리플렛부터 제품 박스, 현수막·배너까지 품목마다 전문인 협력 공장 중 단가와 품질이 맞는 곳을 골라, 고객 상황에 맞게 연결해 드려요.</span>
+        <span data-lang="en">From business cards, stickers and leaflets to product boxes, hanging banners and roll-up banners, I choose, for each item, the specialist partner factory that fits your budget and quality, and connect you in line with your situation.</span>
+        <span data-lang="jp">名刺・ステッカー・リーフレットから製品ボックス、横断幕・バナーまで、品目ごとに専門の協力工場の中から単価と品質が合うところを選び、お客様の状況に合わせておつなぎします。</span>
+        <span data-lang="cn">从名片、贴纸、宣传单到产品包装盒、横幅、易拉宝，按品类在专业合作工厂中选出单价和质量合适的一家，并结合客户情况为您对接。</span>
+      </p>
+    </div>
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">직접 상담, 빠른 응대</span>
+        <span data-lang="en">Direct consultation, quick response</span>
+        <span data-lang="jp">直接ご相談、迅速対応</span>
+        <span data-lang="cn">亲自咨询，快速响应</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">상담부터 제가 직접 하고 빠르게 응대해요.</span>
+        <span data-lang="en">I handle the consultation myself, from the very start, and respond quickly.</span>
+        <span data-lang="jp">ご相談の段階から私が直接対応し、迅速にお応えします。</span>
+        <span data-lang="cn">从咨询开始就由我亲自负责，并快速响应。</span>
+      </p>
+    </div>
+    <div class="diff-card">
+      <h3>
+        <span data-lang="kr" class="active">직접 배달</span>
+        <span data-lang="en">Hand delivery</span>
+        <span data-lang="jp">直接お届け</span>
+        <span data-lang="cn">亲自送货</span>
+      </h3>
+      <p>
+        <span data-lang="kr" class="active">웬만하면 직접 배달해서 고객을 한 번 더 만나요.</span>
+        <span data-lang="en">Whenever possible I deliver in person, so I get to meet my customers once more.</span>
+        <span data-lang="jp">できるだけ直接お届けして、お客様にもう一度お会いします。</span>
+        <span data-lang="cn">只要条件允许，我都会亲自送货，与客户再见一面。</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- REFERRAL : ref-item 5개 (확인 전 문구는 뺌) -->
+<section class="referral">
+  <div class="section-label">Referral</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">이런 분을 소개해 주세요</span>
+    <span data-lang="en">Please refer people like this</span>
+    <span data-lang="jp">こんな方をご紹介ください</span>
+    <span data-lang="cn">请介绍这样的客户</span>
+  </div>
+  <div class="ref-list">
+    <div class="ref-item ref-item-3">
+      <h3 class="ref-head">
+        <span data-lang="kr" class="active">🏛 관공서·공기업 구매 담당자</span>
+        <span data-lang="en">🏛 Purchasing managers at government offices and public enterprises</span>
+        <span data-lang="jp">🏛 官公庁・公企業の購買担当者</span>
+        <span data-lang="cn">🏛 政府机关·公企业采购负责人</span>
+      </h3>
+      <p class="ref-desc">
+        <span data-lang="kr" class="active">새로 생겼거나 서울 등에서 이전한 지 얼마 안 된 관공서 (지역 업체가 필요해질 수 있어요)</span>
+        <span data-lang="en">Government offices that are newly established or recently relocated from Seoul or elsewhere (they may need a local vendor).</span>
+        <span data-lang="jp">新設された、またはソウルなどから移転して間もない官公庁（地元の業者が必要になることがあります）。</span>
+        <span data-lang="cn">新成立或刚从首尔等地迁来的政府机关（可能需要本地供应商）。</span>
+      </p>
+      <p class="ref-cta">
+        <span data-lang="kr" class="active">→ 홍보물 구매 담당자를 아시면 창운 김근우 대표님 한번 만나보세요.</span>
+        <span data-lang="en">→ If you know someone who buys promotional items, please introduce them to Mr. Kim Geun Woo of ChangzUn.co.</span>
+        <span data-lang="jp">→ 販促物の購買担当者をご存じでしたら、ChangzUn.coのキム・グンウ代表にぜひ一度お会いください。</span>
+        <span data-lang="cn">→ 如果您认识负责宣传品采购的人，请介绍他们认识ChangzUn.co的金根佑代表。</span>
+      </p>
+    </div>
+    <div class="ref-item ref-item-3">
+      <h3 class="ref-head">
+        <span data-lang="kr" class="active">🏢 새로 사업을 시작하거나 사무실을 오픈·이전하는 분</span>
+        <span data-lang="en">🏢 People starting a business or opening/relocating an office</span>
+        <span data-lang="jp">🏢 新しく事業を始める方、事務所をオープン・移転する方</span>
+        <span data-lang="cn">🏢 刚开始创业或开设·搬迁办公室的人</span>
+      </h3>
+      <p class="ref-cta">
+        <span data-lang="kr" class="active">→ 막 오픈하거나 이전하는 분 있으면 김근우 대표님 한번 만나보세요.</span>
+        <span data-lang="en">→ If you know someone who has just opened or is relocating, please introduce them to Mr. Kim Geun Woo.</span>
+        <span data-lang="jp">→ オープンや移転をされたばかりの方がいらっしゃれば、キム・グンウ代表にぜひ一度お会いください。</span>
+        <span data-lang="cn">→ 如果您认识刚开业或搬迁的人，请介绍他们认识金根佑代表。</span>
+      </p>
+    </div>
+    <div class="ref-item ref-item-3">
+      <h3 class="ref-head">
+        <span data-lang="kr" class="active">🗂 중소기업 구매·총무 담당자</span>
+        <span data-lang="en">🗂 Purchasing and general-affairs managers at small and mid-sized companies</span>
+        <span data-lang="jp">🗂 中小企業の購買・総務担当者</span>
+        <span data-lang="cn">🗂 中小企业采购·总务负责人</span>
+      </h3>
+      <p class="ref-desc">
+        <span data-lang="kr" class="active">매년 직책이 바뀌면 명함부터 새로 만들어야 하는 회사</span>
+        <span data-lang="en">Companies that must make new business cards whenever job titles change each year.</span>
+        <span data-lang="jp">毎年役職が変わると、まず名刺を作り直す必要のある会社。</span>
+        <span data-lang="cn">每年职务变动后就需要重新制作名片的公司。</span>
+      </p>
+      <p class="ref-cta">
+        <span data-lang="kr" class="active">→ 명함·홍보물 챙기는 총무 담당자 계시면 김근우 대표님 한번 만나보세요.</span>
+        <span data-lang="en">→ If you know a general-affairs manager who handles business cards and promotional items, please introduce them to Mr. Kim Geun Woo.</span>
+        <span data-lang="jp">→ 名刺や販促物を担当する総務の方をご存じでしたら、キム・グンウ代表にぜひ一度お会いください。</span>
+        <span data-lang="cn">→ 如果您认识负责名片和宣传品的总务人员，请介绍他们认识金根佑代表。</span>
+      </p>
+    </div>
+    <div class="ref-item ref-item-3">
+      <h3 class="ref-head">
+        <span data-lang="kr" class="active">🎪 박람회 등 현장 홍보를 많이 하는 회사</span>
+        <span data-lang="en">🎪 Companies that do a lot of on-site promotion, such as at expos</span>
+        <span data-lang="jp">🎪 博覧会など現場での広報が多い会社</span>
+        <span data-lang="cn">🎪 经常在博览会等现场做宣传的公司</span>
+      </h3>
+      <p class="ref-desc">
+        <span data-lang="kr" class="active">온라인 홈페이지가 있어도 현장에서는 리플렛이 꼭 필요한 곳</span>
+        <span data-lang="en">Places that still need leaflets on site, even with an online website.</span>
+        <span data-lang="jp">オンラインのホームページがあっても、現場ではリーフレットが欠かせない会社。</span>
+        <span data-lang="cn">即使有线上官网，现场也一定需要宣传单的公司。</span>
+      </p>
+      <p class="ref-cta">
+        <span data-lang="kr" class="active">→ 박람회 준비하는 분 있으면 김근우 대표님 한번 만나보세요.</span>
+        <span data-lang="en">→ If you know someone preparing for an expo, please introduce them to Mr. Kim Geun Woo.</span>
+        <span data-lang="jp">→ 博覧会の準備をされている方がいらっしゃれば、キム・グンウ代表にぜひ一度お会いください。</span>
+        <span data-lang="cn">→ 如果您认识正在筹备博览会的人，请介绍他们认识金根佑代表。</span>
+      </p>
+    </div>
+    <div class="ref-item ref-item-3">
+      <h3 class="ref-head">
+        <span data-lang="kr" class="active">⚓ 해양·조선·해양수산 분야</span>
+        <span data-lang="en">⚓ Marine, shipbuilding and maritime/fisheries sectors</span>
+        <span data-lang="jp">⚓ 海洋・造船・海洋水産分野</span>
+        <span data-lang="cn">⚓ 海洋·造船·海洋水产领域</span>
+      </h3>
+      <p class="ref-desc">
+        <span data-lang="kr" class="active">홍보물은 한 번 쓰면 끝나는 소모품이라, 많이 쓰는 곳일수록 좋아요<br>예전부터 인연을 넓히고 싶었던 분야</span>
+        <span data-lang="en">Promotional items are consumables used once, so the more a company uses, the better.<br>A field where I have long wanted to build connections.</span>
+        <span data-lang="jp">販促物は一度使えば終わる消耗品なので、たくさん使う会社ほど好都合です。<br>以前からご縁を広げたかった分野です。</span>
+        <span data-lang="cn">宣传品是用一次就结束的消耗品，用得越多的单位越合适。<br>也是我一直想拓展人脉的领域。</span>
+      </p>
+      <p class="ref-cta">
+        <span data-lang="kr" class="active">→ 해양·조선 쪽 구매 담당자를 아시면 김근우 대표님 한번 만나보세요.</span>
+        <span data-lang="en">→ If you know a purchasing manager in the marine or shipbuilding field, please introduce them to Mr. Kim Geun Woo.</span>
+        <span data-lang="jp">→ 海洋・造船関連の購買担当者をご存じでしたら、キム・グンウ代表にぜひ一度お会いください。</span>
+        <span data-lang="cn">→ 如果您认识海洋、造船领域的采购负责人，请介绍他们认识金根佑代表。</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER : 2009년 창업(대표 확인). 경력 연차 숫자는 확인 전이라 뺌 -->
+<section class="career">
+  <div class="section-label">Career</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">경력 및 전문 분야</span>
+    <span data-lang="en">Career &amp; Expertise</span>
+    <span data-lang="jp">経歴・専門分野</span>
+    <span data-lang="cn">经历与专业领域</span>
+  </div>
+  <div class="career-list">
+    <div class="career-item">
+      <div class="career-badge"><span data-lang="kr" class="active">현재</span><span data-lang="en">Current</span><span data-lang="jp">現在</span><span data-lang="cn">现任</span></div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">종합광고기획 창운 대표</span>
+          <span data-lang="en">CEO · ChangzUn.co</span>
+          <span data-lang="jp">ChangzUn.co 代表</span>
+          <span data-lang="cn">ChangzUn.co 代表</span>
+        </h3>
+        <p>
+          <span data-lang="kr" class="active">2009년 창업<br>명함·스티커·현수막 등 홍보물 제작</span>
+          <span data-lang="en">Founded in 2009<br>Production of promotional items: business cards, stickers, banners and more</span>
+          <span data-lang="jp">2009年創業<br>名刺・ステッカー・横断幕などの販促物制作</span>
+          <span data-lang="cn">2009年创立<br>名片、贴纸、横幅等宣传品制作</span>
+        </p>
+      </div>
+    </div>
+    <div class="career-item">
+      <div class="career-badge"><span data-lang="kr" class="active">현재</span><span data-lang="en">Current</span><span data-lang="jp">現在</span><span data-lang="cn">现任</span></div>
+      <div class="career-content">
+        <h3>
+          <span data-lang="kr" class="active">부산라이온스클럽 현 회장</span>
+          <span data-lang="en">Current President, Busan Lions Club</span>
+          <span data-lang="jp">釜山ライオンズクラブ 現会長</span>
+          <span data-lang="cn">釜山狮子会 现任会长</span>
+        </h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO : portfolio1~10.jpg (가로형 약 1.4:1, 이미지 안에 제목 포함). 자동 3초 슬라이드 -->
+<section class="portfolio">
+  <div class="section-label">Portfolio</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">작업 사례</span>
+    <span data-lang="en">Portfolio</span>
+    <span data-lang="jp">実績紹介</span>
+    <span data-lang="cn">作品案例</span>
+  </div>
+  <div class="portfolio-track-wrap">
+    <div class="portfolio-track" id="portfolio-track">
+      <div class="portfolio-slide"><img src="portfolio1.jpg" alt="기업 양면 명함 디자인" data-alt-kr="기업 양면 명함 디자인" data-alt-en="Corporate double-sided business card design" data-alt-jp="企業用 両面名刺デザイン" data-alt-cn="企业双面名片设计"></div>
+      <div class="portfolio-slide"><img src="portfolio2.jpg" alt="원형 도무송 스티커 디자인" data-alt-kr="원형 도무송 스티커 디자인" data-alt-en="Circular die-cut sticker design" data-alt-jp="円形ダイカットステッカーデザイン" data-alt-cn="圆形异形模切贴纸设计"></div>
+      <div class="portfolio-slide"><img src="portfolio3.jpg" alt="제품 팸플릿 디자인" data-alt-kr="제품 팸플릿 디자인" data-alt-en="Product pamphlet design" data-alt-jp="製品パンフレットデザイン" data-alt-cn="产品宣传册设计"></div>
+      <div class="portfolio-slide"><img src="portfolio4.jpg" alt="행사 홍보 포스터 디자인" data-alt-kr="행사 홍보 포스터 디자인" data-alt-en="Event promotional poster design" data-alt-jp="イベント告知ポスターデザイン" data-alt-cn="活动宣传海报设计"></div>
+      <div class="portfolio-slide"><img src="portfolio5.jpg" alt="흑지 로고 종이가방 디자인" data-alt-kr="흑지 로고 종이가방 디자인" data-alt-en="Black-paper logo shopping bag design" data-alt-jp="黒紙ロゴ紙袋デザイン" data-alt-cn="黑卡纸徽标纸袋设计"></div>
+      <div class="portfolio-slide"><img src="portfolio6.jpg" alt="기업 임직원 사원증 디자인" data-alt-kr="기업 임직원 사원증 디자인" data-alt-en="Corporate employee ID card design" data-alt-jp="企業従業員用 社員証デザイン" data-alt-cn="企业员工工牌设计"></div>
+      <div class="portfolio-slide"><img src="portfolio7.jpg" alt="매장 재오픈 현수막 디자인" data-alt-kr="매장 재오픈 현수막 디자인" data-alt-en="Store reopening banner design" data-alt-jp="店舗リニューアルオープン横断幕デザイン" data-alt-cn="门店重新开业横幅设计"></div>
+      <div class="portfolio-slide"><img src="portfolio8.jpg" alt="병원 4단 접지 리플렛 디자인" data-alt-kr="병원 4단 접지 리플렛 디자인" data-alt-en="Hospital 4-panel folded leaflet design" data-alt-jp="病院向け 四つ折りリーフレットデザイン" data-alt-cn="医院四折页宣传单设计"></div>
+      <div class="portfolio-slide"><img src="portfolio9.jpg" alt="뷰티 세로 롤배너 디자인" data-alt-kr="뷰티 세로 롤배너 디자인" data-alt-en="Beauty vertical roll banner design" data-alt-jp="ビューティー縦型ロールバナーデザイン" data-alt-cn="美容竖版易拉宝设计"></div>
+      <div class="portfolio-slide"><img src="portfolio10.jpg" alt="기업 다이어리 + 내지 디자인" data-alt-kr="기업 다이어리 + 내지 디자인" data-alt-en="Corporate diary and inner pages design" data-alt-jp="企業用ダイアリー＋中紙デザイン" data-alt-cn="企业日记本及内页设计"></div>
+    </div>
+  </div>
+  <div class="portfolio-nav">
+    <button class="portfolio-btn" onclick="portfolioSlide(-1)">‹</button>
+    <div class="portfolio-dots" id="portfolio-dots"></div>
+    <button class="portfolio-btn" onclick="portfolioSlide(1)">›</button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="section-label">Contact</div>
+  <div class="section-title">
+    <span data-lang="kr" class="active">연락하기</span>
+    <span data-lang="en">Contact</span>
+    <span data-lang="jp">お問い合わせ</span>
+    <span data-lang="cn">联系方式</span>
+  </div>
+  <div class="contact-list">
+    <a class="contact-item" href="tel:010-5664-5710">
+      <div class="contact-icon">📞</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">전화</span>
+        <span data-lang="en">Phone</span>
+        <span data-lang="jp">電話</span>
+        <span data-lang="cn">电话</span>
+      </div>
+      <div class="contact-value">010-5664-5710</div>
+    </a>
+    <a class="contact-item" href="mailto:imp8641@naver.com">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-label">Email</div>
+      <div class="contact-value">imp8641@naver.com</div>
+    </a>
+    <a class="contact-item" href="https://blog.naver.com/imp8641" target="_blank" rel="noopener">
+      <div class="contact-icon">🌐</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">네이버 블로그</span>
+        <span data-lang="en">Naver Blog</span>
+        <span data-lang="jp">NAVERブログ</span>
+        <span data-lang="cn">Naver博客</span>
+      </div>
+      <div class="contact-value">imp8641</div>
+    </a>
+    <a class="contact-item" href="http://www.xn--pr3b17ziqe.com/front/index/f_main.asp" target="_blank" rel="noopener">
+      <div class="contact-icon">💻</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">판촉북</span>
+        <span data-lang="en">판촉북 (Promo Items)</span>
+        <span data-lang="jp">판촉북（販促物）</span>
+        <span data-lang="cn">판촉북（促销品）</span>
+      </div>
+      <div class="contact-value">판촉북.com</div>
+    </a>
+    <a class="contact-item" href="http://www.kk1192.com/web/?id=5710" target="_blank" rel="noopener">
+      <div class="contact-icon">🏆</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">상패 홈페이지</span>
+        <span data-lang="en">Plaque website</span>
+        <span data-lang="jp">表彰盾サイト</span>
+        <span data-lang="cn">奖牌网站</span>
+      </div>
+      <div class="contact-value">kk1192.com</div>
+    </a>
+    <a class="contact-item" href="https://jinjjabg-hub.github.io/MANDU/?u=kim-geunwoo" target="_blank">
+      <div class="contact-icon">💬</div>
+      <div class="contact-label">MANDU</div>
+      <div class="contact-value">
+        <span data-lang="kr" class="active">실시간 번역 메신저</span>
+        <span data-lang="en">Live translation chat</span>
+        <span data-lang="jp">リアルタイム翻訳チャット</span>
+        <span data-lang="cn">实时翻译聊天</span>
+      </div>
+    </a>
+    <a class="contact-item" style="grid-column: 1 / -1;" href="https://map.kakao.com/link/search/%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC%20%EB%B6%80%EC%A0%84%EB%A1%9C%2034%2C%201%EC%B8%B5%20%EC%B0%BD%EC%9A%B4" target="_blank">
+      <div class="contact-icon">📍</div>
+      <div class="contact-label">
+        <span data-lang="kr" class="active">주소 (탭하면 지도 열림)</span>
+        <span data-lang="en">Address (tap to open map)</span>
+        <span data-lang="jp">住所（タップで地図）</span>
+        <span data-lang="cn">地址（点击打开地图）</span>
+      </div>
+      <div class="contact-value">
+        <span data-lang="kr" class="active">부산광역시 부산진구 부전로 34, 1층 창운</span>
+        <span data-lang="en">1F, 34 Bujeon-ro, Busanjin-gu, Busan, Korea</span>
+        <span data-lang="jp">부산광역시 부산진구 부전로 34, 1층 창운</span>
+        <span data-lang="cn">부산광역시 부산진구 부전로 34, 1층 창운</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ACTION -->
+<div class="action">
+  <div class="btn-group">
+    <button class="btn btn-primary" onclick="saveContact()">
+      <span data-lang="kr" class="active">📞 연락처 저장</span>
+      <span data-lang="en">📞 Save contact</span>
+      <span data-lang="jp">📞 連絡先を保存</span>
+      <span data-lang="cn">📞 保存联系人</span>
+    </button>
+    <button class="btn btn-secondary" onclick="saveToCardbook({id:'kim-geunwoo',name:'김근우',nameEn:'Kim Geun Woo',title:'대표',company:'종합광고기획 창운',phone:'010-5664-5710',email:'imp8641@naver.com',chapter:'파이오니어',bni:'멤버',url:window.location.href})">
+      <span data-lang="kr" class="active">🗂️ 명함 저장 (CardBook)</span>
+      <span data-lang="en">🗂️ Save to CardBook</span>
+      <span data-lang="jp">🗂️ 名刺を保存</span>
+      <span data-lang="cn">🗂️ 保存名片</span>
+    </button>
+    <button class="btn btn-share" onclick="shareCard()">
+      <span data-lang="kr" class="active">📤 명함 전달하기</span>
+      <span data-lang="en">📤 Share this card</span>
+      <span data-lang="jp">📤 名刺を共有</span>
+      <span data-lang="cn">📤 分享名片</span>
+    </button>
+  </div>
+</div>
+
+<!-- 공유 바텀시트 (Web Share API 미지원 브라우저 폴백) -->
+<div class="share-sheet" id="shareSheet">
+  <div class="share-backdrop" onclick="closeShare()"></div>
+  <div class="share-panel">
+    <div class="share-handle"></div>
+    <div class="share-title">명함 전달하기</div>
+    <div class="share-btns">
+      <button class="share-btn" onclick="shareKakao()">
+        <div class="share-btn-icon" style="background:#FEE500;">💬</div><span>카카오톡</span>
+      </button>
+      <button class="share-btn" onclick="shareSMS()">
+        <div class="share-btn-icon" style="background:#34c759;">✉️</div><span>문자</span>
+      </button>
+      <button class="share-btn" onclick="copyLink()">
+        <div class="share-btn-icon" style="background:#e8e8e8;">🔗</div><span>링크 복사</span>
+      </button>
+      <button class="share-btn" onclick="shareQR()">
+        <div class="share-btn-icon" style="background:#0a2a5c;">📱</div><span>QR 보기</span>
+      </button>
+    </div>
+    <button class="share-cancel" onclick="closeShare()">취소</button>
+  </div>
+</div>
+
+<!-- 만두 연결 (카드 주인 전용, 방문자는 무시해도 되는 위치) -->
+<div class="mandu-activate-wrap" style="padding:14px 20px 4px;text-align:center;">
+  <button id="mandu-activate-btn" onclick="activateMandu()"
+    style="background:none;border:1px solid rgba(201,168,76,0.3);color:var(--muted-dark);font-size:10.5px;padding:7px 14px;border-radius:20px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;">
+    💬 본인 명함이신가요? 만두 연결하기 (1회)
+  </button>
+  <div id="mandu-activate-done" style="display:none;font-size:10.5px;color:var(--gold);padding:7px 0;">
+    ✅ 만두 연결 완료 — 이제 이 카드로 DM을 받을 수 있어요
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="company">
+    <span data-lang="kr" class="active">종합광고기획 창운</span>
+    <span data-lang="en">ChangzUn.co</span>
+    <span data-lang="jp">ChangzUn.co</span>
+    <span data-lang="cn">ChangzUn.co</span>
+  </div>
+  <div class="slogan-footer">Need promotional items? I connect you to the right maker for each product.</div>
+</footer>
+
+<script src="https://cardbook.bizmy.net/save-to-cardbook.js?v=20261011b"></script>
+<script>
+function setLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+  });
+  document.querySelectorAll('[data-alt-' + lang + ']').forEach(img => {
+    img.alt = img.getAttribute('data-alt-' + lang);
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    const m = btn.getAttribute('onclick').match(/'(\w+)'/);
+    btn.classList.toggle('active', m && m[1] === lang);
+  });
+}
+function saveContact() {
+  const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:김근우\nORG:종합광고기획 창운\nTITLE:대표\nTEL:010-5664-5710\nEMAIL:imp8641@naver.com\nURL:https://jinjjabg-hub.github.io/BNI-PIONEER-cards/김근우/\nADR:;;부산광역시 부산진구 부전로 34, 1층 창운;;;;\nEND:VCARD`;
+  if (window.cbSaveContact) return cbSaveContact(vcard);
+  const blob = new Blob([vcard], {type:'text/vcard'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = '김근우.vcf';
+  a.click();
+}
+
+/* ── 명함 전달하기 ── */
+const CARD_URL = 'https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EA%B9%80%EA%B7%BC%EC%9A%B0/';
+const CARD_TITLE = '김근우 | 종합광고기획 창운';
+const CARD_TEXT = '필요한 홍보물, 품목에 맞는 곳으로 연결해 드려요. · 종합광고기획 창운 김근우 대표';
+
+function shareCard() {
+  if (navigator.share) {
+    navigator.share({ title: CARD_TITLE, text: CARD_TEXT, url: CARD_URL }).catch(() => {});
+  } else {
+    document.getElementById('shareSheet').style.display = 'block';
+  }
+}
+function closeShare() { document.getElementById('shareSheet').style.display = 'none'; }
+function shareKakao() {
+  window.open('https://sharer.kakao.com/talk/friends/picker/link?app_key=&url=' + encodeURIComponent(CARD_URL), '_blank');
+  closeShare();
+}
+function shareSMS() {
+  location.href = 'sms:?body=' + encodeURIComponent(CARD_TITLE + '\n' + CARD_URL);
+  closeShare();
+}
+function copyLink() {
+  navigator.clipboard.writeText(CARD_URL).then(() => alert('링크가 복사되었습니다!')).catch(() => {
+    const t = document.createElement('textarea');
+    t.value = CARD_URL;
+    document.body.appendChild(t); t.select(); document.execCommand('copy');
+    document.body.removeChild(t);
+    alert('링크가 복사되었습니다!');
+  });
+  closeShare();
+}
+function shareQR() { window.open('qr.png', '_blank'); closeShare(); }
+
+/* ── PORTFOLIO 자동 슬라이드 (표준: 3초 간격, 터치 스와이프, 수동 조작 시 타이머 리셋) ──
+   portfolio 섹션이 없는 명함(HTML에서 <section class="portfolio"> 삭제한 경우)에는
+   아래 코드가 아무 일도 하지 않고 조용히 종료된다. */
+(function () {
+  const track = document.getElementById('portfolio-track');
+  if (!track) return;
+
+  const slides = track.querySelectorAll('.portfolio-slide');
+  const total = slides.length;
+  const dotsWrap = document.getElementById('portfolio-dots');
+  let idx = 0, timer = null;
+
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'portfolio-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => { go(i); reset(); };
+    dotsWrap.appendChild(dot);
+  }
+
+  function render() {
+    track.style.transform = `translateX(-${idx * 100}%)`;
+    dotsWrap.querySelectorAll('.portfolio-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
+  }
+  function go(i) { idx = (i + total) % total; render(); }
+  window.portfolioSlide = function (dir) { go(idx + dir); reset(); };
+  function auto() { timer = setTimeout(() => { go(idx + 1); auto(); }, 3000); }
+  function reset() { clearTimeout(timer); auto(); }
+
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; clearTimeout(timer); }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) go(idx + (dx < 0 ? 1 : -1));
+    auto();
+  }, { passive: true });
+
+  auto();
+})();
+
+/* ── 만두 원클릭 연결 (카드 주인 전용) ──────────────────────────
+   구글 로그인 1번 → manduid_index/kim-geunwoo 문서에 uid 자동 등록.
+   MANDU 링크(?u=kim-geunwoo)는 카드 제작 시점에 이미 고정돼 있으므로
+   *아무도(송승훈 포함) 링크를 중간에서 복사·전달·붙여넣기 할 필요가 없다.*
+   save-to-cardbook.js가 이미 firebase를 로드해두므로 그걸 재사용한다. */
+async function _manduWaitFirebase(maxTries) {
+  let tries = 0;
+  while ((typeof firebase === 'undefined' || !firebase.apps || !firebase.apps.length) && tries < (maxTries || 50)) {
+    await new Promise(r => setTimeout(r, 100));
+    tries++;
+  }
+  return typeof firebase !== 'undefined' && firebase.apps && firebase.apps.length > 0;
+}
+
+async function _manduFinishActivate(user) {
+  const slug = 'kim-geunwoo';
+  const db = firebase.firestore();
+
+  // 이미 다른 uid로 연결돼 있으면 덮어쓰지 않음 (실수·장난 클릭으로부터 카드 보호)
+  const existing = await db.collection('manduid_index').doc(slug).get();
+  if (existing.exists && existing.data().uid !== user.uid) {
+    const btn = document.getElementById('mandu-activate-btn');
+    if (btn) btn.style.display = 'none';
+    const done = document.getElementById('mandu-activate-done');
+    if (done) { done.textContent = 'ℹ️ 이미 연결된 명함이에요'; done.style.display = 'block'; }
+    return;
+  }
+
+  await db.collection('users').doc(user.uid).set({
+    uid: user.uid, displayName: user.displayName || '', photoURL: user.photoURL || '',
+    email: user.email || '', manduid: slug
+  }, { merge: true });
+  await db.collection('manduid_index').doc(slug).set({
+    uid: user.uid, createdAt: firebase.firestore.FieldValue.serverTimestamp()
+  }, { merge: true });
+  const btn = document.getElementById('mandu-activate-btn');
+  const done = document.getElementById('mandu-activate-done');
+  if (btn) btn.style.display = 'none';
+  if (done) done.style.display = 'block';
+}
+
+async function activateMandu() {
+  if (!confirm('본인 명함이 맞나요?\n구글 로그인하면 이 명함으로 만두 DM을 받을 수 있게 연결돼요.')) return;
+  const btn = document.getElementById('mandu-activate-btn');
+  if (btn) { btn.disabled = true; btn.textContent = '연결 중...'; }
+  const ready = await _manduWaitFirebase();
+  if (!ready) {
+    if (btn) { btn.disabled = false; btn.textContent = '💬 본인 명함이신가요? 만두 연결하기 (1회)'; }
+    alert('연결 실패. 잠시 후 다시 시도해주세요.');
+    return;
+  }
+  try {
+    const auth = firebase.auth();
+    await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
+    const provider = new firebase.auth.GoogleAuthProvider();
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (isMobile) {
+      sessionStorage.setItem('_manduPendingSlug', 'kim-geunwoo');
+      await auth.signInWithRedirect(provider);
+      return; // 리다이렉트 후 아래 즉시실행 블록에서 이어짐
+    }
+    const result = await auth.signInWithPopup(provider);
+    await _manduFinishActivate(result.user);
+  } catch (e) {
+    console.error('만두 연결 실패:', e);
+    if (btn) { btn.disabled = false; btn.textContent = '💬 본인 명함이신가요? 만두 연결하기 (1회)'; }
+    alert('연결 중 오류가 발생했어요.');
+  }
+}
+
+// 모바일 리다이렉트 로그인 복귀 처리
+(async function () {
+  if (!sessionStorage.getItem('_manduPendingSlug')) return;
+  const ready = await _manduWaitFirebase();
+  sessionStorage.removeItem('_manduPendingSlug');
+  if (!ready) return;
+  try {
+    const res = await firebase.auth().getRedirectResult();
+    if (res && res.user) await _manduFinishActivate(res.user);
+  } catch (e) { console.error(e); }
+})();
+</script>
+<script>
+(function(){
+  var LOG_URL = "https://script.google.com/macros/s/AKfycbz5VDYuWaAQiE9jxZ9r4dew_DgOyMuB_lj1P0K9YCtY1APweG-iKg7T5IZHqylLojbE/exec";
+  var SLUG = document.title;
+  function dicaLog(type){
+    try { fetch(LOG_URL + "?slug=" + encodeURIComponent(SLUG) + "&event=" + type, {mode:"no-cors"}); } catch(e){}
+  }
+  dicaLog('view');
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var saveBtn = document.querySelector('.btn-primary');
+    var cardBtn = document.querySelector('.btn-secondary');
+    if (saveBtn) saveBtn.addEventListener('click', function(){ dicaLog('save_vcard'); });
+    // 카드북 저장은 누른 순간이 아니라 실제로 저장에 성공했을 때만 센다
+    window.addEventListener('cardbook:saved', function(){ dicaLog('save_cardbook'); });
+
+    var statBtn = document.createElement('div');
+    statBtn.textContent = '📊 카드 현황 보기';
+    statBtn.style.cssText = 'position:fixed;bottom:16px;right:16px;background:rgba(0,0,0,0.65);color:#fff;padding:8px 14px;border-radius:20px;font-size:12px;cursor:pointer;z-index:9999;font-family:sans-serif;box-shadow:0 2px 10px rgba(0,0,0,0.3);';
+    statBtn.onclick = function(){
+      statBtn.style.cursor = 'default';
+      statBtn.textContent = '불러오는 중...';
+      fetch(LOG_URL + "?action=stats&slug=" + encodeURIComponent(SLUG))
+        .then(function(r){ return r.json(); })
+        .then(function(d){
+          statBtn.textContent = '조회 ' + d.view + '회 · 저장 ' + d.save + '회';
+        });
+    };
+    document.body.appendChild(statBtn);
+  });
+})();
+</script>
+</body>
+</html>
