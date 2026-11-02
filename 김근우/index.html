@@ -758,16 +758,16 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
       <span data-lang="cn">📞 保存联系人</span>
     </button>
     <button class="btn btn-secondary" onclick="saveToCardbook({id:'kim-geunwoo',name:'김근우',nameEn:'Kim Geun Woo',title:'대표',company:'종합광고기획 창운',phone:'010-5664-5710',email:'imp8641@naver.com',chapter:'파이오니어',bni:'멤버',url:window.location.href})">
-      <span data-lang="kr" class="active">🗂️ 비즈홈 저장 (CardBook)</span>
+      <span data-lang="kr" class="active">🗂️ 카드북에 저장</span>
       <span data-lang="en">🗂️ Save to CardBook</span>
-      <span data-lang="jp">🗂️ CardBookに保存</span>
-      <span data-lang="cn">🗂️ 保存到CardBook</span>
+      <span data-lang="jp">🗂️ 名刺を保存</span>
+      <span data-lang="cn">🗂️ 保存名片</span>
     </button>
     <button class="btn btn-share" onclick="shareCard()">
-      <span data-lang="kr" class="active">📤 비즈홈 전달하기</span>
-      <span data-lang="en">📤 Share BizHome</span>
-      <span data-lang="jp">📤 BizHomeを共有</span>
-      <span data-lang="cn">📤 分享BizHome</span>
+      <span data-lang="kr" class="active">📤 비즈홈 공유</span>
+      <span data-lang="en">📤 Share this card</span>
+      <span data-lang="jp">📤 名刺を共有</span>
+      <span data-lang="cn">📤 分享名片</span>
     </button>
   </div>
 </div>
@@ -777,7 +777,7 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
   <div class="share-backdrop" onclick="closeShare()"></div>
   <div class="share-panel">
     <div class="share-handle"></div>
-    <div class="share-title">비즈홈 전달하기</div>
+    <div class="share-title">비즈홈 공유</div>
     <div class="share-btns">
       <button class="share-btn" onclick="shareKakao()">
         <div class="share-btn-icon" style="background:#FEE500;">💬</div><span>카카오톡</span>
@@ -842,7 +842,7 @@ function saveContact() {
   a.click();
 }
 
-/* ── 명함 전달하기 ── */
+/* ── 비즈홈 공유 ── */
 const CARD_URL = 'https://jinjjabg-hub.github.io/BNI-PIONEER-cards/%EA%B9%80%EA%B7%BC%EC%9A%B0/';
 const CARD_TITLE = '김근우 | 종합광고기획 창운';
 const CARD_TEXT = '필요한 홍보물, 품목에 맞는 곳으로 연결해 드려요. · 종합광고기획 창운 김근우 대표';
