@@ -467,6 +467,16 @@ body {
 [data-lang].active { display: block; }
 .hero-name [data-lang] { display: none; }
 .hero-name [data-lang].active { display: block; }
+
+/* ── 링크 로고 줄 / 주소 한 줄 (dica-namecard 2026-11-04 표준) ── */
+.link-row { display:flex; justify-content:center; flex-wrap:wrap; gap:16px; margin:16px 0; }
+.link-tile { display:block; line-height:0; border-radius:16px; overflow:hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.12); }
+.link-tile img, .link-tile svg { width:56px; height:56px; display:block; background:#fff; }
+.link-tile:active { transform: scale(0.94); }
+.addr-line { display:flex; align-items:center; gap:10px; background:#fff; border-radius:12px; padding:12px 14px; text-decoration:none; border:1px solid rgba(0,0,0,0.05); }
+.addr-pin { font-size:18px; }
+.addr-text { flex:1; font-size:12.5px; font-weight:600; color: var(--text-light,#1a1a2e); line-height:1.5; }
+.addr-map { font-size:12px; font-weight:700; color: var(--gold,#c9a84c); white-space:nowrap; }
 </style>
 </head>
 <body>
@@ -917,41 +927,16 @@ body {
         <div class="contact-val">momo2655@naver.com</div>
       </div>
     </a>
-    <a class="contact-item" href="https://www.aidclub.com/index" target="_blank">
-      <div class="contact-icon-wrap">🌐</div>
-      <div>
-        <div class="contact-type">Website</div>
-        <div class="contact-val">aidclub.com</div>
-      </div>
+  </div>
+  <div class="link-row">
+    <a class="link-tile" href="https://jinjjabg-hub.github.io/MANDU/?u=kimkyungtae" target="_blank" rel="noopener" aria-label="MANDU">
+      <img src="https://cardbook.bizmy.net/mandu-icon.png" alt="MANDU" width="56" height="56">
     </a>
-    <a class="contact-item" href="https://naver.me/5ECpiZJf" target="_blank">
-      <div class="contact-icon-wrap">📝</div>
-      <div>
-        <div class="contact-type">
-          <span data-lang="kr" class="active">회원가입 링크</span>
-          <span data-lang="en">Join Link</span>
-          <span data-lang="jp">会員登録リンク</span>
-          <span data-lang="cn">会员注册链接</span>
-        </div>
-        <div class="contact-val">
-          <span data-lang="kr" class="active">지금 바로 가입하기 →</span>
-          <span data-lang="en">Join Now →</span>
-          <span data-lang="jp">今すぐ登録 →</span>
-          <span data-lang="cn">立即加入 →</span>
-        </div>
-      </div>
+    <a class="link-tile" href="https://www.aidclub.com/index" target="_blank" rel="noopener" aria-label="Homepage">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0d1b3e"/><path d="M32 15 13 31h5.5v17h10V37h7v11h10V31H51z" fill="#fff"/></svg>
     </a>
-    <a class="contact-item" href="https://jinjjabg-hub.github.io/MANDU/?u=kimkyungtae" target="_blank">
-      <div class="contact-icon-wrap">💬</div>
-      <div>
-        <div class="contact-type">MANDU</div>
-        <div class="contact-val">
-          <span data-lang="kr" class="active">실시간 번역 메신저</span>
-          <span data-lang="en">Real-time Translation Chat</span>
-          <span data-lang="jp">リアルタイム翻訳チャット</span>
-          <span data-lang="cn">实时翻译聊天</span>
-        </div>
-      </div>
+    <a class="link-tile" href="https://naver.me/5ECpiZJf" target="_blank" rel="noopener" aria-label="Homepage">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0d1b3e"/><path d="M32 15 13 31h5.5v17h10V37h7v11h10V31H51z" fill="#fff"/></svg>
     </a>
   </div>
 </div>
