@@ -1014,6 +1014,10 @@ const NO_MEETING_DAYS = [
   '2027-05-05', // 어린이날
   '2027-09-15', // 추석
 ];
+// 시작 시간이 다른 날 (기본은 6:30 오픈 네트워킹). 형식: '날짜': [시, 분]
+const SPECIAL_START = {
+  '2026-11-25': [6, 0],   // 초대 포스터 일정(오전 06:00)
+};
 const VISIT_WEEKS = 8; // 앞으로 몇 번의 수요일을 보여줄지
 const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyRFVCMc7VUxq8TKDH82vUzGe_kaYTUD84EL4-OLcM90hjsEzgvQhjyuAyOwRwsf5smDQ/exec';
 
@@ -1192,11 +1196,13 @@ function ymd(d) {
 }
 function visitLabel(d) {
   const m = d.getMonth() + 1, day = d.getDate();
+  const [h, mi] = SPECIAL_START[ymd(d)] || [6, 30];
+  const t = `${h}:${String(mi).padStart(2, '0')}`;
   return {
-    kr: `${m}월 ${day}일 (수) 오전 6:30`,
-    en: `Wed, ${d.toLocaleString('en-US', { month: 'short' })} ${day} · 6:30 AM`,
-    jp: `${m}月${day}日（水）朝6:30`,
-    cn: `${m}月${day}日（周三）早上6:30`,
+    kr: `${m}월 ${day}일 (수) 오전 ${t}`,
+    en: `Wed, ${d.toLocaleString('en-US', { month: 'short' })} ${day} · ${t} AM`,
+    jp: `${m}月${day}日（水）朝${t}`,
+    cn: `${m}月${day}日（周三）早上${t}`,
   }[CUR_LANG];
 }
 function renderVisitDates() {
