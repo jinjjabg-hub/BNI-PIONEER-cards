@@ -5,7 +5,7 @@
  * 주소(home/card)는 이 파일이 있는 pioneer/ 폴더 기준 상대경로입니다.
  */
 window.PIONEER_MEMBERS = [
-  { name:'송승훈', job:{kr:'앱 개발·웹 제작(비즈홈)', en:'App development & web design (Biz Home)', jp:'アプリ開発・Web制作（ビズホーム）', cn:'应用开发·网站制作（商务主页）', hi:'ऐप डेवलपमेंट व वेब डिज़ाइन (बिज़होम)'}, home:'../송승훈/' },
+  { name:'송승훈', job:{kr:'앱 개발·웹 제작(비즈홈)', en:'App development & web design (Biz Home)', jp:'アプリ開発・Web制作（ビズホーム）', cn:'应用开发·网站制作（商务主页）', hi:'ऐप डेवलपमेंट व वेब डिज़ाइन (बिज़होम)'}, home:'https://bizhome.bizmy.net/songsh/' },
   { name:'이상호', job:{kr:'인테리어(숙박·병원·상가)', en:'Interiors (lodging, clinics, retail)', jp:'インテリア（宿泊・病院・商業施設）', cn:'室内装修（住宿·医院·商铺）', hi:'इंटीरियर (होटल, क्लिनिक, दुकानें)'}, card:'cards/interior.jpg', tel:'010-8501-8612' },
   { name:'조현우', job:{kr:'고용지원금', en:'Employment subsidies', jp:'雇用助成金', cn:'雇佣补贴', hi:'रोज़गार सब्सिडी'}, card:'cards/subsidy.jpg', tel:'010-6590-0731' },
   { name:'김근우', job:{kr:'인쇄·디자인', en:'Printing & design', jp:'印刷・デザイン', cn:'印刷·设计', hi:'प्रिंटिंग व डिज़ाइन'}, home:'../김근우/' },
