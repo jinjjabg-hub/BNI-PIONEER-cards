@@ -502,6 +502,7 @@
 .addr-text { flex:1; font-size:12.5px; font-weight:600; color: var(--text-light,#1a1a2e); line-height:1.5; }
 .addr-map { font-size:12px; font-weight:700; color: var(--gold,#c9a84c); white-space:nowrap; }
 </style>
+<script src="../dica-i18n.js"></script>
 </head>
 <body>
 
@@ -527,7 +528,7 @@
         <span data-lang="ja">スペースディレクター</span>
         <span data-lang="zh">空间总监 · 住宿顾问</span>
       </div>
-      <div class="co-name">감성온도</div>
+      <div class="co-name"><span data-lang="ko" class="active">감성온도</span><span data-lang="en">Gamsung Ondo</span><span data-lang="ja">Gamsung Ondo</span><span data-lang="zh">Gamsung Ondo</span></div>
     </div>
   </div>
 
@@ -563,7 +564,7 @@
 
   <!-- WHY -->
   <div class="block">
-    <div class="block-label">Why 감성온도</div>
+    <div class="block-label"><span data-lang="ko" class="active">Why 감성온도</span><span data-lang="en">Why Gamsung Ondo</span><span data-lang="ja">Why Gamsung Ondo</span><span data-lang="zh">Why Gamsung Ondo</span></div>
     <div class="why-cards">
       <div class="why-card">
         <div class="icon">🏡</div>
@@ -739,7 +740,7 @@
   <!-- FOOTER -->
   <div class="card-footer">
     <span>감성온도 · Gamsung Ondo</span><br>
-    김지현 대표 | 숙박 공간 컨설팅 / 공간디렉터
+    <span data-lang="ko" class="active">김지현 대표 | 숙박 공간 컨설팅 / 공간디렉터</span><span data-lang="en">CEO Kim Ji-Hyun | Accommodation Space Consulting / Space Director</span><span data-lang="ja">金知賢 代表 | 宿泊空間コンサルティング / スペースディレクター</span><span data-lang="zh">金知贤 代表 | 住宿空间咨询 / 空间总监</span>
   </div>
 
 </div>
@@ -819,12 +820,12 @@ document.querySelectorAll('[data-lang="ko active"]').forEach(el => {
     closeShare();
   }
   function copyLink() {
-    navigator.clipboard.writeText(CARD_URL).then(() => alert('링크가 복사되었습니다!')).catch(() => {
+    navigator.clipboard.writeText(CARD_URL).then(() => alert(dicaT('링크가 복사되었습니다!'))).catch(() => {
       const t = document.createElement('textarea');
       t.value = CARD_URL;
       document.body.appendChild(t); t.select(); document.execCommand('copy');
       document.body.removeChild(t);
-      alert('링크가 복사되었습니다!');
+      alert(dicaT('링크가 복사되었습니다!'));
     });
     closeShare();
   }
@@ -887,7 +888,7 @@ async function _manduFinishActivate(user) {
     const btn = document.getElementById('mandu-activate-btn');
     if (btn) btn.style.display = 'none';
     const done = document.getElementById('mandu-activate-done');
-    if (done) { done.textContent = 'ℹ️ 이미 연결된 비즈홈이에요'; done.style.display = 'block'; }
+    if (done) { done.textContent = dicaT('ℹ️ 이미 연결된 비즈홈이에요'); done.style.display = 'block'; }
     return;
   }
 
@@ -905,13 +906,13 @@ async function _manduFinishActivate(user) {
 }
 
 async function activateMandu() {
-  if (!confirm('본인 비즈홈이 맞나요?\n구글 로그인하면 이 비즈홈으로 만두 DM을 받을 수 있게 연결돼요.')) return;
+  if (!confirm(dicaT('본인 비즈홈이 맞나요?\n구글 로그인하면 이 비즈홈으로 만두 DM을 받을 수 있게 연결돼요.'))) return;
   const btn = document.getElementById('mandu-activate-btn');
-  if (btn) { btn.disabled = true; btn.textContent = '연결 중...'; }
+  if (btn) { btn.disabled = true; btn.textContent = dicaT('연결 중...'); }
   const ready = await _manduWaitFirebase();
   if (!ready) {
-    if (btn) { btn.disabled = false; btn.textContent = '💬 본인 비즈홈이신가요? 만두 연결하기 (1회)'; }
-    alert('연결 실패. 잠시 후 다시 시도해주세요.');
+    if (btn) { btn.disabled = false; btn.textContent = dicaT('💬 본인 비즈홈이신가요? 만두 연결하기 (1회)'); }
+    alert(dicaT('연결 실패. 잠시 후 다시 시도해주세요.'));
     return;
   }
   try {
@@ -928,8 +929,8 @@ async function activateMandu() {
     await _manduFinishActivate(result.user);
   } catch (e) {
     console.error('만두 연결 실패:', e);
-    if (btn) { btn.disabled = false; btn.textContent = '💬 본인 비즈홈이신가요? 만두 연결하기 (1회)'; }
-    alert('연결 중 오류가 발생했어요.');
+    if (btn) { btn.disabled = false; btn.textContent = dicaT('💬 본인 비즈홈이신가요? 만두 연결하기 (1회)'); }
+    alert(dicaT('연결 중 오류가 발생했어요.'));
   }
 }
 
