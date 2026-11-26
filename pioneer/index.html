@@ -379,6 +379,7 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
 .chapter-stat b { display:block; font-size: 21px; font-weight: 800; line-height: 1.2; letter-spacing: -0.5px; white-space: nowrap; }
 .chapter-stat > span { font-size: 11.5px; opacity: .9; }
 </style>
+<script src="../dica-i18n.js"></script>
 </head>
 <body>
 
@@ -406,7 +407,7 @@ footer .slogan-footer { font-size: 11px; color: var(--muted-dark); letter-spacin
   <img class="hero-img" src="hero.jpg?v=5" alt="BNI 비즈니스 네트워크 초대 · 파이오니어 챕터">
 </div>
 <div class="hero-content">
-  <div class="hero-badge">BUSAN 1호 PIONEER</div>
+  <div class="hero-badge"><span data-lang="kr" class="active">BUSAN 1호 PIONEER</span><span data-lang="en">BUSAN No.1 PIONEER</span><span data-lang="jp">BUSAN 第1号 PIONEER</span><span data-lang="cn">BUSAN 第1号 PIONEER</span></div>
   <div class="hero-name">
     <span data-lang="kr" class="active">파이오니어 챕터</span>
     <span data-lang="en">Pioneer Chapter</span>
@@ -1357,7 +1358,7 @@ async function _manduFinishActivate(user) {
     const btn = document.getElementById('mandu-activate-btn');
     if (btn) btn.style.display = 'none';
     const done = document.getElementById('mandu-activate-done');
-    if (done) { done.textContent = 'ℹ️ 이미 연결된 비즈홈이에요'; done.style.display = 'block'; }
+    if (done) { done.textContent = dicaT('ℹ️ 이미 연결된 비즈홈이에요'); done.style.display = 'block'; }
     return;
   }
 
@@ -1375,13 +1376,13 @@ async function _manduFinishActivate(user) {
 }
 
 async function activateMandu() {
-  if (!confirm('본인 비즈홈이 맞나요?\n구글 로그인하면 이 비즈홈으로 만두 DM을 받을 수 있게 연결돼요.')) return;
+  if (!confirm(dicaT('본인 비즈홈이 맞나요?\n구글 로그인하면 이 비즈홈으로 만두 DM을 받을 수 있게 연결돼요.'))) return;
   const btn = document.getElementById('mandu-activate-btn');
-  if (btn) { btn.disabled = true; btn.textContent = '연결 중...'; }
+  if (btn) { btn.disabled = true; btn.textContent = dicaT('연결 중...'); }
   const ready = await _manduWaitFirebase();
   if (!ready) {
-    if (btn) { btn.disabled = false; btn.textContent = '💬 본인 비즈홈이신가요? 만두 연결하기 (1회)'; }
-    alert('연결 실패. 잠시 후 다시 시도해주세요.');
+    if (btn) { btn.disabled = false; btn.textContent = dicaT('💬 본인 비즈홈이신가요? 만두 연결하기 (1회)'); }
+    alert(dicaT('연결 실패. 잠시 후 다시 시도해주세요.'));
     return;
   }
   try {
@@ -1398,8 +1399,8 @@ async function activateMandu() {
     await _manduFinishActivate(result.user);
   } catch (e) {
     console.error('만두 연결 실패:', e);
-    if (btn) { btn.disabled = false; btn.textContent = '💬 본인 비즈홈이신가요? 만두 연결하기 (1회)'; }
-    alert('연결 중 오류가 발생했어요.');
+    if (btn) { btn.disabled = false; btn.textContent = dicaT('💬 본인 비즈홈이신가요? 만두 연결하기 (1회)'); }
+    alert(dicaT('연결 중 오류가 발생했어요.'));
   }
 }
 
